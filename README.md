@@ -1,6 +1,6 @@
 # Bamboo-X
 
-![screenshot](https://a.pomf.cat/gendpi.png)
+![screenshot](https://a.pomf.cat/qajbtb.png)
 Preview of Bamboo-X.
 
 About
