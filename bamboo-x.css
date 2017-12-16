@@ -1,4 +1,4 @@
-@-moz-document domain(exhentai.org) {
+@-moz-document domain("exhentai.org"), domain("e-hentai.org") {
 /* GENERAL */
 /** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
         * {
@@ -47,6 +47,1489 @@
         }
         table.itg {
             margin-left: 5px !important;
+            margin-right: -10px !important;
+        }
+        table.itg .it3 {
+            margin-left: 0px !important;
+            margin-top: 10px !important;
+        }
+        table.itg .it4 {
+            margin-top: 10px !important;
+        }
+*/
+    
+/* HEADER */
+/** DESCRIPTION : change the elements of the header **/
+        p#nb {
+            /*** HEADER ***/
+            background: #22202B !important;
+            border-bottom: 3px solid #CA8D6E !important;
+            padding: 32px 0px 30px 130px !important;
+            text-align: left !important;
+            position: absolute !important;
+            top: -2px !important;
+            right: 0px !important;
+            left: 0px !important;
+            margin-left: -2px !important;
+            z-index: 99 !important;
+        }
+        p#nb a {
+            /*** HEADER LINKS ***/
+            color: #F8F8F8 !important;
+            font-family: "Roboto" !important;
+            font-size: 13pt !important;
+            font-stretch: condensed !important;
+        }
+        p#nb a:hover {
+            color: #F9AE74 !important;
+        }
+        p#nb img {
+            /*** HEADER ICONS ***/
+            visibility: hidden !important;
+        }  
+
+/* HOME */
+/** DESCRIPION : change the elements of the home page **/
+        #nb a:nth-of-type(1):before {
+            /*** HOME SLOGAN ***/
+            content: "exhentai.org" !important;
+            color: #FFF !important;
+            font-family: "Neuton" !important;
+            font-size: 23pt !important;
+            position: absolute !important;
+            top: 18px !important;
+            left: 30px !important;
+            visibility: visible !important;
+            z-index: 99 !important;
+            transition: all .3s ease-in-out !important;
+        }
+        #nb a:nth-of-type(1):hover:before {
+            color: #CA8D6E !important;
+        }
+        #nb a:nth-of-type(1) {
+            visibility: hidden;
+        }
+        #toppane .ih:before {
+            color: #FFF !important;
+            content: "「変態」" !important;
+            font-family: "KFhimaji" !important;
+            font-size: 31pt !important;
+            text-shadow: 3px 3px rgba(117, 83, 108, .7) !important;
+            position: absolute !important;
+            margin-top: 69px !important;
+            margin-left: 47px !important;
+            visibility: visible !important;
+        }
+        #toppane .ih {
+            visibility: hidden;
+        }
+        #searchbox {
+            /*** HOME SEARCH BOX ***/
+            background: no-repeat url("https://i.imgur.com/JXxHJY1.jpg") center 41% !important;
+            background-size: cover !important;
+            border: 1px solid #000 !important;
+            height: 120px !important;
+            padding: 20px !important;
+            width: auto !important;
+            margin-right: -4px !important;
+            margin-left: -4px !important;
+            z-index: 10 !important;
+        }
+        table.itc {
+            /*** HOME SEARCH CATEGORIES ***/
+            background: rgba(34,32,43,.01) !important;
+            border-radius: 2px !important;
+            padding: 8px 10px 10px 10px  !important;
+            width: auto !important;
+            position: absolute;
+            left: 0px !important;
+            right: 0px !important;
+            margin: 65px auto !important;
+            z-index: 999 !important;
+        }
+        .itc tr {
+            display: inline-block !important;
+        }
+        .itc .ic,
+        .itdc img {
+            /*** HOME SEARCH CATEGORIES ICONS ***/
+            border-radius: 50% !important;
+            height: 0px !important;
+            width: 0px !important;
+            padding: 12px 0px 0px 12px !important;
+        }
+        .itc img[src*="_d"] {
+           opacity: .3 !important;
+        }
+        #f_doujinshi_img,   
+        a[href="https://exhentai.org/doujinshi"] img,
+        form[name="favform"] img[src*="doujinshi"],
+        .id4 .id41[title="Doujinshi"] {
+            background: #EB6361 !important;
+        }
+        #f_manga_img,
+        a[href="https://exhentai.org/manga"] img,
+        form[name="favform"] img[src*="manga"],
+        .id4 .id41[title="Manga"] {
+            background: #EEE657 !important;
+        }
+        #f_artistcg_img,
+        a[href="https://exhentai.org/artistcg"] img,
+        form[name="favform"] img[src*="artistcg"],
+        .id4 .id41[title="Artist CG Sets"] {
+            background: #EBBD63 !important;
+        }
+        #f_gamecg_img,
+        a[href="https://exhentai.org/gamecg"] img,
+        form[name="favform"] img[src*="gamecg"],
+        .id4 .id41[title="Game CG Sets"] {
+            background: #5C9F97 !important;
+        }
+        #f_western_img,
+        a[href="https://exhentai.org/western"] img,
+        form[name="favform"] img[src*="western"],
+        .id4 .id41[title="Western"] {
+            background: #F7E999 !important;
+        }
+        #f_imageset_img,
+        a[href="https://exhentai.org/imageset"] img,
+        form[name="favform"] img[src*="imageset"],
+        .id4 .id41[title="Image Sets"] {
+            background: #47D2E9 !important;
+        }
+        #f_non-h_img,
+        a[href="https://exhentai.org/non-h"] img,
+        form[name="favform"] img[src*="non-h"],
+        .id4 .id41[title="Non-H"] {
+            background: #ECF0F1 !important;
+        }
+        #f_cosplay_img,
+        a[href="https://exhentai.org/cosplay"] img,
+        form[name="favform"] img[src*="cosplay"],
+        .id4 .id41[title="Cosplay"] {
+            background: #AA8C91 !important;
+        }
+        #f_asianporn_img,
+        a[href="https://exhentai.org/asianporn"] img,
+        form[name="favform"] img[src*="asian"],
+        .id4 .id41[title="Asian Porn"] {
+            background: #FDE1F7 !important;
+        }
+        #f_misc_img,
+        a[href="https://exhentai.org/misc"] img,
+        form[name="favform"] img[src*="misc"],
+        .id4 .id41[title="Misc"]{
+            background: #FFF0D6 !important;
+        }
+        #searchbox .nopm .stdinput,
+        div[style="width:985px; margin:10px auto 5px; text-align:center"] .fs,
+        #torrentform #focusme {
+            /*** HOME SEARCHBAR INPUT ***/
+            background: #383745 !important;
+            border: 1px solid #000 !important;
+            box-shadow: none !important;
+            color: transparent !important;
+            font-size: 12pt !important;
+            font-stretch: condensed !important;
+            padding: 7px !important;
+            position: fixed !important;
+            top: 18px !important;
+            right: 200px !important;
+            width: 24px !important;
+            z-index: 99 !important;
+            transition: all .3s ease-in-out !important;
+        }
+        #torrentform #focusme {
+            right: 118px !important;
+        }
+        div[style="width:985px; margin:10px auto 5px; text-align:center"] .fs {
+            top: 22px !important;
+        }
+        #searchbox .nopm .stdinput:focus,
+        div[style="width:985px; margin:10px auto 5px; text-align:center"] .fs:focus,
+        #torrentform #focusme:focus {
+            color: #EBEBEB !important;
+            width: 20% !important;
+            transition: all .3s ease-in-out !important;
+        }
+        #searchbox .nopm .stdbtn,
+        div[style="width:985px; margin:10px auto 5px; text-align:center"] .stdbtn,
+        #torrentform .stdbtn {
+            /*** HOME SEARCHBAR BUTTONS ***/
+            background: #383745 !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            border: 1px solid #000 !important;
+            border-radius: 1px !important;
+            box-shadow: none !important;
+            color: transparent !important;
+            width: 20px !important;
+            padding: 15px !important;
+            position: fixed !important;
+            top: 21px !important;
+            z-index: 99 !important;
+        }
+        #searchbox .nopm .stdbtn[value="Apply Filter"],
+        div[style="width:985px; margin:10px auto 5px; text-align:center"] .stdbtn[value="Search Favorites"],
+        #torrentform .stdbtn[value="Search Torrents"] {
+            background-image: url("https://i.imgur.com/MXLCI2Q.png") !important;
+            background-size: 28px auto !important;
+            right: 146px !important;
+        }
+        #torrentform .stdbtn[value="Search Torrents"] {
+            right: 64px !important;
+        }
+        #searchbox .nopm .stdbtn[value="Clear Filter"],
+        div[style="width:985px; margin:10px auto 5px; text-align:center"] .stdbtn[value="Clear"],
+        #torrentform .stdbtn[value="Clear"] {
+            background-image: url("https://i.imgur.com/h7v8SWh.png") !important;
+            background-size: 28px auto !important;
+            right: 105px !important;
+        }
+        #torrentform .stdbtn[value="Clear"] {
+            right: 23px !important;
+        }
+        #searchbox form .nopm a[onclick*="advsearch_pane"],
+        #searchbox form .nopm a[onclick*="filesearch_pane"] {
+            /*** HOME SEARCH OPTIONS ***/
+            background: #383745 !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            border: 1px solid #000 !important;
+            border-radius: 1px !important;
+            box-shadow: none !important;
+            color: transparent;
+            height: 0px !important;
+            width: 0px !important;
+            padding: 30px 0px 0px 30px !important;
+            position: fixed !important;
+            top: 25px !important;
+            z-index: 99 !important;            
+        }
+        #searchbox form .nopm a[onclick*="advsearch_pane"] {
+            background-image: url("https://i.imgur.com/D6gWsU5.png") !important;
+            background-size: 21px auto !important;
+            right: 64px !important;
+        }
+        .itss {
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            padding: 20px !important;
+            width: auto !important;
+            position: fixed !important;
+            bottom: 20px !important;
+            left: 20px !important;
+            margin: auto !important;
+            z-index: 999 !important;
+        }
+        #searchbox form .nopm a[onclick*="filesearch_pane"] {
+            background-image: url("https://i.imgur.com/oprVAfY.png") !important;
+            background-size: 16px auto !important;
+            right: 23px !important;
+        }
+        #fsdiv {
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            padding: 20px !important;
+            width: auto !important;
+            position: fixed !important;
+            bottom: 20px !important;
+            left: 20px !important;
+            margin: auto !important;
+            z-index: 999 !important;
+        }
+        #fsdiv *,
+        .itss * {
+            font-family: "Roboto" !important;
+            font-size: 10pt !important;
+        }
+        .ip[style="margin-top:5px"] {
+            /*** HOME RESULTS ***/
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: #FFF !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            padding: 10px 20px !important;
+            max-width: 150px !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 100 !important;
+        }
+        #iw {
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            color: #D33257 !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            letter-spacing: .5px !important;
+            padding: 10px !important;
+            width: 1174px !important;
+            text-transform: uppercase !important;
+            margin-top: -9px !important;
+        }
+        p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+        }
+        .ip[style="margin-top:5px"] span,
+        .ip[style="margin-top:5px"] a[href*="random"] {
+            display: none !important;
+        }
+        div#dmi,
+        div[style="position:absolute; top:-18px; left:15px"] {
+            /*** THUMBNAIL/LIST BUTTON ***/
+            visibility: hidden;
+        }
+        #dmi a[href*="set=dm_t"],
+        #dmi a[href*="set=dm_l"],
+        div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"],
+        div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"] {
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: #FFF !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            padding: 10px 20px !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            right: 20px !important;
+            bottom: 75px !important;
+            visibility: visible !important;
+            z-index: 100 !important;
+        }
+        div[style="position:relative; z-index:2"] > .ptt {
+            /*** HOME PAGINATIONS ***/
+            display: none !important;
+        }
+        .itg {
+            /*** HOME THUMBNAIL CONTENT ***/
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            max-width: 99% !important;
+            margin-top: -9px !important;
+            padding-top: 10px !important;
+        }
+        .itg .id1 {
+            /*** THUMBNAILS ***/
+            background: transparent !important;
+            border: none !important;
+        }
+        .itg .id2 {
+            color: #FFF !important;
+            height: 18px !important;
+            width: 200px !important;
+            margin-bottom: 12px !important;
+            text-align: left !important;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out !important;
+        }
+        .id2 a {
+            font-size: 10.5pt !important;
+            font-stretch: condensed !important;
+        }
+        .id1:not(.e-Highlighted):not(.e-Filtered) > .id2 {
+            overflow: hidden !important;
+        }
+        .id1:hover:not(.e-Highlighted):not(.e-Filtered) > .id2 > a {
+            background: transparent !important;
+            color: #EBBD63 !important;
+            text-shadow: none !important;
+        }
+        .itg .id2:hover {
+            height: 65px !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+        .itg .id3,
+        .itg .id3 img {
+            border-radius: 1px !important;
+            z-index: 99 !important;
+        }
+        .id4 {
+            opacity: 0;
+            margin-top: 4px !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+        .id4 .id41 {
+            border-radius: 50% !important;
+            left: 7px !important;
+        }
+        .id4 .id42 {
+            font-size: 9pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            top: 5px !important;
+            left: 18pt !important;
+        }
+        .id4 .id43 {
+            top: 3px !important;
+            left: 60pt !important;
+        }
+        .id4 .tn {
+            margin-right: 14px !important;
+            margin-top: 2px !important;
+        }
+        .id3:hover ~ .id4 {
+            opacity: 1 !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+        table.itg {
+            /*** HOME LIST CONTENT ***/
+            margin-left: 2px;
+            max-width: 100% !important;
+            width: 99.7%;
+        }
+        table.itg th {
+            display: none !important;
+        }
+        tr.gtr0,
+        tr.gtr1 {
+            /*** LIST BODY ***/
+            background: transparent;
+            border-bottom: 1px dashed #344146 !important;
+        }
+        tr.gtr0 td,
+        tr.gtr1 td {
+            padding: 8px 5px !important;
+        }
+        td.itd,
+        td.itu,
+        td.itdc {
+            border-right: 0px !important;
+        }
+        td.itd a,
+        td.itu a {
+            /*** LIST LINKS ***/
+            color: #FFF !important;
+            font-weight: 500 !important;
+            text-decoration: none !important;
+            transition: all .3s ease-in-out !important;
+        }
+        .it5 > a:hover {
+            color: #7E7E7E !important;
+            transition: all .3s ease-in-out !important;
+        }
+        .itdc img {
+            /*** CATEGORIES ICON ***/
+            margin-top: -2px !important;
+            margin-left: 5px !important;
+        }
+        table.itg .it3 {
+            /*** TORRENT ICON ***/
+            margin-left: -20px;
+        }
+        table.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
+            background: url('https://i.imgur.com/n8CjvZT.png') !important;
+            background-size: 140% auto !important;
+            background-position: 75% 80% !important;
+        } 
+        div.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
+            background: url('https://i.imgur.com/n8CjvZT.png') !important;
+            background-size: cover !important;
+            background-position: center !important
+        }   
+        .it3 > .i > a > .n,
+        .id4 .tn {
+            opacity: 0;
+        }
+        div.in img {
+            /*** NEW ICON ***/   
+            background: no-repeat url('https://i.imgur.com/xUijfgF.png') center !important;
+            background-size: 20px auto !important;
+            height: 0px;
+            width: 0px;
+            padding: 20px 0px 0px 20px !important;
+        }
+        div.in {
+            margin-left: -4px !important;
+            margin-top: -4px !important;
+            margin-right: -4px !important;
+        }
+        div.ir {
+            /*** HOME RATING ***/
+            background-image: url(https://my.mixtape.moe/sflnll.png)
+        }
+        div[style="position:relative; z-index:2"] .ptb,
+        form[name="favform"] table.ptb {
+            /*** HOME PAGINATION ***/
+            margin: 0px 0px 0px 2px !important;
+            width: 99.7% !important;
+        }
+        div[style="position:relative; z-index:2"] .ptb td *,
+        form[name="favform"] table.ptb td * {
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+        }
+        div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1) a,
+        div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1) a,
+        form[name="favform"] table.ptb td:nth-of-type(1) a,
+        form[name="favform"] table.ptb td:nth-last-of-type(1) a,
+        form[name="favform"] .ptdd {
+            color: transparent;
+        }
+        div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1),
+        form[name="favform"] table.ptb td:nth-of-type(1) {
+            background: #7D6962 !important;
+            color: transparent !important;
+        }
+        div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1),
+        form[name="favform"] table.ptb td:nth-last-of-type(1) {
+            background: #383745 !important;
+            color: transparent !important;
+        }
+    
+/* GALLERY */
+/** DESCRIPTION : change the elements of the gallery page **/
+        .gm {
+            /*** GALLERY BOXES ***/
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+        }
+        .gm:nth-of-type(1) {
+            /*** GALLERY INFORMATION BOX ***/
+            padding-bottom: 43px !important;
+            margin-top: 178px !important;
+        }
+        div#gd2,
+        div#gmid,
+        div#gright {
+            background: transparent !important;
+        }
+        #gd2 {
+            /*** GALLERY INFORMATION BOX TITLE ***/
+            padding: 10px !important;
+            min-height: 100px !important;
+            max-height: 100px !important;
+            width: 99% !important;
+            margin-left: -10px !important;
+            z-index: 999 !important;
+        }
+        #gd2 #gn {
+            font-size: 14pt !important;
+            font-stretch: condensed !important;
+            max-width: 98% !important;
+            overflow: hidden !important;
+            text-align: left !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+        }
+        #gd2 h1#gj {
+            height: 18px !important;
+            border-bottom: 1px dashed #344146 !important;
+            padding-bottom: 18px !important;
+            text-align: left !important;
+        }
+        #gleft {
+            /*** GALLERY INFORMATION BOX COVER ***/
+            padding: 0px !important;
+            margin-top: 96px !important;
+            margin-left: 10px !important;
+        }
+        #gmid #gd3 {
+            /*** GALLERY INFORMATION BOX DETAILS ***/
+            margin-left: 38px !important;
+            margin-top: 0px !important;
+            margin-right: -30px !important;
+        }
+        #gd3 #gdc {
+            display: none !important;
+        }
+        #gd3 #gdn {
+            text-align: left !important;
+        }
+        #gd3 #gdn a {
+            color: #DED7E6 !important;
+            font-size: 10pt !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            margin-left: 2px !important;
+        }
+        #gd3 #gdn a:before {
+            color: #FFF !important;
+            content: "Uploaded by " !important;
+        }
+        #gdd *,
+        #gdr * {
+            font-size: 10pt !important;
+        }
+        #gmid #gdf {
+            width: 200px !important;
+            margin-left: -22px !important;
+        }
+        #gmid #gdf #fav {
+            display: none !important;
+        }
+        #gmid #gdf #favoritelink::before {
+            color: #FFF !important;
+            content: "Featured in: ";
+        }
+        #gmid #gdf #favoritelink {
+            color: #44B39D;
+        }
+        #gmid #gdf #favoritelink img {
+            display: none !important;
+        }
+        #gmid #gd4 {
+            /*** GALLERY INFORMATION BOX TAGS ***/
+            border: none !important;
+            width: 430px !important;
+            position: absolute !important;
+            left: 233px !important;
+            margin-top: 56px !important;         
+        }
+        #gmid #gd4 .gt {
+            background: #383745 !important;
+            border-color: #000 !important;
+            border-radius: 1px !important;
+            padding: 3px 8px !important;
+        }
+        #gmid #gd4 .gt a:active,
+        #gmid #gd4 .gt a:hover,
+        #gmid #gd4 a[style*="color: blue"] {
+            color: #CA8D6E !important;
+        }
+        #gmid #gd4 .gtl {
+            background: #7D6962 !important;
+            border-color: #000 !important;
+            border-radius: 1px !important;
+            border-style: solid !important;
+            padding: 3px 8px 4px 8px !important;
+        }
+        #gmid #gd4 .gtw {
+            background: #CA8D6E !important;
+            border-color: #000 !important;
+            border-radius: 1px !important;
+            border-style: solid !important;
+            padding: 3px 8px 4px 8px !important;
+        }
+        #gmid #gd4 .tdn {
+            color: #E26E67 !important;
+        }
+        #gmid #gd4 .tup {
+            color: #2CC990 !important;
+        }
+        #taglist * {
+            font-size: 10pt !important;
+        }
+        #taglist .tc {
+            font-weight: bold !important;
+            text-align: left !important;
+            text-transform: capitalize !important;
+        }
+        #tagmenu_new {
+            position: absolute !important;
+            top: -45px !important;
+            z-index: 999 !important;
+        }
+        #tagmenu_new #newtagfield {
+            background: #383745 !important;
+            padding: 6px 10px !important;
+            width: 378px !important;
+        }
+        #newtagbutton {
+            font-stretch: condensed !important;
+            letter-spacing: .1px !important;
+            text-transform: uppercase !important;
+            margin-left: 5px !important;
+        }
+        #tagmenu_act {
+            width: 600px !important;
+            position: absolute !important;
+            top: -39px !important;
+            margin-left: -16px !important;
+        }
+        #tagmenu_act a {
+            font-size: 10pt !important;
+            font-stretch: condensed !important;
+            text-transform: uppercase !important;
+        }
+        #tagmenu_act a:hover {
+            color: #CA8D6E !important;
+        }
+        #tagmenu_act .mr {
+            visibility: hidden !important;
+        }
+
+        #gd5 {
+            /*** GALLERY INFORMATION BOX OTHERS ***/
+            position: absolute !important;
+            margin-left: -30px !important;
+            margin-top: 48px !important;
+        }
+        #gd5 a[href*="report"] {
+            color: #D8335B !important;
+        }
+        #gd5 p {         
+            padding: 7px !important;
+            text-transform: lowercase !important;
+        }
+        #gd5 p img {
+            display: none !important;
+        }
+        #gd5 * {
+            font-size: 10pt !important;
+            text-transform: capitalize !important;
+        }
+        .gm.torrent-info {
+            /*** GALLERY TORRENT BOX ***/
+            margin-top: 14px !important;
+        }
+        .gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] {
+            border: none !important;
+            padding: 4px 10px 8px 10px !important;
+        }
+        .gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] tbody * {
+            font-size: 10pt !important;
+        }
+        .gm.torrent-info td[style="font-weight: bold; color: red; font-size: 125%;"],
+        .gm.torrent-info tr td:nth-child(3) {
+            display: none !important;
+        } 
+        .gm.torrent-info td[style="width:180px"] {
+            width: 70px !important;
+        }
+        .gm.torrent-info td[style="width:150px"]{
+            width: 50px !important;
+        }
+        .gm.torrent-info td[style="width:80px"] {
+            width: 30px !important;
+        }
+        .gm.torrent-info td[style="width:100px; text-align:center"] {
+            visibility: hidden;
+        }
+        .gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] a {
+            max-width: 100px !important;
+            margin-left: -6px !important;
+        }
+        .gm.torrent-info .stdbtn {
+            border: 1px solid #000 !important;
+            box-shadow: none !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            height: 30px !important;
+            width: 100px !important;
+            text-transform: uppercase !important;
+            position: absolute !important;
+            top: 10px !important;
+            right: 12px !important;
+            visibility: visible !important;
+        }
+        .gm.eze_gallery_custom_container {
+            /*** GALLERY EZE BOX ***/
+            border: none !important;
+            background: transparent !important;
+            margin-top: -4px !important;
+        }
+        .eze_gallery_custom {
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            padding: 20px 24px !important;
+            margin-left: -6px !important;
+            margin-right: -6px !important;
+        }
+        .eze_gallery_custom_cell + .eze_gallery_custom_cell {
+            border-left: 0px solid #000000;
+        }
+        .eze_dl_container {
+            background: #22202B;
+            border: 1px solid #000 !important;
+            padding: 23px !important;
+            margin-top: -1px !important;
+            margin-right: -6px !important;
+            margin-left: -6px !important;
+        }
+        .gtb .gpc {
+            /*** GALLERY PICTURE COUNT ***/
+            display: none !important;
+        }
+        #gdo2 {
+            /*** GALLERY ROW OPTION ***/
+            display: none !important;
+        }
+        .gtb table.ptt {
+            /*** GALLERY TOP PAGINATION ***/
+            display: none !important;
+        }
+        #gdo4 .tha.nosel, 
+        #gdo4 .ths.nosel {
+            /*** GALLERY NORMAL/LARGE BUTTON ***/
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: #FFF !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            padding: 10px 20px !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            right: 20px !important;
+        }
+        #gdo4 .tha.nosel {
+            background: #22202B !important;
+            bottom: 20px !important;
+        }
+        #gdo4 .ths.nosel {
+            background: #22202B !important;
+            color: #DED7E6 !important;
+            bottom: 75px !important;
+        }
+        .eze_gallery_page {
+            /*** GALLERY ART BOX ***/
+            background: #22202B !important;
+            padding: 23px 5px !important;
+            margin-top: -20px !important;
+        }
+        .eze_gallery_page_indicator {
+            display: none !important;
+        }
+        .eze_gallery_page .gdtm {
+            margin-left: 12px !important;
+        }
+        .gtb .ptb {
+            /*** GALLERY BOTTOM PAGINATION ***/
+            margin: auto !important;
+            width: 1212px !important;
+        }
+        .gtb .ptb td * {
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+        }
+        .gtb .ptb td:nth-of-type(1) a,
+        .gtb .ptb td:nth-last-of-type(1) a {
+            color: transparent;
+        }
+        .gtb .ptb td:nth-of-type(1) {
+            background: #7D6962 !important;
+            color: transparent !important;
+        }
+        .gtb .ptb td:nth-last-of-type(1) {
+            background: #383745 !important;
+            color: transparent !important;
+        }
+        #cdiv {
+            /*** GALLERY COMMENT ***/
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+        }
+        #cdiv .c2 {
+            background: #383745 !important;
+            border: 1px solid #000 !important;
+            padding: 4px 8px !important;
+            margin-bottom: 10px !important;
+        }
+        #cdiv .c2 * {
+            font-size: 10.5pt !important;
+            font-stretch: condensed !important;
+            text-transform: uppercase !important;
+        }
+        .c3 a {
+            color: #F9AE74 !important;
+        }
+        .c4.nosel a[style*="blue"] {
+            color: #83D6DE !important;
+        }
+        #cdiv div.c6 {
+            border: 1px solid #000 !important;
+            padding: 20px !important;
+            margin-top: -11px !important;
+            margin-bottom: 15px !important;
+        }
+        #cdiv .c7 {
+            border: 1px solid #000 !important;
+            padding: 20px !important;
+            margin-top: -16px !important;
+        }
+        #cdiv .c7,
+        #cdiv .c7 * {
+            font-size: 10.5pt !important;
+            font-stretch: condensed !important;
+        }
+        #postnewcomment {
+            background: #383745 !important;
+            border: 1px solid #000 !important;
+            color: transparent;
+            padding: 6px !important;
+            margin-top: 14px !important;
+        }
+        #postnewcomment a {
+            font-size: 10.5pt !important;
+            font-stretch: condensed !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+        }
+        #formdiv .stdinput {
+            background: #383745 !important;
+            min-width: 1105px !important;
+            max-width: 1105px !important;
+            padding: 16px !important;
+            margin-bottom: 20px !important;
+        }
+        #formdiv .stdbtn {
+            border: 1px solid #000 !important;
+            box-shadow: none !important;
+            font-size: 10.5pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            height: 40px !important;
+            width: 130px !important;
+            text-transform: uppercase !important;
+        }
+        #frontpage {
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            padding: 10px 15px !important;
+            position: fixed !important;
+            left: 20px !important;
+            bottom: 20px !important;
+            z-index: 999 !important;
+        }
+        #frontpage a,
+        p.ip a[href="https://exhentai.org/"] {
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+        }
+        #frontpage a:hover {
+           color: #F9AE74 !important;
+        }
+    
+/* READER */
+/** DESCRIPTION : change the elements fo the reader page **/
+        #i1.sni {
+            /*** READER CONTAINER ***/
+            padding: 20px !important;
+            background: #22202B !important;
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+        }
+        #i1.sni h1 {
+            /*** READER COMIC TITLE ***/
+            font-stretch: condensed !important;
+            font-size: 14pt !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+        }
+        #i1.sni #i2 div:nth-child(2),
+        #i1.sni #i4 div:nth-child(1) {
+            /*** READER METADATA ***/
+            visibility: hidden !important;
+        }
+        #i1.sni #i6 .mr, 
+        #i1.sni #i7 .mr {
+            /*** READER BOTTOM LINKS ICON ***/
+            visibility: hidden !important;
+        }
+        #loadfail {
+            /*** RELOAD ICON ***/
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            bottom: 31px !important;
+            right: 20px !important;
+            visibility: hidden !important;
+        }
+        #loadfail:after {
+            background-color: #22202B !important;
+            background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
+            background-size: 30px auto !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            content: " " !important;
+            padding: 10px 20px !important;
+            visibility: visible !important;
+        }
+        #i6 a[href*="shash"] {
+            /*** SEARCH FILE ICON ***/
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            bottom: 31px !important;
+            right: 75px !important;
+            visibility: hidden !important;
+        }
+        #i6 a[href*="shash"]::after {
+            background-color: #22202B !important;
+            background-image: url("https://i.imgur.com/oprVAfY.png") !important;
+            background-size: 18px auto !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            content: " " !important;
+            padding: 10px 20px !important;
+            visibility: visible !important;
+        }
+        #i7 a[href*="fullimg"] {
+            /*** DOWNLOAD ICON ***/
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            bottom: 31px !important;
+            right: 130px !important;
+            visibility: hidden !important;
+        }
+        #i7 a[href*="fullimg"]::after {
+            background-color: #22202B !important;
+            background-image: url("https://i.imgur.com/6TxmFSU.png") !important;
+            background-size: 19px auto !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            content: " " !important;
+            padding: 10px 20px !important;
+            visibility: visible !important;
+        }
+        #i1.sni div.sn img,
+        #i1.sni .sb > a > img {
+            /*** READER NAVIGATION ICONS ***/
+            width: 30px;
+            height: 30px;
+            padding: 0px 2px;
+            opacity: 0;
+        }
+        #i1.sni a#prev {
+            background: url('https://i.imgur.com/tKOgREQ.png') no-repeat !important;
+            background-position: 50% 50% !important;
+            background-size: cover !important;
+            visibility: visible !important;
+        }
+        #i1.sni a#next {
+            background: url('https://i.imgur.com/d5zq2fu.png') no-repeat !important;
+            background-position: 50% 50% !important;
+            background-size: cover !important;
+            visibility: visible !important;
+        }
+        #i1.sni .sb > a {
+            background: url('https://i.imgur.com/wAH0xW9.png') no-repeat !important;
+            background-position: 50% 50% !important;
+            background-size: cover !important;
+        }
+    
+/* FAVORITE */
+/** DESCRIPTION : change the elements of the favorite page **/
+        h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
+            background: no-repeat url("https://up.vidyagam.es/5dd837cf-a303-4857-b9b3-4ba8afb19cc3-01.png") center 28% !important;
+            background-size: cover !important;
+            border: 1px solid #000 !important;
+            color: transparent;
+            height: 154px !important;
+            width: 99.5% !important;
+            line-height: 156px !important;
+            margin-top: 28px !important;
+            margin-bottom: -29px !important;
+            margin-left: 2px !important;
+        }
+        h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"]:before {
+            color: #FFF !important;
+            content: "「変態」" !important;
+            font-family: "KFhimaji" !important;
+            font-size: 31pt !important;
+            margin-left: 62px !important;
+            text-shadow: 3px 3px rgba(117, 83, 108, .7) !important;
+        }
+        .ido table.ptt {
+            /*** FAVORITE TOP PAGINATION ***/
+            display: none !important;
+        }
+        .nosel[style="position:relative; width:825px; margin:10px auto 5px"] {
+            /*** FAVORITE CATEGORIES ***/
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            padding: 10px 0px !important;
+            width: 99.5% !important;
+            text-align: center !important;
+            margin-top: 28px !important;
+            margin-left: 2px !important;
+            margin-bottom: -22px !important;
+        }
+        .nosel[style="position:relative; width:825px; margin:10px auto 5px"] .fp {
+            font-size: 9pt;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            margin-left: 4px !important;
+            float: none !important;
+            display: inline-block !important;
+        }
+        .nosel[style="position:relative; width:825px; margin:10px auto 5px"] .fp:hover {
+            background: transparent !important;
+            border: none !important;
+        }
+        .fp.fps {
+            /*** SHOW ALL FAVORITE BUTTON ***/
+            background-color: #22202B !important;
+            border: 1px solid #000 !important;
+            border-radius: 2px !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            padding: 12px 15px !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            left: 17px !important;
+            bottom: 75px !important;
+            z-index: 999 !important;
+            margin: 0px !important;
+        }
+        .nosel a[href="https://exhentai.org/favorites.php"] {
+            font-size: 12pt !important;
+        }
+        div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] {
+            /*** FAVORITE OPTIONS ***/
+            color: transparent;
+        }
+        div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] .stdinput {
+            background-color: #383745 !important;
+            color: transparent;
+            height: 32px !important;
+            width: 32px !important;
+            position: fixed !important;
+            top: 21px !important;
+            right: 63px !important;
+            z-index: 999 !important;
+        }
+        div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] *:not(option) {
+            background: #383745 !important;
+            background-size: 100% auto !important;
+        }
+        div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] option {
+            color: #FFF !important;
+        }
+        form[name="favform"] .stdbtn[value="Apply"] {
+            background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
+            background-color: #383745 !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: 15px auto !important;
+            border: 1px solid #000 !important;
+            border-radius: 1px !important;
+            box-shadow: none !important;
+            color: transparent !important;
+            width: 20px !important;
+            padding: 15px !important;
+            position: fixed !important;
+            top: 21px !important;
+            right: 22px !important;
+            z-index: 999 !important;
+        }
+        .fp div.i,
+        div.i[id*="favicon"],
+        .stuffbox div[style*="float:left; padding:1px 1px 0 4px;"] {
+            /*** FAVORITE ICONS ***/
+            background-image: url(https://my.mixtape.moe/fvesxw.png) !important;   
+        }
+        .fp .i {
+            margin-top: 2px !important;
+            margin-right: 4px !important;
+            margin-left: 4px !important;
+        }
+   
+/* SETTINGS */
+/** DESCRIPTION : change the elements of the settings page **/
+        #outer.stuffbox,
+        .eze_settings_box {
+            background: #22202B !important;
+            padding: 20px 30px 30px 30px !important;
+            margin-top: 178px !important;
+        }
+        #outer.stuffbox h1,
+        .eze_settings_header {
+            font-size: 16pt !important;
+            font-stretch: condensed !important;
+            text-align: left !important;
+            text-transform: uppercase !important;
+        }
+        #apply {
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: #FFF !important;
+            padding: 7px 20px 10px 20px !important;
+            text-decoration: none !important;
+            position: fixed !important;
+            right: 20px !important;
+            bottom: 20px !important;
+            visibility: visible !important;
+            z-index: 100 !important;
+        }
+        #apply .stdbtn[value="Apply"] {
+            background: transparent !important;
+            border: none !important;
+            color: #FFF !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+        }
+        .eze_settings_entry:nth-of-type(2n) {
+            background-color: inherit !important;
+        }
+
+/* TORRENT */
+/** DESCRIPTION : change the elements of the torrent page **/
+        #torrentform > p {
+            /*** TORRENT HEADER ***/
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            padding: 18px !important;
+            width: 96.5% !important;
+            text-transform: uppercase !important;
+            margin-left: 2px !important;
+            margin-bottom: -11px !important;
+        }
+        #torrentform > p > a {
+            color: #F9AE74;
+            text-decoration: none !important;
+        }
+        #torrentform > p > a[style*="text-decoration:none"] {
+            color: #FFF;
+        }
+    
+/* UPLOAD */
+/** DESCRIPTION : change the elements of the upload page **/
+        form[action="https://exhentai.org/upload/manage"] {
+            background: #22202B !important;
+            border: 1px solid #000 !important;
+            padding: 20px !important;
+            margin-top: 160px !important;
+        }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/s/.*"), regexp("(http|https)://exhentai.org/uconfig.php.*"), regexp("(http|https)://e-hentai.org/s/.*"), regexp("(http|https)://e-hentai.org/uconfig.php.*") {
+p.ip {
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            padding: 10px 15px !important;
+            position: fixed !important;
+            left: 20px !important;
+            bottom: 20px !important;
+            z-index: 999 !important;
+        }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/favorites.php.*"), regexp("(http|https)://e-hentai.org/favorites.php.*") {
+body .ip:nth-of-type(2) {
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            padding: 10px 15px !important;
+            position: fixed !important;
+            left: 20px !important;
+            bottom: 20px !important;
+            z-index: 999 !important;
+        }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/torrents.php.*"), regexp("(http|https)://e-hentai.org/torrents.php.*") {
+        .itg {
+    		width: 99.7% !important;
+		}		
+        .ih {
+            /*** TORRENT TITLE ***/
+            background: no-repeat url("https://i.imgur.com/ovO7na7.jpg") center 38% !important;
+            background-size: cover !important;
+            border: 1px solid #000 !important;
+            color: transparent;
+            height: 154px !important;
+            width: 99.5% !important;
+            line-height: 156px !important;
+            margin-top: 28px !important;
+            margin-bottom: -17px !important;
+        }
+        .ih:before {
+            color: #FFF !important;
+            content: "「変態」" !important;
+            font-family: "KFhimaji" !important;
+            font-size: 31pt !important;
+            margin-left: 62px !important;
+            text-shadow: 3px 3px rgba(117, 83, 108, .7) !important;
+        }
+        .ip:nth-of-type(1) {
+            /*** TORRENT RESULT ***/
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: #FFF !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            padding: 10px 20px !important;
+            max-width: 150px !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 100 !important;
+        }
+        .itd[style="width:102px; white-space:nowrap"] {
+            /*** TORRENT UPLOAD TIME ***/
+            padding-left: 10px !important;
+        }
+        .gtr0 > .itd:nth-child(5),
+        .gtr1 > .itd:nth-child(5) {
+            color: #2CC990 !important;
+            font-weight: bold !important;
+        }
+        .gtr0 > .itd:nth-child(6),
+        .gtr1 > .itd:nth-child(6) {
+            color: #E26E67 !important;
+            font-weight: bold !important;
+        }
+        table.ptb {
+            /*** TORRENT BOTTOM PAGINATION ***/
+            margin: 0px 0px 0px 2px !important;
+            width: 99.7% !important;
+        }
+        .ptb td * {
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+        }
+        .ptb td:nth-of-type(1) a,
+        .ptb td:nth-last-of-type(1) a{
+            color: transparent;
+        }   
+        .ptb td:nth-of-type(1) {
+            background: #7D6962 !important;
+            color: transparent !important;
+        }
+        .ptb td:nth-last-of-type(1) {
+            background: #383745 !important;
+            color: transparent !important;
+        }
+        .ido > .ip:nth-of-type(2),
+        .ido > .ip:nth-of-type(3) {
+            visibility: hidden !important;
+        }
+        body > .ip {
+            /*** FAVORITE FRONT PAGE BUTTON ***/
+            background: #22202B !important;
+            border: 1px solid #111 !important;
+            border-radius: 2px !important;
+            color: transparent;
+            padding: 10px 15px !important;
+            position: fixed !important;
+            left: 20px !important;
+            bottom: 20px !important;
+            z-index: 999 !important;
+        }
+        body > .ip a {
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+            text-transform: uppercase !important;
+        }
+        body > .ip a:hover {
+           color: #F9AE74 !important;
+        }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/gallerypopups.php.*"), regexp("(http|https)://exhentai.org/gallerytorrents.php.*"), regexp("(http|https)://exhentai.org/archiver.php.*"), regexp("(http|https)://e-hentai.org/gallerypopups.php.*"), regexp("(http|https)://e-hentai.org/gallerytorrents.php.*"), regexp("(http|https)://e-hentai.org/archiver.php.*") {
+/* POPUP WINDOWS */
+/** DESCRIPTION : change the elements of the popped up windows **/
+        .stuffbox,
+        div#db {
+            /*** POPUP WINDOW MAIN BOX ***/
+            background: #22202B !important;
+            padding: 20px 20px 80px 20px !important;
+        }
+        div[style="width:100%; height:40px; font-size:11pt; font-weight:bold; margin:3px; text-align:center; overflow:hidden"],
+        .stuffbox h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"],
+        #db h1[style="font-size:10pt; font-weight:bold"] {
+            /*** POPUP WINDOW TITLE ***/
+            font-size: 14pt !important;
+            font-stretch: condensed !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+            text-align: left !important;
+        }
+        .stuffbox #galpop p[style="text-align:center"] {
+            text-align: left !important;
+            margin-top: -15px !important;
+            margin-left: 2px !important;
+            margin-bottom: 20px !important;
+        }
+        p[style="margin:0; padding:3px 0px; text-align:center"] {
+            text-align: left !important;
+            margin-top: 0px !important;
+            margin-left: 3px !important;
+            margin-bottom: 20px !important;
+        }
+        div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] {
+            border: 1px solid #000 !important;
+            padding: 10px !important;
+        }
+        .stuffbox .stdbtn,
+        #db .stdbtn {
+            border: 1px solid #000 !important;
+            border-radius: 2px !important;
+            font-size: 11pt !important;
+            font-stretch: condensed !important;
+            font-weight: bold !important;
+            height: 40px !important;
+            width: 150px !important;
+            text-transform: uppercase !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+            margin-top: 20px !important;
+        }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/.*f_shash=.*"), regexp("(http|https)://e-hentai.org/.*f_shash=.*") {
+form[action="https://exhentai.org/"] > div p,
+        table.itsr {
+            visibility: hidden !important;
+        }
+}
             margin-right: -10px !important;
         }
         table.itg .it3 {
