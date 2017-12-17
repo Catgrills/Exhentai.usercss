@@ -48,7 +48,7 @@ I use several fonts for my custom stylesheet.
 Trivia
 -------------------------------
 
-I decided to name the script <i>Bamboo</i> because some anon suggested it to me (because Panda loves Bambo, right ?). The <i>X</i> comes from the famous slogan of Exhentai <i>The X Makes It Sound Cool</i>, and I used this letter to differenciate it with my previous Exhentai script called <i>Bamboo</i>.
+I decided to name the script <i>Bamboo-X</i> because some anon suggested it to me (because Panda loves Bambo, right ?). The <i>X</i> comes from the famous slogan of Exhentai <i>The X Makes It Sound Cool</i>, and I used this letter to differenciate it with my previous Exhentai script called <i>Bamboo</i>.
 
 
 Report
