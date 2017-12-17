@@ -8,7 +8,7 @@ About
 
 Bamboo-X is a custom stylesheet for exhentai.
 
-A custom stylesheet (or userstyles) a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
 
 Instruction
 -------------------------------
