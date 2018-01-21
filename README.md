@@ -1,14 +1,17 @@
 # Bamboo-X
 
-![screenshot](https://i.imgur.com/F9Xkja0.jpg)
-Preview of Bamboo-X.
+![screenshot](https://s1.gifyu.com/images/Screenshot-1290.png)
+
+![screenshot](https://s1.gifyu.com/images/Screenshot-1292.png)  
+
+Preview of <i>Bamboo-X</i>.
 
 About
 -------------------------------
 
-Bamboo-X is a custom stylesheet for exhentai.
+<i>Bamboo-X</i> is a custom stylesheet for <i>Exhentai</i>.
 
-A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+Userstyles are CSS code designed to alter the appearance of one, some, or all sites.
 
 Instruction
 -------------------------------
@@ -33,9 +36,9 @@ Instruction
 
 I use several fonts for my custom stylesheet.
 <ol>
-<li> <a href="https://www.fontsquirrel.com/fonts/neuton">Neuton</a></li>
-<li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a> (make sure to install Roboto Condensed)</li>
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
+<li> <a href="https://www.fontsquirrel.com/fonts/neuton">Neuton</a></li>
+<li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
 </ol>
 
 <strong>Step 4 : Show your appreciation </strong>
@@ -45,13 +48,7 @@ I use several fonts for my custom stylesheet.
 <li>You can share it, but don't forget to mention me.</li>
 </ol>
 
-Trivia
--------------------------------
-
-I decided to name the script <i>Bamboo-X</i> because some anon suggested it to me (because Panda loves Bambo, right ?). The <i>X</i> comes from the famous slogan of Exhentai <i>The X Makes It Sound Cool</i>, and I used this letter to differenciate it with my previous Exhentai script called <i>Bamboo</i>.
-
-
 Report
 -------------------------------
 
-If you find some elements that weren't tweaked or that you simply want to modify or re-add an element that was removed, don't hesitate to report it in the comments.
+Don't hesitate to report any issues you find while using this userstyle.
