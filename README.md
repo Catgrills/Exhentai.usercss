@@ -32,7 +32,14 @@ Instruction
 <li> <a href="https://pastebin.com/rECzzV0i">manually</a> : create a new style in Stylish and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
 </ol>
 
-<strong>Step 3 : Install the font </strong>
+<strong>Step 3 : Install others scripts </strong>
+
+<ol>
+<li> Install <a href="https://sleazyfork.org/en/scripts/37879-exhentai-misc-edition">Exhentai : Misc Edition </a></li>
+<li> Install <a href="https://dnsev-h.github.io/eze/">eze</a></li>
+</ol>
+
+<strong>Step 4 : Install the font </strong>
 
 I use several fonts for my custom stylesheet.
 <ol>
@@ -41,7 +48,7 @@ I use several fonts for my custom stylesheet.
 <li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
 </ol>
 
-<strong>Step 4 : Show your appreciation </strong>
+<strong>Step 5 : Show your appreciation </strong>
 <ol>
 <li>Feel free to comment this submission (critique, suggestion, compliment, etc).</li>
 <li>If you like my works, don't hesitate to watch me.</li>
