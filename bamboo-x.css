@@ -2145,7 +2145,3 @@ p.ip {
         color: #F9AE74 !important;
     }
 }
-
-@-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
-
-}
