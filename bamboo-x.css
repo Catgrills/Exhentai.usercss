@@ -1,6 +1,5 @@
 @-moz-document domain("exhentai.org") {
-
-    /* GENERAL */
+/* GENERAL */
 
     /** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
     * {
@@ -1655,11 +1654,10 @@
         padding: 20px !important;
         margin-top: 160px !important;
     }
-
 }
 
-@-moz-document regexp("(http|https)://exhentai.org/s/.*"),regexp("(http|https)://exhentai.org/uconfig.php.*") {
-    p.ip {
+@-moz-document regexp("(http|https)://exhentai.org/s/.*"), regexp("(http|https)://exhentai.org/uconfig.php.*") {
+p.ip {
         background: #22202B !important;
         border: 1px solid #111 !important;
         border-radius: 2px !important;
@@ -1670,12 +1668,10 @@
         bottom: 20px !important;
         z-index: 999 !important;
     }
-
 }
 
 @-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
-
-    /* FAVORITE */
+/* FAVORITE */
 
     /** DESCRIPTION : change the elements of the favorite page **/
     h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
@@ -1730,14 +1726,13 @@
         bottom: 0px !important;
         left: 0px !important;
         margin: auto !important;
+        overflow-x: hidden !important;
         overflow-y: scroll !important;
         z-index: 9999 !important;
         display: none;
     }
 
-    .nosel .fp[style*="width: 160px;
-
-    "] {
+    .nosel .fp[style*="width:160px;"] {
         border: 1px solid #000 !important;
         border-radius: 1px !important;
         padding: 90px 70px !important;
@@ -1766,9 +1761,7 @@
         filter: invert(1) !important;
     }
 
-    .nosel .fp[style*="width: 160px;
-
-    "]:hover {
+    .nosel .fp[style*="width:160px;"]:hover {
         border-color: #FE8A71 !important;
         transition: all .3s ease-in-out !important;
     }
@@ -1982,7 +1975,7 @@
 }
 
 @-moz-document regexp("(http|https)://exhentai.org/torrents.php.*") {
-    .itg {
+.itg {
         width: 99.7% !important;
     }
 
@@ -2151,5 +2144,8 @@
     body > .ip a:hover {
         color: #F9AE74 !important;
     }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
 
 }
