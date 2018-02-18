@@ -1,6 +1,6 @@
 # Bamboo-X
 
-![screenshot](https://s1.gifyu.com/images/Exhentai_css.png)
+![screenshot](https://s1.gifyu.com/images/Exhentai_css.png | width=100)
 
 Preview of <i>Bamboo-X</i>.
 
