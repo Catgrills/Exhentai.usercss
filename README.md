@@ -30,7 +30,7 @@ Instruction
 
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li> <a href="https://pastebin.com/rECzzV0i">manually</a> : create a new style in Stylish and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li> <a href="https://pastebin.com/rECzzV0i">manually</a> : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
 </ol>
 
 <strong>Step 3 : Install others scripts </strong>
