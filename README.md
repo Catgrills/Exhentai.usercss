@@ -1,8 +1,8 @@
 # Bamboo-X
 
-![screenshot](https://s1.gifyu.com/images/Screenshot-1323.png)
+![screenshot](https://s1.gifyu.com/images/Screenshot-1349.png)
 
-![screenshot](https://s1.gifyu.com/images/Screenshot-1324.png)
+![screenshot](https://s1.gifyu.com/images/Screenshot-1348.png)
 
 
 Preview of <i>Bamboo-X</i>.
