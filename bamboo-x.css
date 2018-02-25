@@ -2106,7 +2106,7 @@
 
 	input[name="modifygids[]"] {
 		visibility: visible !important;
-		margin-top: 6px !important;
+		margin-top: -2px !important;
 		margin-right: 8px !important;
 	}
 
