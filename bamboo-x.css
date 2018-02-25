@@ -1591,6 +1591,7 @@
             bottom: 0px !important;
             left: 0px !important;
             margin: auto !important;
+	    overflow-x: hidden !important;
             overflow-y: scroll !important;
             z-index: 9999 !important;
             display: none;
