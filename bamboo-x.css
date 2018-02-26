@@ -276,7 +276,7 @@
 	}
 
 	#f_doujinshi_img {
-		background: no-repeat url("https://i.imgur.com/1zPR7vp.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/PZ06V9H.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -287,7 +287,7 @@
 	}
 
 	#f_manga_img {
-		background: no-repeat url("https://i.imgur.com/dXCrS20.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/4PQwSBP.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -298,7 +298,7 @@
 	}
 
 	#f_artistcg_img {
-		background: no-repeat url("https://s1.gifyu.com/images/001b146a48b6f8de7ef.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/OGV8S1z.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -309,7 +309,7 @@
 	}
 
 	#f_gamecg_img {
-		background: no-repeat url("https://i.imgur.com/b5iXaKJ.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/hZBx6F3.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -320,7 +320,7 @@
 	}
 
 	#f_western_img {
-		background: no-repeat url("https://i.imgur.com/tfRsUzu.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/D9OdyqB.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -331,7 +331,7 @@
 	}
 
 	#f_imageset_img {
-		background: no-repeat url("https://i.imgur.com/Mp94u02.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/0WRwUHm.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -342,7 +342,7 @@
 	}
 
 	#f_non-h_img {
-		background: no-repeat url("https://i.imgur.com/7CXU8dM.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/lIsnRWe.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -353,7 +353,7 @@
 	}
 
 	#f_cosplay_img {
-		background: no-repeat url("https://i.imgur.com/KUKNYyT.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/Adqz0Hr.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -364,7 +364,7 @@
 	}
 
 	#f_asianporn_img {
-		background: no-repeat url("https://i.imgur.com/ZMkG39f.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/bL2WqFy.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -375,7 +375,7 @@
 	}
 
 	#f_misc_img {
-		background: no-repeat url("https://i.imgur.com/1Y9sID0.jpg") center !important;
+		background: no-repeat url("https://i.imgur.com/qdxrE1t.jpg") center !important;
 		background-size: cover !important;
 	}
 
@@ -1730,41 +1730,41 @@
 	/* TORRENT POPUP */
 	
 	/** DESCRIPTION : change the elements of the torrent popup page **/
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] {
-            height: 100% !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"] {
-            font-size: 15pt !important;
-            margin-bottom: 20px !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
-            border: 1px solid #000 !important;
-            font-size: 12pt !important;
-            padding: 15px !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
-            font-size: 12pt !important;
-            margin-top: 15px !important;
-            margin-bottom: 20px !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
-            border: 1px solid #000 !important;
-            font-size: 12pt !important;
-            padding: 10px !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] {
-            font-size: 14pt !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
-            width: 137px !important;
-            height: 50px !important;
-            line-height: 25px !important;
-        }
-        #torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="text-align:center; margin-top:5px"] {
-            font-size: 14pt !important;
-            font-stretch: condensed !important;
-            margin-top: 32px !important;
-        }
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] {
+	    	height: 100% !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"] {
+		font-size: 15pt !important;
+		margin-bottom: 20px !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
+		border: 1px solid #000 !important;
+		font-size: 12pt !important;
+		padding: 15px !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
+		font-size: 12pt !important;
+		margin-top: 15px !important;
+		margin-bottom: 20px !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
+		border: 1px solid #000 !important;
+		font-size: 12pt !important;
+		padding: 10px !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] {
+		font-size: 14pt !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
+		width: 137px !important;
+		height: 50px !important;
+		line-height: 25px !important;
+	}
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="text-align:center; margin-top:5px"] {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		margin-top: 32px !important;
+	}
 
 	/* SETTINGS */
 
@@ -2357,4 +2357,3 @@
 	}
 
 }
-
