@@ -1343,6 +1343,10 @@
 		right: 20px !important;
 	}
 
+	#gdo4 {
+        	z-index: 99 !important;    
+	}
+	
 	#gdo4 .tha.nosel {
 		background: #22202B !important;
 		bottom: 20px !important;
