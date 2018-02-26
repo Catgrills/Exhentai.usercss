@@ -1726,6 +1726,45 @@
 		padding: 9px 15px 10px 15px !important;
 		margin-top: 10px !important;
 	}
+	
+	/* TORRENT POPUP */
+	
+	/** DESCRIPTION : change the elements of the torrent popup page **/
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] {
+            height: 100% !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"] {
+            font-size: 15pt !important;
+            margin-bottom: 20px !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
+            border: 1px solid #000 !important;
+            font-size: 12pt !important;
+            padding: 15px !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
+            font-size: 12pt !important;
+            margin-top: 15px !important;
+            margin-bottom: 20px !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
+            border: 1px solid #000 !important;
+            font-size: 12pt !important;
+            padding: 10px !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] {
+            font-size: 14pt !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
+            width: 137px !important;
+            height: 50px !important;
+            line-height: 25px !important;
+        }
+        #torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="text-align:center; margin-top:5px"] {
+            font-size: 14pt !important;
+            font-stretch: condensed !important;
+            margin-top: 32px !important;
+        }
 
 	/* SETTINGS */
 
