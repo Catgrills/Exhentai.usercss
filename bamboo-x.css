@@ -1993,42 +1993,52 @@
 		margin-left: 196px !important;
 	}
 
+	a[href*="favcat=0"] .fp,
 	.fp[onclick*="favcat=0"] {
 		background: #60646D;
 	}
 
+	a[href*="favcat=1"] .fp,
 	.fp[onclick*="favcat=1"] {
 		background: #EB6361;
 	}
 
+	a[href*="favcat=2"] .fp,
 	.fp[onclick*="favcat=2"] {
 		background: #EBBD63;
 	}
 
+	a[href*="favcat=3"] .fp,
 	.fp[onclick*="favcat=3"] {
 		background: #EDD834;
 	}
 
+	a[href*="favcat=4"] .fp,
 	.fp[onclick*="favcat=4"] {
 		background: #97CE68;
 	}
 
+	a[href*="favcat=5"] .fp,
 	.fp[onclick*="favcat=5"] {
 		background: #F6CD61;
 	}
 
+	a[href*="favcat=6"] .fp,
 	.fp[onclick*="favcat=6"] {
 		background: #8BCBDE;
 	}
 
+	a[href*="favcat=7"] .fp,
 	.fp[onclick*="favcat=7"] {
 		background: #00587A;
 	}
 
+	a[href*="favcat=8"] .fp,
 	.fp[onclick*="favcat=8"] {
 		background: #8B4D93;
 	}
 
+	a[href*="favcat=9"] .fp,
 	.fp[onclick*="favcat=9"] {
 		background: #BF4A67;
 	}
