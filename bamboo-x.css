@@ -1,6 +1,5 @@
 @-moz-document domain("exhentai.org") {
-
-	/* GENERAL */
+/* GENERAL */
 
 	/** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
 	* {
@@ -19,14 +18,17 @@
 		background: #383745 !important;
 	}
 
-	a,
-	a:hover {
-		transition: all .3s ease-in-out !important;
-	}
-
 	a:focus {
 		outline: none !important;
 	}
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
 	input[type="button"]:enabled:hover,
 	input[type="submit"]:enabled:hover,
@@ -609,12 +611,12 @@
 	}
 
 	.itg .id2 {
-		height: 25px !important;
+		max-height: 25px !important;
+        height: auto !important;
 		width: 200px !important;
 		margin-bottom: 12px !important;
 		text-align: left !important;
-		overflow: hidden;
-		transition: all 0.3s ease-in-out !important;
+		transition: max-height 0.35s ease-out !important;
 	}
 
 	.id2 a {
@@ -626,8 +628,13 @@
 		overflow: hidden !important;
 	}
 
+	.id1:not(.e-Highlighted):not(.e-Filtered):hover > .id2 > a {
+		padding-bottom: 0px !important;        
+	}
+
 	.id1:hover > .id2 > a {
 		background: transparent !important;
+        transition: all 0.35s ease-in-out !important;
 	}
 
 	.id2:hover a {
@@ -636,8 +643,8 @@
 	}
 
 	.itg .id2:hover {
-		height: 85px !important;
-		transition: all 0.3s ease-in-out !important;
+		max-height: 900px !important;
+        transition: max-height 0.45s ease-in !important;
 	}
 
 	.itg .id3,
@@ -1078,6 +1085,10 @@
 		font-weight: normal !important;
 		letter-spacing: .1px !important;
 	}
+
+    #taglist a[style="color: blue;"] {
+        color: #F29B34 !important;
+    }
 
 	#gmid #gd4 .gt a:active,
 	#gmid #gd4 .gt a:hover,
@@ -1699,9 +1710,10 @@
 		height: 65px !important;
 	}
 
-	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top: 1px"], .stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
+	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top:1px"], 
+	.stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
 		text-transform: lowercase !important;
-		margin-top: -4px !important;
+		margin-top: -3px !important;
 	}
 
 	.stuffbox[style*="width:584px"] div[style*="float:left;"] p {
@@ -1731,40 +1743,106 @@
 	
 	/** DESCRIPTION : change the elements of the torrent popup page **/
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] {
-	    	height: 100% !important;
+	    height: 100% !important;
 	}
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"] {
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"],
+	#torrentinfo h1[style="font-size:12pt; font-weight:bold; margin:3px; text-align:center"] {
+        font-family: "Roboto", "KFhimaji" !important;
 		font-size: 15pt !important;
 		margin-bottom: 20px !important;
 	}
+
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
 		border: 1px solid #000 !important;
-		font-size: 12pt !important;
+		font-size: 14pt !important;
 		padding: 15px !important;
 	}
+
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
-		font-size: 12pt !important;
+		font-size: 14pt !important;
 		margin-top: 15px !important;
 		margin-bottom: 20px !important;
 	}
+
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
 		border: 1px solid #000 !important;
-		font-size: 12pt !important;
+		font-size: 14pt !important;
 		padding: 10px !important;
 	}
+
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] {
 		font-size: 14pt !important;
 	}
+
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
 		width: 137px !important;
 		height: 50px !important;
 		line-height: 25px !important;
 	}
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="text-align:center; margin-top:5px"] {
+
+	div[style="text-align:center; margin-top:5px"] {
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		margin-top: 32px !important;
 	}
+
+    #torrentinfo div[style*="border:1px solid #C7B5A3"] {
+        background: #25373D !important;
+        border: 1px solid #000 !important;
+        padding: 20px !important;
+    }
+
+    .stuffbox[style*="width:584px"] input[name="torrent_info"] {
+        background: #22202B !important;
+        font-weight: bold !important;
+        line-height: 32px !important;
+        width: 140px !important;
+        text-transform: uppercase !important;
+    }
+
+	/* REPORT */
+
+	/** DESCRIPTION : change the elements of the report page **/
+
+    p[style="padding:0 0 10px; font-size:10pt"] {
+        color: transparent;
+    }
+
+    p[style="padding:0 0 10px; font-size:10pt"] a[style="text-decoration:none; font-weight:bold"] {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        text-transform: uppercase !important;
+    }
+
+    #gdt[style="font-size:10pt; text-align:center"] {
+        background: #22202B !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding: 15px 0px !important;
+    }
+
+    #report_type {
+        background: #25373D !important;
+        border: 1px solid #000 !important;
+        border-radius: 1px !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding: 10px !important;
+    }
+
+	/* PETITION POPUP */
+
+	/** DESCRIPTION : change the elements of the petition popup page **/
+
+    #galpop div[style="width:100%; height:280px; overflow:auto"] {
+        font-size: 15pt !important;
+        height: 400px !important;
+    }
+
+    #galpop div[style="width:100%; height:280px; overflow:auto"] * {
+        font-size: 14pt !important;
+    }
 
 	/* SETTINGS */
 
@@ -1853,11 +1931,10 @@
 		padding: 20px !important;
 		margin-top: 160px !important;
 	}
-
 }
 
-@-moz-document regexp("(http|https)://exhentai.org/s/.*"),regexp("(http|https)://exhentai.org/uconfig.php.*") {
-	p.ip {
+@-moz-document regexp("(http|https)://exhentai.org/s/.*"), regexp("(http|https)://exhentai.org/uconfig.php.*") {
+p.ip {
 		background: #22202B !important;
 		border: 1px solid #111 !important;
 		border-radius: 2px !important;
@@ -1868,12 +1945,10 @@
 		bottom: 20px !important;
 		z-index: 999 !important;
 	}
-
 }
 
 @-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
-
-	/* FAVORITE */
+/* FAVORITE */
 
 	/** DESCRIPTION : change the elements of the favorite page **/
 	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
@@ -2187,11 +2262,10 @@
 	div[style="position:absolute; top:-35px; left:80px"] {
 		color: transparent !important;
 	}
-
 }
 
 @-moz-document regexp("(http|https)://exhentai.org/torrents.php.*") {
-	.itg {
+.itg {
 		width: 99.7% !important;
 	}
 
@@ -2365,5 +2439,4 @@
 	body > .ip a:hover {
 		color: #F9AE74 !important;
 	}
-
 }
