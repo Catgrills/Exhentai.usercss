@@ -1,6 +1,6 @@
 # Bamboo-X
 
-<img src="preview_bamboo-x.png" width="100%">
+<img src="preview_2_bamboo-x.png" width="100%">
 
 Preview of <i>Bamboo-X</i>.
 
@@ -24,14 +24,13 @@ Instruction
 <li>for Safari : <a href="http://sobolev.us/stylish/">Stylish</a></li>
 <li> for Dolphin : <a href="https://play.google.com/store/apps/details?id=ru.pmmlabs.stylish&amp;hl=en">Stylish</a></li>
 </ol>
-
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li> <a href="https://pastebin.com/rECzzV0i">manually</a> : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li> manually (<a href="https://pastebin.com/rECzzV0i">light version</a> or <a href="https://pastebin.com/htjmKYbH">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li><b>(NEW) STYLUS ONLY</b> : Import <a href="https://mega.nz/#F!4TIBUTaK!68UQF79dszA23h5snooTRw">bamboo-x.json</a> in Stylus by clicking the button <i>Import Styles</i>. You can change theme by clicking the gear icon next to the script name in the managment styles page.</li>
 </ol>
 
 <strong>Step 3 : Install others scripts </strong>
-
 <ol>
 <li> Install <a href="https://sleazyfork.org/en/scripts/37879-exhentai-misc-edition">Exhentai : Misc Edition </a></li>
 <li> Install <a href="https://dnsev-h.github.io/eze/">eze</a></li>
@@ -45,6 +44,7 @@ I use several fonts for my custom stylesheet.
 <li> <a href="https://www.freejapanesefont.com/honoka-antique-kaku-download/">Honoka Antique Kaku</a></li>
 <li> <a href="https://www.fontsquirrel.com/fonts/neuton">Neuton</a></li>
 <li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
+<li> <a href="https://www.freekoreanfont.com/bm-yeon-sung-download/">BM Yeon Sung</a> (Korean font)</li>
 </ol>
 
 <strong>Step 5 : Show your appreciation </strong>
