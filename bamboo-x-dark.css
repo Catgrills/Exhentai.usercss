@@ -1733,12 +1733,12 @@
 	}
 
 	#loadfail:after {
-		background-color: #212121 !important;
+		background-color: #22202B !important;
 		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
 		background-size: 30px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid #000 !important;
+		border: 1px solid #111 !important;
 		border-radius: 2px !important;
 		color: transparent;
 		content: " " !important;
