@@ -1,13 +1,34 @@
 @-moz-document domain("exhentai.org") {
-/* GENERAL */
+
+	/* COLORS */
+
+	/** DESCRIPTION : set the colors **/
+	:root {
+		--body-bg: #F0F1F5 !important;
+		--card-bg: #FFF !important;
+		--card-bg-2:#FAFAFA !important;
+		--card-bg-3:#E6DCDB !important;
+		--card-bg-4:#D4DBC8 !important;
+		--header-bg: #EBBD63 !important;
+		--border-color: #E0E0E0 !important;
+		--border-color-2:#E6567A !important;
+		--primary-color: #212121 !important;
+		--secondary-color: #999 !important;
+		--invert: invert(0) !important;
+	}
+
+	`,
+
+	/* GENERAL */
 
 	/** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
 	* {
-		font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+		font-family: "Roboto", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
+		text-shadow: none !important;
 	}
 
 	*::-moz-focus-inner {
-		border: 0;
+		border: 0 !important;
 	}
 
 	html {
@@ -15,27 +36,27 @@
 	}
 
 	body {
-		background: #383745 !important;
+		background: var(--body-bg) !important;
 	}
 
 	a:focus {
 		outline: none !important;
 	}
 
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 0px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 
 	input[type="button"]:enabled:hover,
 	input[type="submit"]:enabled:hover,
 	input[type="button"]:enabled:focus,
 	input[type="submit"]:enabled:focus {
-		background-color: inherit !important;
-		border-color: #000 !important;
+		background: #212121 !important;
+		border-color: var(--border-color) !important;
 		outline: none !important;
 	}
 
@@ -58,33 +79,33 @@
 	}
 
 	/* GALLERY LIST HELPER 
-	        #tagButtonsDiv {
-	background: #22202B !important;
-	border: 1px solid #000 !important;
-	padding: 40px 0px !important;
-	margin-bottom: 8px !important;
-	margin-left: 5px !important;
-	margin-top: -24px !important;
-	margin-right: 4px !important;
-	        }
-	        #tagButtonsDiv > div {
-	padding: 10px !important;
-	border: 1px solid #000 !important;
-	        }
-	        #tagButtonsDiv > div * {
-	font-size: 10pt !important;
-	        }
-	        table.itg {
-	margin-left: 5px !important;
-	margin-right: -10px !important;
-	        }
-	        table.itg .it3 {
-	margin-left: 0px !important;
-	margin-top: 10px !important;
-	        }
-	        table.itg .it4 {
-	margin-top: 10px !important;
-	        }
+	    #tagButtonsDiv {
+	        background: #22202B !important;
+	        border: 1px solid #000 !important;
+	        padding: 40px 0px !important;
+	        margin-bottom: 8px !important;
+	        margin-left: 5px !important;
+	        margin-top: -24px !important;
+	        margin-right: 4px !important;
+	    }
+	    #tagButtonsDiv > div {
+	        padding: 10px !important;
+	        border: 1px solid #000 !important;
+	    }
+	    #tagButtonsDiv > div * {
+	        font-size: 10pt !important;
+	    }
+	    table.itg {
+	        margin-left: 5px !important;
+	        margin-right: -10px !important;
+	    }
+	    table.itg .it3 {
+	        margin-left: 0px !important;
+	        margin-top: 10px !important;
+	    }
+	    table.itg .it4 {
+	        margin-top: 10px !important;
+	    }
 	*/
 
 	/* HEADER */
@@ -93,8 +114,8 @@
 	p#nb {
 
 		/*** HEADER ***/
-		background: #22202B !important;
-		border-bottom: 3px solid #CA8D6E !important;
+		background: var(--header-bg) !important;
+		border-bottom: 3px solid var(--border-color-2) !important;
 		padding: 32px 0px 30px 130px !important;
 		text-align: left !important;
 		position: absolute !important;
@@ -115,7 +136,7 @@
 	}
 
 	p#nb a:hover {
-		color: #F9AE74 !important;
+		color: #EBEBEB !important;
 	}
 
 	p#nb img {
@@ -143,7 +164,7 @@
 	}
 
 	#nb a:nth-of-type(1):hover:before {
-		color: #CA8D6E !important;
+		color: #FACA9B !important;
 	}
 
 	#nb a:nth-of-type(1) {
@@ -171,7 +192,7 @@
 		/*** HOME SEARCH BOX ***/
 		background: no-repeat url("https://i.imgur.com/Ah4lMHY.jpg") center 34% !important;
 		background-size: cover !important;
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		height: 120px !important;
 		padding: 20px !important;
 		width: auto !important;
@@ -181,8 +202,8 @@
 	}
 
 	form[action="https://exhentai.org/"] {
-		background: #383745 !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		height: 60% !important;
 		width: 80% !important;
 		position: fixed !important;
@@ -197,10 +218,11 @@
 	}
 
 	form[action="https://exhentai.org/"] .nopm input[name="f_search"] {
-		background: #22202B;
-		border: 1px solid #000000;
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
 		border-width: 0px 0px 1px 0px !important;
+		color: var(--primary-color);
 		font-size: 15pt !important;
 		font-stretch: condensed !important;
 		height: 30px !important;
@@ -212,11 +234,11 @@
 
 	input[value="Apply Filter"],
 	input[value="Clear Filter"] {
-		border: 1px solid #000 !important;
+		border: none !important;
 		border-radius: 1px !important;
-		height: 67px !important;
+		height: 66px !important;
 		width: 150px !important;
-		line-height: 67px !important;
+		line-height: 68px !important;
 		top: -5px !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
@@ -238,7 +260,7 @@
 	table.itc {
 
 		/*** HOME SEARCH CATEGORIES ***/
-		background: rgba(34, 32, 43, .01) !important;
+		background: transparent !important;
 		border-radius: 2px !important;
 		padding: 8px 0px !important;
 		height: auto !important;
@@ -258,12 +280,25 @@
 	.itc .ic {
 
 		/*** HOME SEARCH CATEGORIES ICONS ***/
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		height: 0px !important;
 		width: 0px !important;
 		padding: 18vh 0px 0px 14vw !important;
 		margin-bottom: 6px;
+	}
+
+	:root {
+		--doujinshi: url("https://i.imgur.com/PZ06V9H.jpg") !important;
+		--manga: url("https://i.imgur.com/4PQwSBP.jpg") !important;
+		--artistcg: url("https://i.imgur.com/OGV8S1z.jpg") !important;
+		--gamecg: url("https://i.imgur.com/hZBx6F3.jpg") !important;
+		--western: url("https://i.imgur.com/D9OdyqB.jpg") !important;
+		--nonh: url("https://i.imgur.com/lIsnRWe.jpg") !important;
+		--imageset: url("https://i.imgur.com/0WRwUHm.jpg") !important;
+		--cosplay: url("https://i.imgur.com/Adqz0Hr.jpg") !important;
+		--asian: url("https://i.imgur.com/bL2WqFy.jpg") !important;
+		--misc: url("https://i.imgur.com/qdxrE1t.jpg") !important;
 	}
 
 	.itdc img {
@@ -278,7 +313,7 @@
 	}
 
 	#f_doujinshi_img {
-		background: no-repeat url("https://i.imgur.com/PZ06V9H.jpg") center !important;
+		background: no-repeat var(--doujinshi) center !important;
 		background-size: cover !important;
 	}
 
@@ -289,7 +324,7 @@
 	}
 
 	#f_manga_img {
-		background: no-repeat url("https://i.imgur.com/4PQwSBP.jpg") center !important;
+		background: no-repeat var(--manga) center !important;
 		background-size: cover !important;
 	}
 
@@ -300,7 +335,7 @@
 	}
 
 	#f_artistcg_img {
-		background: no-repeat url("https://i.imgur.com/OGV8S1z.jpg") center !important;
+		background: no-repeat var(--artistcg) center !important;
 		background-size: cover !important;
 	}
 
@@ -311,7 +346,7 @@
 	}
 
 	#f_gamecg_img {
-		background: no-repeat url("https://i.imgur.com/hZBx6F3.jpg") center !important;
+		background: no-repeat var(--gamecg) center !important;
 		background-size: cover !important;
 	}
 
@@ -322,7 +357,7 @@
 	}
 
 	#f_western_img {
-		background: no-repeat url("https://i.imgur.com/D9OdyqB.jpg") center !important;
+		background: no-repeat var(--western) center !important;
 		background-size: cover !important;
 	}
 
@@ -333,7 +368,7 @@
 	}
 
 	#f_imageset_img {
-		background: no-repeat url("https://i.imgur.com/0WRwUHm.jpg") center !important;
+		background: no-repeat var(--imageset) center !important;
 		background-size: cover !important;
 	}
 
@@ -344,7 +379,7 @@
 	}
 
 	#f_non-h_img {
-		background: no-repeat url("https://i.imgur.com/lIsnRWe.jpg") center !important;
+		background: no-repeat var(--nonh) center !important;
 		background-size: cover !important;
 	}
 
@@ -355,7 +390,7 @@
 	}
 
 	#f_cosplay_img {
-		background: no-repeat url("https://i.imgur.com/Adqz0Hr.jpg") center !important;
+		background: no-repeat var(--cosplay) center !important;
 		background-size: cover !important;
 	}
 
@@ -366,7 +401,7 @@
 	}
 
 	#f_asianporn_img {
-		background: no-repeat url("https://i.imgur.com/bL2WqFy.jpg") center !important;
+		background: no-repeat var(--asian) center !important;
 		background-size: cover !important;
 	}
 
@@ -377,7 +412,7 @@
 	}
 
 	#f_misc_img {
-		background: no-repeat url("https://i.imgur.com/qdxrE1t.jpg") center !important;
+		background: no-repeat var(--misc) center !important;
 		background-size: cover !important;
 	}
 
@@ -437,8 +472,8 @@
 	}
 
 	.itss {
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 20px !important;
 		height: 200px !important;
 		width: 800px !important;
@@ -458,8 +493,8 @@
 	}
 
 	#fsdiv {
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 20px 20px 50px 20px !important;
 		height: 30%;
 		width: 40% !important;
@@ -475,17 +510,25 @@
 
 	#fsdiv *,
 	.itss * {
+		color: var(--primary-color);
 		font-family: "Roboto" !important;
 		font-size: 14pt !important;
 		font-stretch: condensed;
+		font-weight: normal !important;
+	}
+
+	#adv42 {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color);
+		border-radius: 1px !important;
+		color: var(--secondary-color) !important;
 	}
 
 	input[value="File Search"] {
-		background: #60646D;
-		border: 1px solid #000;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
-		color: #FFF !important;
-		font-weight: bold !important;
+		color: var(--secondary-color) !important;
 		padding: 5px 10px !important;
 		text-transform: uppercase !important;
 		margin-top: 8px !important;
@@ -493,8 +536,8 @@
 	}
 
 	input[name="sfile"] {
-		background: #60646D;
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 2px 2px 3px 2px !important;
 		margin-top: 1px !important;
 	}
@@ -502,8 +545,8 @@
 	.ip[style="margin-top:5px"] {
 
 		/*** HOME RESULTS ***/
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: #FFF !important;
 		font-size: 11pt !important;
@@ -524,26 +567,30 @@
 	}
 
 	#iw {
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		color: #D33257 !important;
-		font-size: 11pt !important;
+		font-size: 14pt !important;
 		font-stretch: condensed !important;
-		font-weight: bold !important;
-		letter-spacing: .5px !important;
-		padding: 10px !important;
+		font-weight: normal !important;
+		letter-spacing: 0px !important;
+		padding: 10px 10px 18px 10px !important;
 		width: 1174px !important;
-		text-transform: uppercase !important;
 		margin-top: -9px !important;
 	}
 
+	#iw * {
+		font-weight: normal !important;
+	}
+
 	p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
+		color: var(--secondary-color);
 		padding: 20px !important;
-		font-size: 11pt !important;
+		font-size: 14pt !important;
 		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-transform: uppercase !important;
+		font-style: normal !important;
+		font-weight: normal !important;
 		margin-top: -10px !important;
 		margin-right: 2px !important;
 		margin-left: 2px !important;
@@ -565,10 +612,10 @@
 	#dmi a[href*="set=dm_l"],
 	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"],
 	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"] {
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
-		color: #FFF !important;
+		color: var(--secondary-color) !important;
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -580,6 +627,13 @@
 		bottom: 25px !important;
 		visibility: visible !important;
 		z-index: 100 !important;
+	}
+
+	#dmi a[href*="set=dm_t"]:hover,
+	#dmi a[href*="set=dm_l"]:hover,
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"]:hover,
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"]:hover {
+		color: #F9AE74 !important;
 	}
 
 	div[style="position:relative; z-index:2"] {
@@ -595,8 +649,8 @@
 	.itg {
 
 		/*** HOME THUMBNAIL CONTENT ***/
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		max-width: 99% !important;
 		margin-top: -9px !important;
 		padding-top: 10px !important;
@@ -612,7 +666,7 @@
 
 	.itg .id2 {
 		max-height: 25px !important;
-        height: auto !important;
+		height: auto !important;
 		width: 200px !important;
 		margin-bottom: 12px !important;
 		text-align: left !important;
@@ -620,8 +674,10 @@
 	}
 
 	.id2 a {
+		color: var(--secondary-color) !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
+		font-weight: normal !important;
 	}
 
 	.id1:not(.e-Highlighted):not(.e-Filtered) > .id2 {
@@ -629,12 +685,12 @@
 	}
 
 	.id1:not(.e-Highlighted):not(.e-Filtered):hover > .id2 > a {
-		padding-bottom: 0px !important;        
+		padding-bottom: 0px !important;
 	}
 
 	.id1:hover > .id2 > a {
 		background: transparent !important;
-        transition: all 0.35s ease-in-out !important;
+		transition: all 0.35s ease-in-out !important;
 	}
 
 	.id2:hover a {
@@ -644,7 +700,7 @@
 
 	.itg .id2:hover {
 		max-height: 900px !important;
-        transition: max-height 0.45s ease-in !important;
+		transition: max-height 0.45s ease-in !important;
 	}
 
 	.itg .id3,
@@ -655,7 +711,7 @@
 
 	.itg .id3 {
 		background: #17171A !important;
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		height: 280px !important;
 	}
 
@@ -742,12 +798,14 @@
 
 		/*** LIST BODY ***/
 		background: transparent;
-		border-bottom: 1px dashed #344146 !important;
+		border-bottom: 1px dotted #BEBEBE !important;
 	}
 
 	tr.gtr0 td,
 	tr.gtr1 td {
-		font-size: 12pt !important;
+		color: var(--secondary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
 		padding: 10px 5px !important;
 	}
 
@@ -769,15 +827,16 @@
 	td.itu a {
 
 		/*** LIST LINKS ***/
-		color: #FFF !important;
-		font-size: 12pt !important;
+		color: var(--primary-color) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed;
 		font-weight: 500 !important;
 		text-decoration: none !important;
 		transition: all .3s ease-in-out !important;
 	}
 
 	.it5 {
-		height: 21px !important;
+		height: 24px !important;
 	}
 
 	.it5 > a:hover {
@@ -799,7 +858,7 @@
 	}
 
 	.it3 .i {
-		margin-top: 1px !important;
+		margin-top: -2px !important;
 		margin-right: 2px !important;
 	}
 
@@ -811,8 +870,8 @@
 
 	table.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
 		background: url('https://i.imgur.com/n8CjvZT.png') !important;
-		background-size: 140% auto !important;
-		background-position: 75% 80% !important;
+		background-size: 165% auto !important;
+		background-position: 75% 0% !important;
 	}
 
 	div.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
@@ -850,8 +909,17 @@
 		width: 99.7% !important;
 	}
 
+	table.ptb td {
+		border-color: var(--border-color) !important;
+	}
+    
+    table.ptb td:hover {
+     	background: var(--card-bg) !important;   
+    }
+
 	div[style="position:relative; z-index:2"] .ptb td *,
 	form[name="favform"] table.ptb td * {
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 	}
@@ -865,13 +933,14 @@
 
 	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1),
 	form[name="favform"] table.ptb td:nth-of-type(1) {
-		background: #7D6962 !important;
+		background: var(--card-bg-3) !important;
+		border-color: var(--border-color) !important;
 		color: transparent !important;
 	}
 
 	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1),
 	form[name="favform"] table.ptb td:nth-last-of-type(1) {
-		background: #383745 !important;
+		background: var(--card-bg-2) !important;
 		color: transparent !important;
 	}
 
@@ -881,8 +950,8 @@
 	.gm {
 
 		/*** GALLERY BOXES ***/
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 	}
 
 	.gm:nth-of-type(1) {
@@ -914,8 +983,10 @@
 	}
 
 	#gd2 #gn {
+		color: var(--primary-color);
 		font-size: 16pt !important;
 		font-stretch: condensed !important;
+		font-weight: normal;
 		max-width: 98% !important;
 		overflow: hidden !important;
 		text-align: left !important;
@@ -924,9 +995,12 @@
 	}
 
 	#gd2 h1#gj {
-		border-bottom: 1px dashed #344146 !important;
-		font-family: "Roboto", "KFhimaji" !important;
-		font-size: 12pt !important;
+		border-bottom: 1px dotted #BEBEBE !important;
+		color: var(--secondary-color);
+		font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed;
+		font-weight: normal;
 		height: 18px !important;
 		padding-bottom: 18px !important;
 		text-align: left !important;
@@ -943,7 +1017,7 @@
 		position: absolute;
 		top: 25px !important;
 		right: 18px !important;
-		filter: invert(1) !important;
+		filter: var(--invert) !important;
 	}
 
 	#gleft {
@@ -952,6 +1026,10 @@
 		padding: 0px !important;
 		margin-top: 96px !important;
 		margin-left: 10px !important;
+	}
+
+	#gleft #gd1 div {
+		border: 1px solid var(--border-color);
 	}
 
 	#gmid #gd3 {
@@ -982,23 +1060,25 @@
 	}
 
 	#gd3 #gdn a:before {
-		color: #FFF !important;
+		color: var(--primary-color) !important;
 		content: "Uploaded by " !important;
 		font-stretch: condensed !important;
+		font-weight: normal !important;
 		letter-spacing: .2px !important;
-		text-transform: uppercase !important;
 		margin-right: 5px !important;
 	}
 
 	#gdd *,
 	#gdr * {
+		color: var(--secondary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed;
+		font-weight: normal;
 		text-transform: lowercase !important;
 	}
 
 	.gdt1 {
-		color: #D4D4D4 !important;
+		color: var(--primary-color) !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		letter-spacing: .1px !important;
@@ -1014,9 +1094,9 @@
 	}
 
 	#grt1 {
+		color: #EBBD63 !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
-		text-transform: uppercase !important;
 	}
 
 	#gmid #gdf #fav {
@@ -1024,7 +1104,7 @@
 	}
 
 	#gmid #gdf #favoritelink::before {
-		color: #D4D4D4 !important;
+		color: var(--primary-color) !important;
 		content: "Featured in: ";
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
@@ -1066,8 +1146,8 @@
 	}
 
 	#gmid #gd4 .gt {
-		background: #383745 !important;
-		border-color: #000 !important;
+		background: var(--card-bg-2) !important;
+		border-color: var(--border-color) !important;
 		border-radius: 1px !important;
 		padding: 6px 12px !important;
 		margin-top: -5px !important;
@@ -1086,9 +1166,9 @@
 		letter-spacing: .1px !important;
 	}
 
-    #taglist a[style="color: blue;"] {
-        color: #F29B34 !important;
-    }
+	#taglist a[style="color: blue;"] {
+		color: #F29B34 !important;
+	}
 
 	#gmid #gd4 .gt a:active,
 	#gmid #gd4 .gt a:hover,
@@ -1097,8 +1177,8 @@
 	}
 
 	#gmid #gd4 .gtl {
-		background: #7D6962 !important;
-		border-color: #000 !important;
+		background: var(--card-bg-3) !important;
+		border-color: var(--border-color) !important;
 		border-radius: 1px !important;
 		border-style: solid !important;
 		padding: 6px 12px !important;
@@ -1107,8 +1187,8 @@
 	}
 
 	#gmid #gd4 .gtw {
-		background: #CA8D6E !important;
-		border-color: #000 !important;
+		background: var(--card-bg-4) !important;
+		border-color: var(--border-color) !important;
 		border-radius: 1px !important;
 		border-style: solid !important;
 		padding: 6px 12px !important;
@@ -1125,6 +1205,7 @@
 	}
 
 	#taglist * {
+		color: var(--primary-color);
 		font-size: 14pt !important;
 	}
 
@@ -1142,9 +1223,10 @@
 	}
 
 	#tagmenu_new #newtagfield {
-		background: #383745 !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		padding: 9px !important;
@@ -1157,9 +1239,9 @@
 	#newtagbutton {
 		background: transparent !important;
 		border: none !important;
+		color: var(--secondary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
-		font-weight: bold !important;
 		letter-spacing: .1px !important;
 		text-transform: uppercase !important;
 		margin-left: 5px !important;
@@ -1173,6 +1255,7 @@
 	}
 
 	#tagmenu_act a {
+		color: var(--secondary-color);
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		text-transform: uppercase !important;
@@ -1189,8 +1272,8 @@
 	#gd5 {
 
 		/*** GALLERY INFORMATION BOX OTHERS ***/
-		background: #25373D !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		height: 100% !important;
 		padding: 20px !important;
 		width: 170px !important;
@@ -1205,6 +1288,7 @@
 	}
 
 	#gd5 * {
+		color: var(--secondary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
@@ -1221,6 +1305,12 @@
 		display: none !important;
 	}
 
+	#gnd,
+	#gnd * {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
 	.gm.torrent-info {
 
 		/*** GALLERY TORRENT BOX ***/
@@ -1233,12 +1323,13 @@
 	}
 
 	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] tbody * {
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 	}
 
 	.gm.torrent-info span[style="font-weight:bold"] {
-		color: #4CD4B0 !important;
+		color: #1ABC9C !important;
 		font-weight: normal !important;
 	}
 
@@ -1264,16 +1355,18 @@
 	}
 
 	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] a {
+		color: var(--primary-color);
 		max-width: 100px !important;
 		margin-left: -6px !important;
 	}
 
 	.gm.torrent-info input {
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		box-shadow: none !important;
+		color: var(--secondary-color) !important;
 		font-stretch: condensed !important;
-		font-weight: bold !important;
 		height: 40px !important;
 		width: 130px !important;
 		text-transform: uppercase !important;
@@ -1292,30 +1385,50 @@
 	}
 
 	.eze_gallery_custom {
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 20px 24px !important;
 		margin-left: -6px !important;
 		margin-right: -6px !important;
 	}
 
+	.eze_gallery_custom_row a:hover,
+	.eze_dl_container a:hover {
+		color: #F9AE74 !important;
+	}
+
 	.eze_gallery_custom_row * {
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 	}
 
 	.eze_gallery_custom_cell + .eze_gallery_custom_cell {
-		border-left: 0px solid #000000;
+		border-left: 0px solid var(--border-color);
 	}
 
 	.eze_dl_container {
-		background: #22202B;
-		border: 1px solid #000 !important;
+		background: var(--card-bg);
+		border: 1px solid var(--border-color) !important;
 		padding: 23px !important;
 		margin-top: -1px !important;
 		margin-right: -6px !important;
 		margin-left: -6px !important;
+	}
+
+	.eze_dl_container * {
+		color: var(--primary-color);
+		font-size: 16pt;
+		font-family: "Roboto" !important;
+		font-stretch: condensed;
+		font-weight: normal;
+	}
+
+	.eze_dl_info,
+	.eze_dl_progress_bar,
+	.eze_dl_setting:nth-of-type(2n),.eze_option_box,.eze_dl_setting_desc_tag,.eze_dl_setting_input {
+		background: var(--card-bg-2) !important;
 	}
 
 	.gtb .gpc {
@@ -1341,9 +1454,9 @@
 	#gdo4 .ths.nosel {
 
 		/*** GALLERY NORMAL/LARGE BUTTON ***/
-		border: 1px solid #111 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
-		color: #FFF !important;
+		color: var(--secondary-color) !important;
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -1355,16 +1468,20 @@
 	}
 
 	#gdo4 {
-        	z-index: 99 !important;    
+		z-index: 99 !important;
 	}
-	
+
 	#gdo4 .tha.nosel {
-		background: #22202B !important;
+		background: var(--card-bg) !important;
 		bottom: 20px !important;
 	}
 
+	#gdo4 .tha.nosel:hover {
+		color: #F9AE74 !important;
+	}
+
 	#gdo4 .ths.nosel {
-		background: #22202B !important;
+		background: var(--card-bg) !important;
 		color: #DED7E6 !important;
 		bottom: 75px !important;
 	}
@@ -1372,7 +1489,8 @@
 	.eze_gallery_page {
 
 		/*** GALLERY ART BOX ***/
-		background: #22202B !important;
+		background: var(--card-bg) !important;
+		border-color: var(--border-color) !important;
 		padding: 23px 5px !important;
 		margin-top: -20px !important;
 	}
@@ -1385,6 +1503,10 @@
 		margin-left: 12px !important;
 	}
 
+	.eze_gallery_page img {
+		border: 1px solid var(--border-color);
+	}
+
 	.gtb .ptb {
 
 		/*** GALLERY BOTTOM PAGINATION ***/
@@ -1393,6 +1515,7 @@
 	}
 
 	.gtb .ptb td * {
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 	}
@@ -1403,12 +1526,12 @@
 	}
 
 	.gtb .ptb td:nth-of-type(1) {
-		background: #7D6962 !important;
+		background: var(--card-bg-3) !important;
 		color: transparent !important;
 	}
 
 	.gtb .ptb td:nth-last-of-type(1) {
-		background: #383745 !important;
+		background: var(--card-bg-2) !important;
 		color: transparent !important;
 	}
 
@@ -1420,20 +1543,29 @@
 	}
 
 	#cdiv .c2 {
-		background: #383745 !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 8px 12px !important;
 		margin-bottom: 10px !important;
 	}
 
 	#cdiv .c2 * {
+		color: var(--secondary-color);
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		text-transform: uppercase !important;
 	}
 
+	td.ptds {
+		background: var(--card-bg) !important;
+	}
+
+	table.ptb td {
+		background: var(--card-bg-2);
+	}
+
 	.c3 a {
-		color: #F9AE74 !important;
+		color: #1ABC9C !important;
 	}
 
 	.c4.nosel a[style*="blue"] {
@@ -1445,7 +1577,8 @@
 	}
 
 	#cdiv div.c6 {
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		padding: 20px !important;
@@ -1453,28 +1586,41 @@
 		margin-bottom: 15px !important;
 	}
 
+	#cdiv div.c6 a {
+		color: var(--secondary-color);
+		font-weight: normal;
+	}
+
 	#cdiv .c7 {
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 20px !important;
 		margin-top: -16px !important;
 	}
 
 	#cdiv .c7,
 	#cdiv .c7 * {
+		color: var(--secondary-color) !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 	}
 
+	#chd p {
+		color: var(--secondary-color);
+		font-size: 15pt !important;
+		font-stretch: condensed !important;
+	}
+
 	#postnewcomment {
-		background: #383745 !important;
-		border: 1px solid #000 !important;
-		color: transparent;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		color: transparent !important;
 		padding: 6px !important;
 		margin-top: 14px !important;
 	}
 
 	#postnewcomment a {
+		color: var(--secondary-color);
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		text-decoration: none !important;
@@ -1482,21 +1628,25 @@
 	}
 
 	textarea[name="commenttext_new"] {
-		background: #383745 !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
+		color: var(--primary-color);
 		padding: 15px !important;
-		font-size: 11pt !important;
+		font-size: 14pt !important;
+		font-stretch: condensed;
 		min-width: 1105px !important;
 		max-width: 1105px !important;
 		margin-bottom: 10px !important;
 	}
 
 	#formdiv input {
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		box-shadow: none !important;
-		font-size: 11pt !important;
+		color: var(--secondary-color);
+		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
 		height: 42px !important;
@@ -1505,8 +1655,8 @@
 	}
 
 	#frontpage {
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		padding: 10px 15px !important;
@@ -1518,6 +1668,7 @@
 
 	#frontpage a,
 	p.ip a[href="https://exhentai.org/"] {
+		color: var(--secondary-color);
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -1535,8 +1686,9 @@
 	#i1.sni {
 
 		/*** READER CONTAINER ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 20px !important;
-		background: #22202B !important;
 		margin-top: 20px !important;
 		margin-bottom: 20px !important;
 	}
@@ -1544,8 +1696,10 @@
 	#i1.sni h1 {
 
 		/*** READER COMIC TITLE ***/
+		color: var(--primary-color);
 		font-stretch: condensed !important;
 		font-size: 17pt !important;
+		font-weight: normal;
 		max-width: 100% !important;
 		overflow: hidden !important;
 		text-overflow: ellipsis !important;
@@ -1581,12 +1735,12 @@
 	}
 
 	#loadfail:after {
-		background-color: #22202B !important;
+		background-color: var(--card-bg) !important;
 		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
 		background-size: 30px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid #111 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		content: " " !important;
@@ -1609,12 +1763,12 @@
 	}
 
 	#i6 a[href*="shash"]::after {
-		background-color: #22202B !important;
+		background-color: var(--card-bg) !important;
 		background-image: url("https://i.imgur.com/oprVAfY.png") !important;
 		background-size: 18px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid #111 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		content: " " !important;
@@ -1637,12 +1791,12 @@
 	}
 
 	#i7 a[href*="fullimg"]::after {
-		background-color: #22202B !important;
+		background-color: var(--card-bg) !important;
 		background-image: url("https://i.imgur.com/6TxmFSU.png") !important;
 		background-size: 19px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid #111 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		content: " " !important;
@@ -1651,7 +1805,13 @@
 	}
 
 	div.sn div {
-		font-size: 12pt !important;
+		color: var(--secondary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
+	}
+
+	div.sn div * {
+		font-weight: normal !important;
 	}
 
 	div.sb {
@@ -1673,6 +1833,7 @@
 		background-position: 50% 50% !important;
 		background-size: cover !important;
 		visibility: visible !important;
+		filter: brightness(0) var(--invert);
 	}
 
 	#i1.sni a#next {
@@ -1680,19 +1841,23 @@
 		background-position: 50% 50% !important;
 		background-size: cover !important;
 		visibility: visible !important;
+		filter: brightness(0) var(--invert);
 	}
 
 	#i1.sni .sb > a {
 		background: url('https://i.imgur.com/wAH0xW9.png') no-repeat !important;
 		background-position: 50% 50% !important;
 		background-size: cover !important;
+		filter: brightness(0) var(--invert);
 	}
 
 	/* FAVORITE POPUP */
 
 	/** DESCRIPTION : changef the elements of the favorite popup page **/
 	.stuffbox[style*="width:584px"] {
-		background: #22202B !important;
+		background: var(--card-bg) !important;
+		border-color: var(--border-color) !important;
+		color: var(--primary-color);
 		font-size: 12pt !important;
 		height: 440px !important;
 		padding: 20px !important;
@@ -1705,9 +1870,15 @@
 	}
 
 	.stuffbox[style*="width:584px"] div[style*="width:100%"] {
+		color: var(--primary-color) !important;
 		font-size: 15pt !important;
 		font-stretch: condensed !important;
+		font-weight: normal !important;
 		height: 65px !important;
+	}
+
+	.stuffbox[style*="width:584px"] div[style*="width:100%"] a {
+		color: var(--primary-color) !important;
 	}
 
 	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top:1px"], 
@@ -1719,11 +1890,14 @@
 	.stuffbox[style*="width:584px"] div[style*="float:left;"] p {
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
+		font-weight: normal !important;
 	}
 
 	.stuffbox[style*="width:584px"] textarea {
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		padding: 10px !important;
@@ -1731,42 +1905,54 @@
 
 	.stuffbox[style*="width:584px"] input[type="button"],
 	.stuffbox[style*="width:584px"] input[type="submit"] {
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
+		color: var(--primary-color) !important;
 		font-size: 14pt !important;
 		font-stretch: condensed;
 		padding: 9px 15px 10px 15px !important;
 		margin-top: 10px !important;
 	}
-	
+
 	/* TORRENT POPUP */
-	
+
 	/** DESCRIPTION : change the elements of the torrent popup page **/
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] {
-	    height: 100% !important;
+		height: 100% !important;
 	}
 
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"],
 	#torrentinfo h1[style="font-size:12pt; font-weight:bold; margin:3px; text-align:center"] {
-        font-family: "Roboto", "KFhimaji" !important;
+		font-family: "Roboto", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
 		font-size: 15pt !important;
+		font-weight: normal !important;
 		margin-bottom: 20px !important;
 	}
 
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		font-size: 14pt !important;
+		font-weight: normal !important;
 		padding: 15px !important;
 	}
 
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett * {
+		font-weight: normal !important;
+	}
+
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
+		color: var(--primary-color);
 		font-size: 14pt !important;
+		font-weight: normal !important;
 		margin-top: 15px !important;
 		margin-bottom: 20px !important;
 	}
 
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
-		border: 1px solid #000 !important;
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
 		font-size: 14pt !important;
 		padding: 10px !important;
 	}
@@ -1776,6 +1962,8 @@
 	}
 
 	#torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
+		background: var(--card-bg-2) !important;
+		color: var(--primary-color);
 		width: 137px !important;
 		height: 50px !important;
 		line-height: 25px !important;
@@ -1787,88 +1975,119 @@
 		margin-top: 32px !important;
 	}
 
-    #torrentinfo div[style*="border:1px solid #C7B5A3"] {
-        background: #25373D !important;
-        border: 1px solid #000 !important;
-        padding: 20px !important;
-    }
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] a,
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] *,
+	div[style="text-align:center; margin-top:5px"] * {
+		color: var(--primary-color);
+		font-weight: normal !important;
+	}
 
-    .stuffbox[style*="width:584px"] input[name="torrent_info"] {
-        background: #22202B !important;
-        font-weight: bold !important;
-        line-height: 32px !important;
-        width: 140px !important;
-        text-transform: uppercase !important;
-    }
+	#torrentinfo div[style*="border:1px solid #C7B5A3"] {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 20px !important;
+	}
+
+	.stuffbox[style*="width:584px"] input[name="torrent_info"] {
+		background: var(--card-bg) !important;
+		color: var(--secondary-color);
+		font-weight: normal !important;
+		line-height: 32px !important;
+		width: 140px !important;
+		text-transform: uppercase !important;
+	}
 
 	/* REPORT */
 
 	/** DESCRIPTION : change the elements of the report page **/
 
-    p[style="padding:0 0 10px; font-size:10pt"] {
-        color: transparent;
-    }
+	p[style="padding:0 0 10px; font-size:10pt"] {
+		color: transparent;
+	}
 
-    p[style="padding:0 0 10px; font-size:10pt"] a[style="text-decoration:none; font-weight:bold"] {
-        font-size: 14pt !important;
-        font-stretch: condensed !important;
-        text-transform: uppercase !important;
-    }
+	p[style="padding:0 0 10px; font-size:10pt"] a[style="text-decoration:none; font-weight:bold"] {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		text-transform: uppercase !important;
+	}
 
-    #gdt[style="font-size:10pt; text-align:center"] {
-        background: #22202B !important;
-        font-size: 14pt !important;
-        font-stretch: condensed !important;
-        padding: 15px 0px !important;
-    }
+	#gdt[style="font-size:10pt; text-align:center"] {
+		background: var(--card-bg) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		padding: 15px 0px !important;
+	}
 
-    #report_type {
-        background: #25373D !important;
-        border: 1px solid #000 !important;
-        border-radius: 1px !important;
-        font-size: 14pt !important;
-        font-stretch: condensed !important;
-        padding: 10px !important;
-    }
+	#report_type {
+		background: #25373D !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		padding: 10px !important;
+	}
 
 	/* PETITION POPUP */
 
 	/** DESCRIPTION : change the elements of the petition popup page **/
 
-    #galpop div[style="width:100%; height:280px; overflow:auto"] {
-        font-size: 15pt !important;
-        height: 400px !important;
-    }
+	#galpop div[style="width:100%; height:280px; overflow:auto"] {
+		font-size: 15pt !important;
+		height: 400px !important;
+	}
 
-    #galpop div[style="width:100%; height:280px; overflow:auto"] * {
-        font-size: 14pt !important;
-    }
+	#galpop div[style="width:100%; height:280px; overflow:auto"] * {
+		font-size: 14pt !important;
+	}
 
 	/* SETTINGS */
 
 	/** DESCRIPTION : change the elements of the settings page **/
 	#outer.stuffbox,
 	.eze_settings_box {
-		background: #22202B !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color);
 		padding: 20px 30px 30px 30px !important;
 		margin-top: 178px !important;
 	}
 
-	#outer * {
-		font-size: 12pt !important;
+	#outer *,
+	.eze_settings_label * {
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
+		font-weight: normal;
 	}
 
 	#outer.stuffbox h1,
-	.eze_settings_header {
+	.eze_settings_header,
+	.eze_settings_entry .eze_settings_entry {
+		color: var(--secondary-color) !important;
 		font-size: 16pt !important;
 		font-stretch: condensed !important;
+		font-weight: normal !important;
 		text-align: left !important;
 		text-transform: uppercase !important;
 	}
 
+	#profile_outer select,
+	#profile_outer input[type="button"],
+	#profile_outer input[type="submit"],
+	.optouter input[type="text"],
+	.optouter input[type="password"],
+	.optouter select,
+	.optouter textarea {
+		background: var(--card-bg-2) !important;
+		border-radius: 1px !important;
+		border: 1px solid var(--border-color);
+		color: var(--primary-color);
+		font-stretch: condensed;
+		font-weight: normal;
+	}
+
 	#apply {
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: #FFF !important;
 		padding: 7px 20px 10px 20px !important;
@@ -1883,7 +2102,7 @@
 	#apply input[value="Apply"] {
 		background: transparent !important;
 		border: none !important;
-		color: #FFF !important;
+		color: var(--secondary-color) !important;
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -1901,8 +2120,9 @@
 	#torrentform > p {
 
 		/*** TORRENT HEADER ***/
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		color: var(--secondary-color);
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -1926,35 +2146,42 @@
 
 	/** DESCRIPTION : change the elements of the upload page **/
 	form[action="https://exhentai.org/upload/manage"] {
-		background: #22202B !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		padding: 20px !important;
 		margin-top: 160px !important;
 	}
+
 }
 
-@-moz-document regexp("(http|https)://exhentai.org/s/.*"), regexp("(http|https)://exhentai.org/uconfig.php.*") {
-p.ip {
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+@-moz-document regexp("(http|https)://exhentai.org/s/.*"),regexp("(http|https)://exhentai.org/uconfig.php.*") {
+	p.ip {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		padding: 10px 15px !important;
 		position: fixed !important;
 		left: 20px !important;
-		bottom: 20px !important;
+		bottom: 23px !important;
 		z-index: 999 !important;
 	}
+
+	p.ip a:hover {
+		color: #F9AE74 !important;
+	}
+
 }
 
 @-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
-/* FAVORITE */
+
+	/* FAVORITE */
 
 	/** DESCRIPTION : change the elements of the favorite page **/
 	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
 		background: no-repeat url("https://i.imgur.com/0lBKZdH.jpg") center 33% !important;
 		background-size: cover !important;
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		color: transparent;
 		height: 160px !important;
 		width: 99.5% !important;
@@ -1992,7 +2219,7 @@ p.ip {
 
 		/*** FAVORITE CATEGORIES ***/
 		background: rgba(34, 32, 43, .98) !important;
-		border: 1px solid #000 !important;
+		border: none !important;
 		padding: 10px 0px !important;
 		height: 100% !important;
 		width: 100% !important;
@@ -2038,7 +2265,7 @@ p.ip {
 		filter: invert(1) !important;
 	}
 
-	.ido .nosel .fp[style*="width:160px;"]:hover {
+	.ido .nosel .fp[style*="width: 160px;"]:hover {
 		border-color: #FE8A71 !important;
 		transition: all .3s ease-in-out !important;
 	}
@@ -2219,7 +2446,7 @@ p.ip {
 	}
 
 	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] *:not(option) {
-		background: #383745 !important;
+		background: var(--card-bg-2) !important;
 		background-size: 100% auto !important;
 	}
 
@@ -2240,15 +2467,19 @@ p.ip {
 	}
 
 	body .ip:nth-of-type(2) {
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		padding: 10px 15px !important;
 		position: fixed !important;
 		left: 20px !important;
-		bottom: 25px !important;
+		bottom: 23px !important;
 		z-index: 999 !important;
+	}
+
+	body .ip:nth-of-type(2) a:hover {
+		color: #F9AE74 !important;
 	}
 
 	.itg {
@@ -2262,10 +2493,11 @@ p.ip {
 	div[style="position:absolute; top:-35px; left:80px"] {
 		color: transparent !important;
 	}
+
 }
 
 @-moz-document regexp("(http|https)://exhentai.org/torrents.php.*") {
-.itg {
+	.itg {
 		width: 99.7% !important;
 	}
 
@@ -2274,7 +2506,7 @@ p.ip {
 		/*** TORRENT TITLE ***/
 		background: no-repeat url("https://i.imgur.com/rb1QG6N.jpg") center 32% !important;
 		background-size: cover !important;
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		color: transparent;
 		height: 154px !important;
 		width: 99.5% !important;
@@ -2298,9 +2530,10 @@ p.ip {
 	#focusme {
 
 		/*** TORRENT SEARCHBAR ***/
-		background: #22202B;
-		border: 1px solid #000000 !important;
+		background: var(--card-bg);
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
+		color: var(--primary-color);
 		font-size: 15pt !important;
 		font-stretch: condensed !important;
 		height: 24px !important;
@@ -2313,7 +2546,7 @@ p.ip {
 
 	input[value="Clear"],
 	input[value="Search Torrents"] {
-		border: 1px solid #000 !important;
+		border: none;
 		border-radius: 1px !important;
 		height: 61px !important;
 		font-size: 14pt !important;
@@ -2339,8 +2572,8 @@ p.ip {
 	.ip:nth-of-type(1) {
 
 		/*** TORRENT RESULT ***/
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: #FFF !important;
 		font-size: 11pt !important;
@@ -2379,7 +2612,7 @@ p.ip {
 	}
 
 	div[style="height:15px; min-width:300px; max-width:600px; overflow:hidden"] {
-		height: 22px !important;
+		height: 26px !important;
 	}
 
 	table.ptb {
@@ -2390,6 +2623,7 @@ p.ip {
 	}
 
 	.ptb td * {
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 	}
@@ -2400,12 +2634,12 @@ p.ip {
 	}
 
 	.ptb td:nth-of-type(1) {
-		background: #7D6962 !important;
+		background: var(--card-bg-3) !important;
 		color: transparent !important;
 	}
 
 	.ptb td:nth-last-of-type(1) {
-		background: #383745 !important;
+		background: var(--card-bg-2) !important;
 		color: transparent !important;
 	}
 
@@ -2417,14 +2651,14 @@ p.ip {
 	body > .ip {
 
 		/*** FAVORITE FRONT PAGE BUTTON ***/
-		background: #22202B !important;
-		border: 1px solid #111 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		padding: 10px 15px !important;
 		position: fixed !important;
 		left: 20px !important;
-		bottom: 20px !important;
+		bottom: 23px !important;
 		z-index: 999 !important;
 	}
 
@@ -2439,4 +2673,5 @@ p.ip {
 	body > .ip a:hover {
 		color: #F9AE74 !important;
 	}
+
 }
