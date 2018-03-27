@@ -53,8 +53,9 @@
 	input[type="submit"]:enabled:hover,
 	input[type="button"]:enabled:focus,
 	input[type="submit"]:enabled:focus {
-		background: #212121 !important;
+		background: var(--card-bg) !important;
 		border-color: var(--border-color) !important;
+		color: var(--secondary-color) !important;
 		outline: none !important;
 	}
 
