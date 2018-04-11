@@ -2228,7 +2228,7 @@
 		display: none;
 	}
 
-	.ido .nosel .fp[style*="width: 160px;"] {
+	.ido .nosel .fp[style*="width:160px;"] {
 		border: 1px solid #000 !important;
 		border-radius: 1px !important;
 		padding: 90px 70px !important;
@@ -2257,7 +2257,7 @@
 		filter: invert(1) !important;
 	}
 
-	.ido .nosel .fp[style*="width: 160px;"]:hover {
+	.ido .nosel .fp[style*="width:160px;"]:hover {
 		border-color: #FE8A71 !important;
 		transition: all .3s ease-in-out !important;
 	}
