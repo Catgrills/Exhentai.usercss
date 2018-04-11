@@ -24,10 +24,11 @@ Instruction
 <li>for Safari : <a href="http://sobolev.us/stylish/">Stylish</a></li>
 <li> for Dolphin : <a href="https://play.google.com/store/apps/details?id=ru.pmmlabs.stylish&amp;hl=en">Stylish</a></li>
 </ol>
+
 <strong>Step 2 : Install the script </strong>
 <ol>
 <li> manually (<a href="https://pastebin.com/rECzzV0i">light version</a> or <a href="https://pastebin.com/htjmKYbH">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
-<li><b>(NEW) STYLUS ONLY</b> : Import <a href="https://mega.nz/#F!4TIBUTaK!68UQF79dszA23h5snooTRw">bamboo-x.json</a> in Stylus by clicking the button <i>Import Styles</i>. You can change theme by clicking the gear icon next to the script name in the managment styles page.</li>
+<li><b>(NEW) STYLUS ONLY</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here</a>.</li>
 </ol>
 
 <strong>Step 3 : Install others scripts </strong>
