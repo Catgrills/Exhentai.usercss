@@ -1,0 +1,2696 @@
+/* ==UserStyle==
+@name           Bamboo-X
+@namespace      https://github.com/Catgrills/Bamboo-X
+@version        1.0.0
+@description    An userstyle for Exhentai called Bamboo-X.
+@author         Catgrills/Katgrills
+@preprocessor uso
+@var select theme 'Theme' {
+	"Light": `
+	:root {
+        --body-bg: #F0F1F5 !important;
+		--card-bg: #FFF !important;
+		--card-bg-2: #FAFAFA !important;
+		--card-bg-3: #E6DCDB !important;
+		--card-bg-4: #D4DBC8 !important;
+		--header-bg: #EBBD63 !important;
+		--border-color: #E0E0E0 !important;
+		--border-color-2: #E6567A !important;
+		--primary-color: #212121 !important;
+		--secondary-color: #999 !important;
+		--invert: invert(0) !important;
+	}
+	`,
+	"Dark":`
+	:root {
+	    --body-bg: #383745 !important; 
+		--card-bg: #22202B !important;
+		--card-bg-2: #383745 !important;
+		--card-bg-3: #7D6962 !important;
+		--card-bg-4: #CA8D6E !important;
+		--header-bg: #22202B !important;
+		--border-color: #111 !important;
+		--border-color-2: #CA8D6E !important;
+		--primary-color: #FFF !important;
+		--secondary-color: #DDD !important;
+		--invert: invert(1) !important;
+	}
+	`
+}
+==/UserStyle== */
+@-moz-document domain("exhentai.org") {
+/*[[theme]]*/
+/* GENERAL */
+
+	/** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
+	* {
+		font-family: "Roboto", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
+        text-shadow: none !important;
+	}
+
+	*::-moz-focus-inner {
+		border: 0 !important;
+	}
+
+	html {
+		overflow-x: hidden !important;
+	}
+
+	body {
+		background: var(--body-bg) !important;
+	}
+
+	a:focus {
+		outline: none !important;
+	}
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+	input[type="button"]:enabled:hover,
+	input[type="submit"]:enabled:hover,
+	input[type="button"]:enabled:focus,
+	input[type="submit"]:enabled:focus {
+        background: #212121 !important;
+		border-color: var(--border-color) !important;
+		outline: none !important;
+	}
+
+	.ido {
+
+		/*** MAIN CONTENT ***/
+		background: transparent !important;
+		border: none !important;
+		padding: 10px !important;
+		margin-top: 140px !important;
+	}
+
+	.c1 .c8 {
+		display: none !important;
+	}
+
+	input[type="checkbox"] {
+		position: relative;
+		top: 0px;
+	}
+
+	/* GALLERY LIST HELPER 
+    #tagButtonsDiv {
+        background: #22202B !important;
+        border: 1px solid #000 !important;
+        padding: 40px 0px !important;
+        margin-bottom: 8px !important;
+        margin-left: 5px !important;
+        margin-top: -24px !important;
+        margin-right: 4px !important;
+    }
+    #tagButtonsDiv > div {
+        padding: 10px !important;
+        border: 1px solid #000 !important;
+    }
+    #tagButtonsDiv > div * {
+        font-size: 10pt !important;
+    }
+    table.itg {
+        margin-left: 5px !important;
+        margin-right: -10px !important;
+    }
+    table.itg .it3 {
+        margin-left: 0px !important;
+        margin-top: 10px !important;
+    }
+    table.itg .it4 {
+        margin-top: 10px !important;
+    }
+	*/
+
+	/* HEADER */
+
+	/** DESCRIPTION : change the elements of the header **/
+	p#nb {
+
+		/*** HEADER ***/
+		background: var(--header-bg) !important;
+		border-bottom: 3px solid var(--border-color-2) !important;
+		padding: 32px 0px 30px 130px !important;
+		text-align: left !important;
+		position: absolute !important;
+		top: -2px !important;
+		right: 0px !important;
+		left: 0px !important;
+		margin-left: -2px !important;
+		z-index: 999 !important;
+	}
+
+	p#nb a {
+
+		/*** HEADER LINKS ***/
+		color: #F8F8F8 !important;
+		font-family: "Roboto" !important;
+		font-size: 15pt !important;
+		font-stretch: condensed !important;
+	}
+
+	p#nb a:hover {
+		color: #EBEBEB !important;
+	}
+
+	p#nb img {
+
+		/*** HEADER ICONS ***/
+		visibility: hidden !important;
+	}
+
+	/* HOME */
+
+	/** DESCRIPION : change the elements of the home page **/
+	#nb a:nth-of-type(1):before {
+
+		/*** HOME SLOGAN ***/
+		content: "exhentai.org" !important;
+		color: #FFF !important;
+		font-family: "Neuton" !important;
+		font-size: 23pt !important;
+		position: absolute !important;
+		top: 19px !important;
+		left: 30px !important;
+		visibility: visible !important;
+		z-index: 99 !important;
+		transition: all .3s ease-in-out !important;
+	}
+
+	#nb a:nth-of-type(1):hover:before {
+		color: #FACA9B !important;
+	}
+
+	#nb a:nth-of-type(1) {
+		visibility: hidden;
+	}
+
+	#toppane .ih:before {
+		color: #FFF !important;
+		content: "へんたい" !important;
+		font-family: "Honoka Antique-Kaku" !important;
+		font-size: 40pt !important;
+		text-shadow: 4px 3px 0px #EB9532, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+		position: absolute !important;
+		margin-top: 72px !important;
+		margin-left: 40px !important;
+		visibility: visible !important;
+	}
+
+	#toppane .ih {
+		visibility: hidden;
+	}
+
+	#searchbox {
+
+		/*** HOME SEARCH BOX ***/
+		background: no-repeat url("https://i.imgur.com/Ah4lMHY.jpg") center 34% !important;
+		background-size: cover !important;
+		border: 1px solid var(--border-color) !important;
+		height: 120px !important;
+		padding: 20px !important;
+		width: auto !important;
+		margin-right: -4px !important;
+		margin-left: -4px !important;
+		z-index: 10 !important;
+	}
+
+	form[action="https://exhentai.org/"] {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		height: 60% !important;
+		width: 80% !important;
+		position: fixed !important;
+		top: 0px !important;
+		right: 0px !important;
+		bottom: 0px !important;
+		left: 0px !important;
+		margin: auto !important;
+		overflow: hidden !important;
+		z-index: 999 !important;
+		visibility: hidden;
+	}
+
+	form[action="https://exhentai.org/"] .nopm input[name="f_search"] {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		border-radius: 1px !important;
+		border-width: 0px 0px 1px 0px !important;
+        color: var(--primary-color);
+		font-size: 15pt !important;
+		font-stretch: condensed !important;
+		height: 30px !important;
+		padding: 14px 16px 17px 16px !important;
+		width: 100% !important;
+		margin-left: 0px !important;
+		margin-top: 0px !important;
+	}
+
+	input[value="Apply Filter"],
+	input[value="Clear Filter"] {
+		border: none !important;
+		border-radius: 1px !important;
+		height: 66px !important;
+		width: 150px !important;
+		line-height: 68px !important;
+		top: -5px !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold;
+		position: absolute !important;
+		text-transform: uppercase !important;
+	}
+
+	input[value="Apply Filter"] {
+		background: #344146;
+		right: 146px !important;
+	}
+
+	input[value="Clear Filter"] {
+		background: #B05F6D;
+		right: -3px !important;
+	}
+
+	table.itc {
+
+		/*** HOME SEARCH CATEGORIES ***/
+		background: transparent !important;
+		border-radius: 2px !important;
+		padding: 8px 0px !important;
+		height: auto !important;
+		width: auto !important;
+		position: absolute;
+		top: 0px !important;
+		right: 0px !important;
+		bottom: 0px !important;
+		left: -12px !important;
+		margin: 100px auto auto auto !important;
+	}
+
+	.itc tr {
+		display: inline-block !important;
+	}
+
+	.itc .ic {
+
+		/*** HOME SEARCH CATEGORIES ICONS ***/
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+		height: 0px !important;
+		width: 0px !important;
+		padding: 18vh 0px 0px 14vw !important;
+		margin-bottom: 6px;
+	}
+    
+    :root {
+     	--doujinshi : url("https://i.imgur.com/PZ06V9H.jpg") !important;
+        --manga : url("https://i.imgur.com/4PQwSBP.jpg") !important;
+        --artistcg: url("https://i.imgur.com/OGV8S1z.jpg") !important;
+        --gamecg: url("https://i.imgur.com/hZBx6F3.jpg") !important;
+        --western: url("https://i.imgur.com/D9OdyqB.jpg") !important;
+        --nonh: url("https://i.imgur.com/lIsnRWe.jpg") !important;
+        --imageset: url("https://i.imgur.com/0WRwUHm.jpg") !important;
+        --cosplay: url("https://i.imgur.com/Adqz0Hr.jpg") !important;
+        --asian: url("https://i.imgur.com/bL2WqFy.jpg") !important;
+        --misc: url("https://i.imgur.com/qdxrE1t.jpg") !important;
+    }
+
+	.itdc img {
+		border-radius: 50% !important;
+		height: 0px !important;
+		width: 0px !important;
+		padding: 12px 0px 0px 12px !important;
+	}
+
+	.itc img[src*="_d"] {
+		opacity: .3 !important;
+	}
+
+	#f_doujinshi_img {
+		background: no-repeat var(--doujinshi) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/doujinshi"] img,
+	form[name="favform"] img[src*="doujinshi"],
+	.id4 .id41[title="Doujinshi"] {
+		background: #EB6361 !important;
+	}
+
+	#f_manga_img {
+		background: no-repeat var(--manga) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/manga"] img,
+	form[name="favform"] img[src*="manga"],
+	.id4 .id41[title="Manga"] {
+		background: #EEE657 !important;
+	}
+
+	#f_artistcg_img {
+		background: no-repeat var(--artistcg) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/artistcg"] img,
+	form[name="favform"] img[src*="artistcg"],
+	.id4 .id41[title="Artist CG Sets"] {
+		background: #EBBD63 !important;
+	}
+
+	#f_gamecg_img {
+		background: no-repeat var(--gamecg) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/gamecg"] img,
+	form[name="favform"] img[src*="gamecg"],
+	.id4 .id41[title="Game CG Sets"] {
+		background: #5C9F97 !important;
+	}
+
+	#f_western_img {
+		background: no-repeat var(--western) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/western"] img,
+	form[name="favform"] img[src*="western"],
+	.id4 .id41[title="Western"] {
+		background: #F7E999 !important;
+	}
+
+	#f_imageset_img {
+		background: no-repeat var(--imageset) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/imageset"] img,
+	form[name="favform"] img[src*="imageset"],
+	.id4 .id41[title="Image Sets"] {
+		background: #47D2E9 !important;
+	}
+
+	#f_non-h_img {
+		background: no-repeat var(--nonh) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/non-h"] img,
+	form[name="favform"] img[src*="non-h"],
+	.id4 .id41[title="Non-H"] {
+		background: #ECF0F1 !important;
+	}
+
+	#f_cosplay_img {
+		background: no-repeat var(--cosplay) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/cosplay"] img,
+	form[name="favform"] img[src*="cosplay"],
+	.id4 .id41[title="Cosplay"] {
+		background: #AA8C91 !important;
+	}
+
+	#f_asianporn_img {
+		background: no-repeat var(--asian) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/asianporn"] img,
+	form[name="favform"] img[src*="asian"],
+	.id4 .id41[title="Asian Porn"] {
+		background: #FDE1F7 !important;
+	}
+
+	#f_misc_img {
+		background: no-repeat var(--misc) center !important;
+		background-size: cover !important;
+	}
+
+	a[href="https://exhentai.org/misc"] img,
+	form[name="favform"] img[src*="misc"],
+	.id4 .id41[title="Misc"] {
+		background: #FFF0D6 !important;
+	}
+
+	#searchbox form .nopm a[onclick*="advsearch_pane"],
+	#searchbox form .nopm a[onclick*="filesearch_pane"] {
+
+		/*** HOME SEARCH OPTIONS ***/
+		background: #383745 !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		border: 1px solid #000 !important;
+		border-radius: 1px !important;
+		box-shadow: none !important;
+		color: transparent;
+		height: 0px !important;
+		width: 0px !important;
+		padding: 34px 0px 0px 34px !important;
+		position: fixed !important;
+		top: 25px !important;
+		visibility: visible !important;
+	}
+
+	#trigger-box-btn {
+		background: #383745 !important;
+		background-image: url("http://www.pvhc.net/img226/gzypyldoqaxjhvtyyhei.png") !important;
+		background-position: 92% center !important;
+		background-repeat: no-repeat !important;
+		background-size: 20px auto !important;
+		border: 1px solid #000 !important;
+		border-radius: 1px !important;
+		color: #FFF !important;
+		font-size: 12pt !important;
+		font-stretch: condensed;
+		font-weight: bold;
+		height: 36px !important;
+		width: 150px !important;
+		padding: 0px 8px;
+		text-align: left;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		top: 25px !important;
+		right: 112px !important;
+		z-index: 999 !important;
+		visibility: visible !important;
+	}
+
+	#searchbox form .nopm a[onclick*="advsearch_pane"] {
+		background-image: url("https://i.imgur.com/D6gWsU5.png") !important;
+		background-size: 21px auto !important;
+		right: 67px !important;
+	}
+
+	.itss {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 20px !important;
+		height: 200px !important;
+		width: 800px !important;
+		position: fixed !important;
+		top: 34vh !important;
+		right: 0px !important;
+		bottom: 0px !important;
+		left: 0px !important;
+		margin: auto !important;
+		visibility: visible !important;
+	}
+
+	#searchbox form .nopm a[onclick*="filesearch_pane"] {
+		background-image: url("https://i.imgur.com/oprVAfY.png") !important;
+		background-size: 16px auto !important;
+		right: 23px !important;
+	}
+
+	#fsdiv {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 20px 20px 50px 20px !important;
+		height: 30%;
+		width: 40% !important;
+		position: fixed !important;
+		top: -3vh !important;
+		right: 0px !important;
+		bottom: 20px !important;
+		left: 0px !important;
+		margin: auto !important;
+		z-index: 999 !important;
+		visibility: visible !important;
+	}
+
+	#fsdiv *,
+	.itss * {
+        color: var(--primary-color);
+		font-family: "Roboto" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed;
+        font-weight: normal !important;
+	}
+
+    #adv42 {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color);
+		border-radius: 1px !important;
+		color: var(--secondary-color) !important;        
+    }
+    
+	input[value="File Search"] {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color);
+		border-radius: 1px !important;
+		color: var(--secondary-color) !important;
+		padding: 5px 10px !important;
+		text-transform: uppercase !important;
+		margin-top: 8px !important;
+		margin-bottom: 8px !important;
+	}
+
+	input[name="sfile"] {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 2px 2px 3px 2px !important;
+		margin-top: 1px !important;
+	}
+
+	.ip[style="margin-top:5px"] {
+
+		/*** HOME RESULTS ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: #FFF !important;
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding: 10px 20px !important;
+		max-width: 150px !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		bottom: 20px !important;
+		right: 20px !important;
+		visibility: hidden;
+		z-index: 100 !important;
+	}
+
+	#iw {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		color: #D33257 !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		letter-spacing: 0px !important;
+		padding: 10px 10px 18px 10px !important;
+		width: 1174px !important;
+		margin-top: -9px !important;
+	}
+    
+    #iw * {
+     	font-weight: normal !important;   
+    }
+
+	p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
+		border: 1px solid var(--border-color) !important;
+        color: var(--secondary-color);
+		padding: 20px !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+        font-style: normal !important;
+		font-weight: normal !important;
+		margin-top: -10px !important;
+		margin-right: 2px !important;
+		margin-left: 2px !important;
+	}
+
+	.ip[style="margin-top:5px"] span,
+	.ip[style="margin-top:5px"] a[href*="random"] {
+		display: none !important;
+	}
+
+	div#dmi,
+	div[style="position:absolute; top:-18px; left:15px"] {
+
+		/*** THUMBNAIL/LIST BUTTON ***/
+		visibility: hidden;
+	}
+
+	#dmi a[href*="set=dm_t"],
+	#dmi a[href*="set=dm_l"],
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"],
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"] {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: var(--secondary-color) !important;
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding: 10px 20px !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		right: 20px !important;
+		bottom: 25px !important;
+		visibility: visible !important;
+		z-index: 100 !important;
+	}
+
+    #dmi a[href*="set=dm_t"]:hover,
+	#dmi a[href*="set=dm_l"]:hover,
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"]:hover,
+    div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"]:hover {
+        color: #F9AE74 !important;
+    }
+    
+	div[style="position:relative; z-index:2"] {
+		z-index: 99 !important;
+	}
+
+	div[style="position:relative; z-index:2"] > .ptt {
+
+		/*** HOME PAGINATIONS ***/
+		display: none !important;
+	}
+
+	.itg {
+
+		/*** HOME THUMBNAIL CONTENT ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		max-width: 99% !important;
+		margin-top: -9px !important;
+		padding-top: 10px !important;
+	}
+
+	.itg .id1 {
+
+		/*** THUMBNAILS ***/
+		background: transparent !important;
+		border: none !important;
+		height: 335px !important;
+	}
+
+	.itg .id2 {
+		max-height: 25px !important;
+        height: auto !important;
+		width: 200px !important;
+		margin-bottom: 12px !important;
+		text-align: left !important;
+		transition: max-height 0.35s ease-out !important;
+	}
+
+	.id2 a {
+        color: var(--secondary-color) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+        font-weight: normal !important;
+	}
+
+	.id1:not(.e-Highlighted):not(.e-Filtered) > .id2 {
+		overflow: hidden !important;
+	}
+
+	.id1:not(.e-Highlighted):not(.e-Filtered):hover > .id2 > a {
+		padding-bottom: 0px !important;        
+	}
+
+	.id1:hover > .id2 > a {
+		background: transparent !important;
+        transition: all 0.35s ease-in-out !important;
+	}
+
+	.id2:hover a {
+		color: inherit !important;
+		text-shadow: none !important;
+	}
+
+	.itg .id2:hover {
+		max-height: 900px !important;
+        transition: max-height 0.45s ease-in !important;
+	}
+
+	.itg .id3,
+	.itg .id3 img {
+		border-radius: 1px !important;
+		z-index: 99 !important;
+	}
+
+	.itg .id3 {
+		background: #17171A !important;
+		border: 1px solid var(--border-color) !important;
+		height: 280px !important;
+	}
+
+	.itg .id3 img {
+		height: auto !important;
+		width: 100% !important;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		margin: auto;
+	}
+
+	#detail_box {
+		background: rgba(0, 0, 0, .9) !important;
+		font-size: 16pt !important;
+		font-stretch: condensed !important;
+		opacity: 0;
+		transition: all .3s ease-in-out !important;
+	}
+
+	.id3:hover #detail_box {
+		opacity: 1 !important;
+		transition: all .3s ease-in-out !important;
+	}
+
+	#detail_box #detail_box_cat {
+		font-size: 22pt !important;
+		font-stretch: condensed;
+		margin-top: 10vh !important;
+		margin-bottom: 2px !important;
+	}
+
+	#detail_box #detail_box_rate {
+		position: absolute !important;
+		right: 0px !important;
+		left: 0px !important;
+		margin: 10px auto !important;
+	}
+
+	.id4 {
+		visibility: hidden;
+	}
+
+	.id4 .id41 {
+		border-radius: 50% !important;
+		left: 7px !important;
+	}
+
+	.id4 .id42 {
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-transform: uppercase !important;
+		top: 2px !important;
+		left: 18pt !important;
+	}
+
+	.id4 .id43 {
+		top: 2px !important;
+		left: 65pt !important;
+	}
+
+	.id4 .tn {
+		margin-right: 14px !important;
+		margin-top: 2px !important;
+	}
+
+	table.itg {
+
+		/*** HOME LIST CONTENT ***/
+		margin-left: 2px;
+		max-width: 100% !important;
+		width: 99.7%;
+	}
+
+	table.itg th {
+		display: none !important;
+	}
+
+	tr.gtr0,
+	tr.gtr1 {
+
+		/*** LIST BODY ***/
+		background: transparent;
+		border-bottom: 1px dotted #BEBEBE !important;
+	}
+
+	tr.gtr0 td,
+	tr.gtr1 td {
+        color: var(--secondary-color);
+		font-size: 14pt !important;
+        font-stretch: condensed;
+		padding: 10px 5px !important;
+	}
+
+	div.it4r {
+		margin-top: 2px !important;
+	}
+
+	.itd[style="white-space:nowrap"] {
+		padding-top: 11px !important;
+	}
+
+	td.itd,
+	td.itu,
+	td.itdc {
+		border-right: 0px !important;
+	}
+
+	td.itd a,
+	td.itu a {
+
+		/*** LIST LINKS ***/
+		color: var(--primary-color) !important;
+		font-size: 14pt !important;
+        font-stretch: condensed;
+		font-weight: 500 !important;
+		text-decoration: none !important;
+		transition: all .3s ease-in-out !important;
+	}
+
+	.it5 {
+		height: 24px !important;
+	}
+
+	.it5 > a:hover {
+		color: #7E7E7E !important;
+		transition: all .3s ease-in-out !important;
+	}
+
+	.itdc img {
+
+		/*** CATEGORIES ICON ***/
+		margin-top: -2px !important;
+		margin-left: 5px !important;
+	}
+
+	table.itg .it3 {
+
+		/*** TORRENT ICON ***/
+		margin-left: -20px;
+	}
+
+	.it3 .i {
+		margin-top: -2px !important;
+		margin-right: 2px !important;
+	}
+
+	.it3 div[id*="favicon_"] {
+		margin-top: 3px !important;
+		margin-right: 5px !important;
+		margin-left: 14px !important;
+	}
+
+	table.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
+		background: url('https://i.imgur.com/n8CjvZT.png') !important;
+		background-size: 165% auto !important;
+		background-position: 75% 0% !important;
+	}
+
+	div.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
+		background: url('https://i.imgur.com/n8CjvZT.png') !important;
+		background-size: cover !important;
+		background-position: center !important
+	}
+
+	.it3 > .i > a > .n,
+	.id4 .tn {
+		opacity: 0;
+	}
+
+	div.in img {
+
+		/*** NEW ICON ***/   
+		background: no-repeat url('https://i.imgur.com/xUijfgF.png') center !important;
+		background-size: 20px auto !important;
+		height: 0px;
+		width: 0px;
+		padding: 20px 0px 0px 20px !important;
+	}
+
+	div.in {
+		margin-left: 3px !important;
+		margin-top: -1px !important;
+		margin-right: -1px !important;
+	}
+
+	div[style="position:relative; z-index:2"] .ptb,
+	form[name="favform"] table.ptb {
+
+		/*** HOME PAGINATION ***/
+		margin: 0px 0px 0px 2px !important;
+		width: 99.7% !important;
+	}
+    
+    table.ptb td {
+     	border-color: var(--border-color) !important;   
+    }
+    
+    table.ptb td:hover {
+     	background: var(--card-bg) !important;   
+    }
+
+	div[style="position:relative; z-index:2"] .ptb td *,
+	form[name="favform"] table.ptb td * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1) a,
+	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1) a,
+	form[name="favform"] table.ptb td:nth-of-type(1) a,
+	form[name="favform"] table.ptb td:nth-last-of-type(1) a,form[name="favform"] .ptdd {
+		color: transparent;
+	}
+
+	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1),
+	form[name="favform"] table.ptb td:nth-of-type(1) {
+		background: var(--card-bg-3) !important;
+        border-color: var(--border-color) !important;
+		color: transparent !important;
+	}
+
+	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1),
+	form[name="favform"] table.ptb td:nth-last-of-type(1) {
+		background: var(--card-bg-2) !important;
+		color: transparent !important;
+	}
+
+	/* GALLERY */
+
+	/** DESCRIPTION : change the elements of the gallery page **/
+	.gm {
+
+		/*** GALLERY BOXES ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+	}
+
+	.gm:nth-of-type(1) {
+
+		/*** GALLERY INFORMATION BOX ***/
+		padding-bottom: 80px !important;
+		margin-top: 178px !important;
+	}
+
+	div#gd2,
+	div#gmid,
+	div#gright {
+		background: transparent !important;
+	}
+
+	div#gmid {
+		z-index: 99;
+	}
+
+	#gd2 {
+
+		/*** GALLERY INFORMATION BOX TITLE ***/
+		padding: 10px !important;
+		min-height: 100px !important;
+		max-height: 100px !important;
+		width: 99% !important;
+		margin-left: -10px !important;
+		z-index: 999 !important;
+	}
+
+	#gd2 #gn {
+        color: var(--primary-color);
+		font-size: 16pt !important;
+		font-stretch: condensed !important;
+        font-weight: normal;
+		max-width: 98% !important;
+		overflow: hidden !important;
+		text-align: left !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
+	#gd2 h1#gj {
+		border-bottom: 1px dotted #BEBEBE !important;
+        color: var(--secondary-color);
+		font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+		font-size: 14pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+		height: 18px !important;
+		padding-bottom: 18px !important;
+		text-align: left !important;
+	}
+
+	#trigger-btn {
+		background: no-repeat url("https://i.imgur.com/pGlESDe.png") center !important;
+		background-color: transparent !important;
+		background-size: 25px auto !important;
+		border: none !important;
+		color: transparent !important;
+		height: 20px !important;
+		width: 30px !important;
+		position: absolute;
+		top: 25px !important;
+		right: 18px !important;
+		filter: var(--invert) !important;
+	}
+
+	#gleft {
+
+		/*** GALLERY INFORMATION BOX COVER ***/
+		padding: 0px !important;
+		margin-top: 96px !important;
+		margin-left: 10px !important;
+	}
+
+    #gleft #gd1 div {
+    	border: 1px solid var(--border-color);    
+    }
+    
+	#gmid #gd3 {
+
+		/*** GALLERY INFORMATION BOX DETAILS ***/
+		margin-left: 38px !important;
+		margin-top: -15px !important;
+		margin-right: -30px !important;
+	}
+
+	#gd3 #gdc {
+		display: none !important;
+	}
+
+	#gd3 #gdn {
+		text-align: left !important;
+		white-space: nowrap !important;
+	}
+
+	#gd3 #gdn a {
+		color: #EBBD63 !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		letter-spacing: .1px !important;
+		text-decoration: none !important;
+		margin-left: 2px !important;
+	}
+
+	#gd3 #gdn a:before {
+		color: var(--primary-color) !important;
+		content: "Uploaded by " !important;
+		font-stretch: condensed !important;
+        font-weight: normal !important;
+		letter-spacing: .2px !important;
+		margin-right: 5px !important;
+	}
+
+	#gdd *,
+	#gdr * {
+        color: var(--secondary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
+        font-weight: normal;
+		text-transform: lowercase !important;
+	}
+
+	.gdt1 {
+		color: var(--primary-color) !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		letter-spacing: .1px !important;
+	}
+
+	#gmid #gdf {
+		width: 200px !important;
+		margin-left: -22px !important;
+	}
+
+	#gdf div[style="float:left"] {
+		width: 300px !important;
+	}
+
+	#grt1 {
+        color: #EBBD63 !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	#gmid #gdf #fav {
+		display: none !important;
+	}
+
+	#gmid #gdf #favoritelink::before {
+		color: var(--primary-color) !important;
+		content: "Featured in: ";
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		text-transform: lowercase !important;
+	}
+
+	#rating_count {
+		font-stretch: condensed !important;
+	}
+
+	#rating_label {
+		color: #65878F !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+	}
+
+	#gmid #gdf #favoritelink {
+		color: #44B39D;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		letter-spacing: .1px !important;
+		text-transform: uppercase !important;
+	}
+
+	#gmid #gdf #favoritelink img {
+		display: none !important;
+	}
+
+	#gmid #gd4 {
+
+		/*** GALLERY INFORMATION BOX TAGS ***/
+		border: none !important;
+		width: 80% !important;
+		position: absolute !important;
+		left: 233px !important;
+		margin-top: 47px !important;
+	}
+
+	#gmid #gd4 .gt {
+		background: var(--card-bg-2) !important;
+		border-color: var(--border-color) !important;
+		border-radius: 1px !important;
+		padding: 6px 12px !important;
+		margin-top: -5px !important;
+		margin-bottom: 10px !important;
+	}
+
+	#taglist {
+		margin-top: -6px !important;
+		margin-left: 20px !important;
+	}
+
+	#taglist a {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		letter-spacing: .1px !important;
+	}
+
+    #taglist a[style="color: blue;"] {
+        color: #F29B34 !important;
+    }
+
+	#gmid #gd4 .gt a:active,
+	#gmid #gd4 .gt a:hover,
+	#gmid #gd4 a[style*="color:blue"] {
+		color: #CA8D6E !important;
+	}
+
+	#gmid #gd4 .gtl {
+		background: var(--card-bg-3) !important;
+		border-color: var(--border-color) !important;
+		border-radius: 1px !important;
+		border-style: solid !important;
+		padding: 6px 12px !important;
+		margin-top: -5px !important;
+		margin-bottom: 10px !important;
+	}
+
+	#gmid #gd4 .gtw {
+		background: var(--card-bg-4) !important;
+		border-color: var(--border-color) !important;
+		border-radius: 1px !important;
+		border-style: solid !important;
+		padding: 6px 12px !important;
+		margin-top: -5px !important;
+		margin-bottom: 10px !important;
+	}
+
+	#gmid #gd4 .tdn {
+		color: #E26E67 !important;
+	}
+
+	#gmid #gd4 .tup {
+		color: #2CC990 !important;
+	}
+
+	#taglist * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+	}
+
+	#taglist .tc {
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		text-align: left !important;
+		text-transform: lowercase !important;
+	}
+
+	#tagmenu_new {
+		position: absolute !important;
+		top: -45px !important;
+		z-index: 999 !important;
+	}
+
+	#tagmenu_new #newtagfield {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		padding: 9px !important;
+		text-transform: lowercase !important;
+		width: 378px !important;
+		margin-top: -5px !important;
+		margin-left: 20px !important;
+	}
+
+	#newtagbutton {
+		background: transparent !important;
+		border: none !important;
+        color: var(--secondary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		letter-spacing: .1px !important;
+		text-transform: uppercase !important;
+		margin-left: 5px !important;
+	}
+
+	#tagmenu_act {
+		width: 800px !important;
+		position: absolute !important;
+		top: -41px !important;
+		margin-left: 5px !important;
+	}
+
+	#tagmenu_act a {
+        color: var(--secondary-color);
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		text-transform: uppercase !important;
+	}
+
+	#tagmenu_act a:hover {
+		color: #CA8D6E !important;
+	}
+
+	#tagmenu_act .mr {
+		visibility: hidden !important;
+	}
+
+	#gd5 {
+
+		/*** GALLERY INFORMATION BOX OTHERS ***/
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		height: 100% !important;
+		padding: 20px !important;
+		width: 170px !important;
+		position: absolute !important;
+		margin-left: -71px !important;
+		margin-top: -20px !important;
+		display: none;
+	}
+
+	#gd5 a[href*="report"] {
+		color: #D8335B !important;
+	}
+
+	#gd5 * {
+        color: var(--secondary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		letter-spacing: -.1px !important;
+		text-transform: lowercase !important;
+	}
+
+	#gd5 p {
+		padding: 7px !important;
+		text-transform: lowercase !important;
+	}
+
+	#gd5 p img {
+		display: none !important;
+	}
+
+    #gnd, 
+    #gnd * {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+
+	.gm.torrent-info {
+
+		/*** GALLERY TORRENT BOX ***/
+		margin-top: 14px !important;
+	}
+
+	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] {
+		border: none !important;
+		padding: 4px 10px 8px 10px !important;
+	}
+
+	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] tbody * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	.gm.torrent-info span[style="font-weight:bold"] {
+		color: #1ABC9C !important;
+		font-weight: normal !important;
+	}
+
+	.gm.torrent-info td[style="font-weight: bold; color: red; font-size: 125%;"],
+	.gm.torrent-info tr td:nth-child(3) {
+		display: none !important;
+	}
+
+	.gm.torrent-info td[style="width:180px"] {
+		width: 70px !important;
+	}
+
+	.gm.torrent-info td[style="width:150px"] {
+		width: 50px !important;
+	}
+
+	.gm.torrent-info td[style="width:80px"] {
+		width: 30px !important;
+	}
+
+	.gm.torrent-info td[style="width:100px; text-align:center"] {
+		visibility: hidden;
+	}
+
+	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] a {
+        color: var(--primary-color);
+		max-width: 100px !important;
+		margin-left: -6px !important;
+	}
+
+	.gm.torrent-info input {
+        background: var(--card-bg-2);
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+		box-shadow: none !important;
+        color: var(--secondary-color) !important;
+		font-stretch: condensed !important;
+		height: 40px !important;
+		width: 130px !important;
+		text-transform: uppercase !important;
+		position: absolute !important;
+		top: 15px !important;
+		right: 12px !important;
+		visibility: visible !important;
+	}
+
+	.gm.eze_gallery_custom_container {
+
+		/*** GALLERY EZE BOX ***/
+		border: none !important;
+		background: transparent !important;
+		margin-top: -4px !important;
+	}
+
+	.eze_gallery_custom {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 20px 24px !important;
+		margin-left: -6px !important;
+		margin-right: -6px !important;
+	}
+
+    .eze_gallery_custom_row a:hover,
+    .eze_dl_container a:hover {
+    	color: #F9AE74 !important;
+	}
+    
+	.eze_gallery_custom_row * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+	}
+
+	.eze_gallery_custom_cell + .eze_gallery_custom_cell {
+		border-left: 0px solid var(--border-color);
+	}
+
+	.eze_dl_container {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color) !important;
+		padding: 23px !important;
+		margin-top: -1px !important;
+		margin-right: -6px !important;
+		margin-left: -6px !important;
+	}
+
+    .eze_dl_container * {
+        color: var(--primary-color);
+        font-size: 16pt;
+        font-family: "Roboto" !important;
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+    
+    .eze_dl_info,
+    .eze_dl_progress_bar,
+    .eze_dl_setting:nth-of-type(2n),
+    .eze_option_box,
+    .eze_dl_setting_desc_tag,
+    .eze_dl_setting_input {
+     	background: var(--card-bg-2) !important;   
+    }
+
+	.gtb .gpc {
+
+		/*** GALLERY PICTURE COUNT ***/
+		display: none !important;
+	}
+
+	#gdo2 {
+
+		/*** GALLERY ROW OPTION ***/
+		display: none !important;
+	}
+
+	.gtb table.ptt,
+	.ido .ptt {
+
+		/*** GALLERY TOP PAGINATION ***/
+		display: none !important;
+	}
+
+	#gdo4 .tha.nosel,
+	#gdo4 .ths.nosel {
+
+		/*** GALLERY NORMAL/LARGE BUTTON ***/
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: var(--secondary-color) !important;
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding: 10px 20px !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		right: 20px !important;
+	}
+
+	#gdo4 {
+        	z-index: 99 !important;    
+	}
+	
+	#gdo4 .tha.nosel {
+		background: var(--card-bg) !important;
+		bottom: 20px !important;
+	}
+    
+    #gdo4 .tha.nosel:hover {
+     	color: #F9AE74 !important;   
+    }
+
+	#gdo4 .ths.nosel {
+		background: var(--card-bg) !important;
+		color: #DED7E6 !important;
+		bottom: 75px !important;
+	}
+
+	.eze_gallery_page {
+
+		/*** GALLERY ART BOX ***/
+		background: var(--card-bg) !important;
+        border-color: var(--border-color) !important;
+		padding: 23px 5px !important;
+		margin-top: -20px !important;
+	}
+
+	.eze_gallery_page_indicator {
+		display: none !important;
+	}
+
+	.eze_gallery_page .gdtm {
+		margin-left: 12px !important;
+	}
+
+    .eze_gallery_page img {
+    	border: 1px solid var(--border-color);    
+    }
+    
+	.gtb .ptb {
+
+		/*** GALLERY BOTTOM PAGINATION ***/
+		margin: auto !important;
+		width: 1212px !important;
+	}
+
+	.gtb .ptb td * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	.gtb .ptb td:nth-of-type(1) a,
+	.gtb .ptb td:nth-last-of-type(1) a {
+		color: transparent;
+	}
+
+	.gtb .ptb td:nth-of-type(1) {
+		background: var(--card-bg-3) !important;
+		color: transparent !important;
+	}
+
+	.gtb .ptb td:nth-last-of-type(1) {
+		background: var(--card-bg-2) !important;
+		color: transparent !important;
+	}
+
+	#cdiv {
+
+		/*** GALLERY COMMENT ***/
+		padding-top: 25px !important;
+		padding-bottom: 25px !important;
+	}
+
+	#cdiv .c2 {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 8px 12px !important;
+		margin-bottom: 10px !important;
+	}
+
+	#cdiv .c2 * {
+        color: var(--secondary-color);
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		text-transform: uppercase !important;
+	}
+    
+    td.ptds {
+    	background: var(--card-bg) !important;    
+    }
+    
+    table.ptb td {
+    	background: var(--card-bg-2);           
+    }
+    
+	.c3 a {
+		color: #1ABC9C !important;
+	}
+
+	.c4.nosel a[style*="blue"] {
+		color: #83D6DE !important;
+	}
+
+	#cdiv .c5 {
+		text-align: right !important;
+	}
+
+	#cdiv div.c6 {
+		border: 1px solid var(--border-color) !important;
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		padding: 20px !important;
+		margin-top: -11px !important;
+		margin-bottom: 15px !important;
+	}
+    
+	#cdiv div.c6 a {
+        color: var(--secondary-color);
+        font-weight: normal;
+	}
+    
+	#cdiv .c7 {
+		border: 1px solid var(--border-color) !important;
+		padding: 20px !important;
+		margin-top: -16px !important;
+	}
+
+	#cdiv .c7,
+	#cdiv .c7 * {
+        color: var(--secondary-color) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+	}
+
+    #chd p {
+		color: var(--secondary-color);
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+    }
+
+	#postnewcomment {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		color: transparent !important;
+		padding: 6px !important;
+		margin-top: 14px !important;
+	}
+
+	#postnewcomment a {
+        color: var(--secondary-color);
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+	}
+
+	textarea[name="commenttext_new"] {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+        color: var(--primary-color);
+		padding: 15px !important;
+		font-size: 14pt !important;
+        font-stretch: condensed;
+		min-width: 1105px !important;
+		max-width: 1105px !important;
+		margin-bottom: 10px !important;
+	}
+
+	#formdiv input {
+        background: var(--card-bg-2);
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+		box-shadow: none !important;
+        color: var(--secondary-color);
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		height: 42px !important;
+		width: 130px !important;
+		text-transform: uppercase !important;
+	}
+
+	#frontpage {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: transparent;
+		padding: 10px 15px !important;
+		position: fixed !important;
+		left: 20px !important;
+		bottom: 20px !important;
+		z-index: 999 !important;
+	}
+
+	#frontpage a,
+	p.ip a[href="https://exhentai.org/"] {
+        color: var(--secondary-color);
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+	}
+
+	#frontpage a:hover {
+		color: #F9AE74 !important;
+	}
+
+	/* READER */
+
+	/** DESCRIPTION : change the elements fo the reader page **/
+	#i1.sni {
+
+		/*** READER CONTAINER ***/
+		background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+		padding: 20px !important;
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+
+	#i1.sni h1 {
+
+		/*** READER COMIC TITLE ***/
+        color: var(--primary-color);
+		font-stretch: condensed !important;
+		font-size: 17pt !important;
+        font-weight: normal;
+		max-width: 100% !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+	}
+
+	#i1.sni #i2 div:nth-child(2),
+	#i1.sni #i4 div:nth-child(1) {
+
+		/*** READER METADATA ***/
+		visibility: hidden !important;
+	}
+
+	#i1.sni #i6 .mr,
+	#i1.sni #i7 .mr {
+
+		/*** READER BOTTOM LINKS ICON ***/
+		visibility: hidden !important;
+	}
+
+	#loadfail {
+
+		/*** RELOAD ICON ***/
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		bottom: 31px !important;
+		right: 20px !important;
+		visibility: hidden !important;
+	}
+
+	#loadfail:after {
+		background-color: #22202B !important;
+		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
+		background-size: 30px auto !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		border: 1px solid #111 !important;
+		border-radius: 2px !important;
+		color: transparent;
+		content: " " !important;
+		padding: 10px 20px !important;
+		visibility: visible !important;      
+	}
+
+	#i6 a[href*="shash"] {
+
+		/*** SEARCH FILE ICON ***/
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		bottom: 31px !important;
+		right: 75px !important;
+		visibility: hidden !important;
+	}
+
+	#i6 a[href*="shash"]::after {
+		background-color: var(--card-bg) !important;
+		background-image: url("https://i.imgur.com/oprVAfY.png") !important;
+		background-size: 18px auto !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: transparent;
+		content: " " !important;
+		padding: 10px 20px !important;
+		visibility: visible !important;
+	}
+
+	#i7 a[href*="fullimg"] {
+
+		/*** DOWNLOAD ICON ***/
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		bottom: 31px !important;
+		right: 130px !important;
+		visibility: hidden !important;
+	}
+
+	#i7 a[href*="fullimg"]::after {
+		background-color: var(--card-bg) !important;
+		background-image: url("https://i.imgur.com/6TxmFSU.png") !important;
+		background-size: 19px auto !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: transparent;
+		content: " " !important;
+		padding: 10px 20px !important;
+		visibility: visible !important;
+	}
+
+	div.sn div {
+        color: var(--secondary-color);
+		font-size: 14pt !important;
+        font-stretch: condensed;
+	}
+
+	div.sn div * {
+        font-weight: normal !important;
+	}
+    
+	div.sb {
+		margin-top: 0px !important;
+	}
+
+	#i1.sni div.sn img,
+	#i1.sni .sb > a > img {
+
+		/*** READER NAVIGATION ICONS ***/
+		width: 30px;
+		height: 30px;
+		padding: 0px 2px;
+		opacity: 0;
+	}
+
+	#i1.sni a#prev {
+		background: url('https://i.imgur.com/tKOgREQ.png') no-repeat !important;
+		background-position: 50% 50% !important;
+		background-size: cover !important;
+		visibility: visible !important;
+        filter: brightness(0) var(--invert);
+	}
+
+	#i1.sni a#next {
+		background: url('https://i.imgur.com/d5zq2fu.png') no-repeat !important;
+		background-position: 50% 50% !important;
+		background-size: cover !important;
+		visibility: visible !important;
+        filter: brightness(0) var(--invert);
+	}
+
+	#i1.sni .sb > a {
+		background: url('https://i.imgur.com/wAH0xW9.png') no-repeat !important;
+		background-position: 50% 50% !important;
+		background-size: cover !important;
+        filter: brightness(0) var(--invert);
+	}
+
+	/* FAVORITE POPUP */
+
+	/** DESCRIPTION : changef the elements of the favorite popup page **/
+	.stuffbox[style*="width:584px"] {
+		background: var(--card-bg) !important;
+        border-color: var(--border-color) !important;
+        color: var(--primary-color);
+		font-size: 12pt !important;
+		height: 440px !important;
+		padding: 20px !important;
+		position: absolute !important;
+		top: 0px !important;
+		right: 0px !important;
+		bottom: 0px !important;
+		left: 0px !important;
+		margin: auto !important;
+	}
+
+	.stuffbox[style*="width:584px"] div[style*="width:100%"] {
+        color: var(--primary-color) !important;
+		font-size: 15pt !important;
+		font-stretch: condensed !important;
+        font-weight: normal !important;
+		height: 65px !important;
+	}
+    
+	.stuffbox[style*="width:584px"] div[style*="width:100%"] a {
+        color: var(--primary-color) !important;
+	}
+
+	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top:1px"], 
+	.stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
+		text-transform: lowercase !important;
+		margin-top: -3px !important;
+	}
+
+	.stuffbox[style*="width:584px"] div[style*="float:left;"] p {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+        font-weight: normal !important;
+	}
+
+	.stuffbox[style*="width:584px"] textarea {
+        background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		padding: 10px !important;
+	}
+
+	.stuffbox[style*="width:584px"] input[type="button"],
+	.stuffbox[style*="width:584px"] input[type="submit"] {
+        background: var(--card-bg-2);
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+        color: var(--primary-color) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed;
+		padding: 9px 15px 10px 15px !important;
+		margin-top: 10px !important;
+	}
+	
+	/* TORRENT POPUP */
+	
+	/** DESCRIPTION : change the elements of the torrent popup page **/
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] {
+	    height: 100% !important;
+	}
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"],
+	#torrentinfo h1[style="font-size:12pt; font-weight:bold; margin:3px; text-align:center"] {
+        font-family: "Roboto", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
+		font-size: 15pt !important;
+        font-weight: normal !important;
+		margin-bottom: 20px !important;
+	}
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
+        background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		font-size: 14pt !important;
+        font-weight: normal !important;
+		padding: 15px !important;
+	}
+    
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett * {
+        font-weight: normal !important;
+	}
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+        font-weight: normal !important;
+		margin-top: 15px !important;
+		margin-bottom: 20px !important;
+	}
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
+        background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color) !important;
+		font-size: 14pt !important;
+		padding: 10px !important;
+	}
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] {
+		font-size: 14pt !important;
+	}
+
+	#torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
+        background: var(--card-bg-2) !important;
+        color: var(--primary-color);
+		width: 137px !important;
+		height: 50px !important;
+		line-height: 25px !important;
+	}
+
+	div[style="text-align:center; margin-top:5px"] {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		margin-top: 32px !important;
+	}
+    
+    #torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] a,
+    #torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] *,
+    div[style="text-align:center; margin-top:5px"] * {
+     	color: var(--primary-color);   
+        font-weight: normal !important;
+    }
+
+    #torrentinfo div[style*="border:1px solid #C7B5A3"] {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        padding: 20px !important;
+    }
+
+    .stuffbox[style*="width:584px"] input[name="torrent_info"] {
+        background: var(--card-bg) !important;
+        color: var(--secondary-color);
+        font-weight: normal !important;
+        line-height: 32px !important;
+        width: 140px !important;
+        text-transform: uppercase !important;
+    }
+
+	/* REPORT */
+
+	/** DESCRIPTION : change the elements of the report page **/
+
+    p[style="padding:0 0 10px; font-size:10pt"] {
+        color: transparent;
+    }
+
+    p[style="padding:0 0 10px; font-size:10pt"] a[style="text-decoration:none; font-weight:bold"] {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        text-transform: uppercase !important;
+    }
+
+    #gdt[style="font-size:10pt; text-align:center"] {
+        background: var(--card-bg) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding: 15px 0px !important;
+    }
+
+    #report_type {
+        background: #25373D !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 1px !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding: 10px !important;
+    }
+
+	/* PETITION POPUP */
+
+	/** DESCRIPTION : change the elements of the petition popup page **/
+
+    #galpop div[style="width:100%; height:280px; overflow:auto"] {
+        font-size: 15pt !important;
+        height: 400px !important;
+    }
+
+    #galpop div[style="width:100%; height:280px; overflow:auto"] * {
+        font-size: 14pt !important;
+    }
+
+	/* SETTINGS */
+
+	/** DESCRIPTION : change the elements of the settings page **/
+	#outer.stuffbox,
+	.eze_settings_box {
+		background: var(--card-bg) !important;
+        border: 1px solid var(--border-color);
+		padding: 20px 30px 30px 30px !important;
+		margin-top: 178px !important;
+	}
+
+	#outer *,
+    .eze_settings_label * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+	}
+
+	#outer.stuffbox h1,
+	.eze_settings_header,
+    .eze_settings_entry .eze_settings_entry{
+        color: var(--secondary-color) !important;
+		font-size: 16pt !important;
+		font-stretch: condensed !important;
+        font-weight: normal !important;
+		text-align: left !important;
+		text-transform: uppercase !important;
+	}
+    
+    #profile_outer select,
+    #profile_outer input[type="button"], 
+    #profile_outer input[type="submit"],
+    .optouter input[type="text"], 
+    .optouter input[type="password"], 
+    .optouter select, 
+    .optouter textarea {
+     	background: var(--card-bg-2) !important;
+        border-radius: 1px !important;
+        border: 1px solid var(--border-color);
+        color: var(--primary-color);
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+
+	#apply {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: #FFF !important;
+		padding: 7px 20px 10px 20px !important;
+		text-decoration: none !important;
+		position: fixed !important;
+		right: 20px !important;
+		bottom: 20px !important;
+		visibility: visible !important;
+		z-index: 100 !important;
+	}
+
+	#apply input[value="Apply"] {
+		background: transparent !important;
+		border: none !important;
+		color: var(--secondary-color) !important;
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding-top: 4px !important;
+		text-transform: uppercase !important;
+	}
+
+	.eze_settings_entry:nth-of-type(2n) {
+		background-color: inherit !important;
+	}
+
+	/* TORRENT */
+
+	/** DESCRIPTION : change the elements of the torrent page **/
+	#torrentform > p {
+
+		/*** TORRENT HEADER ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+        color: var(--secondary-color);
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding: 18px !important;
+		width: 96.5% !important;
+		text-transform: uppercase !important;
+		margin-left: 2px !important;
+		margin-bottom: -11px !important;
+	}
+
+	#form > p > a {
+		color: #F9AE74;
+		text-decoration: none !important;
+	}
+
+	#form > p > a[style*="text-decoration:none"] {
+		color: #FFF;
+	}
+
+	/* UPLOAD */
+
+	/** DESCRIPTION : change the elements of the upload page **/
+	form[action="https://exhentai.org/upload/manage"] {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 20px !important;
+		margin-top: 160px !important;
+	}
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/s/.*"), regexp("(http|https)://exhentai.org/uconfig.php.*") {
+	p.ip {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: transparent;
+		padding: 10px 15px !important;
+		position: fixed !important;
+		left: 20px !important;
+		bottom: 23px !important;
+		z-index: 999 !important;
+	}
+    
+    p.ip a:hover {
+        color: #F9AE74 !important;
+    }
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
+/* FAVORITE */
+
+	/** DESCRIPTION : change the elements of the favorite page **/
+	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
+		background: no-repeat url("https://i.imgur.com/0lBKZdH.jpg") center 33% !important;
+		background-size: cover !important;
+		border: 1px solid var(--border-color) !important;
+		color: transparent;
+		height: 160px !important;
+		width: 99.5% !important;
+		line-height: 156px !important;
+		margin-top: 28px !important;
+		margin-bottom: -29px !important;
+		margin-left: 2px !important;
+	}
+
+	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"]:before {
+		color: #FFF !important;
+		content: "へんたい" !important;
+		font-family: "Honoka Antique-Kaku" !important;
+		font-size: 40pt !important;
+		text-shadow: 4px 3px 0px #EB6361, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+		position: absolute !important;
+		margin-top: -3px !important;
+		margin-left: -68px !important;
+		visibility: visible !important;
+	}
+
+	div[style="width:985px; margin:10px auto 5px; text-align:center"] {
+
+		/*** FAVORITE SEARCH BAR ***/
+		display: none !important;
+	}
+
+	.ido table.ptt {
+
+		/*** FAVORITE TOP PAGINATION ***/
+		display: none !important;
+	}
+
+	.ido .nosel {
+
+		/*** FAVORITE CATEGORIES ***/
+		background: rgba(34, 32, 43, .98) !important;
+		border: none !important;
+		padding: 10px 0px !important;
+		height: 100% !important;
+		width: 100% !important;
+		text-align: center !important;
+		position: fixed !important;
+		top: 0px !important;
+		right: 0px !important;
+		bottom: 0px !important;
+		left: 0px !important;
+		margin: auto !important;
+		overflow-x: hidden !important;
+		overflow-y: scroll !important;
+		z-index: 9999 !important;
+		display: none;
+	}
+
+	.ido .nosel .fp[style*="width:160px;"] {
+		border: 1px solid #000 !important;
+		border-radius: 1px !important;
+		padding: 90px 70px !important;
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-transform: uppercase !important;
+		margin-top: 17vh !important;
+		margin-right: 4px !important;
+		margin-bottom: -16vh !important;
+		margin-left: 4px !important;
+		float: none !important;
+		transition: all .3s ease-in-out !important;
+		display: inline-block !important;
+	}
+
+	#close-btn {
+		background: url('https://imgur.com/4GlrMN7.png') no-repeat 50% 50%;
+		background-size: 25px auto !important;
+		background-color: transparent !important;
+		border: none !important;
+		color: transparent !important;
+		position: fixed !important;
+		top: 40px !important;
+		right: 40px !important;
+		filter: invert(1) !important;
+	}
+
+	.ido .nosel .fp[style*="width:160px;"]:hover {
+		border-color: #FE8A71 !important;
+		transition: all .3s ease-in-out !important;
+	}
+
+	.fp .i {
+		display: none !important;
+	}
+
+	div[style="float:left; text-align:left; height:20px; padding:2px 0 0 3px"] {
+		color: #FFF !important;
+		width: 100% !important;
+		font-family: "Bebas Neue" !important;
+		font-size: 20pt !important;
+		letter-spacing: 6px !important;
+		text-align: center !important;
+		margin-top: -15px !important;
+	}
+
+	div[style="font-weight:bold; float:left; text-align:right; width:30px; height:20px; padding:2px 3px 0 0"] {
+		color: #FFF !important;
+		font-family: "Bebas Neue" !important;
+		font-size: 19pt !important;
+		width: 100% !important;
+		text-align: left !important;
+		position: absolute;
+		margin-top: 66px !important;
+		margin-left: 196px !important;
+	}
+
+	a[href*="favcat=0"] .fp,
+	.fp[onclick*="favcat=0"] {
+		background: #60646D;
+	}
+
+	a[href*="favcat=1"] .fp,
+	.fp[onclick*="favcat=1"] {
+		background: #EB6361;
+	}
+
+	a[href*="favcat=2"] .fp,
+	.fp[onclick*="favcat=2"] {
+		background: #EBBD63;
+	}
+
+	a[href*="favcat=3"] .fp,
+	.fp[onclick*="favcat=3"] {
+		background: #EDD834;
+	}
+
+	a[href*="favcat=4"] .fp,
+	.fp[onclick*="favcat=4"] {
+		background: #97CE68;
+	}
+
+	a[href*="favcat=5"] .fp,
+	.fp[onclick*="favcat=5"] {
+		background: #F6CD61;
+	}
+
+	a[href*="favcat=6"] .fp,
+	.fp[onclick*="favcat=6"] {
+		background: #8BCBDE;
+	}
+
+	a[href*="favcat=7"] .fp,
+	.fp[onclick*="favcat=7"] {
+		background: #00587A;
+	}
+
+	a[href*="favcat=8"] .fp,
+	.fp[onclick*="favcat=8"] {
+		background: #8B4D93;
+	}
+
+	a[href*="favcat=9"] .fp,
+	.fp[onclick*="favcat=9"] {
+		background: #BF4A67;
+	}
+
+	.fp[style="width:140px; padding:4px 0 0; margin:5px auto 0; text-align:center; font-weight:bold; position:relative; left:-8px"] {
+
+		/*** SHOW ALL FAVORITE BUTTON ***/
+		background-color: #22202B !important;
+		border: 1px solid #000 !important;
+		border-radius: 2px !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		height: 30px !important;
+		width: 200px !important;
+		line-height: 30px !important;
+		padding: 12px 15px !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		right: 0px !important;
+		left: 0px;
+		bottom: 75px !important;
+		z-index: 999 !important;
+		margin: auto !important;
+	}
+
+	.nosel a[href="https://exhentai.org/favorites.php"] {
+		font-size: 12pt !important;
+	}
+
+	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] {
+
+		/*** FAVORITE OPTIONS ***/
+		color: transparent;
+	}
+
+	#trigger-box-btn-2 {
+		background: #383745 !important;
+		background-image: url("http://www.pvhc.net/img226/gzypyldoqaxjhvtyyhei.png") !important;
+		background-position: 92% center !important;
+		background-repeat: no-repeat !important;
+		background-size: 20px auto !important;
+		border: 1px solid #000 !important;
+		border-radius: 1px !important;
+		color: #FFF !important;
+		font-size: 12pt !important;
+		font-stretch: condensed;
+		font-weight: bold;
+		height: 36px !important;
+		width: 130px !important;
+		padding: 0px 8px;
+		text-align: left;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		top: 25px !important;
+		right: 22px !important;
+		z-index: 999 !important;
+		visibility: visible !important;
+	}
+
+	input[value="Apply"] {
+		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
+		background-color: #383745 !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: 15px auto !important;
+		border: 1px solid #000 !important;
+		border-radius: 1px !important;
+		box-shadow: none !important;
+		color: transparent !important;
+		height: 30px !important;
+		width: 30px !important;
+		padding: 17px !important;
+		position: fixed !important;
+		top: 25px !important;
+		right: 158px !important;
+		z-index: 999 !important;
+	}
+
+	select[name="ddact"] {
+		background: #383745 !important;
+		border: 1px solid #000 !important;
+		border-radius: 1px !important;
+		color: #FFF !important;
+		height: 36px !important;
+		width: auto !important;
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding-top: 3px !important;
+		padding-left: 10px !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		top: 22px !important;
+		right: 203px !important;
+		z-index: 999 !important;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: -2px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] *:not(option) {
+		background: var(--card-bg-2) !important;
+		background-size: 100% auto !important;
+	}
+
+	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] option {
+		color: #FFF !important;
+	}
+
+	.id4 {
+		opacity: 1 !important;
+		visibility: hidden;
+		margin-top: 4px !important;
+	}
+
+	input[name="modifygids[]"] {
+		visibility: visible !important;
+		margin-top: -2px !important;
+		margin-right: 8px !important;
+	}
+
+	body .ip:nth-of-type(2) {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: transparent;
+		padding: 10px 15px !important;
+		position: fixed !important;
+		left: 20px !important;
+		bottom: 23px !important;
+		z-index: 999 !important;
+	}
+
+    body .ip:nth-of-type(2) a:hover {
+        color: #F9AE74 !important;
+    }
+    
+	.itg {
+		margin-top: 28px !important;
+	}
+
+	p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
+		margin-top: 29px !important;
+	}
+
+	div[style="position:absolute; top:-35px; left:80px"] {
+		color: transparent !important;
+	}
+}
+
+@-moz-document regexp("(http|https)://exhentai.org/torrents.php.*") {
+.itg {
+		width: 99.7% !important;
+	}
+
+	.ih {
+
+		/*** TORRENT TITLE ***/
+		background: no-repeat url("https://i.imgur.com/rb1QG6N.jpg") center 32% !important;
+		background-size: cover !important;
+		border: 1px solid var(--border-color) !important;
+		color: transparent;
+		height: 154px !important;
+		width: 99.5% !important;
+		line-height: 156px !important;
+		margin-top: 28px !important;
+		margin-bottom: -3px !important;
+	}
+
+	.ih:before {
+		color: #FFF !important;
+		content: "へんたい" !important;
+		font-family: "Honoka Antique-Kaku" !important;
+		font-size: 40pt !important;
+		text-shadow: 4px 3px 0px #60646D, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+		position: absolute !important;
+		margin-top: -3px !important;
+		margin-left: -72px !important;
+		visibility: visible !important;
+	}
+
+	#focusme {
+
+		/*** TORRENT SEARCHBAR ***/
+		background: var(--card-bg);
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px !important;
+        color: var(--primary-color);
+		font-size: 15pt !important;
+		font-stretch: condensed !important;
+		height: 24px !important;
+		padding: 15px 0px 20px 15px !important;
+		width: 98% !important;
+		margin-top: 1px !important;
+		margin-bottom: -1px !important;
+		margin-left: -1px !important;
+	}
+
+	input[value="Clear"],
+	input[value="Search Torrents"] {
+		border: none;
+		border-radius: 1px !important;
+		height: 61px !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold;
+		position: absolute !important;
+		margin-top: -109px !important;
+		text-transform: uppercase !important;
+	}
+
+	input[value="Clear"] {
+		background: #65878F !important;
+		width: 110px !important;
+		right: 10px !important;
+	}
+
+	input[value="Search Torrents"] {
+		background: #344146;
+		width: 190px !important;
+		right: 119px !important;
+	}
+
+	.ip:nth-of-type(1) {
+
+		/*** TORRENT RESULT ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: #FFF !important;
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding: 10px 20px !important;
+		max-width: 150px !important;
+		overflow: hidden !important;
+		text-overflow: ellipsis !important;
+		white-space: nowrap !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+		position: fixed !important;
+		bottom: 20px !important;
+		right: 20px !important;
+		z-index: 100 !important;
+		display: none;
+	}
+
+	.itd[style="width:102px; white-space:nowrap"] {
+
+		/*** TORRENT UPLOAD TIME ***/
+		padding-left: 10px !important;
+	}
+
+	.gtr0 > .itd:nth-child(5),
+	.gtr1 > .itd:nth-child(5) {
+		color: #2CC990 !important;
+		font-weight: normal !important;
+	}
+
+	.gtr0 > .itd:nth-child(6),
+	.gtr1 > .itd:nth-child(6) {
+		color: #E26E67 !important;
+		font-weight: normal !important;
+	}
+
+	div[style="height:15px; min-width:300px; max-width:600px; overflow:hidden"] {
+		height: 26px !important;
+	}
+
+	table.ptb {
+
+		/*** TORRENT BOTTOM PAGINATION ***/
+		margin: 0px 0px 0px 2px !important;
+		width: 99.7% !important;
+	}
+
+	.ptb td * {
+        color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	.ptb td:nth-of-type(1) a,
+	.ptb td:nth-last-of-type(1) a {
+		color: transparent;
+	}
+
+	.ptb td:nth-of-type(1) {
+		background: var(--card-bg-3) !important;
+		color: transparent !important;
+	}
+
+	.ptb td:nth-last-of-type(1) {
+		background: var(--card-bg-2) !important;
+		color: transparent !important;
+	}
+
+	.ido > .ip:nth-of-type(2),
+	.ido > .ip:nth-of-type(3) {
+		visibility: hidden !important;
+	}
+
+	body > .ip {
+
+		/*** FAVORITE FRONT PAGE BUTTON ***/
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 2px !important;
+		color: transparent;
+		padding: 10px 15px !important;
+		position: fixed !important;
+		left: 20px !important;
+		bottom: 23px !important;
+		z-index: 999 !important;
+	}
+
+	body > .ip a {
+		font-size: 11pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-decoration: none !important;
+		text-transform: uppercase !important;
+	}
+
+	body > .ip a:hover {
+		color: #F9AE74 !important;
+	}
+}
