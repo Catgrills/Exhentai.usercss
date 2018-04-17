@@ -1,6 +1,6 @@
 # Bamboo-X
 
-<img src="preview_2_bamboo-x.png" width="100%">
+<img src="preview_3_bamboo-x.png" width="100%">
 
 Preview of <i>Bamboo-X</i>.
 
