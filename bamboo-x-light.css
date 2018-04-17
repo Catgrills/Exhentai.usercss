@@ -6,12 +6,12 @@
 	:root {
 		--body-bg: #F0F1F5 !important;
 		--card-bg: #FFF !important;
-		--card-bg-2:#FAFAFA !important;
-		--card-bg-3:#E6DCDB !important;
-		--card-bg-4:#D4DBC8 !important;
-		--header-bg: #EBBD63 !important;
+		--card-bg-2: #FAFAFA !important;
+		--card-bg-3:#F2F2F2 !important;
+		--card-bg-4:#DBDBDB !important;
+		--header-bg: #2A3744 !important;
 		--border-color: #E0E0E0 !important;
-		--border-color-2:#E6567A !important;
+		--border-color-2: #CA8D6E !important;
 		--primary-color: #212121 !important;
 		--secondary-color: #999 !important;
 		--invert: invert(0) !important;
