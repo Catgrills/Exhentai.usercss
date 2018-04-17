@@ -53,10 +53,14 @@
 	input[type="submit"]:enabled:hover,
 	input[type="button"]:enabled:focus,
 	input[type="submit"]:enabled:focus {
-		background: var(--card-bg) !important;
+		background: var(--card-bg);
 		border-color: var(--border-color) !important;
-		color: var(--secondary-color) !important;
+		color: var(--secondary-color);
 		outline: none !important;
+	}
+
+	input[value="Apply"]:hover {
+		color: transparent !important;
 	}
 
 	.ido {
@@ -76,36 +80,6 @@
 		position: relative;
 		top: 0px;
 	}
-
-	/* GALLERY LIST HELPER 
-	    #tagButtonsDiv {
-	        background: #22202B !important;
-	        border: 1px solid #000 !important;
-	        padding: 40px 0px !important;
-	        margin-bottom: 8px !important;
-	        margin-left: 5px !important;
-	        margin-top: -24px !important;
-	        margin-right: 4px !important;
-	    }
-	    #tagButtonsDiv > div {
-	        padding: 10px !important;
-	        border: 1px solid #000 !important;
-	    }
-	    #tagButtonsDiv > div * {
-	        font-size: 10pt !important;
-	    }
-	    table.itg {
-	        margin-left: 5px !important;
-	        margin-right: -10px !important;
-	    }
-	    table.itg .it3 {
-	        margin-left: 0px !important;
-	        margin-top: 10px !important;
-	    }
-	    table.itg .it4 {
-	        margin-top: 10px !important;
-	    }
-	*/
 
 	/* HEADER */
 
@@ -233,9 +207,10 @@
 
 	input[value="Apply Filter"],
 	input[value="Clear Filter"] {
-		border: none !important;
+		border: 1px solid #212121 !important;
 		border-radius: 1px !important;
-		height: 66px !important;
+                border-width: 0px 1px 0px 0px !important;
+		height: 67px !important;
 		width: 150px !important;
 		line-height: 68px !important;
 		top: -5px !important;
@@ -911,10 +886,6 @@
 	table.ptb td {
 		border-color: var(--border-color) !important;
 	}
-    
-    table.ptb td:hover {
-     	background: var(--card-bg) !important;   
-    }
 
 	div[style="position:relative; z-index:2"] .ptb td *,
 	form[name="favform"] table.ptb td * {
@@ -1375,6 +1346,10 @@
 		visibility: visible !important;
 	}
 
+        .gm.torrent-info input:hover {
+		background: var(--card-bg-2) !important;        
+        }
+    
 	.gm.eze_gallery_custom_container {
 
 		/*** GALLERY EZE BOX ***/
@@ -1559,7 +1534,8 @@
 		background: var(--card-bg) !important;
 	}
 
-	table.ptb td {
+	table.ptb td,
+        table.ptb td:hover {
 		background: var(--card-bg-2);
 	}
 
@@ -1734,12 +1710,12 @@
 	}
 
 	#loadfail:after {
-		background-color: #22202B !important;
+		background-color: var(--card-bg) !important;
 		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
 		background-size: 30px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid #111 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
 		content: " " !important;
@@ -1868,6 +1844,12 @@
 		margin: auto !important;
 	}
 
+    .stuffbox[style*="width:584px"] P {
+    	font-size: 14pt;
+        font-stretch: condensed;
+        font-weight: normal !important;
+    }
+    
 	.stuffbox[style*="width:584px"] div[style*="width:100%"] {
 		color: var(--primary-color) !important;
 		font-size: 15pt !important;
@@ -1880,13 +1862,13 @@
 		color: var(--primary-color) !important;
 	}
 
-	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top:1px"], 
+	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top: 1px"], 
 	.stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
 		text-transform: lowercase !important;
 		margin-top: -3px !important;
 	}
 
-	.stuffbox[style*="width:584px"] div[style*="float:left;"] p {
+	.stuffbox[style*="width: 584px"] div[style*="float:left;"] p {
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
@@ -2264,7 +2246,7 @@
 		filter: invert(1) !important;
 	}
 
-	.ido .nosel .fp[style*="width: 160px;"]:hover {
+	.ido .nosel .fp[style*="width:160px;"]:hover {
 		border-color: #FE8A71 !important;
 		transition: all .3s ease-in-out !important;
 	}
@@ -2420,6 +2402,17 @@
 		z-index: 999 !important;
 	}
 
+        input[value="Apply"]:enabled:focus,
+	input[value="Apply"]:enabled:hover {
+		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
+		background-color: #383745 !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: 15px auto !important;
+		border-color: #000 !important;
+		color: transparent !important;
+	}
+
 	select[name="ddact"] {
 		background: #383745 !important;
 		border: 1px solid #000 !important;
@@ -2545,8 +2538,9 @@
 
 	input[value="Clear"],
 	input[value="Search Torrents"] {
-		border: none;
+		border: 1px solid #212121;
 		border-radius: 1px !important;
+                border-width: 0px 0px 0px 1px !important;
 		height: 61px !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
@@ -2555,6 +2549,11 @@
 		margin-top: -109px !important;
 		text-transform: uppercase !important;
 	}
+    
+        input[value="Clear"]:enabled:hover,
+        input[value="Search Torrents"]:enabled:hover {
+     	        border-color: #212121 !important;   
+        }
 
 	input[value="Clear"] {
 		background: #65878F !important;
@@ -2611,7 +2610,7 @@
 	}
 
 	div[style="height:15px; min-width:300px; max-width:600px; overflow:hidden"] {
-		height: 26px !important;
+		height: 22px !important;
 	}
 
 	table.ptb {
@@ -2672,5 +2671,4 @@
 	body > .ip a:hover {
 		color: #F9AE74 !important;
 	}
-
 }
