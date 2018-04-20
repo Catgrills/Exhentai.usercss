@@ -1,14 +1,16 @@
 /* ==UserStyle==
 @name           Bamboo-X
 @namespace      https://github.com/Catgrills/Bamboo-X
-@version        1.0.1
+@version        1.0.2
 @description    An userstyle for Exhentai called Bamboo-X.
 @author         Catgrills/Katgrills
 @preprocessor uso
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-                --body-bg: #F0F1F5 !important;
+        --body-bg: #F0F1F5 !important;
+		--button-bg: #F3F4F7 !important;
+		--button-bg-2: #F0F1F5 !important;
 		--card-bg: #FFF !important;
 		--card-bg-2: #FAFAFA !important;
 		--card-bg-3: #F2F2F2 !important;
@@ -23,7 +25,9 @@
 	`,
 	"Dark":`
 	:root {
-	        --body-bg: #383745 !important; 
+	    --body-bg: #383745 !important; 
+		--button-bg: #344146 !important;
+		--button-bg-2: #B05F6D !important;
 		--card-bg: #22202B !important;
 		--card-bg-2: #383745 !important;
 		--card-bg-3: #7D6962 !important;
@@ -76,9 +80,8 @@
 	input[type="submit"]:enabled:hover,
 	input[type="button"]:enabled:focus,
 	input[type="submit"]:enabled:focus {
-		background: var(--card-bg);
+		background: var(--button-bg) !important;
 		border-color: var(--border-color) !important;
-		color: var(--secondary-color);
 		outline: none !important;
 	}
 
@@ -230,9 +233,9 @@
 
 	input[value="Apply Filter"],
 	input[value="Clear Filter"] {
-		border: 1px solid #212121 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
-                border-width: 0px 1px 0px 0px !important;
+        		color: var(--secondary-color);
 		height: 67px !important;
 		width: 150px !important;
 		line-height: 68px !important;
@@ -245,12 +248,12 @@
 	}
 
 	input[value="Apply Filter"] {
-		background: #344146;
+		background: var(--button-bg);
 		right: 146px !important;
 	}
 
 	input[value="Clear Filter"] {
-		background: #B05F6D;
+		background: var(--button-bg-2);
 		right: -3px !important;
 	}
 
@@ -1369,9 +1372,9 @@
 		visibility: visible !important;
 	}
 
-        .gm.torrent-info input:hover {
+	.gm.torrent-info input:hover {
 		background: var(--card-bg-2) !important;        
-        }
+	}
     
 	.gm.eze_gallery_custom_container {
 
@@ -1558,7 +1561,7 @@
 	}
 
 	table.ptb td,
-        table.ptb td:hover {
+    	table.ptb td:hover {
 		background: var(--card-bg-2);
 	}
 
@@ -1867,12 +1870,12 @@
 		margin: auto !important;
 	}
 
-    .stuffbox[style*="width:584px"] P {
-    	font-size: 14pt;
-        font-stretch: condensed;
-        font-weight: normal !important;
-    }
-    
+	.stuffbox[style*="width:584px"] p {
+		font-size: 14pt;
+		font-stretch: condensed;
+		font-weight: normal !important;
+	}
+
 	.stuffbox[style*="width:584px"] div[style*="width:100%"] {
 		color: var(--primary-color) !important;
 		font-size: 15pt !important;
@@ -2425,7 +2428,7 @@
 		z-index: 999 !important;
 	}
 
-        input[value="Apply"]:enabled:focus,
+    	input[value="Apply"]:enabled:focus,
 	input[value="Apply"]:enabled:hover {
 		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
 		background-color: #383745 !important;
@@ -2561,9 +2564,9 @@
 
 	input[value="Clear"],
 	input[value="Search Torrents"] {
-		border: 1px solid #212121;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
-                border-width: 0px 0px 0px 1px !important;
+        		color: var(--secondary-color);
 		height: 61px !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
@@ -2572,20 +2575,15 @@
 		margin-top: -109px !important;
 		text-transform: uppercase !important;
 	}
-    
-        input[value="Clear"]:enabled:hover,
-        input[value="Search Torrents"]:enabled:hover {
-     	        border-color: #212121 !important;   
-        }
 
 	input[value="Clear"] {
-		background: #65878F !important;
+		background: var(--button-bg-2) !important;
 		width: 110px !important;
 		right: 10px !important;
 	}
 
 	input[value="Search Torrents"] {
-		background: #344146;
+		background: var(--button-bg);
 		width: 190px !important;
 		right: 119px !important;
 	}
@@ -2694,4 +2692,5 @@
 	body > .ip a:hover {
 		color: #F9AE74 !important;
 	}
+
 }
