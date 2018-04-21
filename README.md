@@ -29,8 +29,8 @@ Instruction
 <ol>
 <li>Manually : create a new style in Stylish/Stylus and paste the script in it.
   <ol>
-    <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-dark.css">Bamboo-X dark version</a></li>
-    <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-light.css">Bamboo-X light version </a></li>
+    <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-dark.css">Bamboo-X dark theme</a></li>
+    <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-light.css">Bamboo-X light theme</a></li>
   </ol>
 </li>
 <li>Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here.</a>
