@@ -33,7 +33,7 @@ Instruction
     <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-light.css">Bamboo-X light theme</a></li>
   </ol>
 </li>
-<li>Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here.</a>
+<li>Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here</a>
 </ol>
 
 <strong>Step 3 : Install others scripts </strong>
