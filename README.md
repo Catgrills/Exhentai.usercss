@@ -27,8 +27,13 @@ Instruction
 
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li> manually (<a href="https://pastebin.com/rECzzV0i">light version</a> or <a href="https://pastebin.com/htjmKYbH">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
-<li><b>(NEW) STYLUS ONLY</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here</a>.</li>
+<li>Via <b>userstyles</b> : click the button <i>install Style</i> and it's done.
+  <ol>
+    <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-dark.css">bamboo-x dark version</a></li>
+    <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-light.css">bamboo-x light version </a></li>
+  </ol>
+</li>
+<li>Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here.</a>
 </ol>
 
 <strong>Step 3 : Install others scripts </strong>
