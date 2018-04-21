@@ -27,7 +27,7 @@ Instruction
 
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li>Via <b>userstyles</b> : click the button <i>install Style</i> and it's done.
+<li>Manually : create a new style in Stylish/Stylus and paste the script in it.
   <ol>
     <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-dark.css">bamboo-x dark version</a></li>
     <li><a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x-light.css">bamboo-x light version </a></li>
