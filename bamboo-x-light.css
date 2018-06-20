@@ -51,6 +51,10 @@
 		white-space: nowrap;
 	}
 
+	option {
+		background: var(--card-bg-2);
+	}
+
 	input[type="button"]:enabled:hover,
 	input[type="submit"]:enabled:hover,
 	input[type="button"]:enabled:focus,
@@ -70,10 +74,20 @@
 		background: transparent !important;
 		border: none !important;
 		padding: 10px !important;
-		margin-top: 140px !important;
+		margin-top: 100px !important;
 	}
 
-	.c1 .c8 {
+	.c1 .c8,
+	.dp,
+	#eventpane,
+	.ip .mr,
+	.ip a[href*="ehentai"],
+	.ip a[href*="forums"],
+	.ip a[href*="hentaiverse"],
+	.ip a[href*="lofi"],
+	#pp,
+	#pt,
+	.ygm {
 		display: none !important;
 	}
 
@@ -107,6 +121,7 @@
 		font-family: "Roboto" !important;
 		font-size: 15pt !important;
 		font-stretch: condensed !important;
+		margin-right: 20px !important;
 	}
 
 	p#nb a:hover {
@@ -116,16 +131,36 @@
 	p#nb img {
 
 		/*** HEADER ICONS ***/
-		visibility: hidden !important;
+		display: none;
+	}
+
+	p#nb a[href="https://ehwiki.org/"],
+	p#nb a[href="https://hentaiverse.org/"],
+	p#nb a[href="https://e-hentai.org/toplist.php"],
+	p#nb a[href="https://e-hentai.org/news.php"] {
+		display: none;
 	}
 
 	/* HOME */
 
 	/** DESCRIPION : change the elements of the home page **/
-	#nb a:nth-of-type(1):before {
+	#nb a[href="https://exhentai.org/"]:nth-of-type(1):before {
 
 		/*** HOME SLOGAN ***/
 		content: "exhentai.org" !important;
+		color: #FFF !important;
+		font-family: "Neuton" !important;
+		font-size: 23pt !important;
+		position: absolute !important;
+		top: 19px !important;
+		left: 30px !important;
+		visibility: visible !important;
+		z-index: 99 !important;
+		transition: all .3s ease-in-out !important;
+	}
+
+	#nb a[href="https://e-hentai.org/"]:nth-of-type(1):before {
+		content: "e-hentai.org" !important;
 		color: #FFF !important;
 		font-family: "Neuton" !important;
 		font-size: 23pt !important;
@@ -147,13 +182,13 @@
 
 	#toppane .ih:before {
 		color: #FFF !important;
-		content: "へんたい" !important;
+		content: "フロントページ" !important;
 		font-family: "Honoka Antique-Kaku" !important;
 		font-size: 40pt !important;
-		text-shadow: 4px 3px 0px #EB9532, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+		text-shadow: 4px 3px 0px #111, 9px 8px 0px rgba(255, 255, 255, .7) !important;
 		position: absolute !important;
 		margin-top: 72px !important;
-		margin-left: 40px !important;
+		margin-left: -26px !important;
 		visibility: visible !important;
 	}
 
@@ -164,7 +199,7 @@
 	#searchbox {
 
 		/*** HOME SEARCH BOX ***/
-		background: no-repeat url("https://i.imgur.com/Ah4lMHY.jpg") center 34% !important;
+		background: no-repeat url("https://i.imgur.com/HuLOmQ6.jpg") center 30% !important;
 		background-size: cover !important;
 		border: 1px solid var(--border-color) !important;
 		height: 120px !important;
@@ -175,11 +210,12 @@
 		z-index: 10 !important;
 	}
 
-	form[action="https://exhentai.org/"] {
+	form[action="https://exhentai.org/"],
+	form[action="https://e-hentai.org/"] {
 		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		height: 60% !important;
-		width: 80% !important;
+		border-top: 5px solid var(--border-color-2) !important;
+		height: 100% !important;
+		width: 100% !important;
 		position: fixed !important;
 		top: 0px !important;
 		right: 0px !important;
@@ -191,7 +227,8 @@
 		visibility: hidden;
 	}
 
-	form[action="https://exhentai.org/"] .nopm input[name="f_search"] {
+	form[action="https://exhentai.org/"] .nopm input[name="f_search"],
+	form[action="https://e-hentai.org/"] .nopm input[name="f_search"] {
 		background: var(--card-bg);
 		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
@@ -202,34 +239,50 @@
 		height: 30px !important;
 		padding: 14px 16px 17px 16px !important;
 		width: 100% !important;
-		margin-left: 0px !important;
-		margin-top: 0px !important;
+		position: fixed;
+		top: 0px;
+		left: 0px;
 	}
 
 	input[value="Apply Filter"],
 	input[value="Clear Filter"] {
 		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
-        		color: var(--secondary-color);
-		height: 67px !important;
+		border-width: 0px 1px !important;
+		color: var(--secondary-color);
+		height: 61.5px !important;
 		width: 150px !important;
-		line-height: 68px !important;
-		top: -5px !important;
+		line-height: 58px !important;
+		top: 2.5px !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold;
-		position: absolute !important;
+		position: fixed !important;
 		text-transform: uppercase !important;
 	}
 
 	input[value="Apply Filter"] {
 		background: var(--button-bg);
-		right: 146px !important;
+		right: 210px !important;
 	}
 
 	input[value="Clear Filter"] {
 		background: var(--button-bg-2);
-		right: -3px !important;
+		right: 61px !important;
+	}
+
+	#searchbox #close-btn {
+		background: url('https://imgur.com/4GlrMN7.png') no-repeat center;
+		background-size: 30px auto !important;
+		border: none;
+		color: transparent;
+		height: 67px;
+		width: 65px;
+		position: fixed !important;
+		top: 0px !important;
+		right: -1px !important;
+		filter: brightness(0) var(--invert);
+		opacity: .6;
 	}
 
 	table.itc {
@@ -237,15 +290,10 @@
 		/*** HOME SEARCH CATEGORIES ***/
 		background: transparent !important;
 		border-radius: 2px !important;
-		padding: 8px 0px !important;
+		padding: 8px 30px 8px 26px !important;
 		height: auto !important;
 		width: auto !important;
-		position: absolute;
-		top: 0px !important;
-		right: 0px !important;
-		bottom: 0px !important;
-		left: -12px !important;
-		margin: 100px auto auto auto !important;
+		margin: 88px auto auto auto !important;
 	}
 
 	.itc tr {
@@ -259,7 +307,7 @@
 		border-radius: 1px !important;
 		height: 0px !important;
 		width: 0px !important;
-		padding: 18vh 0px 0px 14vw !important;
+		padding: 50% 0px 0px 100% !important;
 		margin-bottom: 6px;
 	}
 
@@ -401,19 +449,30 @@
 	#searchbox form .nopm a[onclick*="filesearch_pane"] {
 
 		/*** HOME SEARCH OPTIONS ***/
-		background: #383745 !important;
+		background: var(--card-bg) !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		box-shadow: none !important;
-		color: transparent;
-		height: 0px !important;
-		width: 0px !important;
-		padding: 34px 0px 0px 34px !important;
-		position: fixed !important;
-		top: 25px !important;
-		visibility: visible !important;
+		color: var(--secondary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+		font-weight: bold;
+		padding: 10px 15px;
+		text-decoration: none;
+		text-transform: uppercase;
+		position: absolute;
+		right: 37px;
+		z-index: 999 !important;
+	}
+
+	#searchbox form .nopm a[onclick*="advsearch_pane"] {
+		bottom: 100px
+	}
+
+	#searchbox form .nopm a[onclick*="filesearch_pane"] {
+		bottom: 40px;
 	}
 
 	#trigger-box-btn {
@@ -433,54 +492,58 @@
 		padding: 0px 8px;
 		text-align: left;
 		text-transform: uppercase !important;
-		position: fixed !important;
+		position: absolute !important;
 		top: 25px !important;
-		right: 112px !important;
+		right: 30px !important;
 		z-index: 999 !important;
 		visibility: visible !important;
 	}
 
-	#searchbox form .nopm a[onclick*="advsearch_pane"] {
-		background-image: url("https://i.imgur.com/D6gWsU5.png") !important;
-		background-size: 21px auto !important;
-		right: 67px !important;
+	#searchbox form .nopm a[onclick*="advsearch_pane"]::before {
+		background: no-repeat url("https://i.imgur.com/D6gWsU5.png") center !important;
+		background-size: 22px auto !important;
+		color: transparent;
+		content: "dd";
+		margin-right: 5px;
 	}
 
 	.itss {
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color) !important;
 		padding: 20px !important;
-		height: 200px !important;
-		width: 800px !important;
-		position: fixed !important;
-		top: 34vh !important;
-		right: 0px !important;
+		height: 100px !important;
+		width: 100% !important;
+		position: absolute !important;
 		bottom: 0px !important;
-		left: 0px !important;
-		margin: auto !important;
-		visibility: visible !important;
+		margin-top: 80px !important;
 	}
 
-	#searchbox form .nopm a[onclick*="filesearch_pane"] {
-		background-image: url("https://i.imgur.com/oprVAfY.png") !important;
-		background-size: 16px auto !important;
-		right: 23px !important;
+	#searchbox form .nopm a[onclick*="filesearch_pane"]::before {
+		background: no-repeat url("https://i.imgur.com/oprVAfY.png") center !important;
+		background-size: 20px auto !important;
+		color: transparent;
+		content: "dd";
+		margin-right: 5px;
 	}
 
 	#fsdiv {
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color) !important;
-		padding: 20px 20px 50px 20px !important;
-		height: 30%;
-		width: 40% !important;
-		position: fixed !important;
-		top: -3vh !important;
-		right: 0px !important;
-		bottom: 20px !important;
-		left: 0px !important;
+		padding: 20px 20px 40px 20px !important;
+		height: 200px;
+		width: auto !important;
+		text-align: left;
+		position: relative;
+		right: 0px;
+		bottom: 50px;
+		left: 0px;
 		margin: auto !important;
-		z-index: 999 !important;
-		visibility: visible !important;
+		z-index: 99 !important;
+	}
+
+	#fsdiv .itsf {
+		width: 800px;
+		text-align: left;
 	}
 
 	#fsdiv *,
@@ -489,7 +552,7 @@
 		font-family: "Roboto" !important;
 		font-size: 14pt !important;
 		font-stretch: condensed;
-		font-weight: normal !important;
+		font-weight: normal;
 	}
 
 	#adv42 {
@@ -504,10 +567,15 @@
 		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
 		color: var(--secondary-color) !important;
+		font-weight: bold !important;
 		padding: 5px 10px !important;
 		text-transform: uppercase !important;
 		margin-top: 8px !important;
 		margin-bottom: 8px !important;
+	}
+
+	input[value="File Search"] * {
+		font-weight: bold !important;
 	}
 
 	input[name="sfile"] {
@@ -773,7 +841,7 @@
 
 		/*** LIST BODY ***/
 		background: transparent;
-		border-bottom: 1px dotted #BEBEBE !important;
+		border-bottom: 1px dotted var(--border-color) !important;
 	}
 
 	tr.gtr0 td,
@@ -877,11 +945,16 @@
 	}
 
 	div[style="position:relative; z-index:2"] .ptb,
-	form[name="favform"] table.ptb {
+	form[name="favform"] table.ptb,
+	#s.stuffbox table.ptb {
 
 		/*** HOME PAGINATION ***/
 		margin: 0px 0px 0px 2px !important;
 		width: 99.7% !important;
+	}
+
+	#s.stuffbox table.ptb {
+		margin-top: -2px !important;
 	}
 
 	table.ptb td {
@@ -898,8 +971,8 @@
 	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1) a,
 	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1) a,
 	form[name="favform"] table.ptb td:nth-of-type(1) a,
-	form[name="favform"] table.ptb td:nth-last-of-type(1) a,form[name="favform"] .ptdd {
-		color: transparent;
+	form[name="favform"] table.ptb td:nth-last-of-type(1) a,form[name="favform"] .ptdd,#s.stuffbox .ptdd {
+		color: transparent !important;
 	}
 
 	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1),
@@ -910,7 +983,8 @@
 	}
 
 	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1),
-	form[name="favform"] table.ptb td:nth-last-of-type(1) {
+	form[name="favform"] table.ptb td:nth-last-of-type(1),
+	#s.stuffbox table.ptb td:nth-last-of-type(1) a {
 		background: var(--card-bg-2) !important;
 		color: transparent !important;
 	}
@@ -929,7 +1003,7 @@
 
 		/*** GALLERY INFORMATION BOX ***/
 		padding-bottom: 80px !important;
-		margin-top: 178px !important;
+		margin-top: 136px !important;
 	}
 
 	div#gd2,
@@ -1338,6 +1412,7 @@
 		box-shadow: none !important;
 		color: var(--secondary-color) !important;
 		font-stretch: condensed !important;
+		font-weight: bold;
 		height: 40px !important;
 		width: 130px !important;
 		text-transform: uppercase !important;
@@ -1348,9 +1423,9 @@
 	}
 
 	.gm.torrent-info input:hover {
-		background: var(--card-bg-2) !important;        
+		background: var(--card-bg-2) !important;
 	}
-    
+
 	.gm.eze_gallery_custom_container {
 
 		/*** GALLERY EZE BOX ***/
@@ -1536,7 +1611,7 @@
 	}
 
 	table.ptb td,
-    	table.ptb td:hover {
+	table.ptb td:hover {
 		background: var(--card-bg-2);
 	}
 
@@ -1591,7 +1666,7 @@
 		background: var(--card-bg-2) !important;
 		border: 1px solid var(--border-color) !important;
 		color: transparent !important;
-		padding: 6px !important;
+		padding: 6px 6px 10px 6px !important;
 		margin-top: 14px !important;
 	}
 
@@ -1664,6 +1739,7 @@
 		/*** READER CONTAINER ***/
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color) !important;
+		max-width: 90% !important;
 		padding: 20px !important;
 		margin-top: 20px !important;
 		margin-bottom: 20px !important;
@@ -1680,6 +1756,10 @@
 		overflow: hidden !important;
 		text-overflow: ellipsis !important;
 		white-space: nowrap !important;
+	}
+
+	#i1.sni img {
+		max-width: 100% !important;
 	}
 
 	#i1.sni #i2 div:nth-child(2),
@@ -1712,7 +1792,7 @@
 
 	#loadfail:after {
 		background-color: var(--card-bg) !important;
-		background-image: url("https://i.imgur.com/dTiDpYi.png") !important;
+		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
 		background-size: 30px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
@@ -1835,6 +1915,7 @@
 		border-color: var(--border-color) !important;
 		color: var(--primary-color);
 		font-size: 12pt !important;
+		font-stretch: condensed;
 		height: 440px !important;
 		padding: 20px !important;
 		position: absolute !important;
@@ -1863,8 +1944,7 @@
 		color: var(--primary-color) !important;
 	}
 
-	.stuffbox[style*="width:584px"] div[style*="float:left; padding-top: 1px"], 
-	.stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
+	.stuffbox[style*="width: 584px"] div[style*="float:left; padding-top: 1px"], .stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
 		text-transform: lowercase !important;
 		margin-top: -3px !important;
 	}
@@ -1973,7 +2053,7 @@
 	.stuffbox[style*="width:584px"] input[name="torrent_info"] {
 		background: var(--card-bg) !important;
 		color: var(--secondary-color);
-		font-weight: normal !important;
+		font-weight: bold !important;
 		line-height: 32px !important;
 		width: 140px !important;
 		text-transform: uppercase !important;
@@ -2030,7 +2110,7 @@
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color);
 		padding: 20px 30px 30px 30px !important;
-		margin-top: 178px !important;
+		margin-top: 136px !important;
 	}
 
 	#outer *,
@@ -2047,7 +2127,6 @@
 		color: var(--secondary-color) !important;
 		font-size: 16pt !important;
 		font-stretch: condensed !important;
-		font-weight: normal !important;
 		text-align: left !important;
 		text-transform: uppercase !important;
 	}
@@ -2115,6 +2194,10 @@
 		margin-bottom: -11px !important;
 	}
 
+	#torrentform > p > a {
+		color: var(--secondary-color);
+	}
+
 	#form > p > a {
 		color: #F9AE74;
 		text-decoration: none !important;
@@ -2134,9 +2217,107 @@
 		margin-top: 160px !important;
 	}
 
+	form[action="https://upload.e-hentai.org/manage"] {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		padding: 20px !important;
+		margin-top: 100px !important;
+	}
+
+	#m {
+		margin-top: -50px !important;
+	}
+
+	#m * {
+		color: var(--primary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+	}
+
+	#m input,
+	#m select {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+	}
+
+	#uploadform #m.stuffbox {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		margin-top: 70px !important;
+	}
+
+	#uploadform #m.stuffbox table {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+	}
+
+	#uploadform #m.stuffbox table * {
+		border-color: var(--border-color) !important;
+	}
+
+	#uploadform #m.stuffbox input,
+	#uploadform #m.stuffbox select,
+	#uploadform #m.stuffbox textarea {
+		background: var(--card-bg) !important;
+		border-radius: 1px;
+		font-size: 14pt !important;
+	}
+
+	#uploadform #u * {
+		color: var(--primary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+	}
+
+	#uploadform #u #uploadfiles {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		font-size: 14pt !important;
+	}
+
+	#uploadform #u #uploadbutton {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		font-size: 14pt !important;
+		padding: 5px 5px 32px 5px;
+	}
+
+	#folderform {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		padding-bottom: 40px;
+		margin-top: 100px;
+	}
+
+	#folderform input,
+	#folderform select {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		font-size: 14pt !important;
+		padding: 5px !important;
+	}
+
+	#folderform * {
+		color: var(--primary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+	}
+
+	#reorderform .stuffbox {
+		background: var(--card-bg);
+		font-size: 14pt;
+		font-stretch: condensed;
+		padding-bottom: 17px !important;
+	}
+
 }
 
-@-moz-document regexp("(http|https)://exhentai.org/s/.*"),regexp("(http|https)://exhentai.org/uconfig.php.*") {
+@-moz-document regexp("(http|https)://(exhentai|e-hentai).org/s/.*"),
+regexp("(http|https)://(exhentai|e-hentai).org/uconfig.php.*"),
+regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathome|bitcoin|hathperks|exchange|logs).php.*") {
 	p.ip {
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color) !important;
@@ -2149,19 +2330,28 @@
 		z-index: 999 !important;
 	}
 
+	p.ip a {
+		color: var(--secondary-color);
+		font-size: 12pt;
+		font-stretch: condensed;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
 	p.ip a:hover {
 		color: #F9AE74 !important;
 	}
 
 }
 
-@-moz-document regexp("(http|https)://exhentai.org/favorites.php.*") {
+@-moz-document regexp("(http|https)://(exhentai|e-hentai).org/favorites.php.*") {
 
 	/* FAVORITE */
 
 	/** DESCRIPTION : change the elements of the favorite page **/
 	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
-		background: no-repeat url("https://i.imgur.com/0lBKZdH.jpg") center 33% !important;
+		background: no-repeat url("https://i.imgur.com/HuLOmQ6.jpg") center 30% !important;
 		background-size: cover !important;
 		border: 1px solid var(--border-color) !important;
 		color: transparent;
@@ -2175,10 +2365,10 @@
 
 	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"]:before {
 		color: #FFF !important;
-		content: "へんたい" !important;
+		content: "あいよう" !important;
 		font-family: "Honoka Antique-Kaku" !important;
 		font-size: 40pt !important;
-		text-shadow: 4px 3px 0px #EB6361, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+		text-shadow: 4px 3px 0px #111, 9px 8px 0px rgba(255, 255, 255, .7) !important;
 		position: absolute !important;
 		margin-top: -3px !important;
 		margin-left: -68px !important;
@@ -2205,6 +2395,7 @@
 		padding: 10px 0px !important;
 		height: 100% !important;
 		width: 100% !important;
+		padding-bottom: 100px;
 		text-align: center !important;
 		position: fixed !important;
 		top: 0px !important;
@@ -2221,15 +2412,13 @@
 	.ido .nosel .fp[style*="width:160px;"] {
 		border: 1px solid #000 !important;
 		border-radius: 1px !important;
-		padding: 90px 70px !important;
-		font-size: 11pt !important;
+		padding: 80px 80px 70px 80px !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
 		text-transform: uppercase !important;
-		margin-top: 17vh !important;
-		margin-right: 4px !important;
-		margin-bottom: -16vh !important;
-		margin-left: 4px !important;
+		margin-top: 80px;
+		margin-right: 10px;
+		margin-bottom: -70px;
 		float: none !important;
 		transition: all .3s ease-in-out !important;
 		display: inline-block !important;
@@ -2237,13 +2426,15 @@
 
 	#close-btn {
 		background: url('https://imgur.com/4GlrMN7.png') no-repeat 50% 50%;
-		background-size: 25px auto !important;
+		background-size: cover !important;
 		background-color: transparent !important;
 		border: none !important;
 		color: transparent !important;
+		height: 35px;
+		width: 35px;
 		position: fixed !important;
-		top: 40px !important;
-		right: 40px !important;
+		top: 20px !important;
+		right: 20px !important;
 		filter: invert(1) !important;
 	}
 
@@ -2263,18 +2454,18 @@
 		font-size: 20pt !important;
 		letter-spacing: 6px !important;
 		text-align: center !important;
-		margin-top: -15px !important;
+		margin-top: -45px !important;
 	}
 
 	div[style="font-weight:bold; float:left; text-align:right; width:30px; height:20px; padding:2px 3px 0 0"] {
 		color: #FFF !important;
 		font-family: "Bebas Neue" !important;
 		font-size: 19pt !important;
+		line-height: 42pt !important;
+		padding: 0px !important;
+		text-align: center !important;
 		width: 100% !important;
-		text-align: left !important;
-		position: absolute;
-		margin-top: 66px !important;
-		margin-left: 196px !important;
+		margin-top: 0px !important;
 	}
 
 	a[href*="favcat=0"] .fp,
@@ -2333,6 +2524,7 @@
 		background-color: #22202B !important;
 		border: 1px solid #000 !important;
 		border-radius: 2px !important;
+		color: var(--primary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -2343,9 +2535,9 @@
 		text-decoration: none !important;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		right: 0px !important;
 		left: 0px;
-		bottom: 75px !important;
+		right: 0px;
+		bottom: 30px !important;
 		z-index: 999 !important;
 		margin: auto !important;
 	}
@@ -2377,7 +2569,7 @@
 		padding: 0px 8px;
 		text-align: left;
 		text-transform: uppercase !important;
-		position: fixed !important;
+		position: absolute !important;
 		top: 25px !important;
 		right: 22px !important;
 		z-index: 999 !important;
@@ -2386,11 +2578,11 @@
 
 	input[value="Apply"] {
 		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
-		background-color: #383745 !important;
+		background-color: var(--card-bg-2) !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
 		background-size: 15px auto !important;
-		border: 1px solid #000 !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		box-shadow: none !important;
 		color: transparent !important;
@@ -2398,42 +2590,43 @@
 		width: 30px !important;
 		padding: 17px !important;
 		position: fixed !important;
-		top: 25px !important;
-		right: 158px !important;
+		right: 23px !important;
+		bottom: 24px;
 		z-index: 999 !important;
 	}
 
-    	input[value="Apply"]:enabled:focus,
+	input[value="Apply"]:enabled:focus,
 	input[value="Apply"]:enabled:hover {
 		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
-		background-color: #383745 !important;
+		background-color: var(--card-bg) !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
 		background-size: 15px auto !important;
-		border-color: #000 !important;
+		border-color: var(--border-color) !important;
 		color: transparent !important;
 	}
 
 	select[name="ddact"] {
-		background: #383745 !important;
-		border: 1px solid #000 !important;
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
-		color: #FFF !important;
-		height: 36px !important;
+		color: var(--secondary-color) !important;
+		height: 44px !important;
 		width: auto !important;
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
 		padding-top: 3px !important;
-		padding-left: 10px !important;
+		padding-left: 8px !important;
+		text-align: left;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		top: 22px !important;
-		right: 203px !important;
+		bottom: 20px !important;
+		right: 19px !important;
 		z-index: 999 !important;
 		-webkit-appearance: none;
 		-moz-appearance: none;
-		text-indent: -2px;
+		text-indent: 0px;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
@@ -2464,11 +2657,20 @@
 		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
 		color: transparent;
+		font-size: 12pt;
+		font-stretch: condensed;
+		font-weight: bold;
 		padding: 10px 15px !important;
+		text-transform: uppercase;
 		position: fixed !important;
 		left: 20px !important;
 		bottom: 23px !important;
 		z-index: 999 !important;
+	}
+
+	body .ip:nth-of-type(2) a {
+		color: var(--secondary-color);
+		text-decoration: none !important;
 	}
 
 	body .ip:nth-of-type(2) a:hover {
@@ -2487,9 +2689,14 @@
 		color: transparent !important;
 	}
 
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"],
+	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"] {
+		bottom: 76px !important;
+	}
+
 }
 
-@-moz-document regexp("(http|https)://exhentai.org/torrents.php.*") {
+@-moz-document regexp("(http|https)://(exhentai|e-hentai).org/torrents.php.*") {
 	.itg {
 		width: 99.7% !important;
 	}
@@ -2497,7 +2704,7 @@
 	.ih {
 
 		/*** TORRENT TITLE ***/
-		background: no-repeat url("https://i.imgur.com/rb1QG6N.jpg") center 32% !important;
+		background: no-repeat url("https://i.imgur.com/HuLOmQ6.jpg") center 30% !important;
 		background-size: cover !important;
 		border: 1px solid var(--border-color) !important;
 		color: transparent;
@@ -2510,13 +2717,13 @@
 
 	.ih:before {
 		color: #FFF !important;
-		content: "へんたい" !important;
+		content: "ダウンロード" !important;
 		font-family: "Honoka Antique-Kaku" !important;
 		font-size: 40pt !important;
-		text-shadow: 4px 3px 0px #60646D, 9px 8px 0px rgba(255, 255, 255, .15) !important;
+		text-shadow: 4px 3px 0px #111, 9px 8px 0px rgba(255, 255, 255, .7) !important;
 		position: absolute !important;
 		margin-top: -3px !important;
-		margin-left: -72px !important;
+		margin-left: -102px !important;
 		visibility: visible !important;
 	}
 
@@ -2541,7 +2748,7 @@
 	input[value="Search Torrents"] {
 		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
-        color: var(--secondary-color);
+		color: var(--secondary-color);
 		height: 61px !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
@@ -2606,7 +2813,7 @@
 	}
 
 	div[style="height:15px; min-width:300px; max-width:600px; overflow:hidden"] {
-		height: 22px !important;
+		height: 25px !important;
 	}
 
 	table.ptb {
@@ -2657,6 +2864,7 @@
 	}
 
 	body > .ip a {
+		color: var(--primary-color);
 		font-size: 11pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -2666,6 +2874,176 @@
 
 	body > .ip a:hover {
 		color: #F9AE74 !important;
+	}
+
+}
+
+@-moz-document domain("e-hentai.org") {
+
+	/* E-HENTAI */
+
+	/** DESCRIPTION : change the elements of e-hentai.org **/
+	#toppane .ih:before {
+		margin-left: 87px !important;
+	}
+
+	#detail_box_page {
+		color: #EBEBEB !important;
+	}
+
+	.gm {
+		border-radius: 1px !important;
+	}
+
+	#lb {
+		color: transparent;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		width: 100% !important;
+		text-align: center !important;
+		margin-top: 110px !important;
+		margin-bottom: -90px !important;
+	}
+
+	#lb a {
+		color: var(--secondary-color);
+		font-weight: bold;
+	}
+
+	#lb a[style*="bold"] {
+		color: var(--primary-color);
+	}
+
+	#searchform input,
+	#searchform select {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		padding: 5px;
+	}
+
+	#s.stuffbox .ptt:nth-of-type(1) {
+		visibility: hidden;
+	}
+
+	#s.stuffbox .itg {
+		background: var(--card-bg-2) !important;
+	}
+
+	#b.stuffbox > form > table {
+		width: 100%;
+	}
+
+	#b.stuffbox #x,
+	#b.stuffbox textarea,
+	#b.stuffbox input,
+	#b.stuffbox #d table {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		padding: 5px;
+	}
+
+	#b.stuffbox .b input,
+	#b.stuffbox .r input,
+	#b.stuffbox .r textarea {
+		background: var(--card-bg) !important;
+	}
+
+	#t.stuffbox div[class*="d"] {
+		height: auto !important;
+	}
+
+	#t.stuffbox table {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+		padding: 10px !important;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.scb {
+		color: #3498DB !important;
+	}
+
+	.stuffbox {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		width: 90% !important;
+		margin-top: 105px !important;
+	}
+
+	.stuffbox * {
+		border-color: var(--border-color) !important;
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
+	}
+
+	.stuffbox h1,
+	.stuffbox h2,
+	.stuffbox > p {
+		font-size: 16pt !important;
+	}
+
+	.stuffbox .homebox,
+	.stuffbox table {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
+		padding: 10px 10px 15px 10px !important;
+	}
+
+	.stuffbox .homebox input {
+		background: var(--card-bg);
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		font-size: 14pt;
+		padding: 5px 5px 8px 5px;
+	}
+
+	#coinselector div,
+	#dlvl {
+		background: transparent !important;
+		border: none;
+	}
+
+	.stuffbox td > div {
+		min-height: 30px !important;
+		min-width: 100px;
+		text-overflow: ellipsis;
+	}
+
+	.stuffbox td input,
+	.stuffbox form > input {
+		background: var(--card-bg-2) !important;
+		border: 1px solid var(--border-color);
+		border-radius: 1px;
+		padding: 5px 5px 8px 5px;
+	}
+
+	div[style*="text-align: center; width: 800px;"] {
+		background: var(--card-bg) !important;
+		border: 1px solid var(--border-color) !important;
+		border-radius: 1px;
+		margin-top: 160px !important;
+	}
+
+	div[style*="text-align: center; width: 800px;"] * {
+		border-color: var(--border-color) !important;
+		color: var(--primary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+	}
+
+	div[style="font-weight:bold; margin-top:5px; font-size:10pt"] {
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		margin-top: 100px !important;
 	}
 
 }
