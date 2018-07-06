@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bamboo-X
 @namespace      https://github.com/Catgrills/Bamboo-X
-@version        1.0.4
+@version        1.0.5
 @description    An userstyle for E-hentai/Exhentai called Bamboo-X.
 @author         Catgrills/Katgrills
 @preprocessor uso
@@ -315,7 +315,6 @@
 		/*** HOME SEARCH CATEGORIES ***/
 		background: transparent !important;
 		border-radius: 2px !important;
-		padding: 8px 30px 8px 26px !important;
 		height: auto !important;
 		width: auto !important;
 		margin: 88px auto auto auto !important;
@@ -332,7 +331,7 @@
 		border-radius: 1px !important;
 		height: 0px !important;
 		width: 0px !important;
-		padding: 50% 0px 0px 100% !important;
+		padding: 12vw 0px 0px 18vw !important;
 		margin-bottom: 6px;
 	}
 
@@ -1129,7 +1128,7 @@
 		margin-left: 2px !important;
 	}
 
-	#gd3 #gdn a:before {
+	#gd3 #gdn a[href*="uploader"]:before {
 		color: var(--primary-color) !important;
 		content: "Uploaded by " !important;
 		font-stretch: condensed !important;
@@ -2420,6 +2419,7 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		padding: 10px 0px !important;
 		height: 100% !important;
 		width: 100% !important;
+		padding-top: 20px;
 		padding-bottom: 100px;
 		text-align: center !important;
 		position: fixed !important;
@@ -2428,8 +2428,6 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		bottom: 0px !important;
 		left: 0px !important;
 		margin: auto !important;
-		overflow-x: hidden !important;
-		overflow-y: scroll !important;
 		z-index: 9999 !important;
 		display: none;
 	}
@@ -2437,7 +2435,7 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 	.ido .nosel .fp[style*="width:160px;"] {
 		border: 1px solid #000 !important;
 		border-radius: 1px !important;
-		padding: 80px 80px 70px 80px !important;
+		padding: 60px 50px !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
 		text-transform: uppercase !important;
