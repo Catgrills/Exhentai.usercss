@@ -1,10 +1,10 @@
 @-moz-document domain("exhentai.org"),
 domain("e-hentai.org") {
 
-    /* COLORS */
+    	/* COLORS */
 
-    /** DESCRIPTION : set the colors **/
-    :root {
+    	/** DESCRIPTION : set the colors **/
+    	:root {
         	--body-bg: #F0F1F5 !important;
 		--button-bg: #F3F4F7 !important;
 		--button-bg-2: #F0F1F5 !important;
@@ -18,7 +18,7 @@ domain("e-hentai.org") {
 		--primary-color: #212121 !important;
 		--secondary-color: #999 !important;
 		--invert: invert(0) !important;
-    }
+    	}
 
 	/* GENERAL */
 
