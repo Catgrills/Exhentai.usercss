@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bamboo-X
 @namespace      https://github.com/Catgrills/Bamboo-X
-@version        1.0.5
+@version        1.0.6
 @description    An userstyle for E-hentai/Exhentai called Bamboo-X.
 @author         Catgrills/Katgrills
 @preprocessor uso
@@ -42,8 +42,12 @@
 	`
 }
 ==/UserStyle== */
-@-moz-document domain("exhentai.org"), domain("e-hentai.org") {
-/*[[theme]]*/
+
+@-moz-document domain("exhentai.org"),
+domain("e-hentai.org") {
+
+	/*[[theme]]*/
+
 	/* GENERAL */
 
 	/** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
@@ -1940,6 +1944,7 @@
 		color: var(--primary-color);
 		font-size: 12pt !important;
 		font-stretch: condensed;
+		font-weight: bold;
 		height: 440px !important;
 		padding: 20px !important;
 		position: absolute !important;
@@ -1968,7 +1973,8 @@
 		color: var(--primary-color) !important;
 	}
 
-	.stuffbox[style*="width: 584px"] div[style*="float:left; padding-top: 1px"], .stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
+	.stuffbox[style*="width: 584px"] div[style*="float:left; padding-top: 1px"], 
+	.stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
 		text-transform: lowercase !important;
 		margin-top: -3px !important;
 	}
