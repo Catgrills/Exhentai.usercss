@@ -5,7 +5,7 @@ domain("e-hentai.org") {
 
     /** DESCRIPTION : set the colors **/
     :root {
-        --body-bg: #F0F1F5 !important;
+        	--body-bg: #F0F1F5 !important;
 		--button-bg: #F3F4F7 !important;
 		--button-bg-2: #F0F1F5 !important;
 		--card-bg: #FFF !important;
