@@ -5,13 +5,19 @@ domain("e-hentai.org") {
 
     /** DESCRIPTION : set the colors **/
     :root {
-        --body-bg: #282C34 !important;
-        --card-bg: #25373D !important;
-        --card-bg-2: #3E444E !important;
-        --op-bg: rgba(37, 55, 61, .98) !important;
-        --border-color: #000 !important;
+        --body-bg: #383745 !important; 
+        --button-bg: #344146 !important;
+        --button-bg-2: #B05F6D !important;
+        --card-bg: #22202B !important;
+        --card-bg-2: #383745 !important;
+        --card-bg-3: #7D6962 !important;
+        --card-bg-4: #CA8D6E !important;
+        --header-bg: #22202B !important;
+        --border-color: #111 !important;
+        --border-color-2: #CA8D6E !important;
         --primary-color: #FFF !important;
-        --secondary-color: #EBEBEB !important;
+        --secondary-color: #DDD !important;
+        --invert: invert(1) !important;
     }
 
     /* GENERAL */
