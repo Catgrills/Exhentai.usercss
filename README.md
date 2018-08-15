@@ -1,13 +1,13 @@
-# Bamboo-X
+# Bamboo
 
-<img src="preview_4_bamboo-x.png" width="100%">
+<img src="preview.png" width="100%">
 
-Preview of <i>Bamboo-X</i>.
+Preview of <i>Bamboo</i>.
 
 About
 -------------------------------
 
-<i>Bamboo-X</i> is an user style for <i>Exhentai</i>.
+<i>Bamboo</i> is an user style for <i>Exhentai</i>.
 
 User styles are CSS code designed to alter the appearance of one, some, or all sites.
 
@@ -22,7 +22,7 @@ Instruction
 + for <a href="https://addons.opera.com/en-gb/extensions/details/stylus/?display=en">Opera</a>
 
 <strong>Step 2 : Install the script </strong>
-+ Directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo-X/master/bamboo-x.user.css">click here</a>
++ Directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Bamboo/master/exhentai.user.css">click here</a>
 
 <strong>Step 3 : Install others scripts </strong>
 <ol>
