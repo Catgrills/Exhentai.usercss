@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Bamboo
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.0.6
+@version        1.0.7
 @description    An user style for E-hentai/Exhentai called Bamboo.
 @author         Catgrills/Katgrills
 @preprocessor uso
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-        	--body-bg: #F0F1F5 !important;
+        --body-bg: #F0F1F5 !important;
 		--button-bg: #F3F4F7 !important;
 		--button-bg-2: #F0F1F5 !important;
 		--card-bg: #FFF !important;
@@ -16,6 +16,7 @@
 		--card-bg-3: #F2F2F2 !important;
 		--card-bg-4: #DBDBDB !important;
 		--header-bg: #2A3744 !important;
+        --op-bg: rgba(240, 241, 245, .98) !important;
 		--border-color: #E0E0E0 !important;
 		--border-color-2: #CA8D6E !important;
 		--primary-color: #212121 !important;
@@ -25,7 +26,7 @@
 	`,
 	"Dark":`
 	:root {
-	    	--body-bg: #383745 !important; 
+	    --body-bg: #383745 !important; 
 		--button-bg: #344146 !important;
 		--button-bg-2: #B05F6D !important;
 		--card-bg: #22202B !important;
@@ -33,6 +34,7 @@
 		--card-bg-3: #7D6962 !important;
 		--card-bg-4: #CA8D6E !important;
 		--header-bg: #22202B !important;
+        --op-bg: rgba(56, 55, 69, .98) !important;
 		--border-color: #111 !important;
 		--border-color-2: #CA8D6E !important;
 		--primary-color: #FFF !important;
@@ -42,7 +44,6 @@
 	`
 }
 ==/UserStyle== */
-
 @-moz-document domain("exhentai.org"),
 domain("e-hentai.org") {
 
@@ -133,7 +134,7 @@ domain("e-hentai.org") {
 		/*** HEADER ***/
 		background: var(--header-bg) !important;
 		border-bottom: 3px solid var(--border-color-2) !important;
-		padding: 32px 0px 30px 130px !important;
+		padding: 32px 0px 38px 130px !important;
 		text-align: left !important;
 		position: absolute !important;
 		top: -2px !important;
@@ -181,7 +182,7 @@ domain("e-hentai.org") {
 		font-family: "Neuton" !important;
 		font-size: 23pt !important;
 		position: absolute !important;
-		top: 19px !important;
+		top: 21px !important;
 		left: 30px !important;
 		visibility: visible !important;
 		z-index: 99 !important;
@@ -270,7 +271,7 @@ domain("e-hentai.org") {
 		width: 100% !important;
 		position: fixed;
 		top: 0px;
-		left: 0px;
+		left: -1px;
 	}
 
 	input[value="Apply Filter"],
@@ -521,7 +522,7 @@ domain("e-hentai.org") {
 		text-align: left;
 		text-transform: uppercase !important;
 		position: absolute !important;
-		top: 25px !important;
+		top: 29px !important;
 		right: 30px !important;
 		z-index: 999 !important;
 		visibility: visible !important;
@@ -968,7 +969,7 @@ domain("e-hentai.org") {
 
 	div.in {
 		margin-left: 3px !important;
-		margin-top: -1px !important;
+		margin-top: 1px !important;
 		margin-right: -1px !important;
 	}
 
@@ -2343,6 +2344,60 @@ domain("e-hentai.org") {
 		padding-bottom: 17px !important;
 	}
 
+	/* UNLOCK HATH PERKS */
+
+	/** DESCRIPTION : compatible with Unlock Hath Perks script **/
+	#uhp-panel-container {
+		background: var(--op-bg) !important;
+		margin-left: -2px !important;
+		overflow-y: scroll;
+		z-index: 999 !important;
+	}
+
+	#uhp-panel {
+		background: var(--card-bg) !important;
+		border-radius: 1px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		margin: auto;
+	}
+
+	#uhp-panel * {
+		color: var(--primary-color);
+		font-stretch: condensed !important;
+	}
+
+	#uhp-panel h1 {
+		font-size: 18pt !important;
+		margin-bottom: 10px;
+	}
+
+	#uhp-panel > .option-grid {
+		margin-bottom: 20px;
+	}
+
+	#uhp-panel > .option-grid * {
+		font-size: 14pt !important;
+	}
+
+	.uhp-tf-options.tf-option-grid input {
+		background: var(--card-bg-2);
+		border: none;
+		border-radius: 2px;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		font-size: 14pt;
+		padding-bottom: 5px;
+		padding-left: 5px;
+	}
+
+	.uhp-open-in-new-page * {
+		color: var(--secondary-color);
+		font-stretch: condensed;
+	}
+
 }
 
 @-moz-document regexp("(http|https)://(exhentai|e-hentai).org/s/.*"),
@@ -2599,8 +2654,8 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		text-align: left;
 		text-transform: uppercase !important;
 		position: absolute !important;
-		top: 25px !important;
-		right: 22px !important;
+		top: 29px !important;
+		right: 30px !important;
 		z-index: 999 !important;
 		visibility: visible !important;
 	}
