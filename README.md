@@ -7,7 +7,7 @@ Preview of <i>Bamboo</i>.
 About
 -------------------------------
 
-<i>Bamboo</i> is an user style for <i>Exhentai</i>.
+<i>Bamboo</i> is a user style for <i>Exhentai</i>.
 
 User styles are CSS code designed to alter the appearance of one, some, or all sites.
 
