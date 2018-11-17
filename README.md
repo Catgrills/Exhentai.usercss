@@ -28,6 +28,7 @@ Instruction
 <ol>
 <li> Install <a href="https://sleazyfork.org/en/scripts/37879-exhentai-misc-edition">Exhentai : Misc Edition </a></li>
 <li> Install <a href="https://dnsev-h.github.io/eze/">eze</a></li>
+<li> Install <a href="https://sleazyfork.org/en/scripts/10968-sadpanda-torrent-inline">Sad Panda Torrent Inline</a></li>
 </ol>
 
 <strong>Step 4 : Install the font </strong>
