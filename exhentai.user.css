@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bamboo
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.0.9
+@version        1.1.0
 @description    An user style for E-hentai/Exhentai called Bamboo.
 @author         Catgrills/Katgrills
 @preprocessor uso
@@ -811,7 +811,7 @@ domain("e-hentai.org") {
 	}
 
 	.gl3m > a > div:first-child {
-		height: 20px;
+		height: 22px !important;
 		line-height: 20px;
 	}
 
@@ -973,6 +973,11 @@ domain("e-hentai.org") {
 	.glte a {
 		color: var(--primary-color) !important;
 	}
+	
+	.gltm > .gt {
+        	color: #FFF !important;
+        	margin-top: 5px !important;
+    	}
 
 	td.itd a,
 	td.itu a,
