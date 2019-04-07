@@ -783,6 +783,11 @@ domain("e-hentai.org") {
 		top: 2px !important;
 		left: 18pt !important;
 	}
+	
+	.gl6t .gt {
+    		font-size: 14pt !important;
+    		font-stretch: condensed !important;
+	}
 
 	table.itg {
 
