@@ -785,6 +785,7 @@ domain("e-hentai.org") {
 	}
 	
 	.gl6t .gt {
+		color: #FFF !important;
     		font-size: 14pt !important;
     		font-stretch: condensed !important;
 	}
