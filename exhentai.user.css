@@ -1,22 +1,22 @@
 /* ==UserStyle==
 @name           Bamboo
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.0.7
+@version        1.0.8
 @description    An user style for E-hentai/Exhentai called Bamboo.
 @author         Catgrills/Katgrills
 @preprocessor uso
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-        --body-bg: #F0F1F5 !important;
+        	--body-bg: #F0F1F5 !important;
 		--button-bg: #F3F4F7 !important;
 		--button-bg-2: #F0F1F5 !important;
 		--card-bg: #FFF !important;
 		--card-bg-2: #FAFAFA !important;
-		--card-bg-3: #F2F2F2 !important;
+		--card-bg-3: #F0F0F0 !important;
 		--card-bg-4: #DBDBDB !important;
 		--header-bg: #2A3744 !important;
-        --op-bg: rgba(240, 241, 245, .98) !important;
+        	--op-bg: rgba(240, 241, 245, .98) !important;
 		--border-color: #E0E0E0 !important;
 		--border-color-2: #CA8D6E !important;
 		--primary-color: #212121 !important;
@@ -26,7 +26,7 @@
 	`,
 	"Dark":`
 	:root {
-	    --body-bg: #383745 !important; 
+	        --body-bg: #383745 !important; 
 		--button-bg: #344146 !important;
 		--button-bg-2: #B05F6D !important;
 		--card-bg: #22202B !important;
@@ -34,7 +34,7 @@
 		--card-bg-3: #7D6962 !important;
 		--card-bg-4: #CA8D6E !important;
 		--header-bg: #22202B !important;
-        --op-bg: rgba(56, 55, 69, .98) !important;
+        	--op-bg: rgba(56, 55, 69, .98) !important;
 		--border-color: #111 !important;
 		--border-color-2: #CA8D6E !important;
 		--primary-color: #FFF !important;
@@ -44,6 +44,7 @@
 	`
 }
 ==/UserStyle== */
+
 @-moz-document domain("exhentai.org"),
 domain("e-hentai.org") {
 
@@ -74,6 +75,7 @@ domain("e-hentai.org") {
 	}
 
 	select {
+		color: var(--primary-color) !important;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		text-indent: 0px;
@@ -82,7 +84,11 @@ domain("e-hentai.org") {
 	}
 
 	option {
-		background: var(--card-bg-2);
+		background: transparent;
+	}
+
+	option * {
+		color: var(--primary-color) !important;
 	}
 
 	input[type="button"]:enabled:hover,
@@ -104,7 +110,7 @@ domain("e-hentai.org") {
 		background: transparent !important;
 		border: none !important;
 		padding: 10px !important;
-		margin-top: 100px !important;
+		margin-top: 120px !important;
 	}
 
 	.c1 .c8,
@@ -115,6 +121,7 @@ domain("e-hentai.org") {
 	.ip a[href*="forums"],
 	.ip a[href*="hentaiverse"],
 	.ip a[href*="lofi"],
+	#nb img,
 	#pp,
 	#pt,
 	.ygm {
@@ -126,48 +133,66 @@ domain("e-hentai.org") {
 		top: 0px;
 	}
 
+	.lc > span {
+		background: var(--card-bg-2) !important;
+		border: none !important;
+		border-radius: 1px !important;
+		box-shadow: 0px 1px 2Px rgba(0, 0, 0, .2) !important;
+		margin-top: 3px !important;
+	}
+
 	/* HEADER */
 
 	/** DESCRIPTION : change the elements of the header **/
-	p#nb {
+	#nb {
 
 		/*** HEADER ***/
 		background: var(--header-bg) !important;
 		border-bottom: 3px solid var(--border-color-2) !important;
-		padding: 32px 0px 38px 130px !important;
+		padding: 32px 0px 38px 2px !important;
 		text-align: left !important;
+		max-width: 100% !important;
 		position: absolute !important;
 		top: -2px !important;
 		right: 0px !important;
 		left: 0px !important;
+		display: inline-block !important;
 		margin-left: -2px !important;
 		z-index: 999 !important;
 	}
 
-	p#nb a {
+	#nb:hover {
+		max-height: 18px !important;
+	}
+
+	#nb a {
 
 		/*** HEADER LINKS ***/
 		color: #F8F8F8 !important;
 		font-family: "Roboto" !important;
 		font-size: 15pt !important;
 		font-stretch: condensed !important;
-		margin-right: 20px !important;
 	}
 
-	p#nb a:hover {
+	#nb a:hover {
 		color: #EBEBEB !important;
 	}
 
-	p#nb img {
+	#nb div {
 
 		/*** HEADER ICONS ***/
-		display: none;
+		background: transparent;
+		display: inline !important;
 	}
 
-	p#nb a[href="https://ehwiki.org/"],
-	p#nb a[href="https://hentaiverse.org/"],
-	p#nb a[href="https://e-hentai.org/toplist.php"],
-	p#nb a[href="https://e-hentai.org/news.php"] {
+	#nb div:nth-of-type(1) {
+		margin-left: 110px !important;
+	}
+
+	#nb a[href="https://ehwiki.org/"],
+	#nb a[href="https://hentaiverse.org/"],
+	#nb a[href="https://e-hentai.org/toplist.php"],
+	#nb a[href="https://e-hentai.org/news.php"] {
 		display: none;
 	}
 
@@ -182,11 +207,15 @@ domain("e-hentai.org") {
 		font-family: "Neuton" !important;
 		font-size: 23pt !important;
 		position: absolute !important;
-		top: 21px !important;
+		top: 28px !important;
 		left: 30px !important;
 		visibility: visible !important;
 		z-index: 99 !important;
 		transition: all .3s ease-in-out !important;
+	}
+
+	.nbw {
+		visibility: hidden;
 	}
 
 	#nb a[href="https://e-hentai.org/"]:nth-of-type(1):before {
@@ -206,26 +235,6 @@ domain("e-hentai.org") {
 		color: #FACA9B !important;
 	}
 
-	#nb a:nth-of-type(1) {
-		visibility: hidden;
-	}
-
-	#toppane .ih:before {
-		color: #FFF !important;
-		content: "フロントページ" !important;
-		font-family: "Honoka Antique-Kaku" !important;
-		font-size: 40pt !important;
-		text-shadow: 4px 3px 0px #111, 9px 8px 0px rgba(255, 255, 255, .7) !important;
-		position: absolute !important;
-		margin-top: 72px !important;
-		margin-left: -26px !important;
-		visibility: visible !important;
-	}
-
-	#toppane .ih {
-		visibility: hidden;
-	}
-
 	#searchbox {
 
 		/*** HOME SEARCH BOX ***/
@@ -235,8 +244,8 @@ domain("e-hentai.org") {
 		height: 120px !important;
 		padding: 20px !important;
 		width: auto !important;
-		margin-right: -4px !important;
-		margin-left: -4px !important;
+		margin-right: 5px !important;
+		margin-left: 5px !important;
 		z-index: 10 !important;
 	}
 
@@ -259,7 +268,7 @@ domain("e-hentai.org") {
 
 	form[action="https://exhentai.org/"] .nopm input[name="f_search"],
 	form[action="https://e-hentai.org/"] .nopm input[name="f_search"] {
-		background: var(--card-bg);
+		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
 		border-width: 0px 0px 1px 0px !important;
@@ -341,137 +350,75 @@ domain("e-hentai.org") {
 	}
 
 	:root {
-		--doujinshi: url("https://i.imgur.com/PZ06V9H.jpg") !important;
-		--manga: url("https://i.imgur.com/4PQwSBP.jpg") !important;
+		--doujinshi: url("https://i.imgur.com/dFsObyP.jpg") !important;
+		--manga: url("https://i.imgur.com/v3Hzx9F.jpg") !important;
 		--artistcg: url("https://i.imgur.com/OGV8S1z.jpg") !important;
 		--gamecg: url("https://i.imgur.com/hZBx6F3.jpg") !important;
 		--western: url("https://i.imgur.com/D9OdyqB.jpg") !important;
-		--nonh: url("https://i.imgur.com/lIsnRWe.jpg") !important;
-		--imageset: url("https://i.imgur.com/0WRwUHm.jpg") !important;
+		--nonh: url("https://i.imgur.com/982o6uT.jpg") !important;
+		--imageset: url("https://i.imgur.com/10RYkUd.jpg") !important;
 		--cosplay: url("https://i.imgur.com/Adqz0Hr.jpg") !important;
 		--asian: url("https://i.imgur.com/bL2WqFy.jpg") !important;
 		--misc: url("https://i.imgur.com/qdxrE1t.jpg") !important;
 	}
 
-	.itdc img {
-		border-radius: 50% !important;
-		height: 0px !important;
-		width: 0px !important;
-		padding: 12px 0px 0px 12px !important;
+	#searchbox div[id*="cat"] {
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		color: transparent !important;
+		height: 12vw;
+		width: 18vw;
+		margin-bottom: 10px;
 	}
 
-	.itc img[src*="_d"] {
-		opacity: .3 !important;
-	}
-
-	#f_doujinshi_img {
+	#searchbox .ct2 {
 		background: no-repeat var(--doujinshi) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/doujinshi"] img,
-	form[name="favform"] img[src*="doujinshi"],
-	.id4 .id41[title="Doujinshi"] {
-		background: #EB6361 !important;
-	}
-
-	#f_manga_img {
+	#searchbox .ct3 {
 		background: no-repeat var(--manga) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/manga"] img,
-	form[name="favform"] img[src*="manga"],
-	.id4 .id41[title="Manga"] {
-		background: #EEE657 !important;
-	}
-
-	#f_artistcg_img {
+	#searchbox .ct4 {
 		background: no-repeat var(--artistcg) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/artistcg"] img,
-	form[name="favform"] img[src*="artistcg"],
-	.id4 .id41[title="Artist CG Sets"] {
-		background: #EBBD63 !important;
-	}
-
-	#f_gamecg_img {
+	#searchbox .ct5 {
 		background: no-repeat var(--gamecg) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/gamecg"] img,
-	form[name="favform"] img[src*="gamecg"],
-	.id4 .id41[title="Game CG Sets"] {
-		background: #5C9F97 !important;
-	}
-
-	#f_western_img {
+	#searchbox .cta {
 		background: no-repeat var(--western) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/western"] img,
-	form[name="favform"] img[src*="western"],
-	.id4 .id41[title="Western"] {
-		background: #F7E999 !important;
-	}
-
-	#f_imageset_img {
+	#searchbox .ct6 {
 		background: no-repeat var(--imageset) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/imageset"] img,
-	form[name="favform"] img[src*="imageset"],
-	.id4 .id41[title="Image Sets"] {
-		background: #47D2E9 !important;
-	}
-
-	#f_non-h_img {
+	#searchbox .ct9 {
 		background: no-repeat var(--nonh) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/non-h"] img,
-	form[name="favform"] img[src*="non-h"],
-	.id4 .id41[title="Non-H"] {
-		background: #ECF0F1 !important;
-	}
-
-	#f_cosplay_img {
+	#searchbox .ct7 {
 		background: no-repeat var(--cosplay) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/cosplay"] img,
-	form[name="favform"] img[src*="cosplay"],
-	.id4 .id41[title="Cosplay"] {
-		background: #AA8C91 !important;
-	}
-
-	#f_asianporn_img {
+	#searchbox .ct8 {
 		background: no-repeat var(--asian) center !important;
 		background-size: cover !important;
 	}
 
-	a[href="https://exhentai.org/asianporn"] img,
-	form[name="favform"] img[src*="asian"],
-	.id4 .id41[title="Asian Porn"] {
-		background: #FDE1F7 !important;
-	}
-
-	#f_misc_img {
+	#searchbox .ct1 {
 		background: no-repeat var(--misc) center !important;
 		background-size: cover !important;
-	}
-
-	a[href="https://exhentai.org/misc"] img,
-	form[name="favform"] img[src*="misc"],
-	.id4 .id41[title="Misc"] {
-		background: #FFF0D6 !important;
 	}
 
 	#searchbox form .nopm a[onclick*="advsearch_pane"],
@@ -484,24 +431,28 @@ domain("e-hentai.org") {
 		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		box-shadow: none !important;
-		color: var(--secondary-color);
-		font-size: 14pt;
+		color: transparent !important;
+		font-size: 12pt;
 		font-stretch: condensed;
 		font-weight: bold;
 		padding: 10px 15px;
 		text-decoration: none;
 		text-transform: uppercase;
+		overflow: hidden !important;
+		white-space: nowrap !important;
+		width: 20px !important;
 		position: absolute;
-		right: 37px;
 		z-index: 999 !important;
 	}
 
 	#searchbox form .nopm a[onclick*="advsearch_pane"] {
-		bottom: 100px
+		bottom: 2px;
+		right: 79px;
 	}
 
 	#searchbox form .nopm a[onclick*="filesearch_pane"] {
-		bottom: 40px;
+		bottom: 2px;
+		right: 20px;
 	}
 
 	#trigger-box-btn {
@@ -522,7 +473,7 @@ domain("e-hentai.org") {
 		text-align: left;
 		text-transform: uppercase !important;
 		position: absolute !important;
-		top: 29px !important;
+		top: 26px !important;
 		right: 30px !important;
 		z-index: 999 !important;
 		visibility: visible !important;
@@ -562,9 +513,9 @@ domain("e-hentai.org") {
 		height: 200px;
 		width: auto !important;
 		text-align: left;
-		position: relative;
+		position: absolute;
 		right: 0px;
-		bottom: 50px;
+		bottom: 0px;
 		left: 0px;
 		margin: auto !important;
 		z-index: 99 !important;
@@ -596,15 +547,10 @@ domain("e-hentai.org") {
 		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
 		color: var(--secondary-color) !important;
-		font-weight: bold !important;
+		font-weight: normal !important;
 		padding: 5px 10px !important;
-		text-transform: uppercase !important;
 		margin-top: 8px !important;
 		margin-bottom: 8px !important;
-	}
-
-	input[value="File Search"] * {
-		font-weight: bold !important;
 	}
 
 	input[name="sfile"] {
@@ -614,7 +560,7 @@ domain("e-hentai.org") {
 		margin-top: 1px !important;
 	}
 
-	.ip[style="margin-top:5px"] {
+	div[style="position:relative; z-index:2"] .ip {
 
 		/*** HOME RESULTS ***/
 		background: var(--card-bg) !important;
@@ -656,6 +602,7 @@ domain("e-hentai.org") {
 	}
 
 	p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
+		background: var(--card-bg);
 		border: 1px solid var(--border-color) !important;
 		color: var(--secondary-color);
 		padding: 20px !important;
@@ -673,17 +620,15 @@ domain("e-hentai.org") {
 		display: none !important;
 	}
 
-	div#dmi,
-	div[style="position:absolute; top:-18px; left:15px"] {
-
-		/*** THUMBNAIL/LIST BUTTON ***/
-		visibility: hidden;
+	#dms {
+		position: fixed !important;
+		right: 20px !important;
+		bottom: 30px !important;
+		visibility: visible !important;
+		z-index: 100 !important;
 	}
 
-	#dmi a[href*="set=dm_t"],
-	#dmi a[href*="set=dm_l"],
-	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"],
-	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"] {
+	#dms select {
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color) !important;
 		border-radius: 2px !important;
@@ -691,14 +636,12 @@ domain("e-hentai.org") {
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
+		width: auto !important;
+		max-width: 100% !important;
 		padding: 10px 20px !important;
+		text-align: center !important;
 		text-decoration: none !important;
 		text-transform: uppercase !important;
-		position: fixed !important;
-		right: 20px !important;
-		bottom: 25px !important;
-		visibility: visible !important;
-		z-index: 100 !important;
 	}
 
 	#dmi a[href*="set=dm_t"]:hover,
@@ -728,113 +671,111 @@ domain("e-hentai.org") {
 		padding-top: 10px !important;
 	}
 
-	.itg .id1 {
+	.itg .gl1t {
 
 		/*** THUMBNAILS ***/
 		background: transparent !important;
 		border: none !important;
-		height: 335px !important;
+		height: auto !important;
+		margin-bottom: -40px !important;
 	}
 
-	.itg .id2 {
+	.itg .gl4t {
 		max-height: 25px !important;
 		height: auto !important;
-		width: 200px !important;
-		margin-bottom: 12px !important;
-		text-align: left !important;
+		width: auto !important;
+		line-height: 20pt;
+		margin-bottom: 5px !important;
+		text-align: center !important;
 		transition: max-height 0.35s ease-out !important;
 	}
 
-	.id2 a {
+	.gl4t a {
 		color: var(--secondary-color) !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 	}
 
-	.id1:not(.e-Highlighted):not(.e-Filtered) > .id2 {
-		overflow: hidden !important;
-	}
-
-	.id1:not(.e-Highlighted):not(.e-Filtered):hover > .id2 > a {
+	.gl1t:not(.e-Highlighted):not(.e-Filtered):hover > .gl4t > a {
 		padding-bottom: 0px !important;
 	}
 
-	.id1:hover > .id2 > a {
+	.gl1t:hover > .gl4t  > a {
 		background: transparent !important;
 		transition: all 0.35s ease-in-out !important;
 	}
 
-	.id2:hover a {
+	.gl4t:hover a {
 		color: inherit !important;
 		text-shadow: none !important;
 	}
 
-	.itg .id2:hover {
+	.itg .gl4t:hover {
 		max-height: 900px !important;
 		transition: max-height 0.45s ease-in !important;
 	}
 
-	.itg .id3,
-	.itg .id3 img {
+	.itg .gl3t {
+		background: var(--card-bg-2);
+		border: 1px solid var(--border-color);
 		border-radius: 1px !important;
+		margin-bottom: 0px;
+		overflow: hidden !important;
 		z-index: 99 !important;
 	}
 
-	.itg .id3 {
-		background: #17171A !important;
-		border: 1px solid var(--border-color) !important;
-		height: 280px !important;
+	.itg .gl3t a {
+		position: relative !important;
+		overflow: hidden !important;
 	}
 
-	.itg .id3 img {
-		height: auto !important;
-		width: 100% !important;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		margin: auto;
+	.gl3t > a > img {
+		height: 100% !important;
 	}
 
 	#detail_box {
 		background: rgba(0, 0, 0, .9) !important;
 		font-size: 16pt !important;
 		font-stretch: condensed !important;
-		opacity: 0;
+		height: inherit !important;
+		width: 100% !important;
+		padding: 20px 0px 25px 20px !important;
+		position: absolute !important;
+		bottom: 3px !important;
+		opacity: 0 !important;
 		transition: all .3s ease-in-out !important;
 	}
 
-	.id3:hover #detail_box {
+	.gl3t:hover #detail_box {
 		opacity: 1 !important;
 		transition: all .3s ease-in-out !important;
 	}
 
-	#detail_box #detail_box_cat {
-		font-size: 22pt !important;
-		font-stretch: condensed;
-		margin-top: 10vh !important;
-		margin-bottom: 2px !important;
-	}
-
-	#detail_box #detail_box_rate {
-		position: absolute !important;
+	#detail_box #detail_box_page {
+		color: #FFF !important;
+		line-height: 20pt;
 		right: 0px !important;
 		left: 0px !important;
-		margin: 10px auto !important;
 	}
 
-	.id4 {
+	#detail_box #detail_box_page .ir {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#detail_box #detail_box_page .gldown {
+		height: 50px !important;
+		position: absolute;
+		bottom: 0px;
+		right: 40px;
+	}
+
+	.gl5t {
 		visibility: hidden;
 	}
 
-	.id4 .id41 {
-		border-radius: 50% !important;
-		left: 7px !important;
-	}
-
-	.id4 .id42 {
+	.gl5t div {
 		font-size: 11pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
@@ -843,42 +784,41 @@ domain("e-hentai.org") {
 		left: 18pt !important;
 	}
 
-	.id4 .id43 {
-		top: 2px !important;
-		left: 65pt !important;
-	}
-
-	.id4 .tn {
-		margin-right: 14px !important;
-		margin-top: 2px !important;
-	}
-
 	table.itg {
 
 		/*** HOME LIST CONTENT ***/
-		margin-left: 2px;
+		margin-left: 5px;
 		max-width: 100% !important;
-		width: 99.7%;
+		width: 99.2%;
 	}
 
 	table.itg th {
 		display: none !important;
 	}
 
-	tr.gtr0,
-	tr.gtr1 {
+	.itg tr {
 
 		/*** LIST BODY ***/
-		background: transparent;
+		background: transparent !important;
 		border-bottom: 1px dotted var(--border-color) !important;
 	}
 
-	tr.gtr0 td,
-	tr.gtr1 td {
+	.itg tr td {
 		color: var(--secondary-color);
 		font-size: 14pt !important;
 		font-stretch: condensed;
 		padding: 10px 5px !important;
+	}
+
+	.gl3m > a > div:first-child {
+		height: 20px;
+		line-height: 20px;
+	}
+
+	.gl4c.glhide * {
+		color: var(--secondary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
 	}
 
 	div.it4r {
@@ -889,14 +829,148 @@ domain("e-hentai.org") {
 		padding-top: 11px !important;
 	}
 
+	.gl2m > div:last-child {
+		background: transparent !important;
+		border: none !important;
+		font-style: normal;
+		font-weight: normal !important;
+	}
+
+	.gl2c {
+		padding-bottom: 0px !important;
+	}
+
+	.gl2c > div:last-child > div:nth-child(1) {
+		font-style: normal !important;
+		top: -5px !important;
+	}
+
+	.gl2c > div:last-child > div:nth-child(2) {
+		position: absolute;
+		top: 28px !important;
+		left: 11px !important;
+	}
+
+	.gl2c > div:last-child > div:nth-child(3) {
+		position: absolute;
+		top: 30px;
+		left: 103px;
+	}
+
+	.gl3c > a > div:nth-child(2) {
+		padding: 10px 2px !important;
+	}
+
+	.gl3c.glname {
+		padding-left: 30px !important;
+	}
+
+	.gl4c > div:nth-child(1) {
+		top: 15px;
+	}
+
+	.gl4c > div:nth-child(2) {
+		top: 40px;
+	}
+
+	.gl1e > div {
+		border: 1px solid var(--border-color);
+		border-radius: 1px !important;
+	}
+
+	.tc,
+	.gl3e *,
+	.gl4e.glname * {
+		color: var(--primary-color) !important;
+	}
+
+	.gl3e > div:nth-child(2) {
+		background: transparent !important;
+		border: none !important;
+		font-style: normal;
+		font-weight: normal;
+		position: absolute;
+		top: 47px;
+		left: -4px;
+	}
+
+	.gl3e > div:nth-child(5) {
+		font-size: 14pt;
+		margin-top: 10px;
+	}
+
+	.gl3e .gldown {
+		margin-top: 20px !important;
+	}
+
+	.gl4e.glname {
+		margin-left: 20px !important;
+	}
+
+	.gt {
+		background: var(--card-bg-2) !important;
+		border: none !important;
+		border-radius: 1px !important;
+		color: var(--primary-color) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		font-weight: normal !important;
+		padding: 2px 10px 4px 10px !important;
+		margin-right: 4px !important;
+		margin-bottom: 8px !important;
+	}
+
+	.gtl {
+		background: var(--card-bg-3) !important;
+		border: none !important;
+		border-radius: 1px !important;
+		color: var(--primary-color) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		font-weight: normal !important;
+		padding: 2px 10px 4px 10px !important;
+		margin-right: 4px !important;
+	}
+
+	.glthumb,
+	.glthumb div {
+		background: transparent !important;
+		border: none !important;
+		border-radius: 1px !important;
+	}
+
+	.glthumb img {
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 1) !important;
+	}
+
+	.glthumb div:nth-of-type(2) {
+		display: none;
+	}
+
 	td.itd,
 	td.itu,
-	td.itdc {
+	td.itdc,
+	.gltm > tbody > tr > td {
 		border-right: 0px !important;
 	}
 
+	.gl1c,
+	.gl2c,
+	.gl3c,
+	.gl4c,
+	.glfc,
+	.gl4e,
+	.gltc > tbody > tr > td,
+	.glte > tbody > tr > td {
+		border: none !important;
+	}
+
+	.glte .glink {
+		line-height: 20pt !important;
+	}
+
 	td.itd a,
-	td.itu a {
+	td.itu a,
+	.glink {
 
 		/*** LIST LINKS ***/
 		color: var(--primary-color) !important;
@@ -916,34 +990,70 @@ domain("e-hentai.org") {
 		transition: all .3s ease-in-out !important;
 	}
 
-	.itdc img {
+	td div[class*="ct"] {
 
 		/*** CATEGORIES ICON ***/
-		margin-top: -2px !important;
-		margin-left: 5px !important;
+		background: transparent !important;
+		box-shadow: none !important;
+		font-size: 14pt !important;
+		margin-top: -4px !important;
+		letter-spacing: 0px !important;
 	}
 
-	table.itg .it3 {
+	td .ct1 {
+		color: #FFF0D6 !important;
+	}
+
+	td .ct2 {
+		color: #EB6361 !important;
+	}
+
+	td .ct3 {
+		color: #EEE657 !important;
+	}
+
+	td .ct4 {
+		color: #EBBD63 !important;
+	}
+
+	td .ct5 {
+		color: #5C9F97 !important;
+	}
+
+	td .cta {
+		color: #F7E999 !important;
+	}
+
+	td .ct6 {
+		color: #2D338C !important;
+	}
+
+	td .ct7 {
+		color: #AA8C91 !important;
+	}
+
+	td .ct8 {
+		color: #A94093 !important;
+	}
+
+	td .ct9 {
+		color: #47D2E9 !important;
+	}
+
+	table.itg .gldown a {
 
 		/*** TORRENT ICON ***/
-		margin-left: -20px;
-	}
-
-	.it3 .i {
-		margin-top: -2px !important;
-		margin-right: 2px !important;
-	}
-
-	.it3 div[id*="favicon_"] {
-		margin-top: 3px !important;
-		margin-right: 5px !important;
-		margin-left: 14px !important;
-	}
-
-	table.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
 		background: url('https://i.imgur.com/n8CjvZT.png') !important;
-		background-size: 165% auto !important;
-		background-position: 75% 0% !important;
+		background-size: cover !important;
+		background-position: bottom !important;
+		height: 0px;
+		width: 0px;
+		padding: 11px 0px 0px 11px !important;
+		margin-left: -8px;
+	}
+
+	.itg .gldown img {
+		opacity: 0
 	}
 
 	div.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
@@ -978,8 +1088,8 @@ domain("e-hentai.org") {
 	#s.stuffbox table.ptb {
 
 		/*** HOME PAGINATION ***/
-		margin: 0px 0px 0px 2px !important;
-		width: 99.7% !important;
+		margin: 0px 0px 0px 5px !important;
+		width: 99.2% !important;
 	}
 
 	#s.stuffbox table.ptb {
@@ -1028,7 +1138,7 @@ domain("e-hentai.org") {
 		border: 1px solid var(--border-color) !important;
 	}
 
-	.gm:nth-of-type(1) {
+	div[class="gm"] {
 
 		/*** GALLERY INFORMATION BOX ***/
 		padding-bottom: 80px !important;
@@ -1252,9 +1362,8 @@ domain("e-hentai.org") {
 
 	#gmid #gd4 .gtl {
 		background: var(--card-bg-3) !important;
-		border-color: var(--border-color) !important;
+		border: none !important;
 		border-radius: 1px !important;
-		border-style: solid !important;
 		padding: 6px 12px !important;
 		margin-top: -5px !important;
 		margin-bottom: 10px !important;
@@ -1300,7 +1409,7 @@ domain("e-hentai.org") {
 		background: var(--card-bg-2) !important;
 		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
-		color: var(--primary-color);
+		color: var(--primary-color) !important;
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		padding: 9px !important;
@@ -1552,7 +1661,7 @@ domain("e-hentai.org") {
 
 	#gdo4 .tha.nosel {
 		background: var(--card-bg) !important;
-		bottom: 20px !important;
+		bottom: -5px !important;
 	}
 
 	#gdo4 .tha.nosel:hover {
@@ -1562,7 +1671,8 @@ domain("e-hentai.org") {
 	#gdo4 .ths.nosel {
 		background: var(--card-bg) !important;
 		color: #DED7E6 !important;
-		bottom: 75px !important;
+		bottom: -5px !important;
+		right: 122px !important;
 	}
 
 	.eze_gallery_page {
@@ -1619,6 +1729,7 @@ domain("e-hentai.org") {
 		/*** GALLERY COMMENT ***/
 		padding-top: 25px !important;
 		padding-bottom: 25px !important;
+		margin-top: 15px !important;
 	}
 
 	#cdiv .c2 {
@@ -1742,7 +1853,7 @@ domain("e-hentai.org") {
 		padding: 10px 15px !important;
 		position: fixed !important;
 		left: 20px !important;
-		bottom: 20px !important;
+		bottom: -1px !important;
 		z-index: 999 !important;
 	}
 
@@ -1814,18 +1925,18 @@ domain("e-hentai.org") {
 		text-decoration: none !important;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		bottom: 31px !important;
+		bottom: 9px !important;
 		right: 20px !important;
 		visibility: hidden !important;
 	}
 
 	#loadfail:after {
-		background-color: var(--card-bg) !important;
+		background-color: #22202B !important;
 		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
 		background-size: 30px auto !important;
 		background-position: center !important;
 		background-repeat: no-repeat !important;
-		border: 1px solid var(--border-color) !important;
+		border: 1px solid #111 !important;
 		border-radius: 2px !important;
 		color: transparent;
 		content: " " !important;
@@ -1842,8 +1953,8 @@ domain("e-hentai.org") {
 		text-decoration: none !important;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		bottom: 31px !important;
-		right: 75px !important;
+		bottom: 9px !important;
+		right: 70px !important;
 		visibility: hidden !important;
 	}
 
@@ -1870,8 +1981,8 @@ domain("e-hentai.org") {
 		text-decoration: none !important;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		bottom: 31px !important;
-		right: 130px !important;
+		bottom: 9px !important;
+		right: 120px !important;
 		visibility: hidden !important;
 	}
 
@@ -2165,8 +2276,8 @@ domain("e-hentai.org") {
 	#profile_outer select,
 	#profile_outer input[type="button"],
 	#profile_outer input[type="submit"],
-	.optouter input[type="text"],
-	.optouter input[type="password"],
+	input[type="text"],
+	input[type="password"],
 	.optouter select,
 	.optouter textarea {
 		background: var(--card-bg-2) !important;
@@ -2175,6 +2286,13 @@ domain("e-hentai.org") {
 		color: var(--primary-color);
 		font-stretch: condensed;
 		font-weight: normal;
+	}
+
+	#catsel div[id*="ct"] {
+		background: transparent !important;
+		border: none !important;
+		box-shadow: none !important;
+		letter-spacing: 0px !important;
 	}
 
 	#apply {
@@ -2186,7 +2304,7 @@ domain("e-hentai.org") {
 		text-decoration: none !important;
 		position: fixed !important;
 		right: 20px !important;
-		bottom: 20px !important;
+		bottom: -1px !important;
 		visibility: visible !important;
 		z-index: 100 !important;
 	}
@@ -2411,7 +2529,7 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		padding: 10px 15px !important;
 		position: fixed !important;
 		left: 20px !important;
-		bottom: 23px !important;
+		bottom: -1px !important;
 		z-index: 999 !important;
 	}
 
@@ -2441,11 +2559,11 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		border: 1px solid var(--border-color) !important;
 		color: transparent;
 		height: 160px !important;
-		width: 99.5% !important;
+		width: 99% !important;
 		line-height: 156px !important;
-		margin-top: 28px !important;
+		margin-top: 0px !important;
 		margin-bottom: -29px !important;
-		margin-left: 2px !important;
+		margin-left: 5px !important;
 	}
 
 	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"]:before {
@@ -2460,7 +2578,7 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		visibility: visible !important;
 	}
 
-	div[style="width:985px; margin:10px auto 5px; text-align:center"] {
+	div[style="width:825px; margin:10px auto 5px; text-align:center"] {
 
 		/*** FAVORITE SEARCH BAR ***/
 		display: none !important;
@@ -2477,7 +2595,7 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		/*** FAVORITE CATEGORIES ***/
 		background: rgba(34, 32, 43, .98) !important;
 		border: none !important;
-		padding: 10px 0px !important;
+		padding: 10px 4px !important;
 		height: 100% !important;
 		width: 100% !important;
 		padding-top: 20px;
@@ -2527,6 +2645,9 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		transition: all .3s ease-in-out !important;
 	}
 
+	div[style*="top:20px"],
+	form[name="favform"] .ip,
+	body > .ip,
 	.fp .i {
 		display: none !important;
 	}
@@ -2605,25 +2726,23 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 	.fp[style="width:140px; padding:4px 0 0; margin:5px auto 0; text-align:center; font-weight:bold; position:relative; left:-8px"] {
 
 		/*** SHOW ALL FAVORITE BUTTON ***/
-		background-color: #22202B !important;
+		background-color: #474552 !important;
 		border: 1px solid #000 !important;
 		border-radius: 2px !important;
 		color: var(--primary-color);
-		font-size: 14pt !important;
+		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
-		height: 30px !important;
-		width: 200px !important;
-		line-height: 30px !important;
-		padding: 12px 15px !important;
+		height: 20px !important;
+		width: auto !important;
+		line-height: 20px !important;
+		padding: 12px 20px !important;
 		text-decoration: none !important;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		left: 0px;
-		right: 0px;
-		bottom: 30px !important;
+		left: 20px !important;
+		bottom: -1px !important;
 		z-index: 999 !important;
-		margin: auto !important;
 	}
 
 	.nosel a[href="https://exhentai.org/favorites.php"] {
@@ -2654,13 +2773,13 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		text-align: left;
 		text-transform: uppercase !important;
 		position: absolute !important;
-		top: 29px !important;
+		top: 26px !important;
 		right: 30px !important;
 		z-index: 999 !important;
 		visibility: visible !important;
 	}
 
-	input[value="Apply"] {
+	input[value="Confirm"] {
 		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
 		background-color: var(--card-bg-2) !important;
 		background-position: center !important;
@@ -2670,17 +2789,17 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		border-radius: 1px !important;
 		box-shadow: none !important;
 		color: transparent !important;
-		height: 30px !important;
-		width: 30px !important;
+		height: 41px !important;
+		width: 41px !important;
 		padding: 17px !important;
 		position: fixed !important;
-		right: 23px !important;
-		bottom: 24px;
+		right: 317px !important;
+		bottom: -1px;
 		z-index: 999 !important;
 	}
 
-	input[value="Apply"]:enabled:focus,
-	input[value="Apply"]:enabled:hover {
+	input[value="Confirm"]:enabled:focus,
+	input[value="Confirm"]:enabled:hover {
 		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
 		background-color: var(--card-bg) !important;
 		background-position: center !important;
@@ -2695,18 +2814,19 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		border: 1px solid var(--border-color) !important;
 		border-radius: 1px !important;
 		color: var(--secondary-color) !important;
-		height: 44px !important;
+		height: 41px !important;
 		width: auto !important;
 		font-size: 12pt !important;
 		font-stretch: condensed !important;
 		font-weight: bold !important;
 		padding-top: 3px !important;
-		padding-left: 8px !important;
-		text-align: left;
+		padding-right: 3px !important;
+		padding-left: 3px !important;
+		text-align: center;
 		text-transform: uppercase !important;
 		position: fixed !important;
-		bottom: 20px !important;
-		right: 19px !important;
+		bottom: -1px !important;
+		right: 155px !important;
 		z-index: 999 !important;
 		-webkit-appearance: none;
 		-moz-appearance: none;
@@ -2781,8 +2901,13 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 }
 
 @-moz-document regexp("(http|https)://(exhentai|e-hentai).org/torrents.php.*") {
+	body {
+		margin-top: -30px !important;
+	}
+
 	.itg {
 		width: 99.7% !important;
+		margin-left: 2px !important;
 	}
 
 	.ih {
@@ -2884,14 +3009,12 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		padding-left: 10px !important;
 	}
 
-	.gtr0 > .itd:nth-child(5),
-	.gtr1 > .itd:nth-child(5) {
+	.itd:nth-child(5) {
 		color: #2CC990 !important;
 		font-weight: normal !important;
 	}
 
-	.gtr0 > .itd:nth-child(6),
-	.gtr1 > .itd:nth-child(6) {
+	.itd:nth-child(6) {
 		color: #E26E67 !important;
 		font-weight: normal !important;
 	}
@@ -2969,10 +3092,6 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 	/** DESCRIPTION : change the elements of e-hentai.org **/
 	#toppane .ih:before {
 		margin-left: 87px !important;
-	}
-
-	#detail_box_page {
-		color: #EBEBEB !important;
 	}
 
 	.gm {
@@ -3128,6 +3247,40 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 		bottom: 20px;
 		right: 20px;
 		margin-top: 100px !important;
+	}
+
+}
+
+@-moz-document regexp("https://exhentai.org/popular.*") {
+	#dms {
+		bottom: 12px !important;
+	}
+
+}
+
+@-moz-document regexp("https://exhentai.org/upload/manage.php.*") {
+	#nb {
+		margin-top: -2px !important;
+		padding-bottom: 33px !important;
+	}
+
+	#nb:hover {
+		max-height: 100% !important;
+	}
+
+	#nb a {
+		padding-top: 10px !important;
+		margin-left: 110px !important;
+		margin-right: -90px !important;
+	}
+
+	#nb a[href="https://exhentai.org/"]:nth-of-type(1)::before {
+		top: 19px !important;
+		visibility: visible !important;
+	}
+
+	#nb a[href="https://exhentai.org/"]:nth-of-type(1) {
+		visibility: hidden;
 	}
 
 }
