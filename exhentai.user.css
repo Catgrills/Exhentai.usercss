@@ -3326,4 +3326,8 @@ regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathom
 	#usertags_outer > div > div:nth-child(1) {
 		width: inherit !important;
 	}
+	
+	#usertags_mass > div:nth-child(2) > input {
+    		width: auto !important;
+	}
 }
