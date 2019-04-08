@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bamboo
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.1.0
+@version        1.1.1
 @description    An user style for E-hentai/Exhentai called Bamboo.
 @author         Catgrills/Katgrills
 @preprocessor uso
@@ -250,6 +250,7 @@ domain("e-hentai.org") {
 	}
 
 	form[action="https://exhentai.org/"],
+	form[action="https://exhentai.org/watched"],
 	form[action="https://e-hentai.org/"] {
 		background: var(--card-bg-2) !important;
 		border-top: 5px solid var(--border-color-2) !important;
@@ -267,6 +268,7 @@ domain("e-hentai.org") {
 	}
 
 	form[action="https://exhentai.org/"] .nopm input[name="f_search"],
+	form[action="https://exhentai.org/watched"] .nopm input[naùe="f_search"],
 	form[action="https://e-hentai.org/"] .nopm input[name="f_search"] {
 		background: var(--card-bg) !important;
 		border: 1px solid var(--border-color);
