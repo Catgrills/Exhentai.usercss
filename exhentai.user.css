@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bamboo
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.1.1
+@version        1.1.2
 @description    An user style for E-hentai/Exhentai called Bamboo.
 @author         Catgrills/Katgrills
 @preprocessor uso
@@ -640,7 +640,7 @@ domain("e-hentai.org") {
 		font-weight: bold !important;
 		width: auto !important;
 		max-width: 100% !important;
-		padding: 10px 20px !important;
+		padding: 11px 20px !important;
 		text-align: center !important;
 		text-decoration: none !important;
 		text-transform: uppercase !important;
@@ -790,6 +790,7 @@ domain("e-hentai.org") {
 		color: #FFF !important;
     		font-size: 14pt !important;
     		font-stretch: condensed !important;
+		margin-bottom: 4px !important;
 	}
 
 	table.itg {
