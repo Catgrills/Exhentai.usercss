@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bamboo
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.1.4
+@version        1.1.5
 @description    An user style for E-hentai/Exhentai called Bamboo.
 @author         Catgrills/Katgrills
 @preprocessor uso
@@ -771,6 +771,154 @@ domain("e-hentai.org") {
 		position: absolute;
 		bottom: 0px;
 		right: 40px;
+	}
+	
+	#detail_box div[id*="posted"] {
+		border: initial !important;
+		color: #FFF !important;
+		font-size: 14pt !important;
+		font-weight: bold;
+		font-style: normal;
+		padding: 5px 0px 0px 0px !important;
+		width: 150px !important;
+		visibility: hidden;
+		white-space: nowrap;
+	}
+
+	.gl2c div[id*="posted"] {
+		background: transparent !important;
+	}
+
+	#detail_box div[id*="posted"]::before {
+		content: "Not Favorited";
+		visibility: visible !important;
+	}
+
+	.gl2c div[style*="border"]::before,
+	.gl2m div[style*="border"]::before,
+	.gl3e div[style*="border"]::before {
+		background: no-repeat url('https://i.imgur.com/wu2OcFV.pngg') center !important;
+		background-size: 18px auto !important;
+		color: transparent;
+		content: "dd" !important;
+		position: relative !important;
+		top: 1px;
+		left: -5px !important;
+	}
+
+	.gl2c div,
+	.gl2m div {
+		border: none !important;
+	}
+
+	#detail_box div[style*="border-color:#000"]::before,
+	.gl2c div[style*="border-color:#000"],
+	.gl2m div[style*="border-color:#000"],
+	.gl3e div[style*="border-color:#000"] {
+
+		/*** FAVORITE 1 ***/
+		color: #60646D !important;
+		content: "DOUJIN ENG";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#f00"]::before,
+	.gl2c div[style*="border-color:#f00"],
+	.gl2m div[style*="border-color:#f00"],
+	.gl3e div[style*="border-color:#f00"] {
+
+		/*** FAVORITE 2 ***/
+		color: #EB6361 !important;
+		content: "DOUJIN RAW";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#fa0"]::before,
+	.gl2c div[style*="border-color:#fa0"],
+	.gl2m div[style*="border-color:#fa0"],
+	.gl3e div[style*="border-color:#fa0"] {
+
+		/*** FAVORITE 3 ***/
+		color: #EBBD63 !important;
+		content: "COMIC ENG";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#dd0"]::before,
+	.gl2c div[style*="border-color:#dd0"],
+	.gl2m div[style*="border-color:#dd0"],
+	.gl3e div[style*="border-color:#dd0"] {
+
+		/*** FAVORITE 4 ***/
+		color: #EDD834 !important;
+		content: "COMIC RAW";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#080"]::before,
+	.gl2c div[style*="border-color:#080"],
+	.gl2m div[style*="border-color:#080"],
+	.gl3e div[style*="border-color:#080"] {
+
+		/*** FAVORITE 5 ***/
+		color: #97CE68 !important;
+		content: "TANK ENG";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#9f4"]::before,
+	.gl2c div[style*="border-color:#9f4"],
+	.gl2m div[style*="border-color:#9f4"],
+	.gl3e div[style*="border-color:#9f4"] {
+
+		/*** FAVORITE 6 ***/
+		color: #F6CD61 !important;
+		content: "TANK RAW";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#4bf"]::before,
+	.gl2c div[style*="border-color:#4bf"],
+	.gl2m div[style*="border-color:#4bf"],
+	.gl3e div[style*="border-color:#4bf"] {
+
+		/*** FAVORITE 7 ***/
+		color: #8BCBDE !important;
+		content: "ARTIST CG";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#00f"]::before,
+	.gl2c div[style*="border-color:#00f"],
+	.gl2m div[style*="border-color:#00f"],
+	.gl3e div[style*="border-color:#00f"] {
+
+		/*** FAVORITE 8 ***/
+		color: #00587A !important;
+		content: "GAME CG";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#508"]::before,
+	.gl2c div[style*="border-color:#508"],
+	.gl2m div[style*="border-color:#508"],
+	.gl3e div[style*="border-color:#508"] {
+
+		/*** FAVORITE 9 ***/
+		color: #8B4D93 !important;
+		content: "MAGAZINE";
+		visibility: visible !important;
+	}
+
+	#detail_box div[style*="border-color:#e8e"]::before,
+	.gl2c div[style*="border-color:#e8e"],
+	.gl2m div[style*="border-color:#e8e"],
+	.gl3e div[style*="border-color:#e8e"] {
+
+		/*** FAVORITE 10 ***/
+		color: #BF4A67 !important;
+		content: "OTHERS";
+		visibility: visible !important;
 	}
 
 	.gl5t {
