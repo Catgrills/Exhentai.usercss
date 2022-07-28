@@ -1,10 +1,14 @@
 # Exhentai usercss
 
-<img src="preview.png" width="100%">
+<img src="preview_home.png" width="100%">
+<img src="preview_favorites.png" width="100%">
+<img src="preview_searchbox.png" width="100%">
+<img src="preview_gallery.png" width="100%">
+<img src="preview_gallery_viewer.png" width="100%">
 
 About
 -------------------------------
-A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i> with two themes : <i>Classic</i> and <i>Pale Taupe</i>.
+A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i>.
 
 Instruction
 -------------------------------
