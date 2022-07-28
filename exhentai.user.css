@@ -68,12 +68,15 @@
         background: var(--body-bg) !important;
     }
 
-    input::placeholder, textarea::placeholder {
+    input::placeholder, 
+    textarea::placeholder {
         color: var(--primary-color) !important;
         -webkit-text-fill-color: var(--primary-color) !important;
     }
 
-    input:disabled, select:disabled, textarea:disabled {
+    input:disabled, 
+    select:disabled, 
+    textarea:disabled {
         color: var(--secondary-color) !important;
         -webkit-text-fill-color: var(--secondary-color);
     }
@@ -177,7 +180,8 @@
         transition: all .3s ease-in-out !important;
     }
 
-    #nb a:nth-of-type(1):hover:before, #nb a:hover {
+    #nb a:nth-of-type(1):hover:before, 
+    #nb a:hover {
         color: #f28e2b !important;
         transition: all .3s ease-in-out !important;
     }
