@@ -6,24 +6,7 @@
 @author         Katgrills
 @preprocessor uso
 @var select theme 'Theme' {
-    "Brown": `
-    :root {
-        --body-bg: #E3E0D1 !important;
-        --button-bg: #F3F4F7 !important;
-        --button-bg-2: #F0F1F5 !important;
-        --card-bg: #EDEBDF !important;
-        --card-bg-2: #CAC5AD !important;
-        --card-bg-3: #F0F0F0 !important;
-        --card-bg-4: #DBDBDB !important;
-        --header-bg: #AE8E7E !important;
-        --op-bg: rgba(230, 207, 185, 0.98) !important;
-        --border-color: #421417; !important;
-        --border-color-2: #604D44 !important;
-        --primary-color: #212121 !important;
-        --secondary-color: #555 !important;
-        --invert: invert(0) !important;
-    }
-    `,
+    
     "Classic":`
     :root {
         --body-bg: #383745 !important; 
@@ -40,6 +23,23 @@
         --primary-color: #FFF !important;
         --secondary-color: #929292 !important;
         --invert: invert(1) !important;
+    }`,
+    "Brown": `
+    :root {
+        --body-bg: #E3E0D1 !important;
+        --button-bg: #F3F4F7 !important;
+        --button-bg-2: #F0F1F5 !important;
+        --card-bg: #EDEBDF !important;
+        --card-bg-2: #CAC5AD !important;
+        --card-bg-3: #F0F0F0 !important;
+        --card-bg-4: #DBDBDB !important;
+        --header-bg: #AE8E7E !important;
+        --op-bg: rgba(230, 207, 185, 0.98) !important;
+        --border-color: #421417; !important;
+        --border-color-2: #604D44 !important;
+        --primary-color: #212121 !important;
+        --secondary-color: #555 !important;
+        --invert: invert(0) !important;
     }
     `
 }
