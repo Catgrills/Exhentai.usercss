@@ -4,7 +4,7 @@
 <img src="preview_favorites.png" width="100%">
 <img src="preview_searchbox.png" width="100%">
 <img src="preview_gallery.png" width="100%">
-<img src="preview_gallery_viewer.png" width="100%">
+<img src="preview_viewer.png" width="100%">
 
 About
 -------------------------------
