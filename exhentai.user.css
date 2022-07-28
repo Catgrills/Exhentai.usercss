@@ -2549,6 +2549,7 @@
         position: fixed !important;
         bottom: 14px !important;
         left: 14px !important;
+        z-index: 99 !important;
     }
 
     .dp a[href="https://exhentai.org/"]:hover {
