@@ -4,7 +4,7 @@
 
 About
 -------------------------------
-A css script for <i><a href="exhentai.org">Exhentai.org</a></i>.
+A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i>.
 
 Instruction
 -------------------------------
