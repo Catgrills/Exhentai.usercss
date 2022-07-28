@@ -731,6 +731,11 @@
     .itg .gl3e div {
         margin-left: 8px !important;
     }
+    
+   .itg .gl3e div[id*="posted"] {
+        border-radius: 2px !important;
+        border-style: solid !important;
+    }
 
     .itg .gl3e .cn {
         border-radius: 2px !important;
@@ -825,11 +830,21 @@
         margin-bottom: -3px !important;
         margin-left: -1px !important;
     }
-
+    
     .itg.gld .gl5t div:nth-of-type(1) div:nth-of-type(1) {
+        width: 75px !important;
+        text-align: center !important;
         margin-top: 7px !important;
-        margin-left: 15px !important;
-        text-align: left !important;
+        margin-left: 10px !important;
+    }
+    
+    .itg.gld .gl5t > div:nth-child(1) > div:nth-child(2) {
+        border-radius: 2px;
+        border-style: solid !important;
+        color: transparent !important;
+        width: 80px !important;
+        margin-top: -20px !important;
+        margin-left: 3px !important;
     }
 
     .gl5t > div:nth-child(2) {
@@ -1020,11 +1035,10 @@
         opacity: 0;
     }
 
-    .gl2c div, 
-    .gl2m div {
-        background-color: transparent !important;
+    .gl2c div[id*="posted"],
+    .gl2m div[id*="posted"] {
         border-radius: 2px !important;
-        border-width: 1px !important;
+        border-style: solid !important;
     }
 
     .gt {
@@ -1156,7 +1170,7 @@
         overflow-y: scroll;
     }
 
-    .ido .nosel .fp[style*="width: 160px"] {
+    .ido .nosel .fp[style*="width:160px"] {
         border: none;
         border-radius: 2px !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
@@ -1191,7 +1205,7 @@
         opacity: .4;
     }
 
-    .ido .nosel .fp[style*="width: 160px;"]:hover {
+    .ido .nosel .fp[style*="width:160px;"]:hover {
         opacity: .5;
         transition: all .3s ease-in-out !important;
     }
@@ -1221,43 +1235,53 @@
         margin-top: 0px !important;
     }
 
-    a[href*="favcat=0"] .fp, .fp[onclick*="favcat=0"] {
+    a[href*="favcat=0"] .fp, 
+    .fp[onclick*="favcat=0"] {
         background: #60646D;
     }
 
-    a[href*="favcat=1"] .fp, .fp[onclick*="favcat=1"] {
+    a[href*="favcat=1"] .fp, 
+    .fp[onclick*="favcat=1"] {
         background: #EB6361;
     }
 
-    a[href*="favcat=2"] .fp, .fp[onclick*="favcat=2"] {
+    a[href*="favcat=2"] .fp, 
+    .fp[onclick*="favcat=2"] {
         background: #EBBD63;
     }
 
-    a[href*="favcat=3"] .fp, .fp[onclick*="favcat=3"] {
+    a[href*="favcat=3"] .fp, 
+    .fp[onclick*="favcat=3"] {
         background: #EDD834;
     }
 
-    a[href*="favcat=4"] .fp, .fp[onclick*="favcat=4"] {
+    a[href*="favcat=4"] .fp, 
+    .fp[onclick*="favcat=4"] {
         background: #97CE68;
     }
 
-    a[href*="favcat=5"] .fp, .fp[onclick*="favcat=5"] {
+    a[href*="favcat=5"] .fp, 
+    .fp[onclick*="favcat=5"] {
         background: #F6CD61;
     }
 
-    a[href*="favcat=6"] .fp, .fp[onclick*="favcat=6"] {
+    a[href*="favcat=6"] .fp, 
+    .fp[onclick*="favcat=6"] {
         background: #8BCBDE;
     }
 
-    a[href*="favcat=7"] .fp, .fp[onclick*="favcat=7"] {
+    a[href*="favcat=7"] .fp, 
+    .fp[onclick*="favcat=7"] {
         background: #00587A;
     }
 
-    a[href*="favcat=8"] .fp, .fp[onclick*="favcat=8"] {
+    a[href*="favcat=8"] .fp, 
+    .fp[onclick*="favcat=8"] {
         background: #8B4D93;
     }
 
-    a[href*="favcat=9"] .fp, .fp[onclick*="favcat=9"] {
+    a[href*="favcat=9"] .fp, 
+    .fp[onclick*="favcat=9"] {
         background: #BF4A67;
     }
 
@@ -1438,13 +1462,13 @@
         color: var(--secondary-color) !important;
     }
 
-    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc {
+    form[name="favform"] div[style*="float:right; width:25px; position:relative;"] .lc {
         position: fixed !important;
         bottom: 27px !important;
         right: 105px !important;
     }
 
-    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc span {
+    form[name="favform"] div[style*="float:right; width:25px; position:relative;"] .lc span {
         background-color: var(--card-bg-3);
         border: none !important;
         border-radius: 2px !important;
@@ -1456,7 +1480,7 @@
         padding-left: 12px;
     }
 
-    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc span::before {
+    form[name="favform"] div[style*="float:right; width:25px; position:relative;"] .lc span::before {
         color: var(--primary-color);
         content: "SELECT ALL";
         font-size: 12pt;
@@ -1464,7 +1488,7 @@
         font-weight: bold;
     }
 
-    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc > input:checked ~ span::after, 
+    form[name="favform"] div[style*="float:right; width:25px; position:relative;"] .lc > input:checked ~ span::after, 
     form[name="favform"] .lr > input:checked ~ span::after {
         top: 13px !important;
         left: 95px !important;
