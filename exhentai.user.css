@@ -1,3526 +1,2801 @@
 /* ==UserStyle==
-@name           Bamboo
+@name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Bamboo
-@version        1.1.7
-@description    An user style for E-hentai/Exhentai called Bamboo.
-@author         Catgrills/Katgrills
+@version        1.0
+@description    An usercss for Exhentai
+@author         Katgrills
 @preprocessor uso
 @var select theme 'Theme' {
-	"Light": `
-	:root {
-        	--body-bg: #F0F1F5 !important;
-		--button-bg: #F3F4F7 !important;
-		--button-bg-2: #F0F1F5 !important;
-		--card-bg: #FFF !important;
-		--card-bg-2: #FAFAFA !important;
-		--card-bg-3: #F0F0F0 !important;
-		--card-bg-4: #DBDBDB !important;
-		--header-bg: #2A3744 !important;
-        	--op-bg: rgba(240, 241, 245, .98) !important;
-		--border-color: #E0E0E0 !important;
-		--border-color-2: #CA8D6E !important;
-		--primary-color: #212121 !important;
-		--secondary-color: #999 !important;
-		--invert: invert(0) !important;
-	}
-	`,
-	"Dark":`
-	:root {
-	        --body-bg: #383745 !important; 
-		--button-bg: #344146 !important;
-		--button-bg-2: #B05F6D !important;
-		--card-bg: #22202B !important;
-		--card-bg-2: #383745 !important;
-		--card-bg-3: #7D6962 !important;
-		--card-bg-4: #CA8D6E !important;
-		--header-bg: #22202B !important;
-        	--op-bg: rgba(56, 55, 69, .98) !important;
-		--border-color: #111 !important;
-		--border-color-2: #CA8D6E !important;
-		--primary-color: #FFF !important;
-		--secondary-color: #DDD !important;
-		--invert: invert(1) !important;
-	}
-	`
+    "Brown": `
+    :root {
+        --body-bg: #E3E0D1 !important;
+        --button-bg: #F3F4F7 !important;
+        --button-bg-2: #F0F1F5 !important;
+        --card-bg: #EDEBDF !important;
+        --card-bg-2: #CAC5AD !important;
+        --card-bg-3: #F0F0F0 !important;
+        --card-bg-4: #DBDBDB !important;
+        --header-bg: #AE8E7E !important;
+        --op-bg: rgba(230, 207, 185, 0.98) !important;
+        --border-color: #421417; !important;
+        --border-color-2: #604D44 !important;
+        --primary-color: #212121 !important;
+        --secondary-color: #555 !important;
+        --invert: invert(0) !important;
+    }
+    `,
+    "Classic":`
+    :root {
+        --body-bg: #383745 !important; 
+        --button-bg: #344146 !important;
+        --button-bg-2: #B05F6D !important;
+        --card-bg: #22202B !important;
+        --card-bg-2: #383745 !important;
+        --card-bg-3: #7D6962 !important;
+        --card-bg-4: #CA8D6E !important;
+        --header-bg: #1A1920 !important;
+        --op-bg: rgba(40, 38, 51, 0.98) !important;
+        --border-color: #111 !important;
+        --border-color-2: #CA8D6E !important;
+        --primary-color: #FFF !important;
+        --secondary-color: #929292 !important;
+        --invert: invert(1) !important;
+    }
+    `
 }
 ==/UserStyle== */
-
-@-moz-document domain("exhentai.org"),
-domain("e-hentai.org") {
-
-	/*[[theme]]*/
-
-	/* GENERAL */
-
-	/** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
-	* {
-		font-family: "Roboto", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
-		text-shadow: none !important;
-	}
-
-	*::-moz-focus-inner {
-		border: 0 !important;
-	}
-
-	html {
-		overflow-x: hidden !important;
-	}
-
-	body {
-		background: var(--body-bg) !important;
-	}
-
-	a:focus {
-		outline: none !important;
-	}
-
-	select {
-		color: var(--primary-color) !important;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		text-indent: 0px;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
-	option {
-		background: transparent;
-	}
-
-	option * {
-		color: var(--primary-color) !important;
-	}
-
-	input[type="button"]:enabled:hover,
-	input[type="submit"]:enabled:hover,
-	input[type="button"]:enabled:focus,
-	input[type="submit"]:enabled:focus {
-		background: var(--button-bg) !important;
-		border-color: var(--border-color) !important;
-		outline: none !important;
-	}
-
-	input[value="Apply"]:hover {
-		color: transparent !important;
-	}
-
-	.ido {
-
-		/*** MAIN CONTENT ***/
-		background: transparent !important;
-		border: none !important;
-		padding: 10px !important;
-		margin-top: 120px !important;
-	}
-
-	.c1 .c8,
-	.dp,
-	#eventpane,
-	.ip .mr,
-	.ip a[href*="ehentai"],
-	.ip a[href*="forums"],
-	.ip a[href*="hentaiverse"],
-	.ip a[href*="lofi"],
-	#nb img,
-	#pp,
-	#pt,
-	.ygm {
-		display: none !important;
-	}
-
-	input[type="checkbox"] {
-		position: relative;
-		top: 0px;
-	}
-
-	.lc > span {
-		background: var(--card-bg-2) !important;
-		border: none !important;
-		border-radius: 1px !important;
-		box-shadow: 0px 1px 2Px rgba(0, 0, 0, .2) !important;
-		margin-top: 3px !important;
-	}
-
-	/* HEADER */
-
-	/** DESCRIPTION : change the elements of the header **/
-	#nb {
-
-		/*** HEADER ***/
-		background: var(--header-bg) !important;
-		border-bottom: 3px solid var(--border-color-2) !important;
-		padding: 32px 0px 38px 2px !important;
-		text-align: left !important;
-		max-width: 100% !important;
-		position: absolute !important;
-		top: -2px !important;
-		right: 0px !important;
-		left: 0px !important;
-		display: inline-block !important;
-		margin-left: -2px !important;
-		z-index: 999 !important;
-	}
-
-	#nb:hover {
-		max-height: 18px !important;
-	}
-
-	#nb a {
-
-		/*** HEADER LINKS ***/
-		color: #F8F8F8 !important;
-		font-family: "Roboto" !important;
-		font-size: 15pt !important;
-		font-stretch: condensed !important;
-	}
-
-	#nb a:hover {
-		color: #EBEBEB !important;
-	}
-
-	#nb div {
-
-		/*** HEADER ICONS ***/
-		background: transparent;
-		display: inline !important;
-	}
-
-	#nb div:nth-of-type(1) {
-		margin-left: 110px !important;
-	}
-
-	#nb a[href="https://ehwiki.org/"],
-	#nb a[href="https://hentaiverse.org/"],
-	#nb a[href="https://e-hentai.org/toplist.php"],
-	#nb a[href="https://e-hentai.org/news.php"] {
-		display: none;
-	}
-
-	/* HOME */
-
-	/** DESCRIPION : change the elements of the home page **/
-	#nb a[href="https://exhentai.org/"]:nth-of-type(1):before {
-
-		/*** HOME SLOGAN ***/
-		content: "exhentai.org" !important;
-		color: #FFF !important;
-		font-family: "Neuton" !important;
-		font-size: 23pt !important;
-		position: absolute !important;
-		top: 28px !important;
-		left: 30px !important;
-		visibility: visible !important;
-		z-index: 99 !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	.nbw {
-		visibility: hidden;
-	}
-
-	#nb a[href="https://e-hentai.org/"]:nth-of-type(1):before {
-		content: "e-hentai.org" !important;
-		color: #FFF !important;
-		font-family: "Neuton" !important;
-		font-size: 23pt !important;
-		position: absolute !important;
-		top: 19px !important;
-		left: 30px !important;
-		visibility: visible !important;
-		z-index: 99 !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	#nb a:nth-of-type(1):hover:before {
-		color: #FACA9B !important;
-	}
-
-	#searchbox {
-
-		/*** HOME SEARCH BOX ***/
-		background: no-repeat url("https://i.imgur.com/HuLOmQ6.jpg") center 30% !important;
-		background-size: cover !important;
-		border: 1px solid var(--border-color) !important;
-		height: 120px !important;
-		padding: 20px !important;
-		width: auto !important;
-		margin-right: 5px !important;
-		margin-left: 5px !important;
-		z-index: 10 !important;
-	}
-
-	form[action="https://exhentai.org/"],
-	form[action="https://exhentai.org/watched"],
-	form[action="https://e-hentai.org/"] {
-		background: var(--card-bg-2) !important;
-		border-top: 5px solid var(--border-color-2) !important;
-		height: 100% !important;
-		width: 100% !important;
-		position: fixed !important;
-		top: 0px !important;
-		right: 0px !important;
-		bottom: 0px !important;
-		left: 0px !important;
-		margin: auto !important;
-		overflow: hidden !important;
-		z-index: 999 !important;
-		visibility: hidden;
-	}
-
-	form[action="https://exhentai.org/"] .nopm input[name="f_search"],
-	form[action="https://exhentai.org/watched"] .nopm input[naùe="f_search"],
-	form[action="https://e-hentai.org/"] .nopm input[name="f_search"] {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color);
-		border-radius: 1px !important;
-		border-width: 0px 0px 1px 0px !important;
-		color: var(--primary-color);
-		font-size: 15pt !important;
-		font-stretch: condensed !important;
-		height: 30px !important;
-		padding: 14px 16px 17px 16px !important;
-		width: 100% !important;
-		position: fixed;
-		top: 0px;
-		left: -1px;
-	}
-
-	input[value="Apply Filter"],
-	input[value="Clear Filter"] {
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		border-width: 0px 1px !important;
-		color: var(--secondary-color);
-		height: 61.5px !important;
-		width: 150px !important;
-		line-height: 58px !important;
-		top: 2.5px !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold;
-		position: fixed !important;
-		text-transform: uppercase !important;
-	}
-
-	input[value="Apply Filter"] {
-		background: var(--button-bg);
-		right: 210px !important;
-	}
-
-	input[value="Clear Filter"] {
-		background: var(--button-bg-2);
-		right: 61px !important;
-	}
-
-	#searchbox #close-btn {
-		background: url('https://imgur.com/4GlrMN7.png') no-repeat center;
-		background-size: 30px auto !important;
-		border: none;
-		color: transparent;
-		height: 67px;
-		width: 65px;
-		position: fixed !important;
-		top: 0px !important;
-		right: -1px !important;
-		filter: brightness(0) var(--invert);
-		opacity: .6;
-	}
-
-	table.itc {
-
-		/*** HOME SEARCH CATEGORIES ***/
-		background: transparent !important;
-		border-radius: 2px !important;
-		height: auto !important;
-		width: auto !important;
-		margin: 88px auto auto auto !important;
-	}
-
-	.itc tr {
-		display: inline-block !important;
-	}
-
-	.itc .ic {
-
-		/*** HOME SEARCH CATEGORIES ICONS ***/
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		height: 0px !important;
-		width: 0px !important;
-		padding: 12vw 0px 0px 18vw !important;
-		margin-bottom: 6px;
-	}
-
-	:root {
-		--doujinshi: url("https://i.imgur.com/dFsObyP.jpg") !important;
-		--manga: url("https://i.imgur.com/v3Hzx9F.jpg") !important;
-		--artistcg: url("https://i.imgur.com/OGV8S1z.jpg") !important;
-		--gamecg: url("https://i.imgur.com/hZBx6F3.jpg") !important;
-		--western: url("https://i.imgur.com/D9OdyqB.jpg") !important;
-		--nonh: url("https://i.imgur.com/982o6uT.jpg") !important;
-		--imageset: url("https://i.imgur.com/10RYkUd.jpg") !important;
-		--cosplay: url("https://i.imgur.com/Adqz0Hr.jpg") !important;
-		--asian: url("https://i.imgur.com/bL2WqFy.jpg") !important;
-		--misc: url("https://i.imgur.com/qdxrE1t.jpg") !important;
-	}
-
-	#searchbox div[id*="cat"] {
-		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		color: transparent !important;
-		height: 12vw;
-		width: 18vw;
-		margin-bottom: 10px;
-	}
-
-	#searchbox .ct2 {
-		background: no-repeat var(--doujinshi) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct3 {
-		background: no-repeat var(--manga) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct4 {
-		background: no-repeat var(--artistcg) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct5 {
-		background: no-repeat var(--gamecg) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .cta {
-		background: no-repeat var(--western) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct6 {
-		background: no-repeat var(--imageset) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct9 {
-		background: no-repeat var(--nonh) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct7 {
-		background: no-repeat var(--cosplay) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct8 {
-		background: no-repeat var(--asian) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox .ct1 {
-		background: no-repeat var(--misc) center !important;
-		background-size: cover !important;
-	}
-
-	#searchbox form .nopm a[onclick*="advsearch_pane"],
-	#searchbox form .nopm a[onclick*="filesearch_pane"] {
-
-		/*** HOME SEARCH OPTIONS ***/
-		background: var(--card-bg) !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		box-shadow: none !important;
-		color: transparent !important;
-		font-size: 12pt;
-		font-stretch: condensed;
-		font-weight: bold;
-		padding: 10px 15px;
-		text-decoration: none;
-		text-transform: uppercase;
-		overflow: hidden !important;
-		white-space: nowrap !important;
-		width: 20px !important;
-		position: absolute;
-		z-index: 999 !important;
-	}
-
-	#searchbox form .nopm a[onclick*="advsearch_pane"] {
-		bottom: 2px;
-		right: 79px;
-	}
-
-	#searchbox form .nopm a[onclick*="filesearch_pane"] {
-		bottom: 2px;
-		right: 20px;
-	}
-
-	#trigger-box-btn {
-		background: #383745 !important;
-		background-image: url("http://www.pvhc.net/img226/gzypyldoqaxjhvtyyhei.png") !important;
-		background-position: 92% center !important;
-		background-repeat: no-repeat !important;
-		background-size: 20px auto !important;
-		border: 1px solid #000 !important;
-		border-radius: 1px !important;
-		color: #FFF !important;
-		font-size: 12pt !important;
-		font-stretch: condensed;
-		font-weight: bold;
-		height: 36px !important;
-		width: 150px !important;
-		padding: 0px 8px;
-		text-align: left;
-		text-transform: uppercase !important;
-		position: absolute !important;
-		top: 26px !important;
-		right: 30px !important;
-		z-index: 999 !important;
-		visibility: visible !important;
-	}
-
-	#searchbox form .nopm a[onclick*="advsearch_pane"]::before {
-		background: no-repeat url("https://i.imgur.com/D6gWsU5.png") center !important;
-		background-size: 22px auto !important;
-		color: transparent;
-		content: "dd";
-		margin-right: 5px;
-	}
-
-	.itss {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 20px !important;
-		height: 100px !important;
-		width: 100% !important;
-		position: absolute !important;
-		bottom: 0px !important;
-		margin-top: 80px !important;
-	}
-
-	#searchbox form .nopm a[onclick*="filesearch_pane"]::before {
-		background: no-repeat url("https://i.imgur.com/oprVAfY.png") center !important;
-		background-size: 20px auto !important;
-		color: transparent;
-		content: "dd";
-		margin-right: 5px;
-	}
-
-	#fsdiv {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 20px 20px 40px 20px !important;
-		height: 200px;
-		width: auto !important;
-		text-align: left;
-		position: absolute;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		margin: auto !important;
-		z-index: 99 !important;
-	}
-
-	#fsdiv .itsf {
-		width: 800px;
-		text-align: left;
-	}
-
-	#fsdiv *,
-	.itss * {
-		color: var(--primary-color);
-		font-family: "Roboto" !important;
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		font-weight: normal;
-	}
-
-	#adv42 {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color);
-		border-radius: 1px !important;
-		color: var(--secondary-color) !important;
-	}
-
-	input[value="File Search"] {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color);
-		border-radius: 1px !important;
-		color: var(--secondary-color) !important;
-		font-weight: normal !important;
-		padding: 5px 10px !important;
-		margin-top: 8px !important;
-		margin-bottom: 8px !important;
-	}
-
-	input[name="sfile"] {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 2px 2px 3px 2px !important;
-		margin-top: 1px !important;
-	}
-
-	div[style="position:relative; z-index:2"] .ip {
-
-		/*** HOME RESULTS ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: #FFF !important;
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		padding: 10px 20px !important;
-		max-width: 150px !important;
-		overflow: hidden !important;
-		text-overflow: ellipsis !important;
-		white-space: nowrap !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		bottom: 20px !important;
-		right: 20px !important;
-		visibility: hidden;
-		z-index: 100 !important;
-	}
-
-	#iw {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		color: #D33257 !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		letter-spacing: 0px !important;
-		padding: 10px 10px 18px 10px !important;
-		width: 1174px !important;
-		margin-top: -9px !important;
-	}
-
-	#iw * {
-		font-weight: normal !important;
-	}
-
-	p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color) !important;
-		color: var(--secondary-color);
-		padding: 20px !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-style: normal !important;
-		font-weight: normal !important;
-		margin-top: -10px !important;
-		margin-right: 2px !important;
-		margin-left: 2px !important;
-	}
-
-	.ip[style="margin-top:5px"] span,
-	.ip[style="margin-top:5px"] a[href*="random"] {
-		display: none !important;
-	}
-
-	#dms {
-		position: fixed !important;
-		right: 20px !important;
-		bottom: 30px !important;
-		visibility: visible !important;
-		z-index: 100 !important;
-	}
-
-	#dms select {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: var(--secondary-color) !important;
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		width: auto !important;
-		max-width: 100% !important;
-		padding: 11px 20px !important;
-		text-align: center !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-	}
-
-	#dmi a[href*="set=dm_t"]:hover,
-	#dmi a[href*="set=dm_l"]:hover,
-	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"]:hover,
-	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"]:hover {
-		color: #F9AE74 !important;
-	}
-
-	div[style="position:relative; z-index:2"] {
-		z-index: 99 !important;
-	}
-
-	div[style="position:relative; z-index:2"] > .ptt {
-
-		/*** HOME PAGINATIONS ***/
-		display: none !important;
-	}
-
-	.itg {
-
-		/*** HOME THUMBNAIL CONTENT ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		max-width: 99% !important;
-		margin-top: -9px !important;
-		padding-top: 10px !important;
-	}
-
-	.itg .gl1t {
-
-		/*** THUMBNAILS ***/
-		background: transparent !important;
-		border: none !important;
-		height: auto !important;
-		margin-bottom: -40px !important;
-	}
-
-	.itg .gl4t {
-		max-height: 25px !important;
-		height: auto !important;
-		width: auto !important;
-		line-height: 20pt;
-		margin-bottom: 5px !important;
-		text-align: center !important;
-		transition: max-height 0.35s ease-out !important;
-	}
-
-	.gl4t a {
-		color: var(--secondary-color) !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-	}
-
-	.gl1t:not(.e-Highlighted):not(.e-Filtered):hover > .gl4t > a {
-		padding-bottom: 0px !important;
-	}
-
-	.gl1t:hover > .gl4t  > a {
-		background: transparent !important;
-		transition: all 0.35s ease-in-out !important;
-	}
-
-	.gl4t:hover a {
-		color: inherit !important;
-		text-shadow: none !important;
-	}
-
-	.itg .gl4t:hover {
-		max-height: 900px !important;
-		transition: max-height 0.45s ease-in !important;
-	}
-
-	.itg .gl3t {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		border-radius: 1px !important;
-		margin-bottom: 0px;
-		overflow: hidden !important;
-		z-index: 99 !important;
-	}
-
-	.itg .gl3t a {
-		position: relative !important;
-		overflow: hidden !important;
-	}
-
-	.gl3t > a > img {
-		height: 100% !important;
-	}
-
-	#detail_box {
-		background: rgba(0, 0, 0, .9) !important;
-		font-size: 16pt !important;
-		font-stretch: condensed !important;
-		height: inherit !important;
-		width: 100% !important;
-		padding: 20px 0px 25px 20px !important;
-		position: absolute !important;
-		bottom: 3px !important;
-		opacity: 0 !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	.gl3t:hover #detail_box {
-		opacity: 1 !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	#detail_box #detail_box_page {
-		color: #FFF !important;
-		line-height: 20pt;
-		right: 0px !important;
-		left: 0px !important;
-	}
-
-	#detail_box #detail_box_page .ir {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-
-	#detail_box #detail_box_page .gldown {
-		height: 50px !important;
-		position: absolute;
-		bottom: 0px;
-		right: 40px;
-	}
-	
-	#detail_box div[id*="posted"] {
-		border: initial !important;
-		color: #FFF !important;
-		font-size: 14pt !important;
-		font-weight: bold;
-		font-style: normal;
-		padding: 5px 0px 0px 0px !important;
-		width: 150px !important;
-		visibility: hidden;
-		white-space: nowrap;
-	}
-
-	.gl2c div[id*="posted"] {
-		background: transparent !important;
-	}
-
-	#detail_box div[id*="posted"]::before {
-		content: "Not Favorited";
-		visibility: visible !important;
-	}
-
-	.gl2c div[style*="border"]::before,
-	.gl2m div[style*="border"]::before,
-	.gl3e div[style*="border"]::before {
-		background: no-repeat url('https://i.imgur.com/wu2OcFV.pngg') center !important;
-		background-size: 18px auto !important;
-		color: transparent;
-		content: "dd" !important;
-		position: relative !important;
-		top: 1px;
-		left: -5px !important;
-	}
-
-	.gl2c div,
-	.gl2m div {
-		border: none !important;
-	}
-
-	#detail_box div[style*="border-color:#000"]::before,
-	.gl2c div[style*="border-color:#000"],
-	.gl2m div[style*="border-color:#000"],
-	.gl3e div[style*="border-color:#000"] {
-
-		/*** FAVORITE 1 ***/
-		color: #60646D !important;
-		content: "DOUJIN ENG";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#f00"]::before,
-	.gl2c div[style*="border-color:#f00"],
-	.gl2m div[style*="border-color:#f00"],
-	.gl3e div[style*="border-color:#f00"] {
-
-		/*** FAVORITE 2 ***/
-		color: #EB6361 !important;
-		content: "DOUJIN RAW";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#fa0"]::before,
-	.gl2c div[style*="border-color:#fa0"],
-	.gl2m div[style*="border-color:#fa0"],
-	.gl3e div[style*="border-color:#fa0"] {
-
-		/*** FAVORITE 3 ***/
-		color: #EBBD63 !important;
-		content: "COMIC ENG";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#dd0"]::before,
-	.gl2c div[style*="border-color:#dd0"],
-	.gl2m div[style*="border-color:#dd0"],
-	.gl3e div[style*="border-color:#dd0"] {
-
-		/*** FAVORITE 4 ***/
-		color: #EDD834 !important;
-		content: "COMIC RAW";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#080"]::before,
-	.gl2c div[style*="border-color:#080"],
-	.gl2m div[style*="border-color:#080"],
-	.gl3e div[style*="border-color:#080"] {
-
-		/*** FAVORITE 5 ***/
-		color: #97CE68 !important;
-		content: "TANK ENG";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#9f4"]::before,
-	.gl2c div[style*="border-color:#9f4"],
-	.gl2m div[style*="border-color:#9f4"],
-	.gl3e div[style*="border-color:#9f4"] {
-
-		/*** FAVORITE 6 ***/
-		color: #F6CD61 !important;
-		content: "TANK RAW";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#4bf"]::before,
-	.gl2c div[style*="border-color:#4bf"],
-	.gl2m div[style*="border-color:#4bf"],
-	.gl3e div[style*="border-color:#4bf"] {
-
-		/*** FAVORITE 7 ***/
-		color: #8BCBDE !important;
-		content: "ARTIST CG";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#00f"]::before,
-	.gl2c div[style*="border-color:#00f"],
-	.gl2m div[style*="border-color:#00f"],
-	.gl3e div[style*="border-color:#00f"] {
-
-		/*** FAVORITE 8 ***/
-		color: #00587A !important;
-		content: "GAME CG";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#508"]::before,
-	.gl2c div[style*="border-color:#508"],
-	.gl2m div[style*="border-color:#508"],
-	.gl3e div[style*="border-color:#508"] {
-
-		/*** FAVORITE 9 ***/
-		color: #8B4D93 !important;
-		content: "MAGAZINE";
-		visibility: visible !important;
-	}
-
-	#detail_box div[style*="border-color:#e8e"]::before,
-	.gl2c div[style*="border-color:#e8e"],
-	.gl2m div[style*="border-color:#e8e"],
-	.gl3e div[style*="border-color:#e8e"] {
-
-		/*** FAVORITE 10 ***/
-		color: #BF4A67 !important;
-		content: "OTHERS";
-		visibility: visible !important;
-	}
-
-	.gl5t {
-		visibility: hidden;
-	}
-
-	.gl5t div {
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-transform: uppercase !important;
-		top: 2px !important;
-		left: 18pt !important;
-	}
-	
-	.gl6t .gt {
-		color: #FFF !important;
-    		font-size: 14pt !important;
-    		font-stretch: condensed !important;
-		margin-bottom: 4px !important;
-	}
-
-	table.itg {
-
-		/*** HOME LIST CONTENT ***/
-		margin-left: 5px;
-		max-width: 100% !important;
-		width: 99.2%;
-	}
-
-	table.itg th {
-		display: none !important;
-	}
-
-	.itg tr {
-
-		/*** LIST BODY ***/
-		background: transparent !important;
-		border-bottom: 1px dotted var(--border-color) !important;
-	}
-
-	.itg tr td {
-		color: var(--secondary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		padding: 10px 5px !important;
-	}
-
-	.gl3m > a > div:first-child {
-		height: 22px !important;
-		line-height: 22px;
-	}
-
-	.gl4c.glhide * {
-		color: var(--secondary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-	}
-
-	div.it4r {
-		margin-top: 2px !important;
-	}
-
-	.itd[style="white-space:nowrap"] {
-		padding-top: 11px !important;
-	}
-
-	.gl2m > div:last-child {
-		background: transparent !important;
-		border: none !important;
-		font-style: normal;
-		font-weight: normal !important;
-	}
-
-	.gl2c {
-		padding-bottom: 0px !important;
-	}
-
-	.gl2c > div:last-child > div:nth-child(1) {
-		font-style: normal !important;
-		top: -5px !important;
-	}
-
-	.gl2c > div:last-child > div:nth-child(2) {
-		position: absolute;
-		top: 28px !important;
-		left: 11px !important;
-	}
-
-	.gl2c > div:last-child > div:nth-child(3) {
-		position: absolute;
-		top: 30px;
-		left: 103px;
-	}
-	
-	.gl3c > a > div {
-		height: 21.5px;
-	}
-
-	.gl3c > a > div:nth-child(2) {
-		padding: 10px 2px !important;
-	}
-
-	.gl3c.glname {
-		padding-left: 30px !important;
-	}
-
-	.gl4c > div:nth-child(1) {
-		top: 15px;
-	}
-
-	.gl4c > div:nth-child(2) {
-		top: 40px;
-	}
-
-	.gl1e > div {
-		border: 1px solid var(--border-color);
-		border-radius: 1px !important;
-	}
-
-	.tc,
-	.gl3e *,
-	.gl4e.glname * {
-		color: var(--primary-color) !important;
-	}
-
-	.gl3e > div:nth-child(2) {
-		background: transparent !important;
-		border: none !important;
-		font-style: normal;
-		font-weight: normal;
-		position: absolute;
-		top: 47px;
-		left: -4px;
-	}
-
-	.gl3e > div:nth-child(5) {
-		font-size: 14pt;
-		margin-top: 10px;
-	}
-
-	.gl3e .gldown {
-		margin-top: 20px !important;
-	}
-
-	.gl4e.glname {
-		margin-left: 20px !important;
-	}
-
-	.gt {
-		background: var(--card-bg-2) !important;
-		border: none !important;
-		border-radius: 1px !important;
-		color: var(--primary-color) !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		font-weight: normal !important;
-		padding: 2px 10px 4px 10px !important;
-		margin-right: 4px !important;
-		margin-bottom: 8px !important;
-	}
-
-	.gtl {
-		background: var(--card-bg-3) !important;
-		border: none !important;
-		border-radius: 1px !important;
-		color: var(--primary-color) !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		font-weight: normal !important;
-		padding: 2px 10px 4px 10px !important;
-		margin-right: 4px !important;
-	}
-
-	.glthumb,
-	.glthumb div {
-		background: transparent !important;
-		border: none !important;
-		border-radius: 1px !important;
-	}
-
-	.glthumb img {
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-	}
-
-	.glthumb div:nth-of-type(2) {
-		display: none;
-	}
-
-	td.itd,
-	td.itu,
-	td.itdc,
-	.gltm > tbody > tr > td {
-		border-right: 0px !important;
-	}
-
-	.gl1c,
-	.gl2c,
-	.gl3c,
-	.gl4c,
-	.glfc,
-	.gl4e,
-	.gltc > tbody > tr > td,
-	.glte > tbody > tr > td {
-		border: none !important;
-	}
-
-	.glte .glink {
-		line-height: 20pt !important;
-	}
-	
-	.gltc a, 
-	.gltm a, 
-	.glte a {
-		color: var(--primary-color) !important;
-	}
-	
-	.gltm > .gt {
-        	color: #FFF !important;
-        	margin-top: 5px !important;
-    	}
-
-	td.itd a,
-	td.itu a,
-	.glink {
-
-		/*** LIST LINKS ***/
-		color: var(--primary-color) !important;
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		font-weight: 500 !important;
-		text-decoration: none !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	.it5 {
-		height: 24px !important;
-	}
-
-	.it5 > a:hover {
-		color: #7E7E7E !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	td div[class*="ct"] {
-
-		/*** CATEGORIES ICON ***/
-		background: transparent !important;
-		box-shadow: none !important;
-		font-size: 14pt !important;
-		margin-top: -4px !important;
-		letter-spacing: 0px !important;
-	}
-
-	td .ct1 {
-		color: #FFF0D6 !important;
-	}
-
-	td .ct2 {
-		color: #EB6361 !important;
-	}
-
-	td .ct3 {
-		color: #EEE657 !important;
-	}
-
-	td .ct4 {
-		color: #EBBD63 !important;
-	}
-
-	td .ct5 {
-		color: #5C9F97 !important;
-	}
-
-	td .cta {
-		color: #F7E999 !important;
-	}
-
-	td .ct6 {
-		color: #2D338C !important;
-	}
-
-	td .ct7 {
-		color: #AA8C91 !important;
-	}
-
-	td .ct8 {
-		color: #A94093 !important;
-	}
-
-	td .ct9 {
-		color: #47D2E9 !important;
-	}
-
-	table.itg .gldown a {
-
-		/*** TORRENT ICON ***/
-		background: url('https://i.imgur.com/n8CjvZT.png') !important;
-		background-size: cover !important;
-		background-position: bottom !important;
-		height: 0px;
-		width: 0px;
-		padding: 11px 0px 0px 11px !important;
-		margin-left: -8px;
-	}
-
-	.itg .gldown img {
-		opacity: 0
-	}
-
-	div.itg a[href*="https://exhentai.org/gallerytorrents.php"] {
-		background: url('https://i.imgur.com/n8CjvZT.png') !important;
-		background-size: cover !important;
-		background-position: center !important
-	}
-
-	.it3 > .i > a > .n,
-	.id4 .tn {
-		opacity: 0;
-	}
-
-	div.in img {
-
-		/*** NEW ICON ***/   
-		background: no-repeat url('https://i.imgur.com/xUijfgF.png') center !important;
-		background-size: 20px auto !important;
-		height: 0px;
-		width: 0px;
-		padding: 20px 0px 0px 20px !important;
-	}
-
-	div.in {
-		margin-left: 3px !important;
-		margin-top: 1px !important;
-		margin-right: -1px !important;
-	}
-
-	div[style="position:relative; z-index:2"] .ptb,
-	form[name="favform"] table.ptb,
-	#s.stuffbox table.ptb {
-
-		/*** HOME PAGINATION ***/
-		margin: 0px 0px 0px 5px !important;
-		width: 99.2% !important;
-	}
-
-	#s.stuffbox table.ptb {
-		margin-top: -2px !important;
-	}
-
-	table.ptb td {
-		border-color: var(--border-color) !important;
-	}
-
-	div[style="position:relative; z-index:2"] .ptb td *,
-	form[name="favform"] table.ptb td * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-	}
-
-	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1) a,
-	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1) a,
-	form[name="favform"] table.ptb td:nth-of-type(1) a,
-	form[name="favform"] table.ptb td:nth-last-of-type(1) a,form[name="favform"] .ptdd,#s.stuffbox .ptdd {
-		color: transparent !important;
-	}
-
-	div[style="position:relative; z-index:2"] .ptb td:nth-of-type(1),
-	form[name="favform"] table.ptb td:nth-of-type(1) {
-		background: var(--card-bg-3) !important;
-		border-color: var(--border-color) !important;
-		color: transparent !important;
-	}
-
-	div[style="position:relative; z-index:2"] .ptb td:nth-last-of-type(1),
-	form[name="favform"] table.ptb td:nth-last-of-type(1),
-	#s.stuffbox table.ptb td:nth-last-of-type(1) a {
-		background: var(--card-bg-2) !important;
-		color: transparent !important;
-	}
-
-	/* GALLERY */
-
-	/** DESCRIPTION : change the elements of the gallery page **/
-	.gm {
-
-		/*** GALLERY BOXES ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-	}
-
-	div[class="gm"] {
-
-		/*** GALLERY INFORMATION BOX ***/
-		padding-bottom: 90px !important;
-		margin-top: 136px !important;
-	}
-
-	div#gd2,
-	div#gmid,
-	div#gright {
-		background: transparent !important;
-	}
-
-	div#gmid {
-		z-index: 99;
-	}
-
-	#gd2 {
-
-		/*** GALLERY INFORMATION BOX TITLE ***/
-		padding: 10px !important;
-		min-height: 100px !important;
-		max-height: 100px !important;
-		width: 99% !important;
-		margin-left: -10px !important;
-		z-index: 999 !important;
-	}
-
-	#gd2 #gn {
-		color: var(--primary-color);
-		font-size: 16pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal;
-		max-width: 98% !important;
-		overflow: hidden !important;
-		text-align: left !important;
-		text-overflow: ellipsis !important;
-		white-space: nowrap !important;
-	}
-
-	#gd2 h1#gj {
-		border-bottom: 1px dotted #BEBEBE !important;
-		color: var(--secondary-color);
-		font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		font-weight: normal;
-		height: 18px !important;
-		padding-bottom: 18px !important;
-		text-align: left !important;
-	}
-
-	#trigger-btn {
-		background: no-repeat url("https://i.imgur.com/pGlESDe.png") center !important;
-		background-color: transparent !important;
-		background-size: 25px auto !important;
-		border: none !important;
-		color: transparent !important;
-		height: 20px !important;
-		width: 30px !important;
-		position: absolute;
-		top: 25px !important;
-		right: 18px !important;
-		filter: var(--invert) !important;
-	}
-
-	#gleft {
-
-		/*** GALLERY INFORMATION BOX COVER ***/
-		padding: 0px !important;
-		margin-top: 96px !important;
-		margin-left: 10px !important;
-	}
-
-	#gleft #gd1 div {
-		border: 1px solid var(--border-color);
-	}
-
-	#gmid #gd3 {
-
-		/*** GALLERY INFORMATION BOX DETAILS ***/
-		margin-left: 38px !important;
-		margin-top: -15px !important;
-		margin-right: -30px !important;
-	}
-
-	#gd3 #gdc .cs {
-		border-radius: 2px;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		color: #FFF !important;
-		font-size: 14pt;
-		font-stretch: condensed;
-		font-weight: normal;
-		height: 32px;
-		line-height: 28px;
-		letter-spacing: 0px;
-		text-transform: lowercase;
-	}
-
-	#gd3 #gdn {
-		text-align: left !important;
-		white-space: nowrap !important;
-	}
-
-	#gd3 #gdn a {
-		color: #EBBD63 !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		letter-spacing: .1px !important;
-		text-decoration: none !important;
-		margin-left: 2px !important;
-	}
-
-	#gd3 #gdn a[href*="uploader"]:before {
-		color: var(--primary-color) !important;
-		content: "Uploaded by " !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		letter-spacing: .2px !important;
-		margin-right: 5px !important;
-	}
-
-	#gdd *,
-	#gdr * {
-		color: var(--secondary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		font-weight: normal;
-		text-transform: lowercase !important;
-	}
-
-	.gdt1 {
-		color: var(--primary-color) !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		letter-spacing: .1px !important;
-	}
-
-	#gmid #gdf {
-		width: 200px !important;
-		margin-left: -22px !important;
-	}
-
-	#gdf div[style="float:left"] {
-		width: 300px !important;
-	}
-
-	#grt1 {
-		color: #EBBD63 !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-	}
-
-	#gmid #gdf #fav {
-		display: none !important;
-	}
-
-	#gmid #gdf #favoritelink::before {
-		color: var(--primary-color) !important;
-		content: "Featured in: ";
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		text-transform: lowercase !important;
-	}
-
-	#rating_count {
-		font-stretch: condensed !important;
-	}
-
-	#rating_label {
-		color: #65878F !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-	}
-
-	#gmid #gdf #favoritelink {
-		color: #44B39D;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		letter-spacing: .1px !important;
-		text-transform: uppercase !important;
-	}
-
-	#gmid #gdf #favoritelink img {
-		display: none !important;
-	}
-
-	#gmid #gd4 {
-
-		/*** GALLERY INFORMATION BOX TAGS ***/
-		border: none !important;
-		width: 80% !important;
-		position: absolute !important;
-		left: 233px !important;
-		margin-top: 47px !important;
-	}
-
-	#gmid #gd4 .gt {
-		background: var(--card-bg-2) !important;
-		border-color: var(--border-color) !important;
-		border-radius: 1px !important;
-		padding: 6px 12px !important;
-		margin-top: -5px !important;
-		margin-bottom: 10px !important;
-	}
-
-	#taglist {
-		width: 80% !important;
-		margin-top: -6px !important;
-		margin-left: 20px !important;
-	}
-
-	#taglist a {
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		letter-spacing: .1px !important;
-	}
-
-	#taglist a[style="color: blue;"] {
-		color: #F29B34 !important;
-	}
-
-	#gmid #gd4 .gt a:active,
-	#gmid #gd4 .gt a:hover,
-	#gmid #gd4 a[style*="color:blue"] {
-		color: #CA8D6E !important;
-	}
-
-	#gmid #gd4 .gtl {
-		background: var(--card-bg-3) !important;
-		border: none !important;
-		border-radius: 1px !important;
-		padding: 6px 12px !important;
-		margin-top: -5px !important;
-		margin-bottom: 10px !important;
-	}
-
-	#gmid #gd4 .gtw {
-		background: var(--card-bg-4) !important;
-		border-color: var(--border-color) !important;
-		border-radius: 1px !important;
-		border-style: solid !important;
-		padding: 6px 12px !important;
-		margin-top: -5px !important;
-		margin-bottom: 10px !important;
-	}
-
-	#gmid #gd4 .tdn {
-		color: #E26E67 !important;
-	}
-
-	#gmid #gd4 .tup {
-		color: #2CC990 !important;
-	}
-
-	#taglist * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-	}
-
-	#taglist .tc {
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		text-align: left !important;
-		text-transform: lowercase !important;
-	}
-
-	#tagmenu_new {
-		position: absolute !important;
-		top: -58px !important;
-		z-index: 999 !important;
-	}
-
-	#tagmenu_new #newtagfield {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: var(--primary-color) !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		padding: 8px 9px 9px 12px !important;
-		text-transform: lowercase !important;
-		width: 378px !important;
-		margin-top: -5px !important;
-		margin-left: 20px !important;
-	}
-
-	#newtagbutton {
-		background: transparent !important;
-		border: none !important;
-		color: var(--secondary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		letter-spacing: .1px !important;
-		text-transform: uppercase !important;
-		margin-left: 5px !important;
-	}
-
-	#tagmenu_act {
-		width: 800px !important;
-		position: absolute !important;
-		top: -41px !important;
-		margin-left: 5px !important;
-	}
-
-	#tagmenu_act a {
-		color: var(--secondary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		text-transform: uppercase !important;
-	}
-
-	#tagmenu_act a:hover {
-		color: #CA8D6E !important;
-	}
-
-	#tagmenu_act .mr {
-		visibility: hidden !important;
-	}
-
-	#gd5 {
-
-		/*** GALLERY INFORMATION BOX OTHERS ***/
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		height: 100% !important;
-		padding: 20px !important;
-		width: 170px !important;
-		position: absolute !important;
-		margin-left: -71px !important;
-		margin-top: -20px !important;
-		display: none;
-	}
-
-	#gd5 a[href*="report"] {
-		color: #D8335B !important;
-	}
-
-	#gd5 * {
-		color: var(--secondary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		letter-spacing: -.1px !important;
-		text-transform: lowercase !important;
-	}
-
-	#gd5 p {
-		padding: 7px !important;
-		text-transform: lowercase !important;
-	}
-
-	#gd5 p img {
-		display: none !important;
-	}
-
-	#gnd,
-	#gnd * {
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-	}
-
-	.gm.torrent-info {
-
-		/*** GALLERY TORRENT BOX ***/
-		margin-top: 14px !important;
-	}
-
-	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] {
-		border: none !important;
-		padding: 4px 10px 8px 10px !important;
-	}
-
-	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] tbody * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-	}
-
-	.gm.torrent-info span[style="font-weight:bold"] {
-		color: #1ABC9C !important;
-		font-weight: normal !important;
-	}
-
-	.gm.torrent-info td[style="font-weight: bold; color: red; font-size: 125%;"],
-	.gm.torrent-info tr td:nth-child(3) {
-		display: none !important;
-	}
-
-	.gm.torrent-info td[style="width:180px"] {
-		width: 70px !important;
-	}
-
-	.gm.torrent-info td[style="width:150px"] {
-		width: 50px !important;
-	}
-
-	.gm.torrent-info td[style="width:80px"] {
-		width: 30px !important;
-	}
-
-	.gm.torrent-info td[style="width:100px; text-align:center"] {
-		visibility: hidden;
-	}
-
-	.gm.torrent-info div[style="margin:10px 5px; padding:3px; border:1px solid #C7B5A3"] a {
-		color: var(--primary-color);
-		max-width: 100px !important;
-		margin-left: -6px !important;
-	}
-
-	.gm.torrent-info input {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		box-shadow: none !important;
-		color: var(--secondary-color) !important;
-		font-stretch: condensed !important;
-		font-weight: bold;
-		height: 40px !important;
-		width: 130px !important;
-		text-transform: uppercase !important;
-		position: absolute !important;
-		top: 15px !important;
-		right: 12px !important;
-		visibility: visible !important;
-	}
-
-	.gm.torrent-info input:hover {
-		background: var(--card-bg-2) !important;
-	}
-
-	.gm.eze_gallery_custom_container {
-
-		/*** GALLERY EZE BOX ***/
-		border: none !important;
-		background: transparent !important;
-		margin-top: -4px !important;
-	}
-
-	.eze_gallery_custom {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 20px 24px !important;
-		margin-left: -6px !important;
-		margin-right: -6px !important;
-	}
-
-	.eze_gallery_custom_row a:hover,
-	.eze_dl_container a:hover {
-		color: #F9AE74 !important;
-	}
-
-	.eze_gallery_custom_row * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-	}
-
-	.eze_gallery_custom_cell + .eze_gallery_custom_cell {
-		border-left: 0px solid var(--border-color);
-	}
-
-	.eze_dl_container {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color) !important;
-		padding: 23px !important;
-		margin-top: -1px !important;
-		margin-right: -6px !important;
-		margin-left: -6px !important;
-	}
-
-	.eze_dl_container * {
-		color: var(--primary-color);
-		font-size: 16pt;
-		font-family: "Roboto" !important;
-		font-stretch: condensed;
-		font-weight: normal;
-	}
-
-	.eze_dl_info,
-	.eze_dl_progress_bar,
-	.eze_dl_setting:nth-of-type(2n),.eze_option_box,.eze_dl_setting_desc_tag,.eze_dl_setting_input {
-		background: var(--card-bg-2) !important;
-	}
-
-	.gtb .gpc {
-
-		/*** GALLERY PICTURE COUNT ***/
-		display: none !important;
-	}
-
-	#gdo2 {
-
-		/*** GALLERY ROW OPTION ***/
-		display: none !important;
-	}
-
-	.gtb table.ptt,
-	.ido .ptt {
-
-		/*** GALLERY TOP PAGINATION ***/
-		display: none !important;
-	}
-
-	#gdo4 .tha.nosel,
-	#gdo4 .ths.nosel {
-
-		/*** GALLERY NORMAL/LARGE BUTTON ***/
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: var(--secondary-color) !important;
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		padding: 10px 20px !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		right: 20px !important;
-	}
-
-	#gdo4 {
-		z-index: 99 !important;
-	}
-
-	#gdo4 .tha.nosel {
-		background: var(--card-bg) !important;
-		bottom: -5px !important;
-	}
-
-	#gdo4 .tha.nosel:hover {
-		color: #F9AE74 !important;
-	}
-
-	#gdo4 .ths.nosel {
-		background: var(--card-bg) !important;
-		color: #DED7E6 !important;
-		bottom: -5px !important;
-		right: 122px !important;
-	}
-
-	.eze_gallery_page {
-
-		/*** GALLERY ART BOX ***/
-		background: var(--card-bg) !important;
-		border-color: var(--border-color) !important;
-		padding: 23px 5px !important;
-		margin-top: -20px !important;
-	}
-
-	.eze_gallery_page_indicator {
-		display: none !important;
-	}
-
-	.eze_gallery_page .gdtm {
-		margin-left: 12px !important;
-	}
-
-	.eze_gallery_page img {
-		border: 1px solid var(--border-color);
-	}
-
-	.gtb .ptb {
-
-		/*** GALLERY BOTTOM PAGINATION ***/
-		margin: auto !important;
-		width: 1212px !important;
-	}
-
-	.gtb .ptb td * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-	}
-
-	.gtb .ptb td:nth-of-type(1) a,
-	.gtb .ptb td:nth-last-of-type(1) a {
-		color: transparent;
-	}
-
-	.gtb .ptb td:nth-of-type(1) {
-		background: var(--card-bg-3) !important;
-		color: transparent !important;
-	}
-
-	.gtb .ptb td:nth-last-of-type(1) {
-		background: var(--card-bg-2) !important;
-		color: transparent !important;
-	}
-
-	#cdiv {
-
-		/*** GALLERY COMMENT ***/
-		padding-top: 25px !important;
-		padding-bottom: 25px !important;
-		margin-top: 15px !important;
-	}
-
-	#cdiv .c2 {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 8px 12px !important;
-		margin-bottom: 10px !important;
-	}
-
-	#cdiv .c2 * {
-		color: var(--secondary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		text-transform: uppercase !important;
-	}
-
-	td.ptds {
-		background: var(--card-bg) !important;
-	}
-
-	table.ptb td,
-	table.ptb td:hover {
-		background: var(--card-bg-2);
-	}
-
-	.c3 a {
-		color: #1ABC9C !important;
-	}
-
-	.c4.nosel a[style*="blue"] {
-		color: #83D6DE !important;
-	}
-
-	#cdiv .c5 {
-		text-align: right !important;
-	}
-
-	#cdiv div.c6 {
-		border: 1px solid var(--border-color) !important;
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		padding: 20px !important;
-		margin-top: -11px !important;
-		margin-bottom: 15px !important;
-	}
-
-	#cdiv div.c6 a {
-		color: var(--secondary-color);
-		font-weight: normal;
-	}
-
-	#cdiv .c7 {
-		border: 1px solid var(--border-color) !important;
-		padding: 20px !important;
-		margin-top: -16px !important;
-	}
-
-	#cdiv .c7,
-	#cdiv .c7 * {
-		color: var(--secondary-color) !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-	}
-
-	#chd p {
-		color: var(--secondary-color);
-		font-size: 15pt !important;
-		font-stretch: condensed !important;
-	}
-
-	#postnewcomment {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		color: transparent !important;
-		padding: 6px 6px 10px 6px !important;
-		margin-top: 14px !important;
-	}
-
-	#postnewcomment a {
-		color: var(--secondary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-	}
-
-	textarea[name="commenttext_new"] {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--primary-color);
-		padding: 15px !important;
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		min-width: 1105px !important;
-		max-width: 1105px !important;
-		margin-bottom: 10px !important;
-	}
-
-	#formdiv input {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		box-shadow: none !important;
-		color: var(--secondary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		height: 42px !important;
-		width: 130px !important;
-		text-transform: uppercase !important;
-	}
-
-	#frontpage {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: transparent;
-		padding: 10px 15px !important;
-		position: fixed !important;
-		left: 20px !important;
-		bottom: -1px !important;
-		z-index: 999 !important;
-	}
-
-	#frontpage a,
-	p.ip a[href="https://exhentai.org/"] {
-		color: var(--secondary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-	}
-
-	#frontpage a:hover {
-		color: #F9AE74 !important;
-	}
-
-	/* READER */
-
-	/** DESCRIPTION : change the elements fo the reader page **/
-	#i1.sni {
-
-		/*** READER CONTAINER ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		max-width: 90% !important;
-		padding: 20px !important;
-		margin-top: 20px !important;
-		margin-bottom: 20px !important;
-	}
-
-	#i1.sni h1 {
-
-		/*** READER COMIC TITLE ***/
-		color: var(--primary-color);
-		font-stretch: condensed !important;
-		font-size: 17pt !important;
-		font-weight: normal;
-		max-width: 100% !important;
-		overflow: hidden !important;
-		text-overflow: ellipsis !important;
-		white-space: nowrap !important;
-	}
-
-	#i1.sni img {
-		max-width: 100% !important;
-	}
-
-	#i1.sni #i2 div:nth-child(2),
-	#i1.sni #i4 div:nth-child(1) {
-
-		/*** READER METADATA ***/
-		visibility: hidden !important;
-	}
-
-	#i1.sni #i6 .mr,
-	#i1.sni #i7 .mr {
-
-		/*** READER BOTTOM LINKS ICON ***/
-		visibility: hidden !important;
-	}
-
-	#loadfail {
-
-		/*** RELOAD ICON ***/
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		bottom: 9px !important;
-		right: 20px !important;
-		visibility: hidden !important;
-	}
-
-	#loadfail:after {
-		background-color: #22202B !important;
-		background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
-		background-size: 30px auto !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;
-		border: 1px solid #111 !important;
-		border-radius: 2px !important;
-		color: transparent;
-		content: " " !important;
-		padding: 10px 20px !important;
-		visibility: visible !important;
-	}
-
-	#i6 a[href*="shash"] {
-
-		/*** SEARCH FILE ICON ***/
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		bottom: 9px !important;
-		right: 70px !important;
-		visibility: hidden !important;
-	}
-
-	#i6 a[href*="shash"]::after {
-		background-color: var(--card-bg) !important;
-		background-image: url("https://i.imgur.com/oprVAfY.png") !important;
-		background-size: 18px auto !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: transparent;
-		content: " " !important;
-		padding: 10px 20px !important;
-		visibility: visible !important;
-	}
-
-	#i7 a[href*="fullimg"] {
-
-		/*** DOWNLOAD ICON ***/
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		bottom: 9px !important;
-		right: 120px !important;
-		visibility: hidden !important;
-	}
-
-	#i7 a[href*="fullimg"]::after {
-		background-color: var(--card-bg) !important;
-		background-image: url("https://i.imgur.com/6TxmFSU.png") !important;
-		background-size: 19px auto !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: transparent;
-		content: " " !important;
-		padding: 10px 20px !important;
-		visibility: visible !important;
-	}
-
-	div.sn div {
-		color: var(--secondary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-	}
-
-	div.sn div * {
-		font-weight: normal !important;
-	}
-
-	div.sb {
-		margin-top: 0px !important;
-	}
-
-	#i1.sni div.sn img,
-	#i1.sni .sb > a > img {
-
-		/*** READER NAVIGATION ICONS ***/
-		width: 30px;
-		height: 30px;
-		padding: 0px 2px;
-		opacity: 0;
-	}
-
-	#i1.sni a#prev {
-		background: url('https://i.imgur.com/tKOgREQ.png') no-repeat !important;
-		background-position: 50% 50% !important;
-		background-size: cover !important;
-		visibility: visible !important;
-		filter: brightness(0) var(--invert);
-	}
-
-	#i1.sni a#next {
-		background: url('https://i.imgur.com/d5zq2fu.png') no-repeat !important;
-		background-position: 50% 50% !important;
-		background-size: cover !important;
-		visibility: visible !important;
-		filter: brightness(0) var(--invert);
-	}
-
-	#i1.sni .sb > a {
-		background: url('https://i.imgur.com/wAH0xW9.png') no-repeat !important;
-		background-position: 50% 50% !important;
-		background-size: cover !important;
-		filter: brightness(0) var(--invert);
-	}
-
-	/* FAVORITE POPUP */
-
-	/** DESCRIPTION : changef the elements of the favorite popup page **/
-	.stuffbox[style*="width:584px"] {
-		background: var(--card-bg) !important;
-		border-color: var(--border-color) !important;
-		color: var(--primary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed;
-		font-weight: bold;
-		height: 440px !important;
-		padding: 20px !important;
-		position: absolute !important;
-		top: 0px !important;
-		right: 0px !important;
-		bottom: 0px !important;
-		left: 0px !important;
-		margin: auto !important;
-	}
-
-	.stuffbox[style*="width:584px"] p {
-		font-size: 14pt;
-		font-stretch: condensed;
-		font-weight: normal !important;
-	}
-
-	.stuffbox[style*="width:584px"] div[style*="width:100%"] {
-		color: var(--primary-color) !important;
-		font-size: 15pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-		height: 65px !important;
-	}
-
-	.stuffbox[style*="width:584px"] div[style*="width:100%"] a {
-		color: var(--primary-color) !important;
-	}
-
-	.stuffbox[style*="width: 584px"] div[style*="float:left; padding-top: 1px"], 
-	.stuffbox[style*="width:584px"] div[style*="float:left; padding-left:5px"] {
-		text-transform: lowercase !important;
-		margin-top: -3px !important;
-	}
-
-	.stuffbox[style*="width: 584px"] div[style*="float:left;"] p {
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: normal !important;
-	}
-
-	.stuffbox[style*="width:584px"] textarea {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		padding: 10px !important;
-	}
-
-	.stuffbox[style*="width:584px"] input[type="button"],
-	.stuffbox[style*="width:584px"] input[type="submit"] {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--primary-color) !important;
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		padding: 9px 15px 10px 15px !important;
-		margin-top: 10px !important;
-	}
-
-	/* TORRENT POPUP */
-
-	/** DESCRIPTION : change the elements of the torrent popup page **/
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] {
-		height: 100% !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] h1[style="font-size:9pt; font-weight:bold; margin:3px; text-align:center"],
-	#torrentinfo h1[style="font-size:12pt; font-weight:bold; margin:3px; text-align:center"] {
-		font-family: "Roboto", "ぼくたちのゴシック２ボールド", "BM YEONSUNG" !important;
-		font-size: 15pt !important;
-		font-weight: normal !important;
-		margin-bottom: 20px !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		font-size: 14pt !important;
-		font-weight: normal !important;
-		padding: 15px !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #ett * {
-		font-weight: normal !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-weight: normal !important;
-		margin-top: 15px !important;
-		margin-bottom: 20px !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] #etd {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		font-size: 14pt !important;
-		padding: 10px !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] {
-		font-size: 14pt !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] input[value="Back to Index"] {
-		background: var(--card-bg-2) !important;
-		color: var(--primary-color);
-		width: 137px !important;
-		height: 50px !important;
-		line-height: 25px !important;
-	}
-
-	div[style="text-align:center; margin-top:5px"] {
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		margin-top: 32px !important;
-	}
-
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] table[style="width:80%; margin:8px auto"] a,
-	#torrentinfo[style="height:535px; width:100%; overflow:auto"] div[style="margin:1px auto 10px; text-align:center"] *,
-	div[style="text-align:center; margin-top:5px"] * {
-		color: var(--primary-color);
-		font-weight: normal !important;
-	}
-
-	#torrentinfo div[style*="border:1px solid #C7B5A3"] {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 20px !important;
-	}
-
-	.stuffbox[style*="width:584px"] input[name="torrent_info"] {
-		background: var(--card-bg) !important;
-		color: var(--secondary-color);
-		font-weight: bold !important;
-		line-height: 32px !important;
-		width: 140px !important;
-		text-transform: uppercase !important;
-	}
-
-	/* REPORT */
-
-	/** DESCRIPTION : change the elements of the report page **/
-
-	p[style="padding:0 0 10px; font-size:10pt"] {
-		color: transparent;
-	}
-
-	p[style="padding:0 0 10px; font-size:10pt"] a[style="text-decoration:none; font-weight:bold"] {
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		text-transform: uppercase !important;
-	}
-
-	#gdt[style="font-size:10pt; text-align:center"] {
-		background: var(--card-bg) !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		padding: 15px 0px !important;
-	}
-
-	#report_type {
-		background: #25373D !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		padding: 10px !important;
-	}
-
-	/* PETITION POPUP */
-
-	/** DESCRIPTION : change the elements of the petition popup page **/
-
-	#galpop div[style="width:100%; height:280px; overflow:auto"] {
-		font-size: 15pt !important;
-		height: 400px !important;
-	}
-
-	#galpop div[style="width:100%; height:280px; overflow:auto"] * {
-		font-size: 14pt !important;
-	}
-
-	/* SETTINGS */
-
-	/** DESCRIPTION : change the elements of the settings page **/
-	#outer.stuffbox,
-	.eze_settings_box {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color);
-		padding: 20px 30px 30px 30px !important;
-		margin-top: 136px !important;
-	}
-
-	#outer *,
-	.eze_settings_label * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		font-weight: normal;
-	}
-
-	#outer.stuffbox h1,
-	.eze_settings_header,
-	.eze_settings_entry .eze_settings_entry {
-		color: var(--secondary-color) !important;
-		font-size: 16pt !important;
-		font-stretch: condensed !important;
-		text-align: left !important;
-		text-transform: uppercase !important;
-	}
-
-	#profile_outer select,
-	#profile_outer input[type="button"],
-	#profile_outer input[type="submit"],
-	input[type="text"],
-	input[type="password"],
-	.optouter select,
-	.optouter textarea {
-		background: var(--card-bg-2) !important;
-		border-radius: 1px !important;
-		border: 1px solid var(--border-color);
-		color: var(--primary-color);
-		font-stretch: condensed;
-		font-weight: normal;
-	}
-
-	#catsel div[id*="ct"] {
-		background: transparent !important;
-		border: none !important;
-		box-shadow: none !important;
-		letter-spacing: 0px !important;
-	}
-
-	#apply {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: #FFF !important;
-		padding: 7px 20px 10px 20px !important;
-		text-decoration: none !important;
-		position: fixed !important;
-		right: 20px !important;
-		bottom: -1px !important;
-		visibility: visible !important;
-		z-index: 100 !important;
-	}
-
-	#apply input[value="Apply"] {
-		background: transparent !important;
-		border: none !important;
-		color: var(--secondary-color) !important;
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		padding-top: 4px !important;
-		text-transform: uppercase !important;
-	}
-
-	.eze_settings_entry:nth-of-type(2n) {
-		background-color: inherit !important;
-	}
-
-	/* TORRENT */
-
-	/** DESCRIPTION : change the elements of the torrent page **/
-	#torrentform > p {
-
-		/*** TORRENT HEADER ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		color: var(--secondary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		padding: 18px !important;
-		width: 96.5% !important;
-		text-transform: uppercase !important;
-		margin-left: 2px !important;
-		margin-bottom: -11px !important;
-	}
-
-	#torrentform > p > a {
-		color: var(--secondary-color);
-	}
-
-	#form > p > a {
-		color: #F9AE74;
-		text-decoration: none !important;
-	}
-
-	#form > p > a[style*="text-decoration:none"] {
-		color: #FFF;
-	}
-
-	/* UPLOAD */
-
-	/** DESCRIPTION : change the elements of the upload page **/
-	form[action="https://exhentai.org/upload/manage"] {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 20px !important;
-		margin-top: 160px !important;
-	}
-
-	form[action="https://upload.e-hentai.org/manage"] {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		padding: 20px !important;
-		margin-top: 100px !important;
-	}
-
-	#m {
-		margin-top: -50px !important;
-	}
-
-	#m * {
-		color: var(--primary-color);
-		font-size: 14pt;
-		font-stretch: condensed;
-	}
-
-	#m input,
-	#m select {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-	}
-
-	#uploadform #m.stuffbox {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
-		margin-top: 70px !important;
-	}
-
-	#uploadform #m.stuffbox table {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-	}
-
-	#uploadform #m.stuffbox table * {
-		border-color: var(--border-color) !important;
-	}
-
-	#uploadform #m.stuffbox input,
-	#uploadform #m.stuffbox select,
-	#uploadform #m.stuffbox textarea {
-		background: var(--card-bg) !important;
-		border-radius: 1px;
-		font-size: 14pt !important;
-	}
-
-	#uploadform #u * {
-		color: var(--primary-color);
-		font-size: 14pt;
-		font-stretch: condensed;
-	}
-
-	#uploadform #u #uploadfiles {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
-		font-size: 14pt !important;
-	}
-
-	#uploadform #u #uploadbutton {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		font-size: 14pt !important;
-		padding: 5px 5px 32px 5px;
-	}
-
-	#folderform {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
-		padding-bottom: 40px;
-		margin-top: 100px;
-	}
-
-	#folderform input,
-	#folderform select {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		font-size: 14pt !important;
-		padding: 5px !important;
-	}
-
-	#folderform * {
-		color: var(--primary-color);
-		font-size: 14pt;
-		font-stretch: condensed;
-	}
-
-	#reorderform .stuffbox {
-		background: var(--card-bg);
-		font-size: 14pt;
-		font-stretch: condensed;
-		padding-bottom: 17px !important;
-	}
-
-	/* UNLOCK HATH PERKS */
-
-	/** DESCRIPTION : compatible with Unlock Hath Perks script **/
-	#uhp-panel-container {
-		background: var(--op-bg) !important;
-		margin-left: -2px !important;
-		overflow-y: scroll;
-		z-index: 999 !important;
-	}
-
-	#uhp-panel {
-		background: var(--card-bg) !important;
-		border-radius: 1px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		left: 0px;
-		margin: auto;
-	}
-
-	#uhp-panel * {
-		color: var(--primary-color);
-		font-stretch: condensed !important;
-	}
-
-	#uhp-panel h1 {
-		font-size: 18pt !important;
-		margin-bottom: 10px;
-	}
-
-	#uhp-panel > .option-grid {
-		margin-bottom: 20px;
-	}
-
-	#uhp-panel > .option-grid * {
-		font-size: 14pt !important;
-	}
-
-	.uhp-tf-options.tf-option-grid input {
-		background: var(--card-bg-2);
-		border: none;
-		border-radius: 2px;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		font-size: 14pt;
-		padding-bottom: 5px;
-		padding-left: 5px;
-	}
-
-	.uhp-open-in-new-page * {
-		color: var(--secondary-color);
-		font-stretch: condensed;
-	}
+@-moz-document domain("exhentai.org") {
+
+    /*[[theme]]*/
+
+    /* GENERAL */
+
+    /** DESCRIPTION : set main font and background, plus change/remove elements from all page **/
+    * {
+        font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+        text-shadow: none !important;
+    }
+
+    *::-moz-focus-inner {
+        border: 0 !important;
+    }
+
+    html {
+        overflow-x: hidden !important;
+    }
+
+    body {
+        background: var(--body-bg) !important;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: var(--primary-color) !important;
+        -webkit-text-fill-color: var(--primary-color) !important;
+    }
+
+    input:disabled, select:disabled, textarea:disabled {
+        color: var(--secondary-color) !important;
+        -webkit-text-fill-color: var(--secondary-color);
+    }
+
+    input[type="button"]:enabled:hover, 
+    input[type="submit"]:enabled:hover, 
+    input[type="button"]:enabled:focus, 
+    input[type="submit"]:enabled:focus, 
+    input[type="text"]:enabled:focus {
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color) !important;
+        outline: none !important;
+    }
+
+    .ido form .lc > span, 
+    #gdt .lr > span, 
+    #outer form .lc > span, 
+    #outer form .lr > span, 
+    #uploadform .lc > span, 
+    #uploadform .lr > span {
+        background: var(--card-bg-2) !important;
+    }
+
+    .lc:hover input:enabled ~ span, 
+    .lr:hover input:enabled ~ span, 
+    .lc input:enabled:focus ~ span, 
+    .lr input:enabled:focus ~ span {
+        background-color: var(--card-bg) !important;
+    }
+
+    .lc > input:checked ~ span::after {
+        border-color: var(--primary-color);
+    }
+
+    .lr > input:checked ~ span::after {
+        background: var(--primary-color) !important;
+    }
+
+    input[value="Search Favorites"], 
+    input[value="Search Torrents"], 
+    .dp a, 
+    .ido h1, 
+    .glthumb .cn, 
+    .glthumb .cs, 
+    .glthumb .ir, 
+    .glthumb div[id*="postedpop"], 
+    .gm #gmid #gd3 #gdf #fav, 
+    .gm #gmid #gd3 #gdf #favoritelink img, 
+    .gpc, 
+    .stuffbox a[href="#"], 
+    #gd5 img, 
+    #gdo2, 
+    #nb a[href="https://ehwiki.org/"], 
+    #nb a[href="https://hentaiverse.org/"], 
+    #nb a[href="https://e-hentai.org/toplist.php"], 
+    #nb a[href="https://e-hentai.org/news.php"], 
+    #toppane h1.ih {
+        display: none !important;
+    }
+
+    /* HEADER */
+
+    /** DESCRIPTION : change the elements of the header **/
+    #nb {
+        background: var(--header-bg) !important;
+        border-top: 3px solid var(--border-color-2);
+        border-bottom: 1px solid var(--border-color) !important;
+        padding: 10px 10px 12px 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        text-align: left !important;
+        position: fixed !important;
+        top: 0px !important;
+        right: 0px !important;
+        left: 0px !important;
+        display: inline-block !important;
+        z-index: 999 !important;
+    }
+
+    #nb:hover {
+        max-height: 100% !important;
+    }
+
+    #nb a {
+        color: #F0F0F0;
+        font-size: 12pt;
+        font-stretch: condensed;
+        transition: all .3s ease-in-out !important;
+    }
+
+    #nb a[href="https://exhentai.org/"]:nth-of-type(1):before {
+
+        /*** HEADER SLOGAN ***/
+        content: "sadpanda.org" !important;
+        color: #F0F0F0 !important;
+        font-family: "Neuton" !important;
+        font-size: 18pt !important;
+        visibility: visible !important;
+        z-index: 99 !important;
+        transition: all .3s ease-in-out !important;
+    }
+
+    #nb a:nth-of-type(1):hover:before, #nb a:hover {
+        color: #f28e2b !important;
+        transition: all .3s ease-in-out !important;
+    }
+
+    #nb a[href="https://exhentai.org/"]:nth-of-type(1) {
+        visibility: hidden;
+    }
+
+    .nbw {
+        margin-right: -60px !important;
+    }
+
+    #nb div {
+
+        /*** HEADER ICONS ***/
+        background: transparent;
+        display: inline-block !important;
+    }
+
+    #trigger-box-btn {
+
+        /*** HEADER SEARCH BUTTON ***/
+        background: no-repeat center url("https://icon-library.com/images/search-icon-svg/search-icon-svg-27.jpg") !important;
+        background-size: 18px 18px !important;
+        border: none;
+        color: transparent !important;
+        font-weight: bold;
+        position: absolute;
+        top: 12.5px;
+        right: 24px;
+        filter: brightness(0) invert(1);
+        opacity: .6;
+    }
+
+    #trigger-box-btn:hover {
+        opacity: .4 !important;
+    }
+
+    /* SEARCH BOX */
+
+    /** DESCRIPTION : change the elements of the search box **/
+    form[action="https://exhentai.org/"], 
+    form[action="https://exhentai.org/watched"], 
+    form[action="https://e-hentai.org/"] {
+        background: var(--op-bg) !important;
+        border-top: 1px solid var(--border-color) !important;
+        height: 100% !important;
+        width: 100% !important;
+        position: fixed !important;
+        top: 50px;
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+        overflow-x: hidden;
+        overflow-y: scroll !important;
+        z-index: 999 !important;
+        visibility: hidden;
+    }
+
+    form[action="https://exhentai.org/"] .nopm input[name="f_search"], 
+    form[action="https://exhentai.org/watched"] .nopm input[name="f_search"], 
+    form[action="https://e-hentai.org/"] .nopm input[name="f_search"] {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color);
+        border-radius: 1px !important;
+        border-width: 1px 0px !important;
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        height: 18px !important;
+        padding: 14px 16px 17px 16px !important;
+        width: 100% !important;
+        position: fixed;
+        top: 45px;
+        left: -1px;
+    }
+
+    input[value="Apply Filter"] {
+        display: none;
+    }
+
+    input[value="Clear Filter"] {
+        background: no-repeat center url("https://i.imgur.com/n1UQkFK.png") !important;
+        background-size: 22px 22px !important;
+        border-width: 0px 2px 0px 0px !important;
+        border-radius: 1px !important;
+        color: transparent;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold;
+        padding-right: 65px !important;
+        width: 25px;
+        position: fixed !important;
+        top: 60px !important;
+        right: 60px;
+        text-transform: uppercase !important;
+        filter: brightness(0) var(--invert);
+        opacity: .6;
+    }
+
+    input[value="Clear Filter"]:enabled:hover {
+        background: no-repeat center url("https://i.imgur.com/n1UQkFK.png") !important;
+        background-size: 22px 22px !important;
+    }
+
+    #searchbox #close-btn {
+        background: url('https://imgur.com/4GlrMN7.png') no-repeat center;
+        background-size: 28px auto !important;
+        border: none;
+        color: transparent;
+        height: 67px;
+        width: 65px;
+        position: fixed !important;
+        top: 39px !important;
+        right: -1px !important;
+        filter: brightness(0) var(--invert) !important;
+        opacity: .6;
+    }
+
+    #searchbox #close-btn:hover {
+        opacity: .4 !important;
+    }
+
+    table.itc {
+
+        /*** SEARCH BOX CATEGORIES ***/
+        background: transparent !important;
+        border-radius: 2px !important;
+        height: auto !important;
+        width: auto !important;
+        margin: 65px auto auto auto !important;
+    }
+
+    :root {
+        --doujinshi: url("https://i.imgur.com/dFsObyP.jpg") !important;
+        --manga: url("https://i.imgur.com/v3Hzx9F.jpg") !important;
+        --artistcg: url("https://i.imgur.com/OGV8S1z.jpg") !important;
+        --gamecg: url("https://i.imgur.com/hZBx6F3.jpg") !important;
+        --western: url("https://i.imgur.com/D9OdyqB.jpg") !important;
+        --nonh: url("https://i.imgur.com/4j5AsXw.jpg") !important;
+        --imageset: url("https://i.imgur.com/10RYkUd.jpg") !important;
+        --cosplay: url("https://i.imgur.com/Adqz0Hr.jpg") !important;
+        --asian: url("https://i.imgur.com/bL2WqFy.jpg") !important;
+        --misc: url("https://i.imgur.com/qdxrE1t.jpg") !important;
+    }
+
+    #searchbox div[id*="cat"] {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+        color: transparent !important;
+        height: 9vw;
+        width: 18vw;
+        margin-bottom: 10px;
+    }
+
+    #searchbox .ct2 {
+        background: no-repeat var(--doujinshi) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct3 {
+        background: no-repeat var(--manga) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct4 {
+        background: no-repeat var(--artistcg) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct5 {
+        background: no-repeat var(--gamecg) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .cta {
+        background: no-repeat var(--western) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct6 {
+        background: no-repeat var(--imageset) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct9 {
+        background: no-repeat var(--nonh) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct7 {
+        background: no-repeat var(--cosplay) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct8 {
+        background: no-repeat var(--asian) center !important;
+        background-size: cover !important;
+    }
+
+    #searchbox .ct1 {
+        background: no-repeat var(--misc) center !important;
+        background-size: cover !important;
+    }
+
+    .nopm {
+
+        /*** SEARCH BOX ADVANCED OPTIONS/FILE SEARCH BUTTONS ***/
+        padding-bottom: 15px !important;
+        margin-top: -14px;
+    }
+
+    .nopm a {
+        background: var(--card-bg);
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+        color: var(--primary-color);
+        padding: 8px 14px 10px 12px;
+        font-family: Roboto Condensed !important;
+        font-size: 14pt !important;
+        text-decoration: none;
+    }
+
+    .nopm a:hover {
+        color: var(--secondary-color);
+    }
+
+    #searchbox form .nopm a[onclick*="advsearch_pane"]::before {
+        background: no-repeat url("https://i.imgur.com/D6gWsU5.png") center !important;
+        background-size: 22px auto !important;
+        color: transparent;
+        content: "ddd";
+        margin-right: 5px;
+    }
+
+    #searchbox form .nopm a[onclick*="filesearch_pane"]::before {
+        background: no-repeat url("https://i.imgur.com/oprVAfY.png") center !important;
+        background-size: 20px auto !important;
+        color: transparent;
+        content: "ddd";
+        margin-right: 5px;
+    }
+
+    .itss {
+
+        /*** SEARCH BOX ADVANCED OPTIONS ***/
+        background: var(--card-bg);
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .4) !important;
+        padding: 10px 10px 12px 10px;
+        width: auto !important;
+        margin: auto;
+    }
+
+    .itss label, .itss td {
+        color: var(--primary-color);
+        font-family: Roboto !important;
+        font-size: 11pt;
+    }
+
+    #f_spf, #f_spt, .ic2 select {
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color) !important;
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+    }
+
+    #fsdiv {
+
+        /*** SEARCH BOX FILE SEARCH ***/
+        background: var(--card-bg);
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .4) !important;
+        padding: 10px 10px 12px 10px;
+        margin: auto;
+    }
+
+    #fsdiv * {
+        color: var(--primary-color);
+        font-family: Roboto !important;
+        font-size: 11pt;
+    }
+
+    #fsdiv input {
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color) !important;
+        border-radius: 2px;
+        border-width: 1px;
+    }
+
+    .itsf {
+        width: 100% !important;
+    }
+
+    /* MAIN BODY */
+
+    /** DESCRIPTION : change the elements of the main body **/
+    .ido {
+        background: var(--card-bg) !important;
+        margin-top: 65px !important;
+    }
+
+    .ido p {
+        color: var(--primary-color);
+        font-size: 12pt;
+    }
+
+    .ido #toppane #searchbox {
+        border: none !important;
+        padding: 0px !important;
+    }
+
+    .ido .ip {
+
+        /*** MAIN BODY NUMBER OF RESULTS ***/
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--primary-color);
+        font-size: 11pt !important;
+        font-style: italic !important;
+        font-weight: bold !important;
+        padding: 5px 10px 7px 10px !important;
+        text-align: left !important;
+        text-transform: uppercase !important;
+        margin-top: -8px !important;
+    }
+
+    .ido .ip a {
+        color: var(--primary-color);
+    }
+
+    .ido .ip:nth-of-type(2) {
+        margin-top: -1px !important;
+    }
+
+    #dms select {
+
+        /*** MAIN BODY MODE SELECT ***/
+        border: 1px solid var(--border-color) !important;
+        background: var(--card-bg) !important;
+        border-radius: 1px !important;
+        color: var(--primary-color);
+        margin-top: -17px !important;
+        height: 27px !important;
+        margin-left: 6px !important;
+    }
+
+    .ptt, 
+    .ptb {
+
+        /*** MAIN BODY PAGINATION ***/
+        max-width: 70% !important;
+    }
+
+    .ptt *, 
+    .ptb * {
+        color: var(--primary-color) !important;
+    }
+
+    .ido .ptb {
+        margin-top: -1px !important;
+    }
+
+    .ptt td, 
+    .ptb td {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        font-size: 11pt !important;
+        font-stretch: condensed;
+        font-weight: bold !important;
+        padding-bottom: 3px !important;
+        width: 9vw !important;
+    }
+
+    .ptt td:nth-of-type(1) a, 
+    .ptt td:nth-last-of-type(1) a, 
+    .ptb td:nth-of-type(1) a, 
+    .ptb td:nth-last-of-type(1) a, 
+    .ptt .ptdd,
+    .ptb .ptdd, 
+    #s.stuffbox .ptdd {
+        color: transparent !important;
+    }
+
+    .ptt td:nth-of-type(1), 
+    .ptb td:nth-of-type(1) {
+        background: var(--card-bg-3) !important;
+        border-color: var(--border-color) !important;
+        color: transparent !important;
+    }
+
+    .ptt td:nth-last-of-type(1), 
+    .ptb td:nth-last-of-type(1) {
+        background: var(--card-bg-4) !important;
+        color: transparent !important;
+    }
+
+    .ptt td:nth-of-type(1)::before, 
+    .ptb td:nth-of-type(1)::before {
+        color: var(--primary-color) !important;
+        content: "PREV" !important;
+    }
+
+    .ptt td:nth-last-of-type(1)::before, 
+    .ptb td:nth-last-of-type(1)::before {
+        color: var(--primary-color) !important;
+        content: "NEXT" !important;
+    }
+
+    td.ptds {
+        background: var(--card-bg) !important;
+    }
+
+    .ptt td:hover, .ptb td:hover {
+        background: var(--card-bg) !important;
+    }
+
+    .itg {
+
+        /*** MAIN BODY LIST MODE TABLE ***/
+        border: none !important;
+        margin-top: -1px !important;
+    }
+
+    .itg tr {
+        background: transparent !important;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .itg > tbody > tr {
+        margin-top: -5px !important;
+    }
+
+    .itg > tbody > tr > th {
+        background: transparent !important;
+        border-top: 1px solid var(--border-color);
+        color: var(--primary-color);
+    }
+
+    .itg tr td {
+        border: none !important;
+    }
+
+    .itg * {
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed;
+    }
+
+    .itg div, .itg div a {
+        color: var(--primary-color);
+    }
+
+    .itg .glink {
+
+        /*** MAIN BODY LIST MODE TABLE ITEMS ***/
+        padding-bottom: 1px;
+    }
+
+    .itg a:hover .glink {
+        color: var(--secondary-color) !important;
+    }
+
+    .itg .glink:hover {
+        color: var(--secondary-color) !important;
+        height: auto !important;
+        opacity: .6;
+        overflow: visible !important;
+    }
+
+    .itg .glnew {
+        font-style: normal !important;
+        font-weight: normal !important;
+    }
+
+    .itg .glhide a {
+        color: #b96f4a !important;
+    }
+
+    .itg .glhide a:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .itg div[id*="favnote"] {
+        color: var(--secondary-color) !important;
+    }
+
+    .itg.gltc .gl2c .ir, 
+    .itg.gltc .gl2c .gldown {
+
+        /*** MAIN BODY LIST MODE TABLE ITEMS COMPACT ***/
+        margin-top: 5px !important;
+    }
+
+    .itg .gl3c.glname {
+        padding-left: 30px !important;
+    }
+
+    .itg .gl3c > a > div {
+        height: auto !important;
+        max-height: 38px !important;
+    }
+
+    .itg .gl4c.glhide a {
+        color: #b96f4a !important;
+    }
+
+    .itg .gl4c.glhide a:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .itg.glte {
+
+        /*** MAIN BODY LIST MODE TABLE ITEMS EXTENDED ***/
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .itg.glte * {
+        font-size: 12pt !important;
+    }
+
+    .itg.glte tbody tr {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        padding-bottom: 10px !important;
+    }
+
+    .itg .gl1e div {
+        border-radius: 2px !important;
+    }
+
+    .itg .gl1e img:hover {
+        opacity: .5;
+    }
+
+    .itg .gl2e {
+        padding-bottom: 5px !important;
+    }
+
+    .itg .gl3e {
+        border-color: var(--border-color) !important;
+        padding-right: 20px !important;
+    }
+
+    .itg .gl3e div {
+        margin-left: 8px !important;
+    }
+
+    .itg .gl3e .cn {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: #FFF !important;
+        letter-spacing: 0px !important;
+        height: auto;
+        line-height: 20pt !important;
+        padding: 1px 10px 3px 10px !important;
+        width: 80px !important;
+        margin: auto !important;
+        left: 0px;
+        right: 0px;
+    }
+
+    .itg .gl3e > div:nth-child(2) {
+        width: auto;
+    }
+
+    .itg .gl3e .ir {
+        margin-top: 5px;
+    }
+
+    .itg .gl3e a[href*="uploader"] {
+        color: #b96f4a;
+    }
+
+    .itg .gl3e a[href*="uploader"]:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .itg .gl3e .gldown {
+        margin-top: 10px;
+    }
+
+    .itg .gl3e .gldown a {
+        background-size: 35px 35px !important;
+    }
+
+    .itg .gl4e.glname {
+        border-color: var(--border-color) !important;
+    }
+
+    .itg.glte td {
+        color: var(--primary-color);
+    }
+
+    .itg .gl4e .gt, 
+    .itg .gl4e .gtl {
+        background: var(--header-bg) !important;
+        margin: auto 2px !important;
+        margin-bottom: 5px !important;
+        float: none;
+        display: inline-block;
+    }
+
+    .itg.gld {
+
+        /*** MAIN BODY LIST MODE TABLE ITEMS THUMBNAIL ***/
+        margin-bottom: 1px !important;
+    }
+
+    .itg.gld .gl1t {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        margin: -1px !important;
+    }
+
+    .itg.gld .gl3t {
+        border-radius: 2px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .itg.gld .gl3t img:hover {
+        opacity: .5;
+    }
+
+    .itg.gld .gl4t.glname.glink {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        line-height: 20pt !important;
+    }
+
+    .itg.gld .gl4t.glname.glink:hover {
+        max-height: 100% !important;
+    }
+
+    .itg.gld .gl5t {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        width: 100% !important;
+        margin-bottom: -3px !important;
+        margin-left: -1px !important;
+    }
+
+    .itg.gld .gl5t div:nth-of-type(1) div:nth-of-type(1) {
+        margin-top: 7px !important;
+        margin-left: 15px !important;
+        text-align: left !important;
+    }
+
+    .gl5t > div:nth-child(2) {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .itg.gld .gl5t > div:nth-child(2) > div:nth-of-type(1) {
+        margin-top: 7px !important;
+        margin-left: -25px !important;
+    }
+
+    .itg.gld .gl5t > div:nth-child(2) > div:nth-of-type(2) {
+        font-size: 14pt;
+        font-stretch: condensed;
+        font-weight: bold;
+        width: auto !important;
+        margin-top: -20px !important;
+        margin-left: 65px !important;
+        white-space: nowrap !important;
+    }
+
+    .itg.gld .gl5t > div:nth-child(2) > div:nth-child(3) {
+        position: absolute;
+        top: 12px;
+        left: 160px !important;
+        width: 20px !important;
+    }
+
+    .itg.gld .gl5t > div:nth-child(2)  .gldown img {
+        width: 20px !important;
+    }
+
+    .itg.gld .gl6t {
+        margin-top: -10px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .itg.gld .gl6t .gt {
+        font-size: 14pt;
+        font-stretch: condensed;
+        margin-top: 2px !important;
+    }
+
+    .glthumb {
+
+        /*** MAIN BODY LIST MODE TABLE ITEMS THUMB PREVIEW ***/
+        background: transparent !important;
+        border: none !important;
+        border-radius: 1px !important;
+        height: auto !important;
+    }
+
+    .glthumb div {
+        border: none !important;
+    }
+
+    .glthumb img {
+        border: 2px solid var(--border-color) !important;
+        border-radius: 1px !important;
+        width: 90% !important;
+        height: auto !important;
+    }
+
+    .glthumb > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+        background: var(--card-bg) !important;
+        border: 2px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        padding: 3px 5px 5px 5px;
+        width: 100px;
+        opacity: .98;
+        position: absolute !important;
+        top: -6.5px !important;
+        left: -28.5px !important;
+    }
+
+    .glthumb > div:nth-child(2) > div:nth-child(2) > div:nth-child(2):before {
+        background: no-repeat url("https://i.imgur.com/SAXVepi.png") !important;
+        background-position: 50% 53.5% !important;
+        background-size: 100% auto !important;
+        content: "";
+        padding: 8px;
+        filter: brightness(0) var(--invert) !important;
+        margin-right: 5px;
+    }
+
+    .gl1m.glcat div[class*="ct"], 
+    .gl1c.glcat div[class*="ct"], 
+    .gl5t div[class*="ct"] {
+
+        /*** MAIN BODY CATEGORIES ICON ***/
+        background: transparent !important;
+        box-shadow: none !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+        margin-top: -4px !important;
+        letter-spacing: 0px !important;
+    }
+
+    .gl1m.glcat .ct1, 
+    .gl1c.glcat .ct1, 
+    .gl5t .ct1 {
+        color: #777777 !important;
+    }
+
+    .gl1m.glcat .ct2, 
+    .gl1c.glcat .ct2, 
+    .gl5t .ct2 {
+        color: #9E2720 !important;
+    }
+
+    .gl1m.glcat .ct3, 
+    .gl1c.glcat .ct3,
+    .gl5t .ct3 {
+        color: #E1D839 !important;
+    }
+
+    .gl1m.glcat .ct4, 
+    .gl1c.glcat .ct4, 
+    .gl5t .ct4 {
+        color: #D38F1D !important;
+    }
+
+    .gl1m.glcat .ct5, 
+    .gl1c.glcat .ct5, 
+    .gl5t .ct5 {
+        color: #6A936D !important;
+    }
+
+    .gl1m.glcat .cta, 
+    .gl1c.glcat .cta, 
+    .gl5t .cta {
+        color: #AB9F60 !important;
+    }
+
+    .gl1m.glcat .ct6, 
+    .gl1c.glcat .ct6, 
+    .gl5t .ct6 {
+        color: #325CA2 !important;
+    }
+
+    .gl1m.glcat .ct7, 
+    .gl1c.glcat .ct7, 
+    .gl5t .ct7 {
+        color: #6A32A2 !important;
+    }
+
+    .gl1m.glcat .ct8, 
+    .gl1c.glcat .ct8, 
+    .gl5t .ct8 {
+        color: #A23282 !important;
+    }
+
+    .gl1m.glcat .ct9, 
+    .gl1c.glcat .ct9, 
+    .gl5t .ct9 {
+        color: #5FA9CF !important;
+    }
+
+    .itg .gldown a {
+
+        /*** MAIN BODY TORRENT ICON ***/
+        background: url('https://i.imgur.com/n8CjvZT.png') !important;
+        background-size: cover !important;
+        background-position: bottom !important;
+        height: 0px;
+        width: 0px;
+        padding: 8px 0px 0px 11px !important;
+        margin-left: -8px;
+    }
+
+    .itg .gldown a:hover {
+        opacity: .6;
+    }
+
+    .itg .gldown img {
+        opacity: 0
+    }
+
+    itg a[href*="https://exhentai.org/gallerytorrents.php"] {
+        background: url('https://i.imgur.com/n8CjvZT.png') !important;
+        background-size: cover !important;
+        background-position: center !important
+    }
+
+    .it3 > .i > a > .n, 
+    .id4 .tn {
+        opacity: 0;
+    }
+
+    .gl2c div, 
+    .gl2m div {
+        background-color: transparent !important;
+        border-radius: 2px !important;
+        border-width: 1px !important;
+    }
+
+    .gt {
+
+        /*** MAIN BODY TAGS ***/
+        background: var(--header-bg) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        color: #FFF !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .4) !important;
+        font-weight: normal !important;
+        padding: 2px 10px 4px 10px !important;
+        margin: 4px 4px 4px 0px !important;
+    }
+
+    .gtl, 
+    .gtw {
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .4) !important;
+        font-weight: normal !important;
+        padding: 2px 10px 4px 10px !important;
+        margin: 4px 4px 4px 0px !important;
+    }
+
+    .gt:hover, 
+    .gtl:hover, 
+    .gtw:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    /* TORRENTS */
+
+    /** DESCRIPTION : change the elements of the torrents page **/
+
+    #torrentform #focusme {
+
+        /*** TORRENTS SEARCH BOX  ***/
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color) !important;
+        border-radius: 1px !important;
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed !important;
+        width: 400px !important;
+        padding: 3px 10px 4.5px 6px !important;
+        position: absolute;
+        left: 4px;
+        z-index: 9999 !important;
+    }
+
+    #torrentform p {
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed;
+        position: absolute !important;
+        top: 12px !important;
+        right: 8px !important;
+    }
+
+    #torrentform a {
+        color: var(--secondary-color);
+    }
+
+    #torrentform a:hover {
+        color: var(--primary-color) !important;
+    }
+
+    #torrentform input[type="button"] {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 1px !important;
+        box-shadow: none !important;
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding: 4px 10px 6px 10px !important;
+        position: absolute !important;
+        top: 9px;
+        left: 424px !important;
+    }
+
+    #torrentform input[type="button"]:hover {
+        background: var(--card-bg-2) !important;
+    }
+
+    /* FAVORITE */
+
+    /** DESCRIPTION : change the elements of the favorite page **/
+    #trigger-box-btn-2 {
+
+        /*** FAVORITE CATEGORY BUTTON ***/
+        background: no-repeat center url("https://i.imgur.com/IjNSJmb.png") !important;
+        background-size: 20px 20px !important;
+        border: none;
+        color: transparent !important;
+        font-weight: bold;
+        position: absolute;
+        top: 13.5px;
+        right: 10px;
+        filter: brightness(0) invert(1);
+        opacity: .6;
+    }
+
+    #trigger-box-btn-2:hover {
+        opacity: .4 !important;
+    }
+
+    .ido .nosel {
+
+        /*** FAVORITE CATEGORIES ***/
+        background: var(--op-bg) !important;
+        border: none !important;
+        padding: 10px 4px !important;
+        height: 100% !important;
+        width: 100% !important;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        text-align: center !important;
+        position: fixed !important;
+        top: 0px !important;
+        right: 0px !important;
+        bottom: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+        z-index: 9999 !important;
+        display: none;
+        overflow-y: scroll;
+    }
+
+    .ido .nosel .fp[style*="width: 160px"] {
+        border: none;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        padding: 60px 50px !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        margin-top: 80px;
+        margin-right: 10px;
+        margin-bottom: -70px;
+        float: none !important;
+        transition: all .3s ease-in-out !important;
+        display: inline-block !important;
+    }
+
+    .ido #close-btn {
+        background: url('https://imgur.com/4GlrMN7.png') no-repeat 50% 50%;
+        background-size: cover !important;
+        background-color: transparent !important;
+        border: none !important;
+        color: transparent !important;
+        height: 29px;
+        width: 29px;
+        position: fixed !important;
+        top: 13px !important;
+        right: 16px !important;
+        filter: brightness(0) var(--invert) !important;
+        opacity: .6
+    }
+
+    .ido #close-btn:hover {
+        opacity: .4;
+    }
+
+    .ido .nosel .fp[style*="width: 160px;"]:hover {
+        opacity: .5;
+        transition: all .3s ease-in-out !important;
+    }
+
+    form[name="favform"] .ip, body > .ip, .fp .i {
+        display: none !important;
+    }
+
+    div[style="float:left; text-align:left; height:20px; padding:2px 0 0 3px"] {
+        color: #FFF !important;
+        width: 100% !important;
+        font-family: "Bebas Neue" !important;
+        font-size: 20pt !important;
+        letter-spacing: 6px !important;
+        text-align: center !important;
+        margin-top: -45px !important;
+    }
+
+    div[style="font-weight:bold; float:left; text-align:right; width:30px; height:20px; padding:2px 3px 0 0"] {
+        color: #FFF !important;
+        font-family: "Bebas Neue" !important;
+        font-size: 19pt !important;
+        line-height: 42pt !important;
+        padding: 0px !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-top: 0px !important;
+    }
+
+    a[href*="favcat=0"] .fp, .fp[onclick*="favcat=0"] {
+        background: #60646D;
+    }
+
+    a[href*="favcat=1"] .fp, .fp[onclick*="favcat=1"] {
+        background: #EB6361;
+    }
+
+    a[href*="favcat=2"] .fp, .fp[onclick*="favcat=2"] {
+        background: #EBBD63;
+    }
+
+    a[href*="favcat=3"] .fp, .fp[onclick*="favcat=3"] {
+        background: #EDD834;
+    }
+
+    a[href*="favcat=4"] .fp, .fp[onclick*="favcat=4"] {
+        background: #97CE68;
+    }
+
+    a[href*="favcat=5"] .fp, .fp[onclick*="favcat=5"] {
+        background: #F6CD61;
+    }
+
+    a[href*="favcat=6"] .fp, .fp[onclick*="favcat=6"] {
+        background: #8BCBDE;
+    }
+
+    a[href*="favcat=7"] .fp, .fp[onclick*="favcat=7"] {
+        background: #00587A;
+    }
+
+    a[href*="favcat=8"] .fp, .fp[onclick*="favcat=8"] {
+        background: #8B4D93;
+    }
+
+    a[href*="favcat=9"] .fp, .fp[onclick*="favcat=9"] {
+        background: #BF4A67;
+    }
+
+    .fp[style="width:140px; padding:4px 0 0; margin:5px auto 0; text-align:center; font-weight:bold; position:relative; left:-8px"] {
+        background-color: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        height: 20px !important;
+        width: auto !important;
+        line-height: 20px !important;
+        padding: 8px 16px 10px 16px !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        position: fixed !important;
+        left: 10px !important;
+        bottom: 10px !important;
+        z-index: 999 !important;
+    }
+
+    .fp[style="width:140px; padding:4px 0 0; margin:5px auto 0; text-align:center; font-weight:bold; position:relative; left:-8px"]:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .ido div[style*="width:825px"], 
+    form[action*="favorites"] {
+
+        /*** FAVORITE SEARCH BOX ***/
+        width: 100% !important;
+    }
+
+    form[action*="favorites"] input[type="text"] {
+        background: var(--card-bg-2) !important;
+        border-color: var(--border-color) !important;
+        border-radius: 1px !important;
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed !important;
+        width: 500px !important;
+        padding: 3px 10px 4.5px 6px !important;
+        position: absolute;
+        top: -10px !important;
+        left: 4px !important;
+    }
+
+    form[action*="favorites"] input[type="text"]:hover, 
+    form[action*="favorites"] input[type="text"]:focus {
+        background: var(--card-bg) !important;
+    }
+
+    form[action*="favorites"] input[value="Clear"] {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 1px !important;
+        box-shadow: none !important;
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding: 4px 10px 6px 10px !important;
+        position: absolute !important;
+        top: -7px !important;
+        left: 524px !important;
+    }
+
+    form[action*="favorites"] table {
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed !important;
+        position: absolute !important;
+        top: 7px !important;
+        right: -130px !important;
+    }
+
+    form[name="favform"] {
+
+        /*** FAVORITE MAIN BODY ***/
+        margin-top: 70px !important;
+    }
+
+    form[name="favform"] .gl4t.glname.glft {
+        line-height: 20pt !important;
+    }
+
+    form[name="favform"] .gl4t.glname.glft:hover {
+        max-height: 100% !important;
+    }
+
+    form[name="favform"] .gl2c .ir, form[name="favform"] .gl2c .gldown {
+        margin-top: 5px !important;
+    }
+
+    div[style*="top:20px"] {
+        color: var(--primary-color) !important;
+        font-size: 13pt;
+        font-stretch: condensed;
+        margin: 10px 0px 0px -8px;
+    }
+
+    div[style*="top:20px"] a {
+        color: var(--primary-color) !important;
+    }
+
+    div[style*="top:20px"] a:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    input[value="Confirm"] {
+
+        /*** FAVORITE EDIT BUTTONS ***/
+        background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
+        background-color: var(--card-bg-4) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 15px auto !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: transparent !important;
+        height: 41px !important;
+        width: 41px !important;
+        padding: 17px !important;
+        position: fixed !important;
+        right: 140px !important;
+        bottom: 10px;
+        z-index: 999 !important;
+    }
+
+    input[value="Confirm"]:enabled:focus {
+        background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
+        background-color: var(--card-bg) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 15px auto !important;
+        border-color: var(--border-color) !important;
+        color: transparent !important;
+    }
+
+    input[value="Confirm"]:enabled:hover {
+        background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
+        background-color: var(--card-bg-2) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: 15px auto !important;
+    }
+
+    select[name="ddact"] {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: var(--primary-color) !important;
+        height: 41px !important;
+        width: auto !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        padding-top: 3px !important;
+        padding-right: 3px !important;
+        padding-left: 3px !important;
+        text-align: center;
+        text-transform: uppercase !important;
+        position: fixed !important;
+        bottom: 10px !important;
+        left: 10px !important;
+        z-index: 999 !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    select[name="ddact"]:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc {
+        position: fixed !important;
+        bottom: 27px !important;
+        right: 105px !important;
+    }
+
+    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc span {
+        background-color: var(--card-bg-3);
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        line-height: 41px;
+        height: 41px;
+        width: 100px !important;
+        text-align: left;
+        padding-left: 12px;
+    }
+
+    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc span::before {
+        color: var(--primary-color);
+        content: "SELECT ALL";
+        font-size: 12pt;
+        font-stretch: condensed;
+        font-weight: bold;
+    }
+
+    form[name="favform"] div[style*="float: right; width: 25px; position: relative;"] .lc > input:checked ~ span::after, 
+    form[name="favform"] .lr > input:checked ~ span::after {
+        top: 13px !important;
+        left: 95px !important;
+        border-color: var(--primary-color) !important;
+    }
+
+    /* GALLERY */
+
+    /** DESCRIPTION : change the elements of the gallery page **/
+    .gm {
+        background: var(--card-bg) !important;
+        padding-bottom: 40px !important;
+        margin-top: 70px !important;
+        margin-bottom: -60px !important;
+    }
+
+    .gm #gd1 {
+        margin-top: 10px;
+    }
+
+    .gm #gd1 div {
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+    }
+
+    .gm #gd2, .gm #gmid {
+        background: transparent !important;
+    }
+
+    .gm #gd2 {
+        text-align: left !important;
+        margin-top: 8px;
+    }
+
+    .gm #gd2 h1 {
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        text-align: left !important;
+        margin-left: 0px;
+    }
+
+    .gm #gd2 #gj {
+        border-color: var(--border-color) !important;
+        color: var(--secondary-color) !important;
+        font-size: 13pt !important;
+        padding-bottom: 13px !important;
+    }
+
+    .gm #gmid {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .gm #gmid * {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+    }
+
+    .gm #gd3 {
+        margin-top: -5px !important;
+        margin-right: 0px !important;
+    }
+
+    .gm #gmid #gd3 .cs {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: #FFF !important;
+        letter-spacing: 0px !important;
+        padding: 4px 15px 7px 16px !important;
+        width: 70px !important;
+    }
+
+    .gm #gmid #gd3 #gdn a {
+        color: #b96f4a !important;
+    }
+
+    .gm #gmid #gd3 #gdn a:hover {
+        opacity: .8;
+    }
+
+    .gm #gmid #gd3 .gdt2 {
+        color: var(--secondary-color) !important;
+        font-style: italic !important;
+    }
+
+    .gm #gmid #gd3 #gdf {
+        padding: 5px 10px 6px 3px !important;
+        width: 100% !important;
+        white-space: nowrap !important;
+    }
+
+    .gm #gmid #gd3 #gdf div[style="float:left"] {
+        background: var(--card-bg-2) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        padding: 2px 0px 4px 0px;
+        text-align: center !important;
+        float: none !important;
+        margin: auto !important;
+    }
+
+    .gm #gmid #gd3 #gdf div:hover {
+        opacity: .8 !important;
+    }
+
+    .gm #gmid #gd3 #gdf #favoritelink {
+        color: var(--primary-color) !important;
+        margin-left: -8px !important;
+    }
+
+    .gm #spa {
+        border-radius: 2px !important;
+        height: auto !important;
+        width: auto !important;
+        text-align: left !important;
+        margin-left: 22px;
+        overflow: visible !important
+    }
+
+    .gm #gd4 {
+        margin-right: -20px !important;
+        margin-left: 30px !important;
+    }
+
+    .gm #gmid #gd4 {
+        border-color: var(--border-color) !important;
+    }
+
+    .gm #gmid #gd4 #taglist div[id*="td"] {
+        padding: 3px 11px 5px 11px !important;
+        margin-top: 0px !important;
+        float: none;
+        display: inline-block;
+    }
+
+    .gm #gmid #gd4 #taglist div[id*="td"] * {
+        color: #FFF !important;
+    }
+
+    .gm #gmid #gd4 #taglist div[id*="td"]:hover a {
+        color: var(--secondary-color) !important;
+    }
+
+    .gm #gmid #gd4 #taglist a[style*="blue"] {
+        color: #b96f4a !important;
+    }
+
+    .gm #gmid #gd4 #tagmenu_act {
+        width: 90% !important;
+        line-height: 20pt !important;
+    }
+
+    .gm #gmid #gd4 #tagmenu_act a {
+        margin-right: 10px;
+    }
+
+    .gm #gmid #gd4 #tagmenu_act a::before {
+        background: no-repeat center url("https://i.imgur.com/Dsenzhv.png") !important;
+        background-size: 14px 14px !important;
+        content: "dd" !important;
+        color: transparent !important;
+        filter: brightness(0) var(--invert) !important;
+    }
+
+    .gm #gmid #gd4 #tagmenu_act a:hover {
+        color: var(--secondary-color);
+    }
+
+    .gm #gmid #gd4 #tagmenu_act img {
+        display: none;
+    }
+
+    .gm #gmid #gd4 #tagmenu_new {
+        margin-top: 15px;
+    }
+
+    .gm #gmid #gd4 .nopm #newtagfield {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+        padding-left: 6px !important;
+        width: 80% !important;
+        margin-left: 5px !important;
+    }
+
+    .gm #gmid #gd4 .nopm #newtagfield:hover, 
+    .gm #gmid #gd4 .nopm #newtagfield:focus {
+        background: var(--card-bg-3) !important;
+    }
+
+    .gm #gmid #gd4 .nopm #newtagbutton {
+        background: var(--card-bg-3);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        padding-top: 2px;
+        padding-bottom: 4px;
+    }
+
+    .gm #gmid #gd5 {
+        width: 24px !important;
+        white-space: nowrap !important;
+        margin-left: 22px !important;
+    }
+
+    .gm #gmid #gd5 a:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .gm #gmid #gd5 .g3.gsp a {
+        color: #c44d56 !important;
+    }
+
+    .gm.eze_gallery_custom_container {
+        padding: 3px 5px 5px 5px !important;
+    }
+
+    .eze_gallery_custom {
+        margin-left: 4px !important;
+    }
+
+    .eze_gallery_custom p {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .eze_gallery_custom_cell + .eze_gallery_custom_cell {
+        border-left: 2px solid var(--border-color);
+    }
+
+    .eze_gallery_custom_row * {
+        color: var(--primary-color);
+    }
+
+    .eze_gallery_custom_row a:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .gtb {
+        margin-top: 80px !important;
+        margin-bottom: -1px !important;
+    }
+
+    #gdo4 {
+        width: 300px !important;
+        top: -40px !important;
+        margin-left: -17px !important;
+    }
+
+    #gdo4 .nosel {
+        background: var(--card-bg);
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding: 6px 8px 7px 8px !important;
+        margin-right: 4px;
+    }
+
+    #gdo4 .ths.nosel {
+        opacity: .5;
+    }
+
+    #gdo4 .tha.nosel:hover {
+        opacity: .8;
+    }
+
+    .eze_gallery_page {
+        background: var(--card-bg) !important;
+        margin-top: -2px !important;
+        margin-bottom: -81px !important;
+    }
+
+    .eze_gallery_page_indicator_border {
+        background: var(--card-bg);
+        border-color: var(--border-color);
+    }
+
+    .eze_gallery_page_indicator_text {
+        background: transparent !important;
+        color: var(--primary-color) !important;
+        font-weight: bold !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        writing-mode: vertical-rl !important;
+    }
+
+    .gdtm img, 
+    .gdtl img {
+        border-radius: 2px !important;
+    }
+
+    .eze_gallery_page img:hover {
+        opacity: .5 !important;
+    }
+
+    .gdtm a, 
+    .gdtl a {
+        color: var(--secondary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        font-weight: bold !important;
+        line-height: 11pt !important;
+    }
+
+    #cdiv {
+        margin-top: 0px !important;
+    }
+
+    #cdiv .c1 {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color) !important;
+        width: 98% !important;
+    }
+
+    #cdiv .c1 a[href*="uploader"] {
+        color: #b96f4a;
+    }
+
+    #cdiv .c1 a[href*="uploader"]:hover {
+        opacity: .8;
+    }
+
+    #cdiv .c1 a[style*="blue"], 
+    #cdiv .c1 a[style*="red"] {
+        color: #846b3c !important;
+    }
+
+    #cdiv .c1 a {
+        color: var(--primary-color);
+    }
+
+    #cdiv .c1 .c2 {
+        background: var(--card-bg) !important;
+        border-width: 0px 0px 1px 0px !important;
+        border-color: var(--border-color) !important;
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed;
+        padding: 5px 8px 7px 8px !important;
+    }
+
+    #cdiv .c1 .c2 .c5.nosel {
+        white-space: nowrap !important;
+        margin-right: 15px !important;
+    }
+
+    #cdiv .c1 div[id*="comment"] {
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed;
+        margin-top: 10px !important;
+        padding-bottom: 20px !important;
+    }
+
+    #cdiv .c1 div[id*="comment"] a:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    #cdiv div[id*="cvotes"] {
+        color: var(--secondary-color);
+        font-size: 11pt !important;
+        font-stretch: condensed;
+        padding-bottom: 15px !important;
+        margin-top: -20px !important;
+    }
+
+    #cdiv .c1 .c8 {
+        color: var(--secondary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding-bottom: 10px !important;
+        margin-top: -12px !important;
+        margin-bottom: 10px !important;
+    }
+
+    #postnewcomment {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        color: transparent !important;
+        padding: 4px 6px 6px 6px !important;
+        white-space: nowrap;
+        width: 150px !important;
+        margin: auto;
+    }
+
+    #postnewcomment:hover {
+        background: var(--card-bg-3) !important;
+    }
+
+    #postnewcomment a {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+    }
+
+    #formdiv textarea {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color) !important;
+        border-radius: 1px !important;
+        color: var(--primary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed !important;
+        padding: 5px 8px !important;
+    }
+
+    #formdiv textarea:focus-visible {
+        outline: none;
+    }
+
+    #formdiv input[value="Post Comment"] {
+        border: 1px solid var(--border-color) !important;
+        background: var(--card-bg-2);
+        border-radius: 2px !important;
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        font-weight: bold;
+        padding: 4px 12px 6px 12px !important;
+        text-transform: uppercase !important;
+        margin-top: 5px !important;
+    }
+
+    #formdiv input[value="Post Comment"]:hover {
+        background: var(--card-bg) !important;
+    }
+
+    #gdt {
+        background: transparent !important;
+        border: none !important;
+        margin-top: 47px !important;
+    }
+
+    #gdt .exp_entry {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color) !important;
+        border-radius: 1px !important;
+    }
+
+    #gdt .exp_entry * {
+        color: var(--primary-color);
+        font-size: 12pt;
+        font-stretch: condensed;
+    }
+
+    #gdt .exp_entry h3 {
+        font-size: 14pt;
+    }
+
+    #gdt .exp_entry textarea, 
+    #gdt .exp_entry #expunge_refer, 
+    #gdt .exp_entry input {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+        outline: none;
+    }
+
+    #gdt .exp_entry textarea:hover, 
+    #gdt .exp_entry textarea:focus, 
+    #gdt .exp_entry #expunge_refer:hover, 
+    #gdt .exp_entry #expunge_refer:focus, 
+    #gdt .exp_entry input:hover, 
+    #gdt .exp_entry input:focus {
+        background: var(--card-bg) !important;
+    }
+
+    #gdt .exp_entry #expunge_refer {
+        padding-left: 5px;
+    }
+
+    #gdt .exp_entry input[type="submit"] {
+        padding: 1px 8px 3px 8px;
+    }
+
+    #reporttable td, 
+    #reporttable p, 
+    #reporttable strong {
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+    }
+
+    #reportform #reporttable #report_type {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        padding-bottom: 6px !important;
+    }
+
+    #reporttable input, 
+    #reporttable textarea {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding: 4px 8px 5px 8px;
+    }
+
+    input[name="sendreport"] {
+        line-height: 14pt !important;
+        padding-bottom: 7px !important;
+    }
+
+    #reporttable textarea:hover, 
+    #reporttable textarea:focus {
+        background: var(--card-bg-2) !important;
+    }
+
+    /* READER */
+
+    /** DESCRIPTION : change the elements fo the reader page **/
+    #i1.sni {
+
+        /*** READER CONTAINER ***/
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        max-width: 88% !important;
+        padding: 0px 10px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #i1.sni h1 {
+
+        /*** READER COMIC TITLE ***/
+        color: var(--primary-color);
+        font-stretch: condensed !important;
+        font-size: 15pt !important;
+        font-weight: normal;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+    #i1.sni img {
+        max-width: 100% !important;
+    }
+
+    #i1.sni img {
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px;
+    }
+
+    #i1.sni #i2 div:nth-child(2), 
+    #i1.sni #i4 div:nth-child(1) {
+
+        /*** READER METADATA ***/
+        visibility: hidden !important;
+    }
+
+    #i1.sni #i6 .mr, #i1.sni #i7 .mr {
+
+        /*** READER BOTTOM LINKS ICON ***/
+        visibility: hidden !important;
+    }
+
+    #loadfail {
+
+        /*** RELOAD ICON ***/
+        font-size: 11pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        visibility: hidden !important;
+        position: fixed;
+        right: 15px;
+        bottom: 25px;
+    }
+
+    #loadfail:after {
+        background-color: var(--header-bg) !important;
+        background-image: url("https://i.imgur.com/2n3rpjO.png") !important;
+        background-size: 30px auto !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: transparent;
+        content: " " !important;
+        padding: 10px 20px !important;
+        visibility: visible !important;
+    }
+
+    #loadfail:hover:after {
+        opacity: .8 !important;
+    }
+
+    #i6 a[href*="shash"] {
+
+        /*** SEARCH FILE ICON ***/
+        font-size: 11pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        visibility: hidden !important;
+        position: fixed !important;
+        left: -208px;
+        bottom: 75px;
+    }
+
+    #i6 a[href*="shash"]::after {
+        background-color: var(--header-bg) !important;
+        background-image: url("https://i.imgur.com/oprVAfY.png") !important;
+        background-size: 18px auto !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: transparent;
+        content: " " !important;
+        padding: 10px 20px !important;
+        visibility: visible !important;
+    }
+
+    #i6 a[href*="shash"]:hover:after {
+        opacity: .8 !important;
+    }
+
+    #i7 {
+        height: 0px !important;
+    }
+
+    #i7 a[href*="fullimg"] {
+
+        /*** DOWNLOAD ICON ***/
+        font-size: 11pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        visibility: hidden !important;
+        position: fixed;
+        right: 15px;
+        bottom: 75px;
+    }
+
+    #i7 a[href*="fullimg"]::after {
+        background-color: var(--card-bg) !important;
+        background-image: url("https://i.imgur.com/6TxmFSU.png") !important;
+        background-size: 19px auto !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: transparent;
+        content: " " !important;
+        padding: 10px 20px !important;
+        visibility: visible !important;
+    }
+
+    #i7 a[href*="fullimg"]:hover:after {
+        opacity: .8 !important;
+    }
+
+    div.sn div {
+        color: var(--secondary-color);
+        font-size: 13pt !important;
+        font-stretch: condensed;
+        margin-right: 8px !important;
+        margin-left: 8px !important;
+    }
+
+    div.sn div * {
+        font-weight: normal !important;
+    }
+
+    div.sb {
+        margin-top: -5px !important;
+    }
+
+    #i1.sni div.sn img, #i1.sni .sb > a > img {
+
+        /*** READER NAVIGATION ICONS ***/
+        width: 30px;
+        height: 30px;
+        padding: 0px 2px;
+        opacity: 0;
+    }
+
+    #i1.sni a#prev {
+        background: url('https://i.imgur.com/tKOgREQ.png') no-repeat !important;
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        visibility: visible !important;
+        filter: brightness(0) var(--invert);
+    }
+
+    #i1.sni a#next {
+        background: url('https://i.imgur.com/d5zq2fu.png') no-repeat !important;
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        visibility: visible !important;
+        filter: brightness(0) var(--invert);
+    }
+
+    #i1.sni .sb > a {
+        background: url('https://i.imgur.com/wAH0xW9.png') no-repeat !important;
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        filter: brightness(0) var(--invert);
+    }
+
+    #i1.sni a#prev:hover, #i1.sni a#next:hover, #i1.sni .sb > a:hover {
+        opacity: .5;
+    }
+
+    /* FAVORITE/TORRENT/ARCHIVE/RENAME POPUPS */
+
+    /** DESCRIPTION : change the elements of the different popups **/
+    #galpop .nosel {
+
+        /*** FAVORITE POPUP ***/
+        font-weight: bold;
+        line-height: 10pt !important;
+    }
+
+    #galpop textarea {
+
+        /*** FAVORITE POPUP ***/
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding: 5px 8px !important;
+    }
+
+    #galpop input {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding: 1px 2px 2px 5px !important;
+    }
+
+    #galpop input:hover, #galpop input:focus, #galpop textarea:hover, #galpop textarea:focus {
+        background: var(--card-bg) !important;
+        outline: none;
+    }
+
+    #galpop input[value="Add to Favorites"] {
+        padding-right: 5px !important;
+        padding-bottom: 3px !important;
+    }
+
+    #galpop input[value="Apply Changes"] {
+        padding-right: 5px !important;
+        padding-bottom: 4px !important;
+    }
+
+    #galpop input[value="Submit"] {
+        padding-right: 6px !important;
+    }
+
+    #db {
+
+        /*** ARCHIVE POPUP ***/
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        padding: 0px 10px 10px 10px !important;
+    }
+
+    #db h1 {
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        font-style: normal;
+    }
+
+    #db input[type="submit"] {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color);
+        border-radius: 2px;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        font-style: normal;
+        width: auto !important;
+        padding: 2px 8px 4px 8px !important;
+    }
+
+    #db * {
+        color: var(--primary-color);
+        font-size: 11pt;
+        font-style: italic;
+    }
+
+    .stuffbox {
+
+        /*** TORRENT POPUP ***/
+        background: var(--card-bg);
+        border: 1px solid var(--border-color) !important;
+        color: var(--primary-color) !important;
+        padding-bottom: 35px !important;
+    }
+
+    .stuffbox h1 {
+        ;
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed !important
+    }
+
+    .stuffbox p {
+        color: var(--secondary-color);
+        font-size: 11pt !important;
+        font-style: italic;
+    }
+
+    .stuffbox #torrentinfo form[action*="gallerytorrent"] div {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+
+    .stuffbox form div * {
+        color: var(--primary-color) !important;
+        font-size: 10pt !important;
+    }
+
+    .stuffbox #torrentinfo form[action*="gallerytorrent"] input {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        width: 100px !important;
+    }
+
+    .stuffbox #torrentinfo div {
+        color: var(--primary-color);
+    }
+
+    .stuffbox #torrentinfo div[style*="border-top"] {
+        border-color: var(--border-color) !important;
+    }
+
+    .stuffbox #torrentinfo div[style*="border-top"] form {
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .stuffbox #torrentinfo form[action*="torrent_post"] input {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+    }
+
+    .stuffbox #torrentinfo form[action*="torrent_post"] input:hover {
+        background: var(--card-bg) !important;
+    }
+
+    #ett, #etd {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        padding: 5px !important;
+    }
+
+    #ett *, #etd, #expungeform * {
+        color: var(--primary-color) !important;
+        font-size: 10pt !important;
+    }
+
+    #torrentinfo table[style*="width"], 
+    #torrentinfo table[style*="width"] a {
+        color: var(--secondary-color);
+        font-size: 10pt !important;
+        font-style: italic !important;
+    }
+
+    input[value="Back to Index"] {
+        background: var(--card-bg-2) !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding-bottom: 4px !important;
+    }
+
+    .stuffbox div[style*="font-size:11pt"] {
+
+        /*** RENAME POPUP ***/
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        overflow: visible !important;
+        margin-bottom: 10px !important;
+    }
+
+    input[name="new_r"], 
+    input[name="new_j"] {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .stuffbox input[value="Submit"] {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding: 2px 10px 4px 10px;
+    }
+
+    /* UPLOAD */
+
+    /** DESCRIPTION : change the elements of the upload page **/
+    #lb {
+        margin-top: 60px !important;
+    }
+
+    #lb, #lb * {
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+
+    #t {
+        white-space: nowrap;
+    }
+
+    #m {
+        margin-top: 0px !important;
+    }
+
+    #m * {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+    }
+
+    #m select, #m input {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+    }
+
+    #m input {
+        padding: 2px 10px 4px 10px;
+    }
+
+    #folderform * {
+        color: var(--primary-color);
+        font-size: 12pt;
+        font-stretch: condensed !important;
+    }
+
+    #folderform select, #folderform input {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        padding: 3px 10px 5px 10px;
+    }
+
+    #m input:hover, 
+    #m input:focus, 
+    #folderform input:hover, 
+    #folderform input:focus {
+        background: var(--card-bg-2) !important;
+    }
+
+    #s {
+        white-space: nowrap !important;
+    }
+
+    #uploadform h2 {
+        color: var(--primary-color);
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+
+    #uploadform #m.stuffbox tr td {
+        border-color: var(--border-color);
+    }
+
+    #uploadform input, 
+    #uploadform select {
+        background: var(--card-bg-2) !important;
+    }
+
+    #uploadform input:hover, 
+    #uploadform input:focus, 
+    #uploadform #ulcomment:hover, 
+    #uploadform #ulcomment:focus {
+        background: var(--card-bg) !important;
+    }
+
+    #uploadform #ulcomment {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px;
+        padding: 5px 8px;
+        outline: none;
+    }
+
+    #u * {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+    }
+
+    #uploadfiles, #uploadbutton {
+        background: var(--card-bg-2) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 2px !important;
+        font-size: 12pt;
+    }
+
+    #reorderform #t {
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding-bottom: 8px !important;
+    }
 
 }
 
-@-moz-document regexp("(http|https)://(exhentai|e-hentai).org/s/.*"),
-regexp("(http|https)://(exhentai|e-hentai).org/uconfig.php.*"),
-regexp("(http|https)://.*e-hentai.org/(home|bounty|bounty_post|stats|hentaiathome|bitcoin|hathperks|exchange|logs).php.*") {
-	p.ip {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: transparent;
-		padding: 10px 15px !important;
-		position: fixed !important;
-		left: 20px !important;
-		bottom: -1px !important;
-		z-index: 999 !important;
-	}
+@-moz-document regexp("https://exhentai.org/s.*") {
 
-	p.ip a {
-		color: var(--secondary-color);
-		font-size: 12pt;
-		font-stretch: condensed;
-		font-weight: bold;
-		text-decoration: none;
-		text-transform: uppercase;
-	}
+    /* VIEWER */
 
-	p.ip a:hover {
-		color: #F9AE74 !important;
-	}
+    /** DESCRIPTION : change the elements of the viewer page **/
+    .dp a[href="https://exhentai.org/"] {
+        display: block !important;
+    }
 
-}
+    .dp a[href="https://exhentai.org/"] {
+        background: var(--card-bg) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: transparent;
+        height: 40px !important;
+        width: 40px !important;
+        position: fixed !important;
+        bottom: 14px !important;
+        left: 14px !important;
+    }
 
-@-moz-document regexp("(http|https)://(exhentai|e-hentai).org/favorites.php.*") {
+    .dp a[href="https://exhentai.org/"]:hover {
+        opacity: .8 !important;
+    }
 
-	/* FAVORITE */
-
-	/** DESCRIPTION : change the elements of the favorite page **/
-	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"] {
-		background: no-repeat url("https://i.imgur.com/HuLOmQ6.jpg") center 30% !important;
-		background-size: cover !important;
-		border: 1px solid var(--border-color) !important;
-		color: transparent;
-		height: 160px !important;
-		width: 99% !important;
-		line-height: 156px !important;
-		margin-top: 0px !important;
-		margin-bottom: -29px !important;
-		margin-left: 5px !important;
-	}
-
-	h1[style="font-size:10pt; font-weight:bold; margin:3px; text-align:center"]:before {
-		color: #FFF !important;
-		content: "あいよう" !important;
-		font-family: "Honoka Antique-Kaku" !important;
-		font-size: 40pt !important;
-		text-shadow: 4px 3px 0px #111, 9px 8px 0px rgba(255, 255, 255, .7) !important;
-		position: absolute !important;
-		margin-top: -3px !important;
-		margin-left: -68px !important;
-		visibility: visible !important;
-	}
-
-	div[style="width:825px; margin:10px auto 5px; text-align:center"] {
-
-		/*** FAVORITE SEARCH BAR ***/
-		display: none !important;
-	}
-
-	.ido table.ptt {
-
-		/*** FAVORITE TOP PAGINATION ***/
-		display: none !important;
-	}
-
-	.ido .nosel {
-
-		/*** FAVORITE CATEGORIES ***/
-		background: rgba(34, 32, 43, .98) !important;
-		border: none !important;
-		padding: 10px 4px !important;
-		height: 100% !important;
-		width: 100% !important;
-		padding-top: 20px;
-		padding-bottom: 100px;
-		text-align: center !important;
-		position: fixed !important;
-		top: 0px !important;
-		right: 0px !important;
-		bottom: 0px !important;
-		left: 0px !important;
-		margin: auto !important;
-		z-index: 9999 !important;
-		display: none;
-	}
-
-	.ido .nosel .fp[style*="width:160px;"] {
-		border: 1px solid #000 !important;
-		border-radius: 1px !important;
-		padding: 60px 50px !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-transform: uppercase !important;
-		margin-top: 80px;
-		margin-right: 10px;
-		margin-bottom: -70px;
-		float: none !important;
-		transition: all .3s ease-in-out !important;
-		display: inline-block !important;
-	}
-
-	#close-btn {
-		background: url('https://imgur.com/4GlrMN7.png') no-repeat 50% 50%;
-		background-size: cover !important;
-		background-color: transparent !important;
-		border: none !important;
-		color: transparent !important;
-		height: 35px;
-		width: 35px;
-		position: fixed !important;
-		top: 20px !important;
-		right: 20px !important;
-		filter: invert(1) !important;
-	}
-
-	.ido .nosel .fp[style*="width:160px;"]:hover {
-		border-color: #FE8A71 !important;
-		transition: all .3s ease-in-out !important;
-	}
-
-	div[style*="top:20px"],
-	form[name="favform"] .ip,
-	body > .ip,
-	.fp .i {
-		display: none !important;
-	}
-
-	div[style="float:left; text-align:left; height:20px; padding:2px 0 0 3px"] {
-		color: #FFF !important;
-		width: 100% !important;
-		font-family: "Bebas Neue" !important;
-		font-size: 20pt !important;
-		letter-spacing: 6px !important;
-		text-align: center !important;
-		margin-top: -45px !important;
-	}
-
-	div[style="font-weight:bold; float:left; text-align:right; width:30px; height:20px; padding:2px 3px 0 0"] {
-		color: #FFF !important;
-		font-family: "Bebas Neue" !important;
-		font-size: 19pt !important;
-		line-height: 42pt !important;
-		padding: 0px !important;
-		text-align: center !important;
-		width: 100% !important;
-		margin-top: 0px !important;
-	}
-
-	a[href*="favcat=0"] .fp,
-	.fp[onclick*="favcat=0"] {
-		background: #60646D;
-	}
-
-	a[href*="favcat=1"] .fp,
-	.fp[onclick*="favcat=1"] {
-		background: #EB6361;
-	}
-
-	a[href*="favcat=2"] .fp,
-	.fp[onclick*="favcat=2"] {
-		background: #EBBD63;
-	}
-
-	a[href*="favcat=3"] .fp,
-	.fp[onclick*="favcat=3"] {
-		background: #EDD834;
-	}
-
-	a[href*="favcat=4"] .fp,
-	.fp[onclick*="favcat=4"] {
-		background: #97CE68;
-	}
-
-	a[href*="favcat=5"] .fp,
-	.fp[onclick*="favcat=5"] {
-		background: #F6CD61;
-	}
-
-	a[href*="favcat=6"] .fp,
-	.fp[onclick*="favcat=6"] {
-		background: #8BCBDE;
-	}
-
-	a[href*="favcat=7"] .fp,
-	.fp[onclick*="favcat=7"] {
-		background: #00587A;
-	}
-
-	a[href*="favcat=8"] .fp,
-	.fp[onclick*="favcat=8"] {
-		background: #8B4D93;
-	}
-
-	a[href*="favcat=9"] .fp,
-	.fp[onclick*="favcat=9"] {
-		background: #BF4A67;
-	}
-
-	.fp[style="width:140px; padding:4px 0 0; margin:5px auto 0; text-align:center; font-weight:bold; position:relative; left:-8px"] {
-
-		/*** SHOW ALL FAVORITE BUTTON ***/
-		background-color: #474552 !important;
-		border: 1px solid #000 !important;
-		border-radius: 2px !important;
-		color: var(--primary-color);
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		height: 20px !important;
-		width: auto !important;
-		line-height: 20px !important;
-		padding: 12px 20px !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		left: 20px !important;
-		bottom: -1px !important;
-		z-index: 999 !important;
-	}
-
-	.nosel a[href="https://exhentai.org/favorites.php"] {
-		font-size: 12pt !important;
-	}
-
-	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] {
-
-		/*** FAVORITE OPTIONS ***/
-		color: transparent;
-	}
-
-	#trigger-box-btn-2 {
-		background: #383745 !important;
-		background-image: url("http://www.pvhc.net/img226/gzypyldoqaxjhvtyyhei.png") !important;
-		background-position: 92% center !important;
-		background-repeat: no-repeat !important;
-		background-size: 20px auto !important;
-		border: 1px solid #000 !important;
-		border-radius: 1px !important;
-		color: #FFF !important;
-		font-size: 12pt !important;
-		font-stretch: condensed;
-		font-weight: bold;
-		height: 36px !important;
-		width: 130px !important;
-		padding: 0px 8px;
-		text-align: left;
-		text-transform: uppercase !important;
-		position: absolute !important;
-		top: 26px !important;
-		right: 30px !important;
-		z-index: 999 !important;
-		visibility: visible !important;
-	}
-
-	input[value="Confirm"] {
-		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
-		background-color: var(--card-bg-2) !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;
-		background-size: 15px auto !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		box-shadow: none !important;
-		color: transparent !important;
-		height: 41px !important;
-		width: 41px !important;
-		padding: 17px !important;
-		position: fixed !important;
-		right: 317px !important;
-		bottom: -1px;
-		z-index: 999 !important;
-	}
-
-	input[value="Confirm"]:enabled:focus,
-	input[value="Confirm"]:enabled:hover {
-		background: no-repeat url("https://i.imgur.com/tuF5qKD.png") center !important;
-		background-color: var(--card-bg) !important;
-		background-position: center !important;
-		background-repeat: no-repeat !important;
-		background-size: 15px auto !important;
-		border-color: var(--border-color) !important;
-		color: transparent !important;
-	}
-
-	select[name="ddact"] {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--secondary-color) !important;
-		height: 41px !important;
-		width: auto !important;
-		font-size: 12pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		padding-top: 3px !important;
-		padding-right: 3px !important;
-		padding-left: 3px !important;
-		text-align: center;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		bottom: -1px !important;
-		right: 155px !important;
-		z-index: 999 !important;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		text-indent: 0px;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
-	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] *:not(option) {
-		background: var(--card-bg-2) !important;
-		background-size: 100% auto !important;
-	}
-
-	div[style="float:right; width:300px; position:relative; text-align:right"] div[style="position:absolute; top:-30px; left:70px"] option {
-		color: #FFF !important;
-	}
-
-	.id4 {
-		opacity: 1 !important;
-		visibility: hidden;
-		margin-top: 4px !important;
-	}
-
-	input[name="modifygids[]"] {
-		visibility: visible !important;
-		margin-top: -2px !important;
-		margin-right: 8px !important;
-	}
-
-	body .ip:nth-of-type(2) {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: transparent;
-		font-size: 12pt;
-		font-stretch: condensed;
-		font-weight: bold;
-		padding: 10px 15px !important;
-		text-transform: uppercase;
-		position: fixed !important;
-		left: 20px !important;
-		bottom: 23px !important;
-		z-index: 999 !important;
-	}
-
-	body .ip:nth-of-type(2) a {
-		color: var(--secondary-color);
-		text-decoration: none !important;
-	}
-
-	body .ip:nth-of-type(2) a:hover {
-		color: #F9AE74 !important;
-	}
-
-	.itg {
-		margin-top: 28px !important;
-	}
-
-	p[style="text-align:center; font-style:italic; margin-bottom:10px"] {
-		margin-top: 29px !important;
-	}
-
-	div[style="position:absolute; top:-35px; left:80px"] {
-		color: transparent !important;
-	}
-
-	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_l"],
-	div[style="position:absolute; top:-18px; left:15px"] a[href*="set=dm_t"] {
-		bottom: 76px !important;
-	}
+    .dp a[href="https://exhentai.org/"]::after {
+        background: no-repeat url("https://i.imgur.com/zj4X1EV.png") center !important;
+        background-size: 18px auto !important;
+        content: " " !important;
+        filter: brightness(0) var(--invert) !important;
+        padding: 10px 20px !important;
+        margin-left: -24px !important;
+    }
 
 }
 
-@-moz-document regexp("(http|https)://(exhentai|e-hentai).org/torrents.php.*") {
-	body {
-		margin-top: -30px !important;
-	}
+@-moz-document url("https://exhentai.org/popular") {
 
-	.itg {
-		width: 99.7% !important;
-		margin-left: 2px !important;
-	}
+    /* POPULAR */
 
-	.ih {
+    /** DESCRIPTION : change the elements of the popular page **/
+    .ido {
+        margin-top: 100px !important;
+    }
 
-		/*** TORRENT TITLE ***/
-		background: no-repeat url("https://i.imgur.com/HuLOmQ6.jpg") center 30% !important;
-		background-size: cover !important;
-		border: 1px solid var(--border-color) !important;
-		color: transparent;
-		height: 154px !important;
-		width: 99.5% !important;
-		line-height: 156px !important;
-		margin-top: 28px !important;
-		margin-bottom: -3px !important;
-	}
-
-	.ih:before {
-		color: #FFF !important;
-		content: "ダウンロード" !important;
-		font-family: "Honoka Antique-Kaku" !important;
-		font-size: 40pt !important;
-		text-shadow: 4px 3px 0px #111, 9px 8px 0px rgba(255, 255, 255, .7) !important;
-		position: absolute !important;
-		margin-top: -3px !important;
-		margin-left: -102px !important;
-		visibility: visible !important;
-	}
-
-	#focusme {
-
-		/*** TORRENT SEARCHBAR ***/
-		background: var(--card-bg);
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		height: 25px !important;
-		padding: 15px 0px 20px 15px !important;
-		width: 98% !important;
-		margin-top: 1px !important;
-		margin-bottom: -1px !important;
-		margin-left: -1px !important;
-	}
-
-	input[value="Clear"],
-	input[value="Search Torrents"] {
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--secondary-color);
-		height: 61.8px !important;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold;
-		position: absolute !important;
-		margin-top: -109.5px !important;
-		text-transform: uppercase !important;
-	}
-
-	input[value="Clear"] {
-		background: var(--button-bg-2) !important;
-		width: 110px !important;
-		right: 10px !important;
-	}
-
-	input[value="Search Torrents"] {
-		background: var(--button-bg);
-		width: 190px !important;
-		right: 119px !important;
-	}
-
-	.ip:nth-of-type(1) {
-
-		/*** TORRENT RESULT ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: #FFF !important;
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		padding: 10px 20px !important;
-		max-width: 150px !important;
-		overflow: hidden !important;
-		text-overflow: ellipsis !important;
-		white-space: nowrap !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-		position: fixed !important;
-		bottom: 20px !important;
-		right: 20px !important;
-		z-index: 100 !important;
-		display: none;
-	}
-
-	.itd[style="width:102px; white-space:nowrap"] {
-
-		/*** TORRENT UPLOAD TIME ***/
-		padding-left: 10px !important;
-	}
-
-	.itd:nth-child(5) {
-		color: #2CC990 !important;
-		font-weight: normal !important;
-	}
-
-	.itd:nth-child(6) {
-		color: #E26E67 !important;
-		font-weight: normal !important;
-	}
-
-	div[style="height:15px; min-width:300px; max-width:600px; overflow:hidden"] {
-		height: 25px !important;
-	}
-
-	table.ptb {
-
-		/*** TORRENT BOTTOM PAGINATION ***/
-		margin: 0px 0px 0px 2px !important;
-		width: 99.7% !important;
-	}
-
-	.ptb td * {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-	}
-
-	.ptb td:nth-of-type(1) a,
-	.ptb td:nth-last-of-type(1) a {
-		color: transparent;
-	}
-
-	.ptb td:nth-of-type(1) {
-		background: var(--card-bg-3) !important;
-		color: transparent !important;
-	}
-
-	.ptb td:nth-last-of-type(1) {
-		background: var(--card-bg-2) !important;
-		color: transparent !important;
-	}
-
-	.ido > .ip:nth-of-type(2),
-	.ido > .ip:nth-of-type(3) {
-		visibility: hidden !important;
-	}
-
-	body > .ip {
-
-		/*** FAVORITE FRONT PAGE BUTTON ***/
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 2px !important;
-		color: transparent;
-		padding: 10px 15px !important;
-		position: fixed !important;
-		left: 20px !important;
-		bottom: 23px !important;
-		z-index: 999 !important;
-	}
-
-	body > .ip a {
-		color: var(--primary-color);
-		font-size: 11pt !important;
-		font-stretch: condensed !important;
-		font-weight: bold !important;
-		text-decoration: none !important;
-		text-transform: uppercase !important;
-	}
-
-	body > .ip a:hover {
-		color: #F9AE74 !important;
-	}
+    .itg > tbody > tr:nth-of-type(1) > th, .itg > tbody > tr:nth-last-of-type(1) {
+        border: none !important;
+    }
 
 }
 
-@-moz-document domain("e-hentai.org") {
+@-moz-document regexp("https://exhentai.org/torrents.php.*") {
 
-	/* E-HENTAI */
+    /* TORRENTS */
 
-	/** DESCRIPTION : change the elements of e-hentai.org **/
-	#toppane .ih:before {
-		margin-left: 87px !important;
-	}
+    /** DESCRIPTION : change the elements of the torrent page **/
+    .ido p.ip {
+        margin-top: 30px !important;
+    }
 
-	.gm {
-		border-radius: 1px !important;
-	}
+    .itg td.itd div {
+        height: 22px !important;
+    }
 
-	#lb {
-		color: transparent;
-		font-size: 14pt !important;
-		font-stretch: condensed !important;
-		width: 100% !important;
-		text-align: center !important;
-		margin-top: 110px !important;
-		margin-bottom: -90px !important;
-	}
+    .itg .itd a:hover {
+        color: var(--secondary-color);
+    }
 
-	#lb a {
-		color: var(--secondary-color);
-		font-weight: bold;
-	}
+    .itg td:nth-last-of-type(1) {
+        text-align: center !important;
+    }
 
-	#lb a[style*="bold"] {
-		color: var(--primary-color);
-	}
+    .itg td:nth-last-of-type(1) a {
+        color: #b96f4a !important;
+    }
 
-	#searchform input,
-	#searchform select {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		padding: 5px;
-	}
-
-	#s.stuffbox .ptt:nth-of-type(1) {
-		visibility: hidden;
-	}
-
-	#s.stuffbox .itg {
-		background: var(--card-bg-2) !important;
-	}
-
-	#b.stuffbox > form > table {
-		width: 100%;
-	}
-
-	#b.stuffbox #x,
-	#b.stuffbox textarea,
-	#b.stuffbox input,
-	#b.stuffbox #d table {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		padding: 5px;
-	}
-
-	#b.stuffbox .b input,
-	#b.stuffbox .r input,
-	#b.stuffbox .r textarea {
-		background: var(--card-bg) !important;
-	}
-
-	#t.stuffbox div[class*="d"] {
-		height: auto !important;
-	}
-
-	#t.stuffbox table {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		padding: 10px !important;
-		margin-top: 10px;
-		margin-bottom: 20px;
-	}
-
-	.scb {
-		color: #3498DB !important;
-	}
-
-	.stuffbox {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		width: 90% !important;
-		margin-top: 105px !important;
-	}
-
-	.stuffbox * {
-		border-color: var(--border-color) !important;
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-	}
-
-	.stuffbox h1,
-	.stuffbox h2,
-	.stuffbox > p {
-		font-size: 16pt !important;
-	}
-
-	.stuffbox .homebox,
-	.stuffbox table {
-		background: var(--card-bg-2);
-		border: 1px solid var(--border-color);
-		padding: 10px 10px 15px 10px !important;
-	}
-
-	.stuffbox .homebox input {
-		background: var(--card-bg);
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		font-size: 14pt;
-		padding: 5px 5px 8px 5px;
-	}
-
-	#coinselector div,
-	#dlvl {
-		background: transparent !important;
-		border: none;
-	}
-
-	.stuffbox td > div {
-		min-height: 30px !important;
-		min-width: 100px;
-		text-overflow: ellipsis;
-	}
-
-	.stuffbox td input,
-	.stuffbox form > input {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color);
-		border-radius: 1px;
-		padding: 5px 5px 8px 5px;
-	}
-
-	div[style*="text-align: center; width: 800px;"] {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px;
-		margin-top: 160px !important;
-	}
-
-	div[style*="text-align: center; width: 800px;"] * {
-		border-color: var(--border-color) !important;
-		color: var(--primary-color);
-		font-size: 14pt;
-		font-stretch: condensed;
-	}
-
-	div[style="font-weight:bold; margin-top:5px; font-size:10pt"] {
-		color: var(--primary-color);
-		font-size: 14pt !important;
-		font-stretch: condensed;
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		margin-top: 100px !important;
-	}
+    .itg td:nth-last-of-type(1) a:hover {
+        color: var(--secondary-color) !important;
+    }
 
 }
 
-@-moz-document regexp("https://exhentai.org/popular.*") {
-	#dms {
-		bottom: 12px !important;
-	}
+@-moz-document url("https://exhentai.org/uconfig.php"), url("https://exhentai.org/uconfig.php#!eze/settings") {
+
+    /* SETTINGS */
+
+    /** DESCRIPTION : change the elements of the settings page **/
+    #outer.stuffbox, .eze_settings_box {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color);
+        padding: 10px 20px 20px 20px !important;
+        margin-top: 70px !important;
+    }
+
+    #outer *, .eze_settings_label * {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+
+    #outer.stuffbox h1, 
+    .eze_settings_header, 
+    .eze_settings_entry .eze_settings_entry {
+        color: var(--secondary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        text-align: left !important;
+        text-transform: uppercase !important;
+    }
+
+    #profile_outer select, 
+    #profile_outer input[type="button"], 
+    #profile_outer input[type="submit"], 
+    input[type="text"], 
+    input[type="password"], 
+    .optouter select, 
+    .optouter textarea {
+        background: var(--card-bg-2) !important;
+        border-radius: 2px !important;
+        border: 1px solid var(--border-color);
+        color: var(--primary-color);
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+
+    #profile_select div input[type="button"] {
+        padding: 4px 10px 6px 10px !important;
+    }
+
+    #profile_select div:nth-of-type(3) {
+        margin-top: -3px !important;
+    }
+
+    #catsel div[id*="ct"] {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        letter-spacing: 0px !important;
+    }
+
+    .optouter textarea {
+        padding: 8px;
+    }
+
+    #profile_outer input:hover, 
+    #profile_outer input:focus, 
+    .optouter textarea:hover, 
+    .optouter textarea:focus {
+        background: var(--card-bg) !important;
+    }
+
+    #apply {
+        background: var(--card-bg-3) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .6) !important;
+        color: #FFF !important;
+        padding: 5px 15px 9px 15px !important;
+        text-decoration: none !important;
+        position: fixed !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        visibility: visible !important;
+        z-index: 100 !important;
+    }
+
+    #apply input[value="Apply"] {
+        background: transparent !important;
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        padding-top: 4px !important;
+        text-transform: uppercase !important;
+    }
+
+    #apply input[value="Apply"]:hover {
+        color: var(--secondary-color) !important;
+    }
+
+    .eze_settings_entry:nth-of-type(2n) {
+        background-color: inherit !important;
+    }
+
+    .eze_settings_header, 
+    .eze_settings_entry .eze_settings_entry[style*="bold"] {
+        border-bottom: 1px solid var(--border-color) !important;
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        padding-bottom: 10px !important;
+        text-transform: capitalize !important;
+    }
+
+    .eze_settings_entry .eze_settings_entry[style*="bold"] {
+        margin-bottom: 10px;
+    }
+
+    .eze_settings_entry div[style*="left"] {
+        margin-left: -6px !important;
+    }
+
+    .eze_settings_entry div[style*="left"] div {
+        margin-bottom: -10px;
+    }
+
+    .eze_settings_entry input {
+        margin-top: 0px !important;
+    }
+
+    .eze_option_box.eze_settings_pad_left {
+        background: var(--card-bg-2);
+    }
 
 }
 
-@-moz-document regexp("https://exhentai.org/upload/manage.php.*") {
-	#nb {
-		margin-top: -2px !important;
-		padding-bottom: 33px !important;
-	}
+@-moz-document url("https://exhentai.org/mytags") {
 
-	#nb:hover {
-		max-height: 100% !important;
-	}
+    /* MY TAGS */
 
-	#nb a {
-		padding-top: 10px !important;
-		margin-left: 110px !important;
-		margin-right: -90px !important;
-	}
+    /** DESCRIPTION : change the elements of the my tags page **/
+    #outer {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color) !important;
+        margin-top: 70px !important;
+    }
 
-	#nb a[href="https://exhentai.org/"]:nth-of-type(1)::before {
-		top: 19px !important;
-		visibility: visible !important;
-	}
+    #outer input[type="button"], 
+    #outer input[type="submit"] {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        color: var(--primary-color) !important;
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        padding: 4px 10px 6px 10px !important;
+    }
 
-	#nb a[href="https://exhentai.org/"]:nth-of-type(1) {
-		visibility: hidden;
-	}
+    #outer input:hover, 
+    #outer input:focus {
+        background: var(--card-bg) !important;
+    }
 
-}
+    #outer input[type="submit"] {
+        margin-top: -1px;
+    }
 
-@-moz-document regexp("https://exhentai.org/mytags.*") {
-	.ip {
-		display: none;
-	}
+    #outer input[type="text"] {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        color: var(--primary-color);
+        padding: 3px 6px 5px 6px !important;
+        margin-top: 2px !important;
+    }
 
-	input,
-	select {
-		background: var(--card-bg-2) !important;
-		border: 1px solid var(--border-color) !important;
-		border-radius: 1px !important;
-		color: var(--primary-color) !important;
-	}
+    #tagset_outer select, 
+    #usertags_mass select {
+        background: var(--card-bg-2);
+        border: 1px solid var(--border-color);
+        border-radius: 2px !important;
+        color: var(--primary-color);
+        padding: 3px 6px 5px 4px !important;
+    }
 
-	button[id*="colorsetter"] {
-		border: none !important;
-		border-radius: 50%;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		position: relative !important;
-		top: -7px !important;
-	}
+    #tagset_outer input[type="button"] {
+        margin-top: -2px !important;
+    }
 
-	#tagname_newtagcomplete-list {
-		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color);
-		margin-top: -1px !important;
-	}
+    #usertags_button {
+        width: auto !important;
+        margin-top: -3px !important;
+    }
 
-	#tagname_newtagcomplete-list div {
-		background: var(--card-bg) !important;
-		border-color: var(--border-color) !important;
-		color: var(--primary-color) !important;
-	}
+    #usertags_outer .lc {
+        color: var(--primary-color);
+        font-size: 12pt !important;
+        font-stretch: condensed;
+        line-height: 16pt !important;
+    }
 
-	#usertags_outer > div > div:nth-child(1) {
-		width: inherit !important;
-	}
+    #usertags_outer div[id*="tagpreview"] {
+        color: #FFF !important;
+        font-size: 12pt !important;
+        font-stretch: condensed !important;
+        margin-top: 1px !important;
+    }
 
-	#usertags_mass > div:nth-child(2),
-	#usertags_mass > div:nth-child(3) {
-		border: none !important;
-		margin-top: 6px !important;
-	}
+    #usertags_mass > div {
+        border-color: var(--border-color);
+        color: var(--primary-color);
+        font-size: 12pt;
+        font-stretch: condensed;
+        line-height: 10pt;
+    }
 
-	#usertags_mass > div:nth-child(1) {
-		border: none !important;
-		margin-top: 4px !important;
-	}
-
-	#usertags_mass > div:nth-child(4) {
-		border: none !important;
-		margin-top: 1px !important;
-	}
-
-	#usertags_mass > div:nth-child(2) > input {
-		width: auto !important;
-	}
 }
