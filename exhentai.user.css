@@ -930,6 +930,10 @@
         filter: brightness(0) var(--invert) !important;
         margin-right: 5px;
     }
+    
+    .glcut {
+        background: transparent !important;
+    }
 
     .gl1m.glcat div[class*="ct"], 
     .gl1c.glcat div[class*="ct"], 
