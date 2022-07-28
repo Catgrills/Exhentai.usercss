@@ -7,7 +7,7 @@
 @preprocessor uso
 @var select theme 'Theme' {
     
-    "Classic":`
+    "1. Classic":`
     :root {
         --body-bg: #383745 !important; 
         --button-bg: #344146 !important;
@@ -24,7 +24,7 @@
         --secondary-color: #929292 !important;
         --invert: invert(1) !important;
     }`,
-    "Brown": `
+    "2. Mustard": `
     :root {
         --body-bg: #E3E0D1 !important;
         --button-bg: #F3F4F7 !important;
