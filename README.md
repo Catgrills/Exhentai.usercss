@@ -22,13 +22,13 @@ Instruction
 <strong>Step 2 : Install the script </strong>
 + Directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Exhentai.usercss/master/exhentai.user.css">click here</a>
 
-<strong>Step 3 : Install others scripts </strong>
+<strong>Step 3 : Install other(s) script(s) </strong>
 <ol>
 <li> <a href="https://greasyfork.org/fr/scripts/37879-exhentai-search-box-and-favorite-box-hidden">Exhentai Search box and Favorite box hidden</a></li>
 <li> <a href="https://dnsev-h.github.io/eze/">eze</a></li>
 </ol>
 
-<strong>Step 4 : Install the font(s) </strong>
+<strong>Step 4 : Install font(s) </strong>
 
 <ol>
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
