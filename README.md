@@ -2,6 +2,10 @@
 
 <img src="preview.png" width="100%">
 
+About
+-------------------------------
+A css script for <i>Exhentai.org</i>.
+
 Instruction
 -------------------------------
 
