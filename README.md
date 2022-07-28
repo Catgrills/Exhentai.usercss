@@ -16,7 +16,7 @@ Instruction
 
 <strong>Step 3 : Install others scripts </strong>
 <ol>
-<li> Install <a href="https://sleazyfork.org/en/scripts/37879-exhentai-misc-edition">Exhentai : Misc Edition </a></li>
+<li> Install <a href="https://greasyfork.org/fr/scripts/37879-exhentai-search-box-and-favorite-box-hidden">Exhentai Search box and Favorite box hidden</a></li>
 <li> Install <a href="https://dnsev-h.github.io/eze/">eze</a></li>
 </ol>
 
