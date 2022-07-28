@@ -4,7 +4,7 @@
 
 About
 -------------------------------
-A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i> with 2 themes (<i>1. Classic</i> and <i>2. Pale Taupe</i>).
+A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i> with two themes : <i>Classic</i> and <i>Pale Taupe</i>.
 
 Instruction
 -------------------------------
