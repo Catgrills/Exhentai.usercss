@@ -31,4 +31,4 @@ Instruction
 Report
 -------------------------------
 
-Don't hesitate to report any issues you find while using this userstyle.
+Don't hesitate to report any issues you find while using this script.
