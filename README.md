@@ -8,7 +8,8 @@
 
 About
 -------------------------------
-A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i>.
+<p>A css script for <i><a href="https://exhentai.org/">Exhentai.org</a></i>.</p>
+<p>There a two themes available : <i>Classic</i> and <i>Pale Taupe</i>.</p>
 
 Instruction
 -------------------------------
