@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.1
+@version        1.2
 @description    An usercss for Exhentai
 @author         Katgrills
 @preprocessor uso
@@ -838,13 +838,18 @@
         margin-left: 10px !important;
     }
     
-    .itg.gld .gl5t > div:nth-child(1) > div:nth-child(2) {
+    .itg.gld .gl5t > div:nth-child(1) > div:nth-child(2),
+    .itg.gld .gl5t > div:nth-child(1) > div:nth-child(2) s {
         border-radius: 2px;
         border-style: solid !important;
         color: transparent !important;
         width: 80px !important;
         margin-top: -20px !important;
         margin-left: 3px !important;
+    }
+    
+    .itg.gld .gl5t > div:nth-child(1) > div:nth-child(2) s::after {
+        margin-left: -6px !important;
     }
 
     .gl5t > div:nth-child(2) {
