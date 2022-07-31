@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.3
+@version        1.4
 @description    An usercss for Exhentai
 @author         Katgrills
 @preprocessor uso
@@ -1689,11 +1689,11 @@
 
     .gm #gmid #gd4 .nopm #newtagfield:hover, 
     .gm #gmid #gd4 .nopm #newtagfield:focus {
-        background: var(--card-bg-3) !important;
+        background: var(--card-bg) !important;
     }
 
     .gm #gmid #gd4 .nopm #newtagbutton {
-        background: var(--card-bg-3);
+        background: var(--card-bg-2);
         border: 1px solid var(--border-color);
         border-radius: 2px !important;
         padding-top: 2px;
