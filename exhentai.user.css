@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.5
+@version        1.6
 @description    A css script for Exhentai.org
 @author         Katgrills
 @preprocessor uso
@@ -482,6 +482,7 @@
     /** DESCRIPTION : change the elements of the main body **/
     .ido {
         background: var(--card-bg) !important;
+        width: 97% !important;
         margin-top: 65px !important;
     }
 
