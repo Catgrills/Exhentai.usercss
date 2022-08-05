@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.6
+@version        1.7
 @description    A css script for Exhentai.org
 @author         Katgrills
 @preprocessor uso
@@ -1454,8 +1454,8 @@
         font-stretch: condensed !important;
         font-weight: bold !important;
         padding-top: 3px !important;
-        padding-right: 3px !important;
-        padding-left: 3px !important;
+        padding-right: 8px !important;
+        padding-left: 8px !important;
         text-align: center;
         text-transform: uppercase !important;
         position: fixed !important;
