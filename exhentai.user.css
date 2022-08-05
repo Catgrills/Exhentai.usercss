@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.7
+@version        1.8
 @description    A css script for Exhentai.org
 @author         Katgrills
 @preprocessor uso
@@ -875,10 +875,11 @@
     }
 
     .itg.gld .gl5t > div:nth-child(2) > div:nth-child(3) {
-        position: absolute;
-        top: 12px;
-        left: 160px !important;
-        width: 20px !important;
+        width: 100% !important;
+        text-align: right;
+        position: relative;
+        top: 13px;
+        left: -5px;
     }
 
     .itg.gld .gl5t > div:nth-child(2)  .gldown img {
