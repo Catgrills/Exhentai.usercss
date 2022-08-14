@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.8
+@version        1.9
 @description    A css script for Exhentai.org
 @author         Katgrills
 @preprocessor uso
@@ -1077,7 +1077,6 @@
         margin: 4px 4px 4px 0px !important;
     }
 
-    .gt:hover, 
     .gtl:hover, 
     .gtw:hover {
         color: var(--secondary-color) !important;
