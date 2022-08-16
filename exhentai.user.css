@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Exhentai.usercss
 @namespace      https://github.com/Catgrills/Exhentai.usercss
-@version        1.9
+@version        2.0
 @description    A css script for Exhentai.org
 @author         Katgrills
 @preprocessor uso
@@ -494,6 +494,18 @@
     .ido #toppane #searchbox {
         border: none !important;
         padding: 0px !important;
+    }
+    
+    #iw {
+
+        /*** MAIN BODY RESULT SKIP MESSAGE ***/
+        text-align: left !important;
+        margin-top: -8px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    #iw * {
+        font-size: 11pt !important;
     }
 
     .ido .ip {
